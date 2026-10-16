@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "single_frame_parcel_spike_rejected": true,
+    "stable_parcel_detected": true,
+    "threshold_hysteresis": true,
+    "stable_empty_detected": true,
+    "nonfinite_feedback_fails_closed": true,
+    "midstroke_is_not_unlocked": true,
+    "concurrent_second_access_denied": true,
+    "missing_id_denied": true,
+    "role_scope_denied": true,
+    "event_waits_for_ack": true,
+    "wrong_session_ack_ignored": true,
+    "offline_ack_ignored": true,
+    "duplicate_ack_idempotent": true,
+    "ttl_relative_to_issue_time": true
+  }
+}

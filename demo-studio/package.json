@@ -1,0 +1,33 @@
+{
+  "name": "demo-studio",
+  "version": "1.0.0",
+  "description": "Parcel Guard demos using verified Webots footage and sensor telemetry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joejimenez-lab/parcel-guard-webots.git",
+    "directory": "demo-studio"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/media": "4.0.532",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "tsc --noEmit",
+    "render:workflow": "remotion render src/index.ts DeliveryWorkflow \"../output/Parcel Guard - Delivery Workflow.mp4\"",
+    "render:recovery": "remotion render src/index.ts SecurityRecovery \"../output/Parcel Guard - Security Recovery.mp4\""
+  }
+}

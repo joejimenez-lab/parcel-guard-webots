@@ -1,0 +1,36 @@
+# Local builds and editor state
+.build/
+.chart-data-*/
+tmp/
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+!.env.example
+node_modules/
+**/.cache/
+**/.remotion/
+*.wbproj
+
+# Duplicate video assets and local render output
+/demo-studio/public/*.mp4
+/demo-studio/dist/
+/demo-studio/out/
+
+# Publish selected delivery assets only; full archives are release downloads
+/*.pptx
+/output/*
+!/output/Parcel Guard - Delivery Workflow.mp4
+!/output/Parcel Guard - Security Recovery.mp4
+!/output/Parcel Guard Preview.gif
+!/output/Parcel Guard Workflow Poster.jpg
+!/output/Parcel Guard Recovery Poster.jpg
+!/output/Package Delivery Security Box - Final Proposal.pptx
+!/output/index.html
+
+# Historical reports from the first demo
+/results/demo_video_status.json
+/results/demo_video_validation.json

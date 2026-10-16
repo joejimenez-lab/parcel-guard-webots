@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "method": "DOM integration with recorded Webots status; no live browser was available",
+  "checks": {
+    "secured_headline": true,
+    "twenty_five_sensor_cells": true,
+    "event_history_visible": true,
+    "access_role_and_fresh_id": true,
+    "code_cleared_after_submit": true,
+    "lab_action_forwarded": true,
+    "fault_cannot_display_secured": true,
+    "offline_queue_displayed": true
+  }
+}

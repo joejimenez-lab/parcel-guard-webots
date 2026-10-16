@@ -1,0 +1,1528 @@
+{
+  "passed": true,
+  "checks": {
+    "motor_cycles": {
+      "successful": 100,
+      "attempted": 100,
+      "target": 99,
+      "trials": [
+        {
+          "cycle": 0,
+          "unlock_and_open_s": 1.28,
+          "full_cycle_s": 2.7840000000000003,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 1,
+          "unlock_and_open_s": 1.2800000000000002,
+          "full_cycle_s": 2.784,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 2,
+          "unlock_and_open_s": 1.2800000000000002,
+          "full_cycle_s": 2.7840000000000007,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 3,
+          "unlock_and_open_s": 1.2799999999999994,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 4,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000007,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 5,
+          "unlock_and_open_s": 1.2799999999999994,
+          "full_cycle_s": 2.7840000000000007,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 6,
+          "unlock_and_open_s": 1.2799999999999976,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 7,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 8,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000025,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 9,
+          "unlock_and_open_s": 1.2799999999999976,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 10,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 11,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 12,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 13,
+          "unlock_and_open_s": 1.279999999999994,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 14,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 15,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 16,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 17,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 18,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 19,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 20,
+          "unlock_and_open_s": 1.279999999999994,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 21,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 22,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 23,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 24,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 25,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 26,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 27,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 28,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 29,
+          "unlock_and_open_s": 1.279999999999987,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 30,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 31,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 32,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 33,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 34,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 35,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 36,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 37,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 38,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 39,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 40,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 41,
+          "unlock_and_open_s": 1.279999999999987,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 42,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 43,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 44,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 45,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.784000000000006,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 46,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 47,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 48,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 49,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 50,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 51,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 52,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 53,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 54,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 55,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 56,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 57,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 58,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 59,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 60,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 61,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 62,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 63,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 64,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 65,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 66,
+          "unlock_and_open_s": 1.2799999999999727,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 67,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 68,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 69,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 70,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 71,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 72,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 73,
+          "unlock_and_open_s": 1.2799999999999727,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 74,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 75,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 76,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 77,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 78,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 79,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 80,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 81,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 82,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 83,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 84,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 85,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 86,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 87,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 88,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 89,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 90,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.7840000000000202,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 91,
+          "unlock_and_open_s": 1.2800000000000011,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 92,
+          "unlock_and_open_s": 1.2800000000000296,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 93,
+          "unlock_and_open_s": 1.2800000000000296,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 94,
+          "unlock_and_open_s": 1.2800000000000296,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 95,
+          "unlock_and_open_s": 1.2800000000000296,
+          "full_cycle_s": 2.7840000000000487,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 96,
+          "unlock_and_open_s": 1.2799999999999727,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 97,
+          "unlock_and_open_s": 1.2799999999999727,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 98,
+          "unlock_and_open_s": 1.2799999999999727,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        },
+        {
+          "cycle": 99,
+          "unlock_and_open_s": 1.2800000000000296,
+          "full_cycle_s": 2.783999999999992,
+          "door_rad": 0.0,
+          "bolt_m": 0.0787,
+          "secured": true
+        }
+      ]
+    },
+    "alert_latency": {
+      "within_1s": 30,
+      "trials": 30,
+      "target": 29,
+      "median_s": 0.0,
+      "p95_s": 0.0,
+      "max_s": 0.0,
+      "max_stimulus_to_observer_s": 0.16,
+      "definition": "First sampled impact threshold crossing to synchronous local outbox insertion; simulated time; excludes transport/rendering",
+      "details": [
+        {
+          "trial": 0,
+          "event_id": 101,
+          "sensor_sample_s": 279.936,
+          "queued_s": 279.936,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.128
+        },
+        {
+          "trial": 1,
+          "event_id": 102,
+          "sensor_sample_s": 281.344,
+          "queued_s": 281.344,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 2,
+          "event_id": 103,
+          "sensor_sample_s": 282.784,
+          "queued_s": 282.784,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 3,
+          "event_id": 104,
+          "sensor_sample_s": 284.224,
+          "queued_s": 284.224,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 4,
+          "event_id": 105,
+          "sensor_sample_s": 285.664,
+          "queued_s": 285.664,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 5,
+          "event_id": 106,
+          "sensor_sample_s": 287.104,
+          "queued_s": 287.104,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 6,
+          "event_id": 107,
+          "sensor_sample_s": 288.544,
+          "queued_s": 288.544,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 7,
+          "event_id": 108,
+          "sensor_sample_s": 289.984,
+          "queued_s": 289.984,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 8,
+          "event_id": 109,
+          "sensor_sample_s": 291.424,
+          "queued_s": 291.424,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 9,
+          "event_id": 110,
+          "sensor_sample_s": 292.864,
+          "queued_s": 292.864,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 10,
+          "event_id": 111,
+          "sensor_sample_s": 294.304,
+          "queued_s": 294.304,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 11,
+          "event_id": 112,
+          "sensor_sample_s": 295.744,
+          "queued_s": 295.744,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 12,
+          "event_id": 113,
+          "sensor_sample_s": 297.184,
+          "queued_s": 297.184,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 13,
+          "event_id": 114,
+          "sensor_sample_s": 298.624,
+          "queued_s": 298.624,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 14,
+          "event_id": 115,
+          "sensor_sample_s": 300.064,
+          "queued_s": 300.064,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 15,
+          "event_id": 116,
+          "sensor_sample_s": 301.504,
+          "queued_s": 301.504,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 16,
+          "event_id": 117,
+          "sensor_sample_s": 302.944,
+          "queued_s": 302.944,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 17,
+          "event_id": 118,
+          "sensor_sample_s": 304.384,
+          "queued_s": 304.384,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 18,
+          "event_id": 119,
+          "sensor_sample_s": 305.824,
+          "queued_s": 305.824,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 19,
+          "event_id": 120,
+          "sensor_sample_s": 307.264,
+          "queued_s": 307.264,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 20,
+          "event_id": 121,
+          "sensor_sample_s": 308.704,
+          "queued_s": 308.704,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 21,
+          "event_id": 122,
+          "sensor_sample_s": 310.144,
+          "queued_s": 310.144,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 22,
+          "event_id": 123,
+          "sensor_sample_s": 311.584,
+          "queued_s": 311.584,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 23,
+          "event_id": 124,
+          "sensor_sample_s": 313.024,
+          "queued_s": 313.024,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 24,
+          "event_id": 125,
+          "sensor_sample_s": 314.464,
+          "queued_s": 314.464,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 25,
+          "event_id": 126,
+          "sensor_sample_s": 315.904,
+          "queued_s": 315.904,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 26,
+          "event_id": 127,
+          "sensor_sample_s": 317.344,
+          "queued_s": 317.344,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 27,
+          "event_id": 128,
+          "sensor_sample_s": 318.784,
+          "queued_s": 318.784,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 28,
+          "event_id": 129,
+          "sensor_sample_s": 320.224,
+          "queued_s": 320.224,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 29,
+          "event_id": 130,
+          "sensor_sample_s": 321.664,
+          "queued_s": 321.664,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        }
+      ]
+    },
+    "connection_recovery": {
+      "successful_outages": 10,
+      "target": 10,
+      "events_per_outage": 10,
+      "expected_events": 100,
+      "recovered_events": 100,
+      "outages": [
+        {
+          "outage": 0,
+          "expected_tamper_ids": [
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.352
+        },
+        {
+          "outage": 1,
+          "expected_tamper_ids": [
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 2,
+          "expected_tamper_ids": [
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 3,
+          "expected_tamper_ids": [
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 4,
+          "expected_tamper_ids": [
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 5,
+          "expected_tamper_ids": [
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 6,
+          "expected_tamper_ids": [
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 7,
+          "expected_tamper_ids": [
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223,
+            224,
+            225
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 8,
+          "expected_tamper_ids": [
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 9,
+          "expected_tamper_ids": [
+            240,
+            241,
+            242,
+            243,
+            244,
+            245,
+            246,
+            247,
+            248,
+            249
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        }
+      ]
+    },
+    "lost_ack_retry": {
+      "retried": true,
+      "queue_drained": true,
+      "receiver_ids_unique": true
+    },
+    "latch_jam": {
+      "blocked_lock_fault": true,
+      "blocked_unlock_fault": true,
+      "measured_recovery": true,
+      "recovered_to_secured": true
+    },
+    "access_security": {
+      "trials": 30,
+      "categories": {
+        "invalid": 6,
+        "expired": 6,
+        "reused": 6,
+        "wrong_role": 6,
+        "replay": 6
+      },
+      "unauthorized_unlocks": 0,
+      "details": [
+        {
+          "category": "invalid",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "expired",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "reused",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "replay",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        }
+      ]
+    },
+    "cooldown": {
+      "five_failures_pause_60s": true,
+      "valid_code_blocked_during_pause": true,
+      "valid_code_works_after_pause": true
+    },
+    "access_timeout": {
+      "auto_closed_and_secured": true
+    }
+  },
+  "runner_error": null,
+  "simulation_time_s": 620.48,
+  "timestep_ms": 32
+}

@@ -1,0 +1,72 @@
+{
+  "parcel_detection": {
+    "correct": 50,
+    "trials": 50,
+    "target": 48
+  },
+  "classification": {
+    "macro_f1": 1.0,
+    "per_class_f1": {
+      "benign_motion": 1.0,
+      "delivery": 1.0,
+      "retrieval": 1.0,
+      "tamper": 1.0
+    },
+    "confusion_matrix": {
+      "benign_motion": {
+        "benign_motion": 15,
+        "delivery": 0,
+        "retrieval": 0,
+        "tamper": 0
+      },
+      "delivery": {
+        "benign_motion": 0,
+        "delivery": 15,
+        "retrieval": 0,
+        "tamper": 0
+      },
+      "retrieval": {
+        "benign_motion": 0,
+        "delivery": 0,
+        "retrieval": 15,
+        "tamper": 0
+      },
+      "tamper": {
+        "benign_motion": 0,
+        "delivery": 0,
+        "retrieval": 0,
+        "tamper": 15
+      }
+    },
+    "motion_only_macro_f1": 0.1,
+    "trials": 60,
+    "target": 0.9
+  },
+  "false_alarms": {
+    "count": 0,
+    "non_tamper_trials": 45,
+    "rate": 0.0,
+    "target_max": 0.05
+  },
+  "alert_generation": {
+    "within_1s": 30,
+    "trials": 30,
+    "target": 29
+  },
+  "connection_recovery": {
+    "outages": 10,
+    "events_during_outages": 100,
+    "all_recovered_once": true
+  },
+  "access": {
+    "invalid_requests": 30,
+    "unauthorized_unlocks": 0,
+    "expired_code_rejected": true,
+    "reused_code_rejected": true,
+    "replay_rejected": true,
+    "one_minute_cooldown": true
+  },
+  "latch_fault_detected": true,
+  "closed_door_parcel_movement_flagged": true,
+  "passed": true
+}

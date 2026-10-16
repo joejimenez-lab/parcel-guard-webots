@@ -1,0 +1,212 @@
+{
+  "passed": true,
+  "checks": {
+    "delivery_recorded": true,
+    "retrieval_recorded": true,
+    "impact_alert_recorded": true,
+    "outage_and_recovery_recorded": true,
+    "queue_drained": true,
+    "delivered_exactly_once": true,
+    "final_door_closed": true,
+    "final_latch_locked": true,
+    "final_parcel_empty": true
+  },
+  "max_door_axis_accel_m_s2": 13.379,
+  "final_status": {
+    "session": "018246ad320c",
+    "time": 9.888,
+    "phase": "SECURED",
+    "secured": true,
+    "fault": false,
+    "door": "closed",
+    "latch": "locked",
+    "parcel": "empty",
+    "link": "online",
+    "grant": "none",
+    "entry_paused_s": 0,
+    "access_remaining_s": 0,
+    "courier_code_used": true,
+    "pending": 0,
+    "events": [
+      {
+        "session": "018246ad320c",
+        "id": 1,
+        "time": 0.384,
+        "kind": "access_granted",
+        "detail": "courier"
+      },
+      {
+        "session": "018246ad320c",
+        "id": 2,
+        "time": 1.856,
+        "kind": "delivery",
+        "detail": "parcel placed",
+        "sensor_time": 1.856,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "018246ad320c",
+        "id": 3,
+        "time": 3.84,
+        "kind": "link_lost",
+        "detail": ""
+      },
+      {
+        "session": "018246ad320c",
+        "id": 4,
+        "time": 4.224,
+        "kind": "tamper",
+        "detail": "impact detected",
+        "sensor_time": 4.224,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "018246ad320c",
+        "id": 5,
+        "time": 4.64,
+        "kind": "link_restored",
+        "detail": ""
+      },
+      {
+        "session": "018246ad320c",
+        "id": 6,
+        "time": 5.568,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "018246ad320c",
+        "id": 7,
+        "time": 7.04,
+        "kind": "retrieval",
+        "detail": "parcel removed",
+        "sensor_time": 7.04,
+        "queue_latency_s": 0.0
+      }
+    ],
+    "event_kinds": [
+      "access_granted",
+      "delivery",
+      "link_lost",
+      "tamper",
+      "link_restored",
+      "access_granted",
+      "retrieval"
+    ],
+    "all_events": [
+      {
+        "session": "018246ad320c",
+        "id": 1,
+        "time": 0.384,
+        "kind": "access_granted",
+        "detail": "courier"
+      },
+      {
+        "session": "018246ad320c",
+        "id": 2,
+        "time": 1.856,
+        "kind": "delivery",
+        "detail": "parcel placed",
+        "sensor_time": 1.856,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "018246ad320c",
+        "id": 3,
+        "time": 3.84,
+        "kind": "link_lost",
+        "detail": ""
+      },
+      {
+        "session": "018246ad320c",
+        "id": 4,
+        "time": 4.224,
+        "kind": "tamper",
+        "detail": "impact detected",
+        "sensor_time": 4.224,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "018246ad320c",
+        "id": 5,
+        "time": 4.64,
+        "kind": "link_restored",
+        "detail": ""
+      },
+      {
+        "session": "018246ad320c",
+        "id": 6,
+        "time": 5.568,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "018246ad320c",
+        "id": 7,
+        "time": 7.04,
+        "kind": "retrieval",
+        "detail": "parcel removed",
+        "sensor_time": 7.04,
+        "queue_latency_s": 0.0
+      }
+    ],
+    "delivered_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "pending_ids": [],
+    "latch_target": "locked",
+    "door_angle_rad": -0.0,
+    "latch_position_m": 0.08,
+    "parcel_distances_m": [
+      0.596,
+      0.5978,
+      0.6049,
+      0.6012,
+      0.5977,
+      0.603,
+      0.5993,
+      0.6039,
+      0.6019,
+      0.6,
+      0.6027,
+      0.6039,
+      0.5999,
+      0.5996,
+      0.6031,
+      0.5998,
+      0.6006,
+      0.6015,
+      0.6054,
+      0.6057,
+      0.5998,
+      0.5976,
+      0.5983,
+      0.6023,
+      0.5962
+    ],
+    "door_accel_m_s2": [
+      -0.0,
+      0.001,
+      9.81
+    ],
+    "last_access_result": true,
+    "malformed_commands": 0,
+    "motion_peak_m_s2": 9.810000000453849,
+    "endpoint_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "endpoint_duplicate_packets": 0
+  }
+}

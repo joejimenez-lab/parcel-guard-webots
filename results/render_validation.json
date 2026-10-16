@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "videos": [
+    {
+      "name": "Delivery Workflow",
+      "passed": true,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "1249",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "41.633333",
+          "size": "4074085"
+        }
+      },
+      "all_frames_decoded_without_errors": true
+    },
+    {
+      "name": "Security Recovery",
+      "passed": true,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "1633",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "54.433333",
+          "size": "5077245"
+        }
+      },
+      "all_frames_decoded_without_errors": true
+    }
+  ],
+  "preview_bytes": 6893906
+}

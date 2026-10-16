@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "videos": [
+    {
+      "name": "workflow",
+      "passed": true,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "nb_frames": "989"
+          }
+        ],
+        "format": {
+          "duration": "31.648000",
+          "size": "39864810"
+        }
+      }
+    },
+    {
+      "name": "resilience",
+      "passed": true,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "nb_frames": "1389"
+          }
+        ],
+        "format": {
+          "duration": "44.448000",
+          "size": "55823455"
+        }
+      }
+    }
+  ]
+}
