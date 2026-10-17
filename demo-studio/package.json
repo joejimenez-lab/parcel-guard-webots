@@ -1,6 +1,6 @@
 {
   "name": "demo-studio",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "description": "Parcel Guard demos using verified Webots footage and sensor telemetry",
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "upgrade": "remotion upgrade",
     "lint": "tsc --noEmit",
     "render:workflow": "remotion render src/index.ts DeliveryWorkflow \"../output/Parcel Guard - Delivery Workflow.mp4\"",
-    "render:recovery": "remotion render src/index.ts SecurityRecovery \"../output/Parcel Guard - Security Recovery.mp4\""
+    "render:recovery": "remotion render src/index.ts SecurityRecovery \"../output/Parcel Guard - Security Recovery.mp4\"",
+    "render:final": "remotion render src/index.ts FinalDemonstration \"../output/Parcel Guard - Final Demonstration.mp4\""
   }
 }

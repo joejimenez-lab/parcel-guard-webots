@@ -15,7 +15,7 @@ The source proposal is `output/Package Delivery Security Box - Final Proposal.pp
 | 15 sequences per class; macro F1 ≥0.90 | Four balanced classes | 1.00; `classification_trials.csv` |
 | False tamper alarm rate ≤5% across non-tamper cases | All 45 non-tamper cases in denominator | 0/45; final confusion matrix |
 | 100 complete cycles, ≥99 successful | Door opens only after bolt endpoint; closes before locking | 100/100; `motor_cycles.csv` |
-| Blocked latch → timeout/fault, never false secured | Zero motor force while keeping target command; two-second timeout | Both locking and unlocking directions; measured recovery |
+| Blocked latch → timeout/fault, never false secured | Zero motor force and applied brake while keeping target command; two-second timeout | Both locking and unlocking directions; measured recovery |
 | 30 sensor-event-to-queue latency tests, ≥29 <1s | Same-cycle local event insertion with sample timestamps | 30/30; `latency_trials.csv`; report explains discrete-time zero |
 | 10 outages ×10 events, all expected IDs once | Actual simulated endpoint ACK/retry/dedup; retained offline outbox | All 100 tamper IDs checked against endpoint; `outage_trials.csv` |
 | 30 access trials, zero unauthorized unlocks | 6 invalid, 6 expired, 6 reused, 6 wrong-role, 6 replay | `access_trials.csv`; resets prevent cooldown masking coverage |
@@ -40,7 +40,7 @@ The supplied assignment requires a class presentation and a paper submitted as a
 | Overall software engineering | Separation of policy and fixture, sensor processing, fault handling, event deduplication, reproducible tests |
 | Logical organization | Report contents and required section order; 14-slide progression with timed speaker notes |
 | English language | Edited report and slide text; spoken delivery remains the presenters' responsibility |
-| Presentation aids | Actual Webots images, editable DFD and result tables, two captioned local videos |
+| Presentation aids | Actual Webots images, editable DFD and result tables, a captioned final walkthrough and two class clips |
 | Audience interaction | Opening prompt, Q&A plan, and evidence-based answers in `docs/PRESENTATION_GUIDE.md`; live delivery remains the team's responsibility |
 | Audience and purpose | User/problem framing, explained metrics, stated simulation boundaries, readable quick start |
 | Clarity | Distinct delivery versus secured state; labeled units, denominators, fault reasons and timing definitions |

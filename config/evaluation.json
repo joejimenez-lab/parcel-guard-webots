@@ -1,5 +1,5 @@
 {
-  "version": "2.1",
+  "version": "2.2",
   "webots": "R2025a",
   "basic_time_step_ms": 32,
   "development_seed": 5650,

@@ -14,13 +14,14 @@ REPORTS = (
 )
 DOCUMENTS = (
     'README.md', 'SUBMISSION.md', 'DESIGN.md', 'REQUIREMENTS.md',
-    'docs/FINAL_REPORT.md', 'docs/SOFTWARE_REQUIREMENTS.md',
+    'docs/FINAL_REPORT.md', 'docs/parcel_guard_report.tex', 'docs/SOFTWARE_REQUIREMENTS.md',
     'docs/PRESENTATION_GUIDE.md', 'docs/USER_GUIDE.md',
     'output/pdf/Parcel Guard - Final Report.pdf',
     'output/pdf/Parcel Guard - Final Presentation.pdf',
     'output/submission/Parcel Guard - Final Presentation.pptx',
 )
 VIDEOS = (
+    'output/Parcel Guard - Final Demonstration.mp4',
     'output/Parcel Guard - Delivery Workflow.mp4',
     'output/Parcel Guard - Security Recovery.mp4',
 )
@@ -59,6 +60,8 @@ def verify(root):
     evaluation = reports['evaluation_manifest']
     hashes(evaluation['source_sha256'])
     hashes({f'results/{name}': value for name, value in evaluation['report_sha256'].items()})
+    if reports['portability_validation'].get('source_sha256') != evaluation['source_sha256']:
+        raise ValueError('Relocation test refers to a different runtime source')
     checks.append('Source and evaluation reports match their saved hashes')
 
     submission = reports['submission_validation']
@@ -81,7 +84,7 @@ def verify(root):
         if not item or item.get('passed') is not True or not item.get('all_frames_decoded_without_errors'):
             raise ValueError(f'Video has no successful full-frame validation: {name}')
         hashes({name: item['sha256']})
-    checks.append('Both finished videos are validated; raw recordings are included')
+    checks.append('All three finished videos are validated; raw recordings are included')
 
     file('output/Package Delivery Security Box - Final Proposal.pptx')
     file('worlds/delivery_box.wbt')

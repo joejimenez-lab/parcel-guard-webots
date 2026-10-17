@@ -17,7 +17,7 @@
   },
   "runner_error": null,
   "final_status": {
-    "session": "39235005b689",
+    "session": "859088375ae4",
     "time": 29.28,
     "phase": "SECURED",
     "secured": true,
@@ -34,7 +34,7 @@
     "pending": 0,
     "events": [
       {
-        "session": "39235005b689",
+        "session": "859088375ae4",
         "id": 1,
         "time": 26.656,
         "kind": "access_granted",
@@ -46,7 +46,7 @@
     ],
     "all_events": [
       {
-        "session": "39235005b689",
+        "session": "859088375ae4",
         "id": 1,
         "time": 26.656,
         "kind": "access_granted",
@@ -94,7 +94,7 @@
     ],
     "last_access_result": true,
     "malformed_commands": 3,
-    "motion_peak_m_s2": 9.809999999851975,
+    "motion_peak_m_s2": 9.809999999809039,
     "endpoint_ids": [
       1
     ],

@@ -6,18 +6,18 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'output'
 reports=[]
-for mode,title,expected in [('workflow','Delivery Workflow',1249),('resilience','Security Recovery',1633)]:
+for mode,title,expected in [('workflow','Delivery Workflow',1249),('resilience','Security Recovery',1633),('final','Final Demonstration',2822)]:
     p=OUT/f'Parcel Guard - {title}.mp4'
     info=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_name,width,height,nb_frames,r_frame_rate','-show_entries','format=duration,size','-of','json',str(p)],text=True))
     s=info['streams'][0]
     decoded=subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],capture_output=True,text=True)
-    ok=(s['codec_name']=='h264' and s['width']==1600 and s['height']==900 and int(s['nb_frames'])==expected
+    ok=(s['codec_name']=='h264' and s['width']==1920 and s['height']==1080 and int(s['nb_frames'])==expected
         and s['r_frame_rate']=='30/1' and decoded.returncode==0 and not decoded.stderr.strip())
     reports.append({'name':title,'passed':ok,'path':str(p.relative_to(ROOT)),
                     'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'metadata':info,
                     'all_frames_decoded_without_errors':decoded.returncode==0 and not decoded.stderr.strip()})
-    poster=OUT/f"Parcel Guard {'Workflow' if mode=='workflow' else 'Recovery'} Poster.jpg"
-    subprocess.run(['ffmpeg','-v','error','-ss','11.7' if mode=='workflow' else '38','-i',str(p),'-frames:v','1','-q:v','2','-y',str(poster)],check=True)
+    poster=OUT/f"Parcel Guard {'Workflow' if mode=='workflow' else 'Recovery' if mode=='resilience' else 'Final'} Poster.jpg"
+    subprocess.run(['ffmpeg','-v','error','-ss','11.7' if mode=='workflow' else '38' if mode=='resilience' else '12.7','-i',str(p),'-frames:v','1','-q:v','2','-y',str(poster)],check=True)
     print(f'{title}: {info["format"]["duration"]} s, {s["nb_frames"]} frames, validated',flush=True)
 if not all(r['passed'] for r in reports):raise SystemExit('An exported video did not validate')
 gif=OUT/'Parcel Guard Preview.gif'

@@ -1,2 +1,2 @@
-export const palette = {bg:'#101c1e',panel:'#1b2b2d',ink:'#f0f5ef',muted:'#a5b8b0',mint:'#7ee1b9',amber:'#f5c274',red:'#ff8989'};
+export const palette = {bg:'#f3f1eb',panel:'#e9e7e0',ink:'#202828',muted:'#596462',mint:'#215f51',amber:'#96621a',red:'#a13535'};
 export const base = {background:palette.bg,color:palette.ink,fontFamily:'Arial, Helvetica, sans-serif'};

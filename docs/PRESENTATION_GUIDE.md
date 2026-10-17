@@ -40,7 +40,7 @@ For a live demonstration, open `worlds/delivery_box.wbt` and its Robot Window. U
 
 ## Questions to prepare for
 
-**Why is the reported queue delay zero?** The controller samples the event and inserts it into the outbox in the same simulation iteration. Sampling runs every 32 ms. The independent stimulus-to-observer measurement is at most 0.160 simulated seconds in the saved run. Real transport latency is outside that metric.
+**Why is the reported queue delay zero?** The controller samples the event and inserts it into the outbox in the same simulation iteration. Sampling runs every 32 ms. The independent stimulus-to-observer measurement is at most 0.224 simulated seconds in the saved run. Real transport latency is outside that metric.
 
 **Does 100% prove it works in the real world?** No. The cases are generated within a specified parcel envelope and the same scene families. We report the number of trials with each score. More varied shapes, disturbances, attackers and hardware would need new tests.
 
@@ -59,3 +59,7 @@ For a live demonstration, open `worlds/delivery_box.wbt` and its Robot Window. U
 **What changed during the review?** Expired authorization and early-close handling were corrected; sensor startup and gaps now require stable data; status JSON handles unavailable values; and physical hinge stops bound unpowered travel. A failed stop-placement experiment is retained in `results/hinge_contact_diagnostic.json`.
 
 Listen to the complete question, answer it directly, then show one relevant observation or test. If the evidence does not answer it, explain the test needed instead of guessing.
+
+## Complete walkthrough
+
+`output/Parcel Guard - Final Demonstration.mp4` combines both scenarios and the final evaluation summary in 94 seconds. It is captioned without narration. The two shorter clips remain timed to slides 8 and 12. The standalone paper source is `docs/parcel_guard_report.tex`.

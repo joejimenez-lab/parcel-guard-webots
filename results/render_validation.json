@@ -5,15 +5,15 @@
       "name": "Delivery Workflow",
       "passed": true,
       "path": "output/Parcel Guard - Delivery Workflow.mp4",
-      "sha256": "303ae2a62b4d7c1d0ef91f5fa667a186a30d7f4240a751328280171f1ceace67",
+      "sha256": "2934c46afeeabe80b61edfae6890e5f4d88dc9c812fd9524e1c6538abb7b4124",
       "metadata": {
         "programs": [],
         "stream_groups": [],
         "streams": [
           {
             "codec_name": "h264",
-            "width": 1600,
-            "height": 900,
+            "width": 1920,
+            "height": 1080,
             "r_frame_rate": "30/1",
             "nb_frames": "1249",
             "side_data_list": [
@@ -23,7 +23,7 @@
         ],
         "format": {
           "duration": "41.633333",
-          "size": "4090533"
+          "size": "4855228"
         }
       },
       "all_frames_decoded_without_errors": true
@@ -32,15 +32,15 @@
       "name": "Security Recovery",
       "passed": true,
       "path": "output/Parcel Guard - Security Recovery.mp4",
-      "sha256": "59c2d11c59b9551e4a686d011aa38ebedf59868ea1dcf33b0565016d8c53ec97",
+      "sha256": "059ecc86e9e71feaa493f5aed9f2f0241ef9a6abbf341f0ac48a185c202d626d",
       "metadata": {
         "programs": [],
         "stream_groups": [],
         "streams": [
           {
             "codec_name": "h264",
-            "width": 1600,
-            "height": 900,
+            "width": 1920,
+            "height": 1080,
             "r_frame_rate": "30/1",
             "nb_frames": "1633",
             "side_data_list": [
@@ -50,11 +50,38 @@
         ],
         "format": {
           "duration": "54.433333",
-          "size": "5087664"
+          "size": "6056343"
+        }
+      },
+      "all_frames_decoded_without_errors": true
+    },
+    {
+      "name": "Final Demonstration",
+      "passed": true,
+      "path": "output/Parcel Guard - Final Demonstration.mp4",
+      "sha256": "22be3676d3fb9a0f5f0ff8719f9064aead3b615004d7341a7e6c4fb4e45156a5",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "2822",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "94.066667",
+          "size": "10776137"
         }
       },
       "all_frames_decoded_without_errors": true
     }
   ],
-  "preview_bytes": 7117829
+  "preview_bytes": 5890110
 }

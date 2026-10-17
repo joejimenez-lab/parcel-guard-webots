@@ -1,4 +1,6 @@
 # Parcel Guard
+
+Repository reading companion. The canonical submission paper is [the standalone LaTeX source](parcel_guard_report.tex), exported as the [final report PDF](../output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf).
 ## Package Delivery Security Box
 
 CS 5650 · Final project · Webots simulation
@@ -13,21 +15,11 @@ A single-parcel lockbox with measured door and bolt feedback, temporary courier 
 
 **Project repository:** https://github.com/joejimenez-lab/parcel-guard-webots
 
-**Submission contents:** final report, presentation with speaker notes, Webots worlds and Python controllers, local Robot Window, reproducible tests, saved results, and two demonstration videos.
+**Submission contents:** final report, presentation with speaker notes, Webots worlds and Python controllers, local Robot Window, reproducible tests, saved results, and a complete captioned walkthrough and two short demonstration clips.
 
-<!-- page -->
 # Contents and abstract
 
-| Section | Page |
-|---|---:|
-| 1. Introduction and team responsibilities | 3 |
-| 2. Related works and technology choices | 4 |
-| 3. System architecture and data flow | 5 |
-| 3.1 Control logic and implementation | 6 |
-| 4. Evaluation method | 7 |
-| 4.1 Results and comparison | 8 |
-| 5. Conclusions, failures, and future work | 9 |
-| 6. References | 10 |
+The paper follows introduction and team responsibilities; related work; architecture and data flow; control design; evaluation method; results; conclusions; reproduction; and references. Its PDF contains an automatically generated table of contents.
 
 ## Abstract
 
@@ -41,7 +33,6 @@ Additional checks cover bolt faults in both directions, an obstructed door, acce
 
 Sections 4 and 5 explain what the numbers measure and where the tests stop. The JSON reports retain individual trials; CSV files support inspection without running Webots. `results/evaluation_manifest.json` binds the results to the evaluated source and configuration. The report date is a build date, not an assignment deadline.
 
-<!-- page -->
 # 1. Introduction
 
 ## Problem and intended users
@@ -69,7 +60,6 @@ The responsibilities below follow the allocation in the proposal. All three team
 
 The proposal organized work into modeling and sensor checks, controller/UI integration, and evaluation. The repository follows those boundaries in separate modules. The final handoff includes reproducible commands and saved evidence so another team member can repeat a test or explain a failure. The suggested presentation remains 13 minutes plus two minutes for questions.
 
-<!-- page -->
 # 2. Related works and technologies
 
 ## Existing approaches
@@ -96,7 +86,6 @@ The local HTML/JavaScript Robot Window reuses the bundled Webots bridge. The pro
 
 A motion-only alarm supplies a limited reference. It uses measured acceleration and door-angle range, but cannot identify delivery or retrieval without additional context. We therefore report both its four-class macro F1 and its non-tamper false alarms. It is deliberately a simple alarm rule, and its score should not be read as a benchmark against a trained classifier or commercial product.
 
-<!-- page -->
 # 3. System architecture
 
 ![Data-flow diagram](assets/data-flow.svg)
@@ -117,7 +106,6 @@ An event contains a session namespace, monotonic integer ID, simulation timestam
 
 The adapter retries pending batches of up to 16 every 0.25 simulated seconds. Duplicate packets receive acknowledgments without creating another endpoint entry. The JSONL export supports inspection, but the controller does not replay it on restart. The outbox, used-code state, and replay cache are volatile. A new policy session intentionally resets them and issues fresh demo credentials.
 
-<!-- page -->
 # 3.1 Control logic and implementation
 
 ## Sensor interpretation
@@ -140,13 +128,12 @@ The door is closed below 0.05 rad, open above 0.15 rad, and moving between those
 
 Courier code 2468 expires after 300 simulated seconds and is consumed when access is granted. Owner code 1357 expires after 86,400 seconds. Expiry uses an exclusive upper bound, so a request exactly at the deadline is rejected. Five failed credential attempts within 300 seconds pause entry for 60 seconds. Replay IDs are rejected even when a code is otherwise valid.
 
-A bolt target timeout is two seconds. A closing door has three seconds before a door fault. Physical hinge stops bound travel slightly beyond the motor's commanded range to avoid a stop fighting the normal closed target. Disabled motor force or torque provides repeatable actuator failure injection.
+A bolt target timeout is two seconds. A closing door has three seconds before a door fault. Physical hinge stops bound travel slightly beyond the motor's commanded range to avoid a stop fighting the normal closed target. The bolt moves with the door and has physical travel stops. Its failure fixture disables force and applies a brake so door motion cannot passively slide it into a false recovery. Door failures disable available torque.
 
 ## Event rules
 
 An empty-to-present transition during courier-authorized open-door handling creates a delivery event. A present-to-empty transition during owner access creates retrieval. An unexplained opening or parcel transition creates tamper. An acceleration-axis magnitude above 13 m/s2 outside approved handling and settling also creates tamper. A one-second refractory interval limits repeated impact alerts. Closure has a 0.7-second settling grace period. Benign motion is the evaluated sequence outcome when no delivery, retrieval, or tamper event occurs.
 
-<!-- page -->
 # 4. Evaluation method
 
 ## Reproducible setup
@@ -164,7 +151,7 @@ The seeds produce separate scenario realizations of the same test families. They
 | R5 | At least 29 of 30 alerts queued within 1 s | First sampled impact crossing to local queue insertion |
 | R6 | Recover all 100 offline events once | 10 outages, 10 distinct impact events per outage; inspect sender and receiver IDs |
 | R7 | Zero unauthorized unlocks in 30 attempts | Six each: invalid, expired, reused, wrong role, replayed ID |
-| R8 | Fault on blocked bolt, never false secured | Disable force in locking and unlocking directions; release and observe recovery |
+| R8 | Fault on blocked bolt, never false secured | Disable force and apply a brake in both directions; release and observe recovery |
 | R9 | Five wrong attempts trigger 60 s cooldown | Check a valid code during and after the pause |
 
 ## Scoring and timing
@@ -173,7 +160,6 @@ For each class, F1 equals 2TP / (2TP + FP + FN). Macro F1 is the unweighted aver
 
 The motion-only reference predicts tamper when measured acceleration exceeds 10.2 m/s2 or door angle varies by more than 0.05 rad. It has no role or parcel input. The queue-latency metric excludes device sampling delay before the first observation, endpoint transport, dashboard rendering, and wall-clock execution. A second timing value measures stimulus-to-observer delay to make that distinction visible.
 
-<!-- page -->
 # 4.1 Results and comparison
 
 | Measure | Observed result | Acceptance |
@@ -203,12 +189,11 @@ Both bolt-jam directions produced faults and recovered from measured feedback. T
 
 These finite tests do not prove an absence of defects. In particular, perfect scores on scripted scenes do not estimate performance across arbitrary parcel shapes, placements, users, weather, or attacks. The released JSON and CSV results make the tested cases inspectable.
 
-<!-- page -->
 # 5. Conclusions and future work
 
 ## What succeeded
 
-The delivered simulation completes courier delivery and owner retrieval using measured device feedback. It rejects the required invalid access categories, distinguishes the four tested sequence types, reports actuator faults, and recovers retained alerts after simulated outages. The two demo videos show actual Webots footage with status taken from the recording, and the full suite supplies the evidence beyond those selected examples.
+The delivered simulation completes courier delivery and owner retrieval using measured device feedback. It rejects the required invalid access categories, distinguishes the four tested sequence types, reports actuator faults, and recovers retained alerts after simulated outages. The demonstration videos show actual Webots footage with status taken from the recording, and the full suite supplies the evidence beyond those selected examples.
 
 The project applies modular design, deterministic state control, input validation, debouncing, hysteresis, timeout handling, and idempotent event processing. Separating policy from device access makes the failure cases easier to reproduce and explain. The UI keeps an event such as delivery separate from the later confirmation that the box is secured.
 
@@ -231,7 +216,6 @@ The event queue survives the simulated link going offline, but restarting a cont
 
 A next iteration should add persistent event and token state, deliberate stuck-at and biased-sensor trials, more varied benign disturbances, and adversarial handling during access. Hardware work would require a physical interlock, safe obstruction handling, secure credential provisioning, and tests of environmental and network behavior. Those additions need new acceptance criteria and cannot be inferred from the current simulation scores.
 
-<!-- page -->
 # 6. References
 
 [1] S. Wolfson, "Everything you need to know about Amazon Key In-Garage Delivery, an exclusive Prime member benefit," About Amazon, May 23, 2023, updated September 28, 2023. https://www.aboutamazon.com/news/amazon-prime/what-is-amazon-key-in-garage-delivery. Accessed October 17, 2026.
@@ -250,7 +234,7 @@ A next iteration should add persistent event and token state, deliberate stuck-a
 
 [8] CS 5650, "Final Report Guidelines and Format Recommendation" and "Software Engineering - Design, Implementation, and Evaluation, Oral and Written Communication" rubric, supplied assignment screenshots. Due date shown as TBD.
 
-[9] Parcel Guard project, evaluation configuration, source manifest, scenario results, and recorded telemetry, release 2.1. https://github.com/joejimenez-lab/parcel-guard-webots. Local evidence: `results/evaluation_manifest.json`, `results/REPORT.md`, and the associated JSON/CSV files.
+[9] Parcel Guard project, evaluation configuration, source manifest, scenario results, and recorded telemetry, release 2.2.0. https://github.com/joejimenez-lab/parcel-guard-webots. Local evidence: `results/evaluation_manifest.json`, `results/REPORT.md`, and the associated JSON/CSV files.
 
 ## Reproduction and demonstration
 

@@ -24,7 +24,7 @@ for x in (-.9,.9):
     for dx,dy,z,r in ((0,0,.4,.18),(-.09,.02,.44,.12),(.06,-.06,.51,.14)):
         planters += f'Transform {{ translation {x+dx} {.65+dy} {z} children [ Shape {{ appearance PBRAppearance {{ baseColor .23 .38 .28 roughness 1 }} geometry Sphere {{ radius {r} subdivision 2 }} }} ] }}'
 BASE = f'''#VRML_SIM R2025a utf8
-WorldInfo {{ basicTimeStep 32 randomSeed 42 title "Parcel Guard | Delivery Security Box" info ["Version 2.0" "One parcel; local simulation and simulated connectivity"] }}
+WorldInfo {{ basicTimeStep 32 randomSeed 42 title "Parcel Guard | Delivery Security Box" info ["Version 2.2" "One parcel; local simulation and simulated connectivity"] }}
 DEF CAMERA Viewpoint {{ orientation -0.186473 0.091566 0.978184 2.246021 position 1.7 -2.2 1.55 fieldOfView .62 }}
 Background {{ skyColor [.40 .48 .48] }}
 DirectionalLight {{ direction -.4 .5 -1 intensity 2 color 1 .96 .87 }}
@@ -54,14 +54,14 @@ DEF BOX Robot {{
      {keypad}
      {block((.59,-.047,0),(.038,.04,.15),'0.76 0.81 0.76',.8,.23)}
      {block((.10,-.024,.05),(.045,.01,.03),'0.39 0.83 0.71',.4,.3)}
+     SliderJoint {{
+      jointParameters JointParameters {{axis 1 0 0 position .08 minStop -.01 maxStop .09 dampingConstant 1}}
+      device [ LinearMotor {{name "latch_motor" minPosition 0 maxPosition .08 maxVelocity .16 maxForce 50}} PositionSensor {{name "latch_position"}} Brake {{name "latch_brake"}} ]
+      endPoint DEF BOLT Solid {{translation .59 -.045 0 children [Shape {{appearance PBRAppearance {{baseColor .93 .70 .30 metalness .7 roughness .25}} geometry Box {{size .12 .05 .045}}}}] name "bolt" boundingObject Box {{size .12 .05 .045}} physics Physics {{density -1 mass .1}}}}
+     }}
     ]
     name "door" boundingObject Transform {{ translation .35 0 0 children [Box {{ size .70 .035 .56 }}] }} physics Physics {{density -1 mass 1}}
    }}
-  }}
-  SliderJoint {{
-   jointParameters JointParameters {{axis 1 0 0 position .08}}
-   device [ LinearMotor {{name "latch_motor" minPosition 0 maxPosition .08 maxVelocity .16 maxForce 50}} PositionSensor {{name "latch_position"}} ]
-   endPoint Solid {{translation .24 -.345 0 children [Shape {{appearance PBRAppearance {{baseColor .93 .70 .30 metalness .7 roughness .25}} geometry Box {{size .12 .05 .045}}}}] name "bolt" boundingObject Box {{size .12 .05 .045}} physics Physics {{density -1 mass .1}}}}
   }}
  ]
  name "Parcel Guard" boundingObject Group {{ children [{collisions}] }}

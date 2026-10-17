@@ -12,6 +12,7 @@ robot = Robot()
 step_ms = int(robot.getBasicTimeStep())
 door_motor = robot.getDevice('door_motor')
 latch_motor = robot.getDevice('latch_motor')
+latch_brake = robot.getDevice('latch_brake')
 door_position = robot.getDevice('door_position')
 latch_position = robot.getDevice('latch_position')
 door_accel = robot.getDevice('door_accel')
@@ -68,6 +69,8 @@ def execute(command, now, trusted=False):
         forced_open = bool(command.get('open'))
     elif action == 'actuator_jam' and trusted:
         latch_motor.setAvailableForce(0 if command.get('jammed') else 50)
+        # Resist passive motion from the parent door while the bolt is blocked.
+        latch_brake.setDampingConstant(10000 if command.get('jammed') else 0)
     elif action == 'door_jam' and trusted:
         door_motor.setAvailableTorque(0 if command.get('jammed') else 20)
     elif action == 'reset_logic':
@@ -78,6 +81,7 @@ def execute(command, now, trusted=False):
         door_requested_open = forced_open = False
         last_access_result = None
         latch_motor.setAvailableForce(50)
+        latch_brake.setDampingConstant(0)
         door_motor.setAvailableTorque(20)
         logged = 0
     elif action in ('parcel_in', 'parcel_out', 'impact', 'force_open', 'jam_latch', 'release_latch', 'jam_door', 'release_door', 'drop_acks', 'reset'):

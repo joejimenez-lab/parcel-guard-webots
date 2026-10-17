@@ -1,0 +1,9 @@
+{
+  "presence": "50 / 50",
+  "f1": "1.00",
+  "falseAlarms": "0 / 45",
+  "cycles": "100 / 100",
+  "unauthorized": "0 / 30",
+  "recovered": "100 / 100",
+  "observer": "0.224"
+}

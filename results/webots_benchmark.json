@@ -815,246 +815,246 @@
       "median_s": 0.0,
       "p95_s": 0.0,
       "max_s": 0.0,
-      "max_stimulus_to_observer_s": 0.16,
+      "max_stimulus_to_observer_s": 0.224,
       "definition": "First sampled impact threshold crossing to synchronous local outbox insertion; simulated time; excludes transport/rendering",
       "details": [
         {
           "trial": 0,
           "event_id": 103,
-          "sensor_sample_s": 279.936,
-          "queued_s": 279.936,
+          "sensor_sample_s": 279.968,
+          "queued_s": 279.968,
           "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.128
+          "stimulus_to_observer_s": 0.224
         },
         {
           "trial": 1,
           "event_id": 104,
-          "sensor_sample_s": 281.344,
-          "queued_s": 281.344,
+          "sensor_sample_s": 281.472,
+          "queued_s": 281.472,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 2,
           "event_id": 105,
-          "sensor_sample_s": 282.784,
-          "queued_s": 282.784,
+          "sensor_sample_s": 282.912,
+          "queued_s": 282.912,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 3,
           "event_id": 106,
-          "sensor_sample_s": 284.224,
-          "queued_s": 284.224,
+          "sensor_sample_s": 284.352,
+          "queued_s": 284.352,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 4,
           "event_id": 107,
-          "sensor_sample_s": 285.664,
-          "queued_s": 285.664,
+          "sensor_sample_s": 285.792,
+          "queued_s": 285.792,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 5,
           "event_id": 108,
-          "sensor_sample_s": 287.104,
-          "queued_s": 287.104,
+          "sensor_sample_s": 287.232,
+          "queued_s": 287.232,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 6,
           "event_id": 109,
-          "sensor_sample_s": 288.544,
-          "queued_s": 288.544,
+          "sensor_sample_s": 288.672,
+          "queued_s": 288.672,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 7,
           "event_id": 110,
-          "sensor_sample_s": 289.984,
-          "queued_s": 289.984,
+          "sensor_sample_s": 290.112,
+          "queued_s": 290.112,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 8,
           "event_id": 111,
-          "sensor_sample_s": 291.424,
-          "queued_s": 291.424,
+          "sensor_sample_s": 291.552,
+          "queued_s": 291.552,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 9,
           "event_id": 112,
-          "sensor_sample_s": 292.864,
-          "queued_s": 292.864,
+          "sensor_sample_s": 292.992,
+          "queued_s": 292.992,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 10,
           "event_id": 113,
-          "sensor_sample_s": 294.304,
-          "queued_s": 294.304,
+          "sensor_sample_s": 294.432,
+          "queued_s": 294.432,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 11,
           "event_id": 114,
-          "sensor_sample_s": 295.744,
-          "queued_s": 295.744,
+          "sensor_sample_s": 295.872,
+          "queued_s": 295.872,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 12,
           "event_id": 115,
-          "sensor_sample_s": 297.184,
-          "queued_s": 297.184,
+          "sensor_sample_s": 297.312,
+          "queued_s": 297.312,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 13,
           "event_id": 116,
-          "sensor_sample_s": 298.624,
-          "queued_s": 298.624,
+          "sensor_sample_s": 298.752,
+          "queued_s": 298.752,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 14,
           "event_id": 117,
-          "sensor_sample_s": 300.064,
-          "queued_s": 300.064,
+          "sensor_sample_s": 300.192,
+          "queued_s": 300.192,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 15,
           "event_id": 118,
-          "sensor_sample_s": 301.504,
-          "queued_s": 301.504,
+          "sensor_sample_s": 301.632,
+          "queued_s": 301.632,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 16,
           "event_id": 119,
-          "sensor_sample_s": 302.944,
-          "queued_s": 302.944,
+          "sensor_sample_s": 303.072,
+          "queued_s": 303.072,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 17,
           "event_id": 120,
-          "sensor_sample_s": 304.384,
-          "queued_s": 304.384,
+          "sensor_sample_s": 304.512,
+          "queued_s": 304.512,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 18,
           "event_id": 121,
-          "sensor_sample_s": 305.824,
-          "queued_s": 305.824,
+          "sensor_sample_s": 305.952,
+          "queued_s": 305.952,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 19,
           "event_id": 122,
-          "sensor_sample_s": 307.264,
-          "queued_s": 307.264,
+          "sensor_sample_s": 307.392,
+          "queued_s": 307.392,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 20,
           "event_id": 123,
-          "sensor_sample_s": 308.704,
-          "queued_s": 308.704,
+          "sensor_sample_s": 308.832,
+          "queued_s": 308.832,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 21,
           "event_id": 124,
-          "sensor_sample_s": 310.144,
-          "queued_s": 310.144,
+          "sensor_sample_s": 310.272,
+          "queued_s": 310.272,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 22,
           "event_id": 125,
-          "sensor_sample_s": 311.584,
-          "queued_s": 311.584,
+          "sensor_sample_s": 311.712,
+          "queued_s": 311.712,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 23,
           "event_id": 126,
-          "sensor_sample_s": 313.024,
-          "queued_s": 313.024,
+          "sensor_sample_s": 313.152,
+          "queued_s": 313.152,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 24,
           "event_id": 127,
-          "sensor_sample_s": 314.464,
-          "queued_s": 314.464,
+          "sensor_sample_s": 314.592,
+          "queued_s": 314.592,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 25,
           "event_id": 128,
-          "sensor_sample_s": 315.904,
-          "queued_s": 315.904,
+          "sensor_sample_s": 316.032,
+          "queued_s": 316.032,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 26,
           "event_id": 129,
-          "sensor_sample_s": 317.344,
-          "queued_s": 317.344,
+          "sensor_sample_s": 317.472,
+          "queued_s": 317.472,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 27,
           "event_id": 130,
-          "sensor_sample_s": 318.784,
-          "queued_s": 318.784,
+          "sensor_sample_s": 318.912,
+          "queued_s": 318.912,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 28,
           "event_id": 131,
-          "sensor_sample_s": 320.224,
-          "queued_s": 320.224,
+          "sensor_sample_s": 320.352,
+          "queued_s": 320.352,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
           "trial": 29,
           "event_id": 132,
-          "sensor_sample_s": 321.664,
-          "queued_s": 321.664,
+          "sensor_sample_s": 321.792,
+          "queued_s": 321.792,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         }
@@ -1083,7 +1083,7 @@
           ],
           "retained_offline": true,
           "recovered_once": true,
-          "reconnect_drain_s": 0.352
+          "reconnect_drain_s": 0.256
         },
         {
           "outage": 1,
@@ -1523,6 +1523,6 @@
     }
   },
   "runner_error": null,
-  "simulation_time_s": 620.48,
+  "simulation_time_s": 620.192,
   "timestep_ms": 32
 }

@@ -12,4 +12,4 @@ The editable video project uses Remotion, React and related npm packages. Exact 
 
 The Python controller and evaluation scripts require the Python standard library plus Webots' bundled controller API.
 
-The optional dashboard test uses jsdom under the MIT license. Report generation uses ReportLab under its BSD license. These packages are needed only to rebuild or check the accompanying materials.
+The optional dashboard test uses jsdom under the MIT license. The paper uses LaTeX and Latin Modern fonts, with TikZ vector diagrams. Its build script supports Tectonic or a TeX distribution. These packages are needed only to rebuild or check the accompanying materials.

@@ -1,6 +1,7 @@
 """Copy verified raw footage and export only recorded telemetry for video overlays."""
 import json
 import shutil
+import subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'demo-studio/public';PUBLIC.mkdir(exist_ok=True)
@@ -19,3 +20,14 @@ for name in ('workflow','resilience'):
 for name in ('webots_classification','webots_sensor_trials','webots_benchmark'):
     shutil.copy2(ROOT/'results'/f'{name}.json',PUBLIC/f'{name}.json')
 print('Prepared verified footage and synchronized telemetry')
+
+benchmark=json.loads((PUBLIC/'webots_benchmark.json').read_text())['checks']
+classification=json.loads((PUBLIC/'webots_classification.json').read_text())
+sensor=json.loads((PUBLIC/'webots_sensor_trials.json').read_text())
+summary={'presence':f"{sensor['correct']} / 50", 'f1':f"{classification['macro_f1']:.2f}",
+         'falseAlarms':f"{classification['false_alarms']} / 45", 'cycles':f"{benchmark['motor_cycles']['successful']} / 100",
+         'unauthorized':f"{benchmark['access_security']['unauthorized_unlocks']} / 30", 'recovered':f"{benchmark['connection_recovery']['recovered_events']} / 100",
+         'observer':f"{benchmark['alert_latency']['max_stimulus_to_observer_s']:.3f}"}
+(PUBLIC/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+
+subprocess.run(['ffmpeg','-v','error','-ss','8','-i',str(PUBLIC/'workflow.mp4'),'-frames:v','1','-q:v','2','-y',str(PUBLIC/'cover.jpg')],check=True)

@@ -41,7 +41,8 @@ class Harness:
 
     def require(self, predicate, message, limit=200):
         if not self.wait(predicate, limit):
-            raise RuntimeError(message)
+            state = {k: self.latest.get(k) for k in ('phase', 'door_angle_rad', 'latch_position_m', 'fault_reason', 'grant', 'secured')} if self.latest else None
+            raise RuntimeError(f'{message}; final measured state: {state}')
 
     def reset(self, **data):
         previous_session = self.latest['session'] if self.latest else None

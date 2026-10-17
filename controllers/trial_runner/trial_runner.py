@@ -28,6 +28,10 @@ schedule = {
 
 last = None
 max_accel = 0.0
+open_samples = 0
+bolt_orientation_error = 0.0
+door_node = robot.getFromDef('DOOR')
+bolt_node = robot.getFromDef('BOLT')
 for frame in range(310):
     if robot.step(step_ms) == -1:
         break
@@ -38,6 +42,10 @@ for frame in range(310):
         last = json.loads(receiver.getString())
         max_accel = max(max_accel, max(abs(value) for value in last.get("door_accel_m_s2", [0])))
         receiver.nextPacket()
+    if last and last['door_angle_rad'] > 1.0:
+        open_samples += 1
+        bolt_orientation_error = max(bolt_orientation_error, max(
+            abs(a - b) for a, b in zip(door_node.getOrientation(), bolt_node.getOrientation())))
 
 checks = {}
 if last:
@@ -52,11 +60,13 @@ if last:
         "final_door_closed": last["door"] == "closed",
         "final_latch_locked": last["latch"] == "locked",
         "final_parcel_empty": last["parcel"] == "empty",
+        "bolt_follows_open_door": open_samples >= 5 and bolt_orientation_error < 0.001,
     }
 else:
     checks = {"received_status": False}
 
 report = {"passed": all(checks.values()), "checks": checks, "max_door_axis_accel_m_s2": max_accel,
+          "open_door_samples": open_samples, "max_bolt_orientation_error": bolt_orientation_error,
           "final_status": last}
 path = Path(__file__).resolve().parents[2] / "results" / "webots_smoke.json"
 path.parent.mkdir(exist_ok=True)

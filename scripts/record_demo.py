@@ -18,7 +18,7 @@ def main():
         path=ROOT/'output/raw'/f'{name}.mp4'
         probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_name,width,height,nb_frames','-show_entries','format=duration,size','-of','json',str(path)],text=True))
         s=probe['streams'][0]
-        valid=s['codec_name']=='h264' and s['width']==1280 and s['height']==720 and int(s['nb_frames'])>900
+        valid=s['codec_name']=='h264' and s['width']==1920 and s['height']==1080 and int(s['nb_frames'])>900
         reports.append({'name':name,'passed':valid,'metadata':probe})
         print(f'{name}: encoded and scenario assertions passed',flush=True)
     (ROOT/'results/video_validation.json').write_text(json.dumps({'passed':all(r['passed'] for r in reports),'videos':reports},indent=2))

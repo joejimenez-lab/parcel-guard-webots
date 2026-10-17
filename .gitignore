@@ -23,6 +23,8 @@ node_modules/
 # Publish selected delivery assets only; full archives are release downloads
 /*.pptx
 /output/*
+!/output/Parcel Guard - Final Demonstration.mp4
+!/output/Parcel Guard Final Poster.jpg
 !/output/Parcel Guard - Delivery Workflow.mp4
 !/output/Parcel Guard - Security Recovery.mp4
 !/output/Parcel Guard Preview.gif

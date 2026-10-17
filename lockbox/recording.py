@@ -31,7 +31,7 @@ def record(name, frames, schedule, chapters, verify):
     for frame in range(frames):
         h.step()
         if frame==8:
-            h.robot.movieStartRecording(str(video),1280,720,0,90,1,False)
+            h.robot.movieStartRecording(str(video),1920,1080,0,90,1,False)
             recording_started=h.robot.getTime()
         if frame in schedule:
             action,data=schedule[frame]

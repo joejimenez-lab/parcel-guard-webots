@@ -13,7 +13,7 @@ flowchart LR
     C -->|Channel 2 / WWI| G[Local control room + test observers]
     G -->|Access / close| C
     G -->|Scene commands, channel 3| H[Independent Supervisor fixture]
-    H --> I[Parcel placement / impact / motor-force disable]
+    H --> I[Parcel placement / impact / actuator fault injection]
 ```
 
 The lockbox is an ordinary `Robot`, instantiated with `controller.Robot`. It cannot call Supervisor scene APIs or inspect parcel positions. Only the fixture and ground-truth scenario runners are Supervisors. The fixture creates stimuli and acknowledges events; it does not classify delivery, retrieval or tamper.
@@ -78,7 +78,7 @@ The queue and replay cache are in memory. `runtime_events.jsonl` is an audit exp
 
 ## Actuator faults
 
-Bolt targets continue to be commanded in jam tests while available motor force is zero. If the measured target is not reached after two seconds, `latch_fault` is emitted and `secured` is false even if the door is closed. Releasing the fixture obstruction restores available force. The fault clears and emits `latch_recovered` only when position feedback reaches the requested endpoint.
+Bolt targets continue to be commanded in jam tests while available motor force is zero and a Brake resists passive slider motion. The slider is attached to the door and has physical stops beyond its commanded endpoints. If the measured target is not reached after two seconds, `latch_fault` is emitted and `secured` is false even if the door is closed. Releasing the fixture obstruction removes the brake and restores available force. The fault clears and emits `latch_recovered` only when position feedback reaches the requested endpoint.
 
 The hinge has physical stops at -0.02 and 1.40 rad with damping 0.1; motor commands remain between 0 and 1.35 rad. The stop margin avoids numerical contact at the normal closed target. A zero-angle stop produced false impacts in a retained failed development diagnostic.
 

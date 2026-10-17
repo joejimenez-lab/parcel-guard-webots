@@ -9,10 +9,10 @@ Parcel Guard simulates a package-delivery security box in Webots. A Python contr
 ## Submission files
 
 - [What to upload and how to prepare for class](SUBMISSION.md)
-- [Final report PDF](output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf) and [editable text](docs/FINAL_REPORT.md)
+- [Final report PDF](output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf) and [editable LaTeX source](docs/parcel_guard_report.tex)
 - [Final presentation](output/submission/Parcel%20Guard%20-%20Final%20Presentation.pptx), [PDF copy](output/pdf/Parcel%20Guard%20-%20Final%20Presentation.pdf), and [speaker guide](docs/PRESENTATION_GUIDE.md)
 - [Rubric and proposal coverage](REQUIREMENTS.md), [user guide](docs/USER_GUIDE.md), and [test results](results/REPORT.md)
-- [Complete project ZIP](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest), including both videos and raw recordings
+- [Complete project ZIP](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest), including the final walkthrough, two class clips, and raw recordings
 
 The final materials retain Joshua Guico, Joe Jimenez, and Brandon Lopez for CS 5650. Team responsibilities and the suggested 13-minute presentation plus two-minute Q&A follow the proposal.
 
@@ -30,10 +30,12 @@ The courier code is single-use and expires 300 simulated seconds after issuance.
 
 - Click **Disconnect link**, then **Impact** (space repeated impacts by >1 simulated second). Watch the queue grow. **Restore link** drains it only after endpoint ACKs.
 - **Drop 3 ACKs** makes the endpoint receive retry packets while preserving unique event IDs.
-- Unlock as owner. Click **Block bolt**, then **Close and secure**. The door closes, the bolt remains retracted, and a fault appears after two seconds. **Release bolt** restores force; measured feedback must reach locked before the box reports secured.
+- Unlock as owner. Click **Block bolt**, then **Close and secure**. The door closes, the bolt remains retracted, and a fault appears after two seconds. **Release bolt** removes the brake and restores force; measured feedback must reach locked before the box reports secured.
 - Try the wrong purpose for a valid code, a redeemed courier code, or five incorrect entries. The log explains each denial; five wrong codes in five simulated minutes pause entry for one minute.
 
 ## Demo videos
+
+- [**Final Demonstration**](output/Parcel%20Guard%20-%20Final%20Demonstration.mp4) — 94-second complete walkthrough with captions and no narration.
 
 - [**Delivery Workflow**](output/Parcel%20Guard%20-%20Delivery%20Workflow.mp4) — 42-second courier delivery, used-code rejection, and owner retrieval.
 - [**Security Recovery**](output/Parcel%20Guard%20-%20Security%20Recovery.mp4) — 54-second access failures, offline alerts, lost-ACK retries, bolt fault, and recovery.
@@ -100,17 +102,18 @@ npm ci
 npm run lint
 npm run render:workflow
 npm run render:recovery
+npm run render:final
 ```
 
 After rendering, return to the project root and run `python3 scripts/finalize_media.py` to check every encoded frame and refresh posters.
 
-`npm run dev` opens editable video scenes. Every substantial scene is registered independently as well as in its complete video. The raw capture uses 1280×720 at 31.25 fps; final videos use 1600×900 at 30 fps.
+`npm run dev` opens editable video scenes. Every substantial scene is registered independently as well as in its complete video. The raw capture is 1920×1080 at 31.25 fps; final videos are 1920×1080 at 30 fps.
 
 ## Submission package
 
-The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and both finished demos. It excludes `node_modules`, caches, and temporary builds. Use this release asset for the complete handoff; GitHub's automatically generated source archive omits raw footage.
+The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and all three finished demos. It excludes `node_modules`, caches, and temporary builds. Use this release asset for the complete handoff; GitHub's automatically generated source archive omits raw footage.
 
-After extraction, run `python3 scripts/check_submission.py`. It uses only the Python standard library to verify the saved evidence, document/video hashes, raw-footage presence, and delivery manifest. It does not rerun the simulator. The release was also tested from a fresh extracted copy, including the full Webots suite and a clean npm installation; see `results/portability_validation.json`.
+After extraction, run `python3 scripts/check_submission.py`. It uses only the Python standard library to verify the saved evidence, document/video hashes, raw-footage presence, and delivery manifest. It does not rerun the simulator. The runtime was also tested from an isolated copy, including the full Webots suite and a clean npm installation; see `results/portability_validation.json`.
 
 Run `python3 scripts/package_project.py` to rebuild the unchanged delivery. If you rerun the evaluation or edit the documents, the saved submission hashes must be reviewed and refreshed before packaging. Keep a separate copy of the original release evidence when experimenting.
 
@@ -131,4 +134,4 @@ python3 scripts/finalize_media.py
 
 The dashboard also received a browser layout check at desktop and 390-pixel widths. DOM tests use recorded status and injected faults; the Webots runners exercise the controller and fixture.
 
-To rebuild the paper, install `reportlab` in your document-building Python environment and run `python3 scripts/build_submission.py`. The script fills `docs/report_source.md` from passing JSON results and writes the editable final text and PDF. Edit the PPTX directly to revise the slides. The included PDF slide copy is a rendered viewing copy.
+The paper is authored in standalone LaTeX, with embedded vector diagrams, numbered equations, tables, and references. Install Tectonic or a working TeX distribution, then run `python3 scripts/build_submission.py` (set `TEX_BIN` if necessary). The script refreshes numerical evidence in `docs/parcel_guard_report.tex` from passing reports and exports the final PDF. `docs/FINAL_REPORT.md` is a repository reading companion. Edit the PPTX directly to revise the slides. The included PDF slide copy is a rendered viewing copy.

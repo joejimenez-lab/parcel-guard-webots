@@ -42,7 +42,7 @@ The baseline predicts tamper if the recorded acceleration peak exceeds 10.2 m/sÂ
 
 ## Latency interpretation
 
-The local event queue is filled in the same Python iteration as the first sampled impact threshold crossing, so the measured sensor-to-queue delay is 0 simulated seconds in all 30 trials. This is a discrete-time scheduling result, not a claim of zero physical or network latency. Device sampling is 32 ms; dashboard/status publishing is 96 ms. The independent Supervisor observed the alert within 0.160 simulated seconds of sending each stimulus. Network and video rendering delays are excluded from the proposal latency metric.
+The local event queue is filled in the same Python iteration as the first sampled impact threshold crossing, so the measured sensor-to-queue delay is 0 simulated seconds in all 30 trials. This is a discrete-time scheduling result, not a claim of zero physical or network latency. Device sampling is 32 ms; dashboard/status publishing is 96 ms. The independent Supervisor observed the alert within 0.224 simulated seconds of sending each stimulus. Network and video rendering delays are excluded from the proposal latency metric.
 
 ## Additional failure checks
 

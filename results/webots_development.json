@@ -77,7 +77,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430638109517123,
+      "motion_peak_m_s2": 16.429756624925822,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -92,7 +92,7 @@
       ],
       "events": [
         {
-          "session": "b5499bdf3967",
+          "session": "b4a0359bdf95",
           "id": 1,
           "time": 1.312,
           "kind": "access_granted",
@@ -105,7 +105,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436531,
+      "motion_peak_m_s2": 16.42976213991981,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -120,14 +120,14 @@
       ],
       "events": [
         {
-          "session": "ec75b0bb1a1d",
+          "session": "935d8f96785f",
           "id": 1,
           "time": 5.824,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "ec75b0bb1a1d",
+          "session": "935d8f96785f",
           "id": 2,
           "time": 7.136,
           "kind": "delivery",
@@ -142,7 +142,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365336,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -157,7 +157,7 @@
       ],
       "events": [
         {
-          "session": "28f9ea2e4a70",
+          "session": "b53348b56e4e",
           "id": 1,
           "time": 10.336,
           "kind": "access_granted",
@@ -170,7 +170,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436533,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -185,14 +185,14 @@
       ],
       "events": [
         {
-          "session": "2583a811ccd5",
+          "session": "1d4d4c1b812d",
           "id": 1,
           "time": 14.848,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "2583a811ccd5",
+          "session": "1d4d4c1b812d",
           "id": 2,
           "time": 16.16,
           "kind": "delivery",
@@ -207,7 +207,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -222,14 +222,14 @@
       ],
       "events": [
         {
-          "session": "be054b7a14f5",
+          "session": "cbb0dbadd191",
           "id": 1,
           "time": 19.36,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "be054b7a14f5",
+          "session": "cbb0dbadd191",
           "id": 2,
           "time": 20.672,
           "kind": "retrieval",
@@ -244,7 +244,7 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 32.79362177741921,
+      "motion_peak_m_s2": 32.791539765515616,
       "door_angle_range_rad": 0.4319,
       "stimulus": "forced_door",
       "parcel_size_m": [
@@ -259,7 +259,7 @@
       ],
       "events": [
         {
-          "session": "a8caa5257b89",
+          "session": "4ac9e27cb2f9",
           "id": 1,
           "time": 23.968,
           "kind": "tamper",
@@ -268,7 +268,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "a8caa5257b89",
+          "session": "4ac9e27cb2f9",
           "id": 2,
           "time": 24.064,
           "kind": "tamper",
@@ -283,7 +283,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351387816,
+      "motion_peak_m_s2": 16.42976145192812,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -298,19 +298,19 @@
       ],
       "events": [
         {
-          "session": "09c5833048e5",
+          "session": "8d15198a7f34",
           "id": 1,
-          "time": 26.368,
+          "time": 26.272,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "09c5833048e5",
+          "session": "8d15198a7f34",
           "id": 2,
-          "time": 27.68,
+          "time": 27.584,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 27.68,
+          "sensor_time": 27.584,
           "queue_latency_s": 0.0
         }
       ]
@@ -320,7 +320,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919745,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -335,19 +335,19 @@
       ],
       "events": [
         {
-          "session": "c1bc0fc8b4e6",
+          "session": "2f18f7b01765",
           "id": 1,
-          "time": 30.88,
+          "time": 30.784,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "c1bc0fc8b4e6",
+          "session": "2f18f7b01765",
           "id": 2,
-          "time": 32.192,
+          "time": 32.096,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 32.192,
+          "sensor_time": 32.096,
           "queue_latency_s": 0.0
         }
       ]
@@ -357,8 +357,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.321622800389505,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243359,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.1975508552536421,
@@ -372,12 +372,12 @@
       ],
       "events": [
         {
-          "session": "6b8894ac6631",
+          "session": "85d911ab62be",
           "id": 1,
-          "time": 35.456,
+          "time": 35.392,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 35.456,
+          "sensor_time": 35.392,
           "queue_latency_s": 0.0
         }
       ]
@@ -387,7 +387,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430642918691124,
+      "motion_peak_m_s2": 16.42976213048251,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -402,19 +402,19 @@
       ],
       "events": [
         {
-          "session": "90397837fbc2",
+          "session": "a707eb57f6e9",
           "id": 1,
-          "time": 37.792,
+          "time": 37.696,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "90397837fbc2",
+          "session": "a707eb57f6e9",
           "id": 2,
-          "time": 39.104,
+          "time": 39.008,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 39.104,
+          "sensor_time": 39.008,
           "queue_latency_s": 0.0
         }
       ]
@@ -424,7 +424,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365304,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -439,19 +439,19 @@
       ],
       "events": [
         {
-          "session": "2e7b2e3d5e9b",
+          "session": "afdb9d22c22a",
           "id": 1,
-          "time": 42.304,
+          "time": 42.208,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "2e7b2e3d5e9b",
+          "session": "afdb9d22c22a",
           "id": 2,
-          "time": 43.616,
+          "time": 43.52,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 43.616,
+          "sensor_time": 43.52,
           "queue_latency_s": 0.0
         }
       ]
@@ -461,7 +461,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919756,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -476,19 +476,19 @@
       ],
       "events": [
         {
-          "session": "d590da5ba3a9",
+          "session": "ca3ec59e5a6e",
           "id": 1,
-          "time": 46.816,
+          "time": 46.72,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "d590da5ba3a9",
+          "session": "ca3ec59e5a6e",
           "id": 2,
-          "time": 48.128,
+          "time": 48.032,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 48.128,
+          "sensor_time": 48.032,
           "queue_latency_s": 0.0
         }
       ]
@@ -498,7 +498,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.42976213991976,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -513,19 +513,19 @@
       ],
       "events": [
         {
-          "session": "20d5b02b5dde",
+          "session": "b9a93d6bc7fa",
           "id": 1,
-          "time": 51.328,
+          "time": 51.232,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "20d5b02b5dde",
+          "session": "b9a93d6bc7fa",
           "id": 2,
-          "time": 52.64,
+          "time": 52.544,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 52.64,
+          "sensor_time": 52.544,
           "queue_latency_s": 0.0
         }
       ]
@@ -535,7 +535,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -550,19 +550,19 @@
       ],
       "events": [
         {
-          "session": "8be45e785acd",
+          "session": "d336d9dd59e0",
           "id": 1,
-          "time": 55.84,
+          "time": 55.744,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "8be45e785acd",
+          "session": "d336d9dd59e0",
           "id": 2,
-          "time": 57.152,
+          "time": 57.056,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 57.152,
+          "sensor_time": 57.056,
           "queue_latency_s": 0.0
         }
       ]
@@ -572,8 +572,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.3216228003895,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243359,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.15570626156162984,
@@ -587,12 +587,12 @@
       ],
       "events": [
         {
-          "session": "50573800ae3d",
+          "session": "84ea1e983827",
           "id": 1,
-          "time": 60.416,
+          "time": 60.352,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 60.416,
+          "sensor_time": 60.352,
           "queue_latency_s": 0.0
         }
       ]
@@ -602,7 +602,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43063811622477,
+      "motion_peak_m_s2": 16.429757328032256,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -617,9 +617,9 @@
       ],
       "events": [
         {
-          "session": "74947b68feb5",
+          "session": "e3f0de82e590",
           "id": 1,
-          "time": 62.752,
+          "time": 62.656,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -630,7 +630,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436531,
+      "motion_peak_m_s2": 16.429762139919777,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -645,19 +645,19 @@
       ],
       "events": [
         {
-          "session": "6fd11325004b",
+          "session": "5caa71c7c99f",
           "id": 1,
-          "time": 67.264,
+          "time": 67.168,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "6fd11325004b",
+          "session": "5caa71c7c99f",
           "id": 2,
-          "time": 68.576,
+          "time": 68.48,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 68.576,
+          "sensor_time": 68.48,
           "queue_latency_s": 0.0
         }
       ]
@@ -667,7 +667,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436533,
+      "motion_peak_m_s2": 16.429762139919763,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -682,19 +682,19 @@
       ],
       "events": [
         {
-          "session": "cff404390ccd",
+          "session": "a2b932aa0a51",
           "id": 1,
-          "time": 71.776,
+          "time": 71.68,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "cff404390ccd",
+          "session": "a2b932aa0a51",
           "id": 2,
-          "time": 73.088,
+          "time": 72.992,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 73.088,
+          "sensor_time": 72.992,
           "queue_latency_s": 0.0
         }
       ]
@@ -704,7 +704,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365336,
+      "motion_peak_m_s2": 16.42976213991976,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -719,19 +719,19 @@
       ],
       "events": [
         {
-          "session": "a12790fb599f",
+          "session": "0cf2a7e6d42c",
           "id": 1,
-          "time": 76.288,
+          "time": 76.192,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "a12790fb599f",
+          "session": "0cf2a7e6d42c",
           "id": 2,
-          "time": 77.6,
+          "time": 77.504,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 77.6,
+          "sensor_time": 77.504,
           "queue_latency_s": 0.0
         }
       ]
@@ -741,7 +741,7 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 32.79362177741924,
+      "motion_peak_m_s2": 32.79153976551558,
       "door_angle_range_rad": 0.4319,
       "stimulus": "forced_door",
       "parcel_size_m": [
@@ -756,21 +756,21 @@
       ],
       "events": [
         {
-          "session": "828dae28a69d",
+          "session": "e74dff74e653",
           "id": 1,
-          "time": 80.896,
+          "time": 80.8,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 80.896,
+          "sensor_time": 80.8,
           "queue_latency_s": 0.0
         },
         {
-          "session": "828dae28a69d",
+          "session": "e74dff74e653",
           "id": 2,
-          "time": 80.992,
+          "time": 80.896,
           "kind": "tamper",
           "detail": "door opened without approval",
-          "sensor_time": 80.992,
+          "sensor_time": 80.896,
           "queue_latency_s": 0.0
         }
       ]
@@ -780,8 +780,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.321623019054364,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.304383868913938,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.20679649363429406,
@@ -795,12 +795,12 @@
       ],
       "events": [
         {
-          "session": "050785f42712",
+          "session": "e7c43deb83f9",
           "id": 1,
-          "time": 83.36,
+          "time": 83.2,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 83.36,
+          "sensor_time": 83.2,
           "queue_latency_s": 0.0
         }
       ]
@@ -810,7 +810,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430638116224774,
+      "motion_peak_m_s2": 16.429757328044403,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -825,9 +825,9 @@
       ],
       "events": [
         {
-          "session": "ca65c22f9cac",
+          "session": "99e87b37c12d",
           "id": 1,
-          "time": 85.696,
+          "time": 85.504,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -838,7 +838,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436531,
+      "motion_peak_m_s2": 16.429762139919823,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -853,19 +853,19 @@
       ],
       "events": [
         {
-          "session": "3ff32f8c58bf",
+          "session": "182decfe8204",
           "id": 1,
-          "time": 90.208,
+          "time": 90.016,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "3ff32f8c58bf",
+          "session": "182decfe8204",
           "id": 2,
-          "time": 91.52,
+          "time": 91.328,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 91.52,
+          "sensor_time": 91.328,
           "queue_latency_s": 0.0
         }
       ]
@@ -875,7 +875,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.42976213991976,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -890,19 +890,19 @@
       ],
       "events": [
         {
-          "session": "bf15c4c1f07a",
+          "session": "27a60420d4c9",
           "id": 1,
-          "time": 94.72,
+          "time": 94.528,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "bf15c4c1f07a",
+          "session": "27a60420d4c9",
           "id": 2,
-          "time": 96.032,
+          "time": 95.84,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 96.032,
+          "sensor_time": 95.84,
           "queue_latency_s": 0.0
         }
       ]
@@ -912,8 +912,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.32162280038949,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243354,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.27452400579610753,
@@ -927,12 +927,12 @@
       ],
       "events": [
         {
-          "session": "ffd37d75e686",
+          "session": "80e6ac506901",
           "id": 1,
-          "time": 99.296,
+          "time": 99.136,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 99.296,
+          "sensor_time": 99.136,
           "queue_latency_s": 0.0
         }
       ]
@@ -942,7 +942,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430642918691124,
+      "motion_peak_m_s2": 16.42976213048251,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -957,19 +957,19 @@
       ],
       "events": [
         {
-          "session": "51d66e6a14cd",
+          "session": "8ca040328f90",
           "id": 1,
-          "time": 101.632,
+          "time": 101.44,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "51d66e6a14cd",
+          "session": "8ca040328f90",
           "id": 2,
-          "time": 102.944,
+          "time": 102.752,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 102.944,
+          "sensor_time": 102.752,
           "queue_latency_s": 0.0
         }
       ]
@@ -979,7 +979,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365304,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -994,9 +994,9 @@
       ],
       "events": [
         {
-          "session": "d45b6118171e",
+          "session": "07e73c661a98",
           "id": 1,
-          "time": 106.144,
+          "time": 105.952,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1007,7 +1007,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436533,
+      "motion_peak_m_s2": 16.429762139919756,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1022,19 +1022,19 @@
       ],
       "events": [
         {
-          "session": "fa9c421eaa09",
+          "session": "eeff2a941d37",
           "id": 1,
-          "time": 110.656,
+          "time": 110.464,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "fa9c421eaa09",
+          "session": "eeff2a941d37",
           "id": 2,
-          "time": 111.968,
+          "time": 111.776,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 111.968,
+          "sensor_time": 111.776,
           "queue_latency_s": 0.0
         }
       ]
@@ -1044,8 +1044,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.3216228003895,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243346,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.24440313316799545,
@@ -1059,12 +1059,12 @@
       ],
       "events": [
         {
-          "session": "9b3db3bc30fa",
+          "session": "ba78b72d870d",
           "id": 1,
-          "time": 115.232,
+          "time": 115.072,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 115.232,
+          "sensor_time": 115.072,
           "queue_latency_s": 0.0
         }
       ]
@@ -1074,7 +1074,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430642918691124,
+      "motion_peak_m_s2": 16.42976213048251,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1089,9 +1089,9 @@
       ],
       "events": [
         {
-          "session": "b2ce3995cce2",
+          "session": "3c020034b49e",
           "id": 1,
-          "time": 117.568,
+          "time": 117.376,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1102,8 +1102,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.32162280039083,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243354,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.1665256644233126,
@@ -1117,12 +1117,12 @@
       ],
       "events": [
         {
-          "session": "220a3c6a5a77",
+          "session": "344a7bbb2dc8",
           "id": 1,
-          "time": 122.144,
+          "time": 121.984,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 122.144,
+          "sensor_time": 121.984,
           "queue_latency_s": 0.0
         }
       ]
@@ -1132,7 +1132,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430642918691134,
+      "motion_peak_m_s2": 16.42976213048252,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1147,19 +1147,19 @@
       ],
       "events": [
         {
-          "session": "d7a31fe3faeb",
+          "session": "32a4bf4ac8cf",
           "id": 1,
-          "time": 124.48,
+          "time": 124.288,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "d7a31fe3faeb",
+          "session": "32a4bf4ac8cf",
           "id": 2,
-          "time": 125.792,
+          "time": 125.6,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 125.792,
+          "sensor_time": 125.6,
           "queue_latency_s": 0.0
         }
       ]
@@ -1169,7 +1169,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365304,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1184,19 +1184,19 @@
       ],
       "events": [
         {
-          "session": "c6918b6df7af",
+          "session": "8972e89fb9f1",
           "id": 1,
-          "time": 128.992,
+          "time": 128.8,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "c6918b6df7af",
+          "session": "8972e89fb9f1",
           "id": 2,
-          "time": 130.304,
+          "time": 130.112,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 130.304,
+          "sensor_time": 130.112,
           "queue_latency_s": 0.0
         }
       ]
@@ -1206,7 +1206,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436525,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1221,19 +1221,19 @@
       ],
       "events": [
         {
-          "session": "6eb78a27e29b",
+          "session": "a689be4454dd",
           "id": 1,
-          "time": 133.504,
+          "time": 133.312,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "6eb78a27e29b",
+          "session": "a689be4454dd",
           "id": 2,
-          "time": 134.816,
+          "time": 134.624,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 134.816,
+          "sensor_time": 134.624,
           "queue_latency_s": 0.0
         }
       ]
@@ -1243,7 +1243,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43064351436533,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1258,9 +1258,9 @@
       ],
       "events": [
         {
-          "session": "c3b30c54f8ea",
+          "session": "0baab47f198d",
           "id": 1,
-          "time": 138.016,
+          "time": 137.824,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1271,7 +1271,7 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 32.7936217774192,
+      "motion_peak_m_s2": 32.79153976551553,
       "door_angle_range_rad": 0.4319,
       "stimulus": "forced_door",
       "parcel_size_m": [
@@ -1286,21 +1286,21 @@
       ],
       "events": [
         {
-          "session": "3f2dfe3e7d62",
+          "session": "0079dfe738d0",
           "id": 1,
-          "time": 142.624,
+          "time": 142.432,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 142.624,
+          "sensor_time": 142.432,
           "queue_latency_s": 0.0
         },
         {
-          "session": "3f2dfe3e7d62",
+          "session": "0079dfe738d0",
           "id": 2,
-          "time": 142.72,
+          "time": 142.528,
           "kind": "tamper",
           "detail": "door opened without approval",
-          "sensor_time": 142.72,
+          "sensor_time": 142.528,
           "queue_latency_s": 0.0
         }
       ]
@@ -1310,7 +1310,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430638711410683,
+      "motion_peak_m_s2": 16.4297566494792,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1325,9 +1325,9 @@
       ],
       "events": [
         {
-          "session": "c1b2345e08d2",
+          "session": "49244ad7b6b7",
           "id": 1,
-          "time": 145.024,
+          "time": 144.736,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1338,7 +1338,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365304,
+      "motion_peak_m_s2": 16.42976213991981,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1353,19 +1353,19 @@
       ],
       "events": [
         {
-          "session": "871dab6b8542",
+          "session": "bf6b5550667f",
           "id": 1,
-          "time": 149.536,
+          "time": 149.248,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "871dab6b8542",
+          "session": "bf6b5550667f",
           "id": 2,
-          "time": 150.848,
+          "time": 150.56,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 150.848,
+          "sensor_time": 150.56,
           "queue_latency_s": 0.0
         }
       ]
@@ -1375,7 +1375,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1390,9 +1390,9 @@
       ],
       "events": [
         {
-          "session": "d88f106a268e",
+          "session": "ec4f58aede84",
           "id": 1,
-          "time": 154.048,
+          "time": 153.76,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1403,7 +1403,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365336,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1418,19 +1418,19 @@
       ],
       "events": [
         {
-          "session": "c6fd19791623",
+          "session": "2c45625aabbf",
           "id": 1,
-          "time": 158.56,
+          "time": 158.272,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "c6fd19791623",
+          "session": "2c45625aabbf",
           "id": 2,
-          "time": 159.872,
+          "time": 159.584,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 159.872,
+          "sensor_time": 159.584,
           "queue_latency_s": 0.0
         }
       ]
@@ -1440,7 +1440,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1455,9 +1455,9 @@
       ],
       "events": [
         {
-          "session": "f247688a963e",
+          "session": "429818d289bf",
           "id": 1,
-          "time": 163.072,
+          "time": 162.784,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1468,7 +1468,7 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 32.793621777419254,
+      "motion_peak_m_s2": 32.79153976551557,
       "door_angle_range_rad": 0.4319,
       "stimulus": "forced_door",
       "parcel_size_m": [
@@ -1483,21 +1483,21 @@
       ],
       "events": [
         {
-          "session": "55ab74c6a096",
+          "session": "382bab2cdb1f",
           "id": 1,
-          "time": 167.68,
+          "time": 167.392,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 167.68,
+          "sensor_time": 167.392,
           "queue_latency_s": 0.0
         },
         {
-          "session": "55ab74c6a096",
+          "session": "382bab2cdb1f",
           "id": 2,
-          "time": 167.776,
+          "time": 167.488,
           "kind": "tamper",
           "detail": "door opened without approval",
-          "sensor_time": 167.776,
+          "sensor_time": 167.488,
           "queue_latency_s": 0.0
         }
       ]
@@ -1507,7 +1507,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.43063871141068,
+      "motion_peak_m_s2": 16.429756649479174,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1522,9 +1522,9 @@
       ],
       "events": [
         {
-          "session": "0853e286b5cc",
+          "session": "17e7be1d8c5a",
           "id": 1,
-          "time": 170.08,
+          "time": 169.696,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1535,7 +1535,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365304,
+      "motion_peak_m_s2": 16.42976213991981,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1550,19 +1550,19 @@
       ],
       "events": [
         {
-          "session": "0ec64f30aaaa",
+          "session": "94b974ac621a",
           "id": 1,
-          "time": 174.592,
+          "time": 174.208,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "0ec64f30aaaa",
+          "session": "94b974ac621a",
           "id": 2,
-          "time": 175.904,
+          "time": 175.52,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 175.904,
+          "sensor_time": 175.52,
           "queue_latency_s": 0.0
         }
       ]
@@ -1572,8 +1572,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.321622800389395,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243355,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.28520435996802096,
@@ -1587,12 +1587,12 @@
       ],
       "events": [
         {
-          "session": "e5b0a9a6018e",
+          "session": "5f79a8a6e88d",
           "id": 1,
-          "time": 179.168,
+          "time": 178.816,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 179.168,
+          "sensor_time": 178.816,
           "queue_latency_s": 0.0
         }
       ]
@@ -1602,7 +1602,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430642918691124,
+      "motion_peak_m_s2": 16.42976213048251,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1617,19 +1617,19 @@
       ],
       "events": [
         {
-          "session": "213c77c92e2a",
+          "session": "952b86390869",
           "id": 1,
-          "time": 181.504,
+          "time": 181.12,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "213c77c92e2a",
+          "session": "952b86390869",
           "id": 2,
-          "time": 182.816,
+          "time": 182.432,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 182.816,
+          "sensor_time": 182.432,
           "queue_latency_s": 0.0
         }
       ]
@@ -1639,7 +1639,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365304,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1654,9 +1654,9 @@
       ],
       "events": [
         {
-          "session": "d04665f04000",
+          "session": "d03c7cfdc749",
           "id": 1,
-          "time": 186.016,
+          "time": 185.632,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1667,7 +1667,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365336,
+      "motion_peak_m_s2": 16.429762139919763,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1682,19 +1682,19 @@
       ],
       "events": [
         {
-          "session": "922591e60d2d",
+          "session": "f11206039ac4",
           "id": 1,
-          "time": 190.528,
+          "time": 190.144,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "922591e60d2d",
+          "session": "f11206039ac4",
           "id": 2,
-          "time": 191.84,
+          "time": 191.456,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 191.84,
+          "sensor_time": 191.456,
           "queue_latency_s": 0.0
         }
       ]
@@ -1704,7 +1704,7 @@
       "expected": "delivery",
       "predicted": "delivery",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1719,19 +1719,19 @@
       ],
       "events": [
         {
-          "session": "2299ff9586b7",
+          "session": "64efc4d72dba",
           "id": 1,
-          "time": 195.04,
+          "time": 194.656,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "2299ff9586b7",
+          "session": "64efc4d72dba",
           "id": 2,
-          "time": 196.352,
+          "time": 195.968,
           "kind": "delivery",
           "detail": "parcel placed",
-          "sensor_time": 196.352,
+          "sensor_time": 195.968,
           "queue_latency_s": 0.0
         }
       ]
@@ -1741,7 +1741,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365336,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1756,19 +1756,19 @@
       ],
       "events": [
         {
-          "session": "c8352283a005",
+          "session": "3897455a16f6",
           "id": 1,
-          "time": 199.552,
+          "time": 199.168,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "c8352283a005",
+          "session": "3897455a16f6",
           "id": 2,
-          "time": 200.864,
+          "time": 200.48,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 200.864,
+          "sensor_time": 200.48,
           "queue_latency_s": 0.0
         }
       ]
@@ -1778,8 +1778,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.321622800389495,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243354,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.27116925402786146,
@@ -1793,12 +1793,12 @@
       ],
       "events": [
         {
-          "session": "d0fb12314d47",
+          "session": "5ff0d791355d",
           "id": 1,
-          "time": 204.128,
+          "time": 203.776,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 204.128,
+          "sensor_time": 203.776,
           "queue_latency_s": 0.0
         }
       ]
@@ -1808,7 +1808,7 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 32.79362177626369,
+      "motion_peak_m_s2": 32.791539764595335,
       "door_angle_range_rad": 0.4319,
       "stimulus": "forced_door",
       "parcel_size_m": [
@@ -1823,21 +1823,21 @@
       ],
       "events": [
         {
-          "session": "d08413c03df9",
+          "session": "43903ab4f7e5",
           "id": 1,
-          "time": 206.56,
+          "time": 206.176,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 206.56,
+          "sensor_time": 206.176,
           "queue_latency_s": 0.0
         },
         {
-          "session": "d08413c03df9",
+          "session": "43903ab4f7e5",
           "id": 2,
-          "time": 206.656,
+          "time": 206.272,
           "kind": "tamper",
           "detail": "door opened without approval",
-          "sensor_time": 206.656,
+          "sensor_time": 206.272,
           "queue_latency_s": 0.0
         }
       ]
@@ -1847,7 +1847,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.4306435138765,
+      "motion_peak_m_s2": 16.42976145192806,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1862,19 +1862,19 @@
       ],
       "events": [
         {
-          "session": "fab56a93ad8e",
+          "session": "2dcdf3bb850e",
           "id": 1,
-          "time": 208.96,
+          "time": 208.48,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "fab56a93ad8e",
+          "session": "2dcdf3bb850e",
           "id": 2,
-          "time": 210.272,
+          "time": 209.792,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 210.272,
+          "sensor_time": 209.792,
           "queue_latency_s": 0.0
         }
       ]
@@ -1884,7 +1884,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919756,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1899,9 +1899,9 @@
       ],
       "events": [
         {
-          "session": "25596815249f",
+          "session": "5bf4c9813a38",
           "id": 1,
-          "time": 213.472,
+          "time": 212.992,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -1912,7 +1912,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1927,19 +1927,19 @@
       ],
       "events": [
         {
-          "session": "8c311b9dc7cb",
+          "session": "680d2159a131",
           "id": 1,
-          "time": 217.984,
+          "time": 217.504,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "8c311b9dc7cb",
+          "session": "680d2159a131",
           "id": 2,
-          "time": 219.296,
+          "time": 218.816,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 219.296,
+          "sensor_time": 218.816,
           "queue_latency_s": 0.0
         }
       ]
@@ -1949,7 +1949,7 @@
       "expected": "retrieval",
       "predicted": "retrieval",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365336,
+      "motion_peak_m_s2": 16.429762139919713,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -1964,19 +1964,19 @@
       ],
       "events": [
         {
-          "session": "5633e44489af",
+          "session": "173c6cdee93d",
           "id": 1,
-          "time": 222.496,
+          "time": 222.016,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5633e44489af",
+          "session": "173c6cdee93d",
           "id": 2,
-          "time": 223.808,
+          "time": 223.328,
           "kind": "retrieval",
           "detail": "parcel removed",
-          "sensor_time": 223.808,
+          "sensor_time": 223.328,
           "queue_latency_s": 0.0
         }
       ]
@@ -1986,8 +1986,8 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 17.321622800389488,
-      "door_angle_range_rad": 0.0177,
+      "motion_peak_m_s2": 14.306462580243359,
+      "door_angle_range_rad": 0.0146,
       "stimulus": "impact",
       "parcel_size_m": [
         0.1557833421156013,
@@ -2001,12 +2001,12 @@
       ],
       "events": [
         {
-          "session": "fa2c137681d2",
+          "session": "a2f8a17cf8ae",
           "id": 1,
-          "time": 227.072,
+          "time": 226.624,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 227.072,
+          "sensor_time": 226.624,
           "queue_latency_s": 0.0
         }
       ]
@@ -2016,7 +2016,7 @@
       "expected": "tamper",
       "predicted": "tamper",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 32.79362177626369,
+      "motion_peak_m_s2": 32.791539764595406,
       "door_angle_range_rad": 0.4319,
       "stimulus": "forced_door",
       "parcel_size_m": [
@@ -2031,21 +2031,21 @@
       ],
       "events": [
         {
-          "session": "cafad5d60bba",
+          "session": "be18f252c41a",
           "id": 1,
-          "time": 229.504,
+          "time": 229.024,
           "kind": "tamper",
           "detail": "impact detected",
-          "sensor_time": 229.504,
+          "sensor_time": 229.024,
           "queue_latency_s": 0.0
         },
         {
-          "session": "cafad5d60bba",
+          "session": "be18f252c41a",
           "id": 2,
-          "time": 229.6,
+          "time": 229.12,
           "kind": "tamper",
           "detail": "door opened without approval",
-          "sensor_time": 229.6,
+          "sensor_time": 229.12,
           "queue_latency_s": 0.0
         }
       ]
@@ -2055,7 +2055,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643513876426,
+      "motion_peak_m_s2": 16.42976145192806,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -2070,9 +2070,9 @@
       ],
       "events": [
         {
-          "session": "e615a6eabe5f",
+          "session": "d9ba70004166",
           "id": 1,
-          "time": 231.904,
+          "time": 231.328,
           "kind": "access_granted",
           "detail": "owner"
         }
@@ -2083,7 +2083,7 @@
       "expected": "benign_motion",
       "predicted": "benign_motion",
       "motion_only_prediction": "tamper",
-      "motion_peak_m_s2": 16.430643514365322,
+      "motion_peak_m_s2": 16.4297621399197,
       "door_angle_range_rad": 1.1993,
       "stimulus": "authorized_cycle",
       "parcel_size_m": [
@@ -2098,9 +2098,9 @@
       ],
       "events": [
         {
-          "session": "054e20ed961f",
+          "session": "7b388dc22479",
           "id": 1,
-          "time": 236.416,
+          "time": 235.84,
           "kind": "access_granted",
           "detail": "owner"
         }
