@@ -5,13 +5,13 @@
 - Webots R2025a and Python 3.10 or later.
 - The simulation and Python test suite need no pip dependencies.
 - Node.js 22+ is needed only for video editing and dashboard DOM tests. FFmpeg and ffprobe are needed for media checks and video production.
-- Rebuilding the final paper uses Python's `reportlab` package. The editable paper is `docs/FINAL_REPORT.md`; its data template is `docs/report_source.md`.
+- The editable paper is `docs/parcel_guard_report.tex`. Open it in a LaTeX editor; the repository build command requires Tectonic or a working TeX distribution. `docs/FINAL_REPORT.md` is a reading companion.
 
-Open `worlds/delivery_box.wbt`, select real-time speed, and open the Parcel Guard Robot Window. Start with the parcel outside. Courier code `2468` permits one delivery and expires after 300 simulated seconds. Owner code `1357` permits collection and expires after 86,400 seconds. The selected purpose must match the code.
+Open `worlds/delivery_box.wbt`, select real-time speed, and open the Parcel Guard Robot Window. Start with the parcel outside. Courier code `2468` permits one delivery and expires after 300 simulated seconds. Owner code `1357` permits one collection access and expires after 86,400 seconds. The selected purpose must match the code.
 
 ## Reading the panel
 
-`SECURED` requires valid readings, a closed door, a locked bolt, no active grant, and no fault. A delivery event confirms a sensor transition; the box may still be open. A moving bolt has reached neither endpoint. The queue count shows events awaiting acknowledgment, while the endpoint count shows unique receipts.
+`SECURED` requires valid readings, a closed door, a locked bolt, no active grant, and no fault. `parcel_detected` means the parcel arrived and delivery is pending. The `delivery` event is recorded only after measured closure and locking. A moving bolt has reached neither endpoint. The queue count shows events awaiting acknowledgment, while the endpoint count shows unique receipts.
 
 `New session` resets policy state and demo tokens. It does not move the parcel. Move the parcel outside first when preparing another delivery. Resetting the simulation also resets the scene. All expiry and cooldown periods use simulation time.
 
@@ -19,7 +19,7 @@ Open `worlds/delivery_box.wbt`, select real-time speed, and open the Parcel Guar
 
 | Symptom | Meaning and action |
 |---|---|
-| Courier request denied | Check purpose, occupancy, expiry, prior use and the event-log reason. Start a new session for a new demo token. |
+| Courier or owner request denied | Check purpose, occupancy, expiry, prior use and the event-log reason. Start a new session for a new demo token. |
 | Entry paused | Five failed credential attempts occurred within 300 simulated seconds. Wait 60 simulated seconds. |
 | Bolt fault | Target was not reached within two seconds. Release the bolt fixture and wait for measured recovery. |
 | Door fault | Closure has not completed after three seconds. Release the door fixture. The bolt stays retracted while the door is open. |

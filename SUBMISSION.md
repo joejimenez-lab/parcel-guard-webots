@@ -2,11 +2,13 @@
 
 **Team:** Joshua Guico, Joe Jimenez, Brandon Lopez
 
-**Course:** CS 5650
+**Course:** CS 5650 · Fall 2026
+
+**Instructor:** Dr. Jung Soo Lim
 
 ## What to submit
 
-The supplied assignment requires a paper as a PDF and a class presentation. Use these finished files:
+The assignment requires a paper as a PDF and a class presentation. Use the files below after the submission check passes.
 
 | Purpose | File |
 |---|---|
@@ -41,7 +43,7 @@ To repeat the simulator tests, use `python3 scripts/run_all.py`. This writes a n
 2. Play the final walkthrough and both short clips locally. They are silent and captioned; no internet connection is needed for playback.
 3. Keep `output/index.html` open for convenient video playback and keep the slide PDF available.
 4. For a live demo, open `worlds/delivery_box.wbt` in Webots R2025a, choose real-time speed, and open its Robot Window. Start a fresh scene with the parcel outside.
-5. Use courier code `2468` and owner code `1357`. The courier code is single-use and expires after 300 simulated seconds. Follow the full sequence in the speaker guide.
+5. Use courier code `2468` and owner code `1357`. Both codes are single-use. The courier code expires after 300 simulated seconds; the owner code expires after 86,400 seconds. Start a new session before repeating an access cycle. Follow the full sequence in the speaker guide.
 
 ## Evidence and coverage
 
@@ -50,4 +52,4 @@ To repeat the simulator tests, use `python3 scripts/run_all.py`. This writes a n
 - [System design](DESIGN.md)
 - [User guide and troubleshooting](docs/USER_GUIDE.md)
 
-The package supplies the required artifacts and the evidence for the documented simulation scope. Uploading the files and delivering the presentation are the remaining course submission steps.
+The submission check catches missing files and stale exports. After it passes, upload the report PDF and prepare the presentation using the speaker guide.

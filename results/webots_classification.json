@@ -92,19 +92,28 @@
       ],
       "events": [
         {
-          "session": "865243edd9b4",
+          "session": "d4adf15037b2",
           "id": 1,
           "time": 1.312,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "865243edd9b4",
+          "session": "d4adf15037b2",
           "id": 2,
           "time": 2.624,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 2.624,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "d4adf15037b2",
+          "id": 3,
+          "time": 4.352,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 4.352,
           "queue_latency_s": 0.0
         }
       ]
@@ -129,7 +138,7 @@
       ],
       "events": [
         {
-          "session": "4eaf3992af1a",
+          "session": "ed95789326f2",
           "id": 1,
           "time": 5.92,
           "kind": "tamper",
@@ -138,7 +147,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "4eaf3992af1a",
+          "session": "ed95789326f2",
           "id": 2,
           "time": 6.016,
           "kind": "tamper",
@@ -168,14 +177,14 @@
       ],
       "events": [
         {
-          "session": "acffb99bb707",
+          "session": "663b00bc91c7",
           "id": 1,
           "time": 8.224,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "acffb99bb707",
+          "session": "663b00bc91c7",
           "id": 2,
           "time": 9.536,
           "kind": "retrieval",
@@ -205,14 +214,14 @@
       ],
       "events": [
         {
-          "session": "a321774c268f",
+          "session": "8cd4501a65a8",
           "id": 1,
           "time": 12.736,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "a321774c268f",
+          "session": "8cd4501a65a8",
           "id": 2,
           "time": 14.048,
           "kind": "retrieval",
@@ -242,19 +251,28 @@
       ],
       "events": [
         {
-          "session": "c18cea411c90",
+          "session": "37d6e11b07b4",
           "id": 1,
           "time": 17.248,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "c18cea411c90",
+          "session": "37d6e11b07b4",
           "id": 2,
           "time": 18.56,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 18.56,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "37d6e11b07b4",
+          "id": 3,
+          "time": 20.288,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 20.288,
           "queue_latency_s": 0.0
         }
       ]
@@ -279,14 +297,14 @@
       ],
       "events": [
         {
-          "session": "68e818708678",
+          "session": "231fbe61d764",
           "id": 1,
           "time": 21.76,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "68e818708678",
+          "session": "231fbe61d764",
           "id": 2,
           "time": 23.072,
           "kind": "retrieval",
@@ -316,7 +334,7 @@
       ],
       "events": [
         {
-          "session": "f7a2899a8ec2",
+          "session": "52db7b7b41aa",
           "id": 1,
           "time": 26.272,
           "kind": "access_granted",
@@ -344,19 +362,28 @@
       ],
       "events": [
         {
-          "session": "294c0d3693fb",
+          "session": "4c87cb350999",
           "id": 1,
           "time": 30.784,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "294c0d3693fb",
+          "session": "4c87cb350999",
           "id": 2,
           "time": 32.096,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 32.096,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "4c87cb350999",
+          "id": 3,
+          "time": 33.824,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 33.824,
           "queue_latency_s": 0.0
         }
       ]
@@ -381,14 +408,14 @@
       ],
       "events": [
         {
-          "session": "4fd4036c86fe",
+          "session": "130126b53e92",
           "id": 1,
           "time": 35.296,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "4fd4036c86fe",
+          "session": "130126b53e92",
           "id": 2,
           "time": 36.608,
           "kind": "retrieval",
@@ -418,7 +445,7 @@
       ],
       "events": [
         {
-          "session": "d3d8ef6d60aa",
+          "session": "8494e42ac366",
           "id": 1,
           "time": 39.904,
           "kind": "tamper",
@@ -427,7 +454,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "d3d8ef6d60aa",
+          "session": "8494e42ac366",
           "id": 2,
           "time": 40.0,
           "kind": "tamper",
@@ -457,7 +484,7 @@
       ],
       "events": [
         {
-          "session": "8c761d5463bc",
+          "session": "f1c0eae5086f",
           "id": 1,
           "time": 42.304,
           "kind": "tamper",
@@ -487,7 +514,7 @@
       ],
       "events": [
         {
-          "session": "bc8e70a38e70",
+          "session": "c3a247698c08",
           "id": 1,
           "time": 44.704,
           "kind": "tamper",
@@ -496,7 +523,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "bc8e70a38e70",
+          "session": "c3a247698c08",
           "id": 2,
           "time": 44.8,
           "kind": "tamper",
@@ -526,7 +553,7 @@
       ],
       "events": [
         {
-          "session": "537c6daabf88",
+          "session": "e5dac5f6f269",
           "id": 1,
           "time": 47.008,
           "kind": "access_granted",
@@ -554,7 +581,7 @@
       ],
       "events": [
         {
-          "session": "d098bfc36807",
+          "session": "2e0f244a2d20",
           "id": 1,
           "time": 51.616,
           "kind": "tamper",
@@ -563,7 +590,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "d098bfc36807",
+          "session": "2e0f244a2d20",
           "id": 2,
           "time": 51.712,
           "kind": "tamper",
@@ -593,14 +620,14 @@
       ],
       "events": [
         {
-          "session": "91f6c6075c78",
+          "session": "edb8ec34710c",
           "id": 1,
           "time": 53.92,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "91f6c6075c78",
+          "session": "edb8ec34710c",
           "id": 2,
           "time": 55.232,
           "kind": "retrieval",
@@ -630,7 +657,7 @@
       ],
       "events": [
         {
-          "session": "67cb54170bf5",
+          "session": "d73241762138",
           "id": 1,
           "time": 58.432,
           "kind": "access_granted",
@@ -658,7 +685,7 @@
       ],
       "events": [
         {
-          "session": "5c3018dc41b9",
+          "session": "83b4b77be6a8",
           "id": 1,
           "time": 63.04,
           "kind": "tamper",
@@ -688,19 +715,28 @@
       ],
       "events": [
         {
-          "session": "86e8c62f128b",
+          "session": "f9e270f8f016",
           "id": 1,
           "time": 65.344,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "86e8c62f128b",
+          "session": "f9e270f8f016",
           "id": 2,
           "time": 66.656,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 66.656,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "f9e270f8f016",
+          "id": 3,
+          "time": 68.384,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 68.384,
           "queue_latency_s": 0.0
         }
       ]
@@ -725,7 +761,7 @@
       ],
       "events": [
         {
-          "session": "b035e03de1dd",
+          "session": "317da11729dd",
           "id": 1,
           "time": 69.952,
           "kind": "tamper",
@@ -755,7 +791,7 @@
       ],
       "events": [
         {
-          "session": "10e061ac887c",
+          "session": "1b9256ae89e8",
           "id": 1,
           "time": 72.256,
           "kind": "access_granted",
@@ -783,19 +819,28 @@
       ],
       "events": [
         {
-          "session": "f225119edcf0",
+          "session": "b2b34658b9e6",
           "id": 1,
           "time": 76.768,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "f225119edcf0",
+          "session": "b2b34658b9e6",
           "id": 2,
           "time": 78.08,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 78.08,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "b2b34658b9e6",
+          "id": 3,
+          "time": 79.808,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 79.808,
           "queue_latency_s": 0.0
         }
       ]
@@ -820,7 +865,7 @@
       ],
       "events": [
         {
-          "session": "6cad41f9910b",
+          "session": "b74022dacc9a",
           "id": 1,
           "time": 81.28,
           "kind": "access_granted",
@@ -848,7 +893,7 @@
       ],
       "events": [
         {
-          "session": "c174c380dc78",
+          "session": "7f535c284103",
           "id": 1,
           "time": 85.792,
           "kind": "access_granted",
@@ -876,14 +921,14 @@
       ],
       "events": [
         {
-          "session": "b68db9de2942",
+          "session": "04f07fa78a40",
           "id": 1,
           "time": 90.304,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "b68db9de2942",
+          "session": "04f07fa78a40",
           "id": 2,
           "time": 91.616,
           "kind": "retrieval",
@@ -913,7 +958,7 @@
       ],
       "events": [
         {
-          "session": "34e55474fee6",
+          "session": "d0723700c3e9",
           "id": 1,
           "time": 94.816,
           "kind": "access_granted",
@@ -941,19 +986,28 @@
       ],
       "events": [
         {
-          "session": "1dc83c0313f8",
+          "session": "5a99ff7b6d09",
           "id": 1,
           "time": 99.328,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "1dc83c0313f8",
+          "session": "5a99ff7b6d09",
           "id": 2,
           "time": 100.64,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 100.64,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5a99ff7b6d09",
+          "id": 3,
+          "time": 102.368,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 102.368,
           "queue_latency_s": 0.0
         }
       ]
@@ -978,14 +1032,14 @@
       ],
       "events": [
         {
-          "session": "b2555ab4fb2b",
+          "session": "3f9056965b8e",
           "id": 1,
           "time": 103.84,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "b2555ab4fb2b",
+          "session": "3f9056965b8e",
           "id": 2,
           "time": 105.152,
           "kind": "retrieval",
@@ -1015,7 +1069,7 @@
       ],
       "events": [
         {
-          "session": "babf056201d1",
+          "session": "94a78cbfacdd",
           "id": 1,
           "time": 108.448,
           "kind": "tamper",
@@ -1024,7 +1078,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "babf056201d1",
+          "session": "94a78cbfacdd",
           "id": 2,
           "time": 108.544,
           "kind": "tamper",
@@ -1054,7 +1108,7 @@
       ],
       "events": [
         {
-          "session": "5ca2d7920406",
+          "session": "6fc2e5df354d",
           "id": 1,
           "time": 110.848,
           "kind": "tamper",
@@ -1084,7 +1138,7 @@
       ],
       "events": [
         {
-          "session": "360732cf134e",
+          "session": "b35094c0ef9e",
           "id": 1,
           "time": 113.152,
           "kind": "access_granted",
@@ -1112,19 +1166,28 @@
       ],
       "events": [
         {
-          "session": "7453ecfa5804",
+          "session": "438d93de14ed",
           "id": 1,
           "time": 117.664,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "7453ecfa5804",
+          "session": "438d93de14ed",
           "id": 2,
           "time": 118.976,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 118.976,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "438d93de14ed",
+          "id": 3,
+          "time": 120.704,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 120.704,
           "queue_latency_s": 0.0
         }
       ]
@@ -1149,19 +1212,28 @@
       ],
       "events": [
         {
-          "session": "804352cd2239",
+          "session": "36c79ae440fc",
           "id": 1,
           "time": 122.176,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "804352cd2239",
+          "session": "36c79ae440fc",
           "id": 2,
           "time": 123.488,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 123.488,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "36c79ae440fc",
+          "id": 3,
+          "time": 125.216,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 125.216,
           "queue_latency_s": 0.0
         }
       ]
@@ -1186,7 +1258,7 @@
       ],
       "events": [
         {
-          "session": "4c8a08fb414e",
+          "session": "e9d109a2ee87",
           "id": 1,
           "time": 126.688,
           "kind": "access_granted",
@@ -1214,19 +1286,28 @@
       ],
       "events": [
         {
-          "session": "5431389d2cae",
+          "session": "fad566ef333f",
           "id": 1,
           "time": 131.2,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5431389d2cae",
+          "session": "fad566ef333f",
           "id": 2,
           "time": 132.512,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 132.512,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "fad566ef333f",
+          "id": 3,
+          "time": 134.24,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 134.24,
           "queue_latency_s": 0.0
         }
       ]
@@ -1251,14 +1332,14 @@
       ],
       "events": [
         {
-          "session": "180a3a1eaffa",
+          "session": "18e3ab548930",
           "id": 1,
           "time": 135.712,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "180a3a1eaffa",
+          "session": "18e3ab548930",
           "id": 2,
           "time": 137.024,
           "kind": "retrieval",
@@ -1288,7 +1369,7 @@
       ],
       "events": [
         {
-          "session": "ddb53229aeec",
+          "session": "175cf04e052b",
           "id": 1,
           "time": 140.224,
           "kind": "access_granted",
@@ -1316,7 +1397,7 @@
       ],
       "events": [
         {
-          "session": "393b04cdc501",
+          "session": "cffbee2769e7",
           "id": 1,
           "time": 144.736,
           "kind": "access_granted",
@@ -1344,14 +1425,14 @@
       ],
       "events": [
         {
-          "session": "02f58946c3d3",
+          "session": "48720f0bbcb8",
           "id": 1,
           "time": 149.248,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "02f58946c3d3",
+          "session": "48720f0bbcb8",
           "id": 2,
           "time": 150.56,
           "kind": "retrieval",
@@ -1381,7 +1462,7 @@
       ],
       "events": [
         {
-          "session": "2417c0da98d0",
+          "session": "f244c7570ad7",
           "id": 1,
           "time": 153.76,
           "kind": "access_granted",
@@ -1409,7 +1490,7 @@
       ],
       "events": [
         {
-          "session": "cef08734ed3d",
+          "session": "f40d19baa87d",
           "id": 1,
           "time": 158.368,
           "kind": "tamper",
@@ -1418,7 +1499,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "cef08734ed3d",
+          "session": "f40d19baa87d",
           "id": 2,
           "time": 158.464,
           "kind": "tamper",
@@ -1448,19 +1529,28 @@
       ],
       "events": [
         {
-          "session": "ed90e28f479c",
+          "session": "4cd3c288c16f",
           "id": 1,
           "time": 160.672,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "ed90e28f479c",
+          "session": "4cd3c288c16f",
           "id": 2,
           "time": 161.984,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 161.984,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "4cd3c288c16f",
+          "id": 3,
+          "time": 163.712,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 163.712,
           "queue_latency_s": 0.0
         }
       ]
@@ -1485,14 +1575,14 @@
       ],
       "events": [
         {
-          "session": "a3ba033b418d",
+          "session": "54c172f0b44d",
           "id": 1,
           "time": 165.184,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "a3ba033b418d",
+          "session": "54c172f0b44d",
           "id": 2,
           "time": 166.496,
           "kind": "retrieval",
@@ -1522,7 +1612,7 @@
       ],
       "events": [
         {
-          "session": "e7808124f887",
+          "session": "0e9f0d911079",
           "id": 1,
           "time": 169.792,
           "kind": "tamper",
@@ -1552,19 +1642,28 @@
       ],
       "events": [
         {
-          "session": "7aa0cf7fd839",
+          "session": "8d9aafda7c49",
           "id": 1,
           "time": 172.096,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "7aa0cf7fd839",
+          "session": "8d9aafda7c49",
           "id": 2,
           "time": 173.408,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 173.408,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "8d9aafda7c49",
+          "id": 3,
+          "time": 175.136,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 175.136,
           "queue_latency_s": 0.0
         }
       ]
@@ -1589,14 +1688,14 @@
       ],
       "events": [
         {
-          "session": "2c16046a88ad",
+          "session": "f4a130995fd4",
           "id": 1,
           "time": 176.608,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "2c16046a88ad",
+          "session": "f4a130995fd4",
           "id": 2,
           "time": 177.92,
           "kind": "retrieval",
@@ -1626,7 +1725,7 @@
       ],
       "events": [
         {
-          "session": "1fe4e005d8d5",
+          "session": "2a1b546563c3",
           "id": 1,
           "time": 181.12,
           "kind": "access_granted",
@@ -1654,7 +1753,7 @@
       ],
       "events": [
         {
-          "session": "99e7078f2874",
+          "session": "4cc2659af509",
           "id": 1,
           "time": 185.632,
           "kind": "access_granted",
@@ -1682,19 +1781,28 @@
       ],
       "events": [
         {
-          "session": "4c768fc68ea0",
+          "session": "865f76e27dcf",
           "id": 1,
           "time": 190.144,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "4c768fc68ea0",
+          "session": "865f76e27dcf",
           "id": 2,
           "time": 191.456,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 191.456,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "865f76e27dcf",
+          "id": 3,
+          "time": 193.184,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 193.184,
           "queue_latency_s": 0.0
         }
       ]
@@ -1719,14 +1827,14 @@
       ],
       "events": [
         {
-          "session": "cfa3cab65086",
+          "session": "190d1975163d",
           "id": 1,
           "time": 194.656,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "cfa3cab65086",
+          "session": "190d1975163d",
           "id": 2,
           "time": 195.968,
           "kind": "retrieval",
@@ -1756,7 +1864,7 @@
       ],
       "events": [
         {
-          "session": "2e2b358a4167",
+          "session": "e4c8519bf790",
           "id": 1,
           "time": 199.264,
           "kind": "tamper",
@@ -1765,7 +1873,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "2e2b358a4167",
+          "session": "e4c8519bf790",
           "id": 2,
           "time": 199.36,
           "kind": "tamper",
@@ -1795,7 +1903,7 @@
       ],
       "events": [
         {
-          "session": "ecb0b6f5cc4c",
+          "session": "1e1f8938329e",
           "id": 1,
           "time": 201.664,
           "kind": "tamper",
@@ -1825,14 +1933,14 @@
       ],
       "events": [
         {
-          "session": "89a168ab9b3c",
+          "session": "f6afa0c42a8a",
           "id": 1,
           "time": 203.968,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "89a168ab9b3c",
+          "session": "f6afa0c42a8a",
           "id": 2,
           "time": 205.28,
           "kind": "retrieval",
@@ -1862,7 +1970,7 @@
       ],
       "events": [
         {
-          "session": "c7de3e1bca73",
+          "session": "fa98dc5a175e",
           "id": 1,
           "time": 208.576,
           "kind": "tamper",
@@ -1892,19 +2000,28 @@
       ],
       "events": [
         {
-          "session": "61d5df853d7a",
+          "session": "606792a2078a",
           "id": 1,
           "time": 210.88,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "61d5df853d7a",
+          "session": "606792a2078a",
           "id": 2,
           "time": 212.192,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 212.192,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "606792a2078a",
+          "id": 3,
+          "time": 213.92,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 213.92,
           "queue_latency_s": 0.0
         }
       ]
@@ -1929,14 +2046,14 @@
       ],
       "events": [
         {
-          "session": "2442870a0fca",
+          "session": "ca25a3c3f14d",
           "id": 1,
           "time": 215.392,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "2442870a0fca",
+          "session": "ca25a3c3f14d",
           "id": 2,
           "time": 216.704,
           "kind": "retrieval",
@@ -1966,7 +2083,7 @@
       ],
       "events": [
         {
-          "session": "c23a204b10fa",
+          "session": "1d46bbfb7395",
           "id": 1,
           "time": 219.904,
           "kind": "access_granted",
@@ -1994,7 +2111,7 @@
       ],
       "events": [
         {
-          "session": "64a5f117f008",
+          "session": "8eca2d9a6c6d",
           "id": 1,
           "time": 224.512,
           "kind": "tamper",
@@ -2024,14 +2141,14 @@
       ],
       "events": [
         {
-          "session": "2bb0566fc11b",
+          "session": "acc19f7622b4",
           "id": 1,
           "time": 226.816,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "2bb0566fc11b",
+          "session": "acc19f7622b4",
           "id": 2,
           "time": 228.128,
           "kind": "retrieval",
@@ -2061,19 +2178,28 @@
       ],
       "events": [
         {
-          "session": "ce246aace9c9",
+          "session": "0a64e331f60e",
           "id": 1,
           "time": 231.328,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "ce246aace9c9",
+          "session": "0a64e331f60e",
           "id": 2,
           "time": 232.64,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 232.64,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "0a64e331f60e",
+          "id": 3,
+          "time": 234.368,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 234.368,
           "queue_latency_s": 0.0
         }
       ]
@@ -2098,19 +2224,28 @@
       ],
       "events": [
         {
-          "session": "346b971191b0",
+          "session": "bc65e94cc4c4",
           "id": 1,
           "time": 235.84,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "346b971191b0",
+          "session": "bc65e94cc4c4",
           "id": 2,
           "time": 237.152,
-          "kind": "delivery",
-          "detail": "parcel placed",
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
           "sensor_time": 237.152,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "bc65e94cc4c4",
+          "id": 3,
+          "time": 238.88,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 238.88,
           "queue_latency_s": 0.0
         }
       ]

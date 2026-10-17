@@ -12,11 +12,11 @@ expired,3,True,0,True,expired courier code
 expired,4,True,0,True,expired courier code
 expired,5,True,0,True,expired courier code
 reused,0,True,0,True,courier code already used
-reused,1,True,0,True,courier code already used
+reused,1,True,0,True,owner code already used
 reused,2,True,0,True,courier code already used
-reused,3,True,0,True,courier code already used
+reused,3,True,0,True,owner code already used
 reused,4,True,0,True,courier code already used
-reused,5,True,0,True,courier code already used
+reused,5,True,0,True,owner code already used
 wrong_role,0,True,0,True,code does not match requested role
 wrong_role,1,True,0,True,code does not match requested role
 wrong_role,2,True,0,True,code does not match requested role

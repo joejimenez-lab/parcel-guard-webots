@@ -10,6 +10,7 @@ try:
     h.advance(15)
     cycles = []
     for i in range(100):
+        h.reset()  # Issue fresh one-use credentials for each independent cycle.
         start = h.robot.getTime()
         h.access('owner',f'cycle-{i}')
         opened = h.robot.getTime()
@@ -62,12 +63,14 @@ try:
     checks['lost_ack_retry'] = {'retried':h.latest['endpoint_duplicate_packets']>dup_before,
                                'queue_drained':h.latest['pending']==0,
                                'receiver_ids_unique':len(h.latest['endpoint_ids'])==len(set(h.latest['endpoint_ids']))}
+    h.reset()
     h.access('owner','locking-jam')
     h.send('jam_latch'); h.advance(8)
     h.send('close'); h.advance(130)
     locked_fault = h.latest['phase']=='FAULT' and h.latest['door']=='closed' and not h.latest['secured'] and h.latest['latch']!='locked'
     h.send('release_latch'); h.require(lambda s:s['secured'],'Locking fault did not recover from measured feedback')
     recovered_lock = 'latch_recovered' in h.latest['event_kinds']
+    h.reset()
     h.send('jam_latch'); h.advance(8)
     h.send('access',role='owner',code='1357',request_id='unlocking-jam'); h.advance(100)
     unlock_fault = h.latest['phase']=='FAULT' and not h.latest['secured'] and h.latest['door']=='closed'
@@ -82,7 +85,9 @@ try:
             if category=='invalid': code='0000'
             elif category=='expired':
                 if i%2: h.send('link_off'); h.advance(8)
-            elif category=='reused': h.access('courier',f'first-use-{i}'); h.close()
+            elif category=='reused':
+                if i % 2: code,role = '1357','owner'
+                h.access(role,f'first-use-{i}'); h.close()
             elif category=='wrong_role':
                 code,role = ('1357','courier') if i%2 else ('2468','owner')
             elif category=='replay':

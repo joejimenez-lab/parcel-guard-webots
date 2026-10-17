@@ -16,6 +16,7 @@ DOCUMENTS = (
     'README.md', 'SUBMISSION.md', 'DESIGN.md', 'REQUIREMENTS.md',
     'docs/FINAL_REPORT.md', 'docs/parcel_guard_report.tex', 'docs/SOFTWARE_REQUIREMENTS.md',
     'docs/PRESENTATION_GUIDE.md', 'docs/USER_GUIDE.md',
+    'docs/proposal/Package Delivery Security Box - Written Proposal.pdf',
     'output/pdf/Parcel Guard - Final Report.pdf',
     'output/pdf/Parcel Guard - Final Presentation.pdf',
     'output/submission/Parcel Guard - Final Presentation.pptx',

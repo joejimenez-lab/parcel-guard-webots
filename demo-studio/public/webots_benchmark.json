@@ -8,802 +8,802 @@
       "trials": [
         {
           "cycle": 0,
-          "unlock_and_open_s": 1.28,
-          "full_cycle_s": 2.7840000000000003,
+          "unlock_and_open_s": 1.248,
+          "full_cycle_s": 2.752,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 1,
-          "unlock_and_open_s": 1.2800000000000002,
-          "full_cycle_s": 2.784,
+          "unlock_and_open_s": 1.2480000000000002,
+          "full_cycle_s": 2.7520000000000007,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 2,
-          "unlock_and_open_s": 1.2800000000000002,
-          "full_cycle_s": 2.7840000000000007,
+          "unlock_and_open_s": 1.2480000000000002,
+          "full_cycle_s": 2.752,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 3,
-          "unlock_and_open_s": 1.2799999999999994,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999993,
+          "full_cycle_s": 2.7520000000000007,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 4,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000007,
+          "unlock_and_open_s": 1.2479999999999993,
+          "full_cycle_s": 2.751999999999999,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 5,
-          "unlock_and_open_s": 1.2799999999999994,
-          "full_cycle_s": 2.7840000000000007,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 6,
-          "unlock_and_open_s": 1.2799999999999976,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 7,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.751999999999999,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 8,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000025,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 9,
-          "unlock_and_open_s": 1.2799999999999976,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 10,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 11,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 12,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 13,
-          "unlock_and_open_s": 1.279999999999994,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 14,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 15,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 16,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 17,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 18,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 19,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 20,
-          "unlock_and_open_s": 1.279999999999994,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 21,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 22,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999999,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 23,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 24,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 25,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 26,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 27,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 28,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 29,
-          "unlock_and_open_s": 1.279999999999987,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 30,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 31,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 32,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 33,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 34,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 35,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 36,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 37,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 38,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 39,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 40,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 41,
-          "unlock_and_open_s": 1.279999999999987,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 42,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 43,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 44,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 45,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.784000000000006,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 46,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 47,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 48,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 49,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 50,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 51,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 52,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 53,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 54,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 55,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 56,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 57,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 58,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 59,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 60,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 61,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 62,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 63,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 64,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 65,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 66,
-          "unlock_and_open_s": 1.2799999999999727,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 67,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 68,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 69,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 70,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 71,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 72,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 73,
-          "unlock_and_open_s": 1.2799999999999727,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 74,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 75,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 76,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 77,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 78,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 79,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 80,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 81,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 82,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 83,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 84,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 85,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 86,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 87,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 88,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 89,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999527,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 90,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.7840000000000202,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999527,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 91,
-          "unlock_and_open_s": 1.2800000000000011,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999527,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 92,
-          "unlock_and_open_s": 1.2800000000000296,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 93,
-          "unlock_and_open_s": 1.2800000000000296,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 94,
-          "unlock_and_open_s": 1.2800000000000296,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 95,
-          "unlock_and_open_s": 1.2800000000000296,
-          "full_cycle_s": 2.7840000000000487,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 96,
-          "unlock_and_open_s": 1.2799999999999727,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 97,
-          "unlock_and_open_s": 1.2799999999999727,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 98,
-          "unlock_and_open_s": 1.2799999999999727,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         },
         {
           "cycle": 99,
-          "unlock_and_open_s": 1.2800000000000296,
-          "full_cycle_s": 2.783999999999992,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
           "door_rad": 0.0,
-          "bolt_m": 0.0787,
+          "bolt_m": 0.0791,
           "secured": true
         }
       ]
@@ -820,241 +820,241 @@
       "details": [
         {
           "trial": 0,
-          "event_id": 103,
-          "sensor_sample_s": 279.968,
-          "queued_s": 279.968,
+          "event_id": 2,
+          "sensor_sample_s": 308.768,
+          "queued_s": 308.768,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.224
         },
         {
           "trial": 1,
-          "event_id": 104,
-          "sensor_sample_s": 281.472,
-          "queued_s": 281.472,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 2,
-          "event_id": 105,
-          "sensor_sample_s": 282.912,
-          "queued_s": 282.912,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 3,
-          "event_id": 106,
-          "sensor_sample_s": 284.352,
-          "queued_s": 284.352,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 4,
-          "event_id": 107,
-          "sensor_sample_s": 285.792,
-          "queued_s": 285.792,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 5,
-          "event_id": 108,
-          "sensor_sample_s": 287.232,
-          "queued_s": 287.232,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 6,
-          "event_id": 109,
-          "sensor_sample_s": 288.672,
-          "queued_s": 288.672,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 7,
-          "event_id": 110,
-          "sensor_sample_s": 290.112,
-          "queued_s": 290.112,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 8,
-          "event_id": 111,
-          "sensor_sample_s": 291.552,
-          "queued_s": 291.552,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 9,
-          "event_id": 112,
-          "sensor_sample_s": 292.992,
-          "queued_s": 292.992,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 10,
-          "event_id": 113,
-          "sensor_sample_s": 294.432,
-          "queued_s": 294.432,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 11,
-          "event_id": 114,
-          "sensor_sample_s": 295.872,
-          "queued_s": 295.872,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 12,
-          "event_id": 115,
-          "sensor_sample_s": 297.312,
-          "queued_s": 297.312,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 13,
-          "event_id": 116,
-          "sensor_sample_s": 298.752,
-          "queued_s": 298.752,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 14,
-          "event_id": 117,
-          "sensor_sample_s": 300.192,
-          "queued_s": 300.192,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 15,
-          "event_id": 118,
-          "sensor_sample_s": 301.632,
-          "queued_s": 301.632,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 16,
-          "event_id": 119,
-          "sensor_sample_s": 303.072,
-          "queued_s": 303.072,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 17,
-          "event_id": 120,
-          "sensor_sample_s": 304.512,
-          "queued_s": 304.512,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 18,
-          "event_id": 121,
-          "sensor_sample_s": 305.952,
-          "queued_s": 305.952,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 19,
-          "event_id": 122,
-          "sensor_sample_s": 307.392,
-          "queued_s": 307.392,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 20,
-          "event_id": 123,
-          "sensor_sample_s": 308.832,
-          "queued_s": 308.832,
-          "sensor_to_queue_s": 0.0,
-          "stimulus_to_observer_s": 0.16
-        },
-        {
-          "trial": 21,
-          "event_id": 124,
+          "event_id": 3,
           "sensor_sample_s": 310.272,
           "queued_s": 310.272,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 22,
-          "event_id": 125,
+          "trial": 2,
+          "event_id": 4,
           "sensor_sample_s": 311.712,
           "queued_s": 311.712,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 23,
-          "event_id": 126,
+          "trial": 3,
+          "event_id": 5,
           "sensor_sample_s": 313.152,
           "queued_s": 313.152,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 24,
-          "event_id": 127,
+          "trial": 4,
+          "event_id": 6,
           "sensor_sample_s": 314.592,
           "queued_s": 314.592,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 25,
-          "event_id": 128,
+          "trial": 5,
+          "event_id": 7,
           "sensor_sample_s": 316.032,
           "queued_s": 316.032,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 26,
-          "event_id": 129,
+          "trial": 6,
+          "event_id": 8,
           "sensor_sample_s": 317.472,
           "queued_s": 317.472,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 27,
-          "event_id": 130,
+          "trial": 7,
+          "event_id": 9,
           "sensor_sample_s": 318.912,
           "queued_s": 318.912,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 28,
-          "event_id": 131,
+          "trial": 8,
+          "event_id": 10,
           "sensor_sample_s": 320.352,
           "queued_s": 320.352,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         },
         {
-          "trial": 29,
-          "event_id": 132,
+          "trial": 9,
+          "event_id": 11,
           "sensor_sample_s": 321.792,
           "queued_s": 321.792,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 10,
+          "event_id": 12,
+          "sensor_sample_s": 323.232,
+          "queued_s": 323.232,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 11,
+          "event_id": 13,
+          "sensor_sample_s": 324.672,
+          "queued_s": 324.672,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 12,
+          "event_id": 14,
+          "sensor_sample_s": 326.112,
+          "queued_s": 326.112,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 13,
+          "event_id": 15,
+          "sensor_sample_s": 327.552,
+          "queued_s": 327.552,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 14,
+          "event_id": 16,
+          "sensor_sample_s": 328.992,
+          "queued_s": 328.992,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 15,
+          "event_id": 17,
+          "sensor_sample_s": 330.432,
+          "queued_s": 330.432,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 16,
+          "event_id": 18,
+          "sensor_sample_s": 331.872,
+          "queued_s": 331.872,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 17,
+          "event_id": 19,
+          "sensor_sample_s": 333.312,
+          "queued_s": 333.312,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 18,
+          "event_id": 20,
+          "sensor_sample_s": 334.752,
+          "queued_s": 334.752,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 19,
+          "event_id": 21,
+          "sensor_sample_s": 336.192,
+          "queued_s": 336.192,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 20,
+          "event_id": 22,
+          "sensor_sample_s": 337.632,
+          "queued_s": 337.632,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 21,
+          "event_id": 23,
+          "sensor_sample_s": 339.072,
+          "queued_s": 339.072,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 22,
+          "event_id": 24,
+          "sensor_sample_s": 340.512,
+          "queued_s": 340.512,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 23,
+          "event_id": 25,
+          "sensor_sample_s": 341.952,
+          "queued_s": 341.952,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 24,
+          "event_id": 26,
+          "sensor_sample_s": 343.392,
+          "queued_s": 343.392,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 25,
+          "event_id": 27,
+          "sensor_sample_s": 344.832,
+          "queued_s": 344.832,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 26,
+          "event_id": 28,
+          "sensor_sample_s": 346.272,
+          "queued_s": 346.272,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 27,
+          "event_id": 29,
+          "sensor_sample_s": 347.712,
+          "queued_s": 347.712,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 28,
+          "event_id": 30,
+          "sensor_sample_s": 349.152,
+          "queued_s": 349.152,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 29,
+          "event_id": 31,
+          "sensor_sample_s": 350.592,
+          "queued_s": 350.592,
           "sensor_to_queue_s": 0.0,
           "stimulus_to_observer_s": 0.16
         }
@@ -1070,16 +1070,16 @@
         {
           "outage": 0,
           "expected_tamper_ids": [
-            134,
-            135,
-            136,
-            137,
-            138,
-            139,
-            140,
-            141,
-            142,
-            143
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1088,16 +1088,16 @@
         {
           "outage": 1,
           "expected_tamper_ids": [
-            146,
-            147,
-            148,
-            149,
-            150,
-            151,
-            152,
-            153,
-            154,
-            155
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1106,16 +1106,16 @@
         {
           "outage": 2,
           "expected_tamper_ids": [
-            158,
-            159,
-            160,
-            161,
-            162,
-            163,
-            164,
-            165,
-            166,
-            167
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1124,16 +1124,16 @@
         {
           "outage": 3,
           "expected_tamper_ids": [
-            170,
-            171,
-            172,
-            173,
-            174,
-            175,
-            176,
-            177,
-            178,
-            179
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1142,16 +1142,16 @@
         {
           "outage": 4,
           "expected_tamper_ids": [
-            182,
-            183,
-            184,
-            185,
-            186,
-            187,
-            188,
-            189,
-            190,
-            191
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1160,16 +1160,16 @@
         {
           "outage": 5,
           "expected_tamper_ids": [
-            194,
-            195,
-            196,
-            197,
-            198,
-            199,
-            200,
-            201,
-            202,
-            203
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1178,16 +1178,16 @@
         {
           "outage": 6,
           "expected_tamper_ids": [
-            206,
-            207,
-            208,
-            209,
-            210,
-            211,
-            212,
-            213,
-            214,
-            215
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1196,16 +1196,16 @@
         {
           "outage": 7,
           "expected_tamper_ids": [
-            218,
-            219,
-            220,
-            221,
-            222,
-            223,
-            224,
-            225,
-            226,
-            227
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1214,16 +1214,16 @@
         {
           "outage": 8,
           "expected_tamper_ids": [
-            230,
-            231,
-            232,
-            233,
-            234,
-            235,
-            236,
-            237,
-            238,
-            239
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1232,16 +1232,16 @@
         {
           "outage": 9,
           "expected_tamper_ids": [
-            242,
-            243,
-            244,
-            245,
-            246,
-            247,
-            248,
-            249,
-            250,
-            251
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150
           ],
           "retained_offline": true,
           "recovered_once": true,
@@ -1381,7 +1381,7 @@
           "denied": true,
           "unauthorized_unlocks": 0,
           "secured": true,
-          "reason": "courier code already used"
+          "reason": "owner code already used"
         },
         {
           "category": "reused",
@@ -1397,7 +1397,7 @@
           "denied": true,
           "unauthorized_unlocks": 0,
           "secured": true,
-          "reason": "courier code already used"
+          "reason": "owner code already used"
         },
         {
           "category": "reused",
@@ -1413,7 +1413,7 @@
           "denied": true,
           "unauthorized_unlocks": 0,
           "secured": true,
-          "reason": "courier code already used"
+          "reason": "owner code already used"
         },
         {
           "category": "wrong_role",
@@ -1523,6 +1523,6 @@
     }
   },
   "runner_error": null,
-  "simulation_time_s": 620.192,
+  "simulation_time_s": 649.568,
   "timestep_ms": 32
 }

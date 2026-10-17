@@ -12,7 +12,7 @@ def main():
     reports=[]
     for name,world in [('workflow','demo_video'),('resilience','resilience_video')]:
         p=ROOT/'results'/f'{name}_recording.json';p.unlink(missing_ok=True)
-        r=subprocess.run([WEBOTS,'--batch','--mode=fast','--stdout','--stderr',f'worlds/delivery_box_{world}.wbt'],cwd=ROOT,capture_output=True,text=True,timeout=240)
+        r=subprocess.run([WEBOTS,'--batch','--mode=fast','--stdout','--stderr',f'worlds/delivery_box_{world}.wbt'],cwd=ROOT,capture_output=True,text=True,timeout=420)
         if r.returncode or not p.exists() or not json.loads(p.read_text())['passed']:
             print(r.stdout);print(r.stderr);raise SystemExit(f'{name} recording or scenario failed; inspect {p}')
         path=ROOT/'output/raw'/f'{name}.mp4'

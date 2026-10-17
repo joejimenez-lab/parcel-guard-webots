@@ -31,7 +31,8 @@ def record(name, frames, schedule, chapters, verify):
     for frame in range(frames):
         h.step()
         if frame==8:
-            h.robot.movieStartRecording(str(video),1920,1080,0,90,1,False)
+            # A moderate target avoids two-pass encoder failures in static scenes.
+            h.robot.movieStartRecording(str(video),1920,1080,0,75,1,False)
             recording_started=h.robot.getTime()
         if frame in schedule:
             action,data=schedule[frame]
@@ -39,7 +40,7 @@ def record(name, frames, schedule, chapters, verify):
         if recording_started is not None and h.latest:
             telemetry.append({'video_time_s':round(h.robot.getTime()-recording_started,6),'status':h.latest})
     h.robot.movieStopRecording()
-    deadline=time.monotonic()+60
+    deadline=time.monotonic()+180
     while not h.robot.movieIsReady() and time.monotonic()<deadline:
         h.step()
     checks=verify(telemetry)

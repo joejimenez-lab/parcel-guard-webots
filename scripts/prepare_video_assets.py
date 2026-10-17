@@ -14,7 +14,7 @@ for name in ('workflow','resilience'):
         s=row['status']
         if s['time']==previous:continue
         previous=s['time']
-        keys=('time','phase','secured','fault','door','latch','parcel','link','pending','delivered_ids','endpoint_ids','events','parcel_distances_m','door_angle_rad','latch_position_m','motion_peak_m_s2','grant','endpoint_duplicate_packets')
+        keys=('time','phase','secured','delivery_pending','fault','door','latch','parcel','link','pending','delivered_ids','endpoint_ids','events','parcel_distances_m','door_angle_rad','latch_position_m','motion_peak_m_s2','grant','endpoint_duplicate_packets')
         rows.append({'at':row['video_time_s'],'status':{k:s[k] for k in keys}})
     (PUBLIC/f'{name}.json').write_text(json.dumps({'chapters':report['chapters'],'samples':rows,'checks':report['checks']},separators=(',',':')))
 for name in ('webots_classification','webots_sensor_trials','webots_benchmark'):

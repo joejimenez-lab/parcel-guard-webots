@@ -1,46 +1,53 @@
 {
   "passed": true,
-  "timestamp_utc": "2026-10-17T16:55:47.955628+00:00",
+  "timestamp_utc": "2026-10-17T18:32:29.276083+00:00",
+  "version": "2.3.0",
   "checks": {
-    "report_pages": 11,
+    "report_pages": 8,
     "presentation_slides": 14,
     "presentation_pdf_pages": 14,
     "speaker_note_slides": 14,
     "native_table_slides": [
       3,
       4,
+      7,
       9,
       10,
       11
     ],
-    "resolved_local_markdown_links": 37,
+    "resolved_local_markdown_links": 38,
     "selectable_pdf_text": true,
     "final_source_matches_evaluation": true,
     "both_recordings_match_evaluated_source": true,
     "all_three_finished_videos_fully_decoded": true,
-    "standalone_latex_compilation_passed": true
+    "standalone_latex_compilation_passed": true,
+    "single_reference_contents_entry": true,
+    "all_R1_R14_requirements_present": true
   },
   "review": {
-    "paper": "All 11 LaTeX pages visually reviewed after final data refresh. Contents, equations, diagrams, tables and references checked. Text bounds checked with pdfplumber.",
-    "slides": "All 14 rendered slides visually reviewed; package, layout, typography and native-table checks passed; PDF conversion also reviewed.",
-    "dashboard": "Browser preview visually reviewed at desktop and 390px widths; no horizontal overflow at 390px. Live controller/fixture behavior verified separately in Webots runners.",
-    "videos": "All chapters in the combined walkthrough visually inspected against recorded state; all three H.264 exports decoded completely without errors.",
-    "scope": "Submission retains the proposal team and proposed responsibility allocation. Presentation delivery and audience interaction remain live team activities."
+    "paper": "All eight IEEE-style pages reviewed after export. Cover, contents, diagrams, equations, requirements, results and references checked. Duplicate contents entry removed; final columns balanced. Text bounds checked with pdfplumber.",
+    "slides": "All 14 slide layouts reviewed. Detail edits on slides 6 and 8 rendered and checked in PPTX and PDF. Six tables remain native and all slides retain speaker notes.",
+    "dashboard": "Desktop and 390px layout reviewed; 14 DOM checks. Gallery playback checked for all three silent videos at desktop and 390px widths.",
+    "videos": "Every chapter and title/results frame reviewed against recorded state. The three unchanged H.264 files match the full-frame decoding validation.",
+    "scope": "Proposal names and planned roles retained. Upload, rehearsal, presentation and audience Q&A remain team activities."
   },
   "artifact_sha256": {
-    "output/pdf/Parcel Guard - Final Report.pdf": "cc4daf17ecba2ea23aeb6202e7d4e5576334a996854a103f96e468f2f1e4387a",
-    "output/pdf/Parcel Guard - Final Presentation.pdf": "60e916a741c10303bbf3a782fba01f46a9b16151de488152ade32d7abb1f2f38",
-    "output/submission/Parcel Guard - Final Presentation.pptx": "aea406918dcc3304989c9af054903dc3cb5e7ed76ab3746fbee13c2cf8dae6a6",
-    "docs/FINAL_REPORT.md": "68dc4d3bd766c9c51abfac34d3f37a3edb72e5750073303a4eb9fcba12950c1e",
-    "docs/parcel_guard_report.tex": "089520a017be6e124a8f4a2afb4cd04c2fa19c727800a129a7eb613a707fc8b3",
-    "docs/PRESENTATION_GUIDE.md": "8d1a0cf0167db04b24cf5c3ea1bcd64aaf9c62088e5208e1c8d8eb26ff09f536",
-    "docs/SOFTWARE_REQUIREMENTS.md": "adf10634e7bac7d658ab0ede42add0ea2c2b9aefc699a50ad0d4f83a7beb740a",
-    "docs/USER_GUIDE.md": "3a52f316ad3855605f85772aa418d0c5a218c9e242023342a0d9f0fc89fc8b85",
-    "REQUIREMENTS.md": "3bbb1d4a961e1dd34312c69ca6faa5ec3bf9bc0a1d11e816f568ac7aa2548027",
-    "DESIGN.md": "c7af4eaa2c07e383df2d1743322d4b020389c5fc86650b48fb6a2b9965f9abc2",
-    "README.md": "d836e176f7b6f24e6876dbd92aeefd3b78669b58c1959b0741392113fccf65f1",
-    "SUBMISSION.md": "e43c96275b10708b23142cdface6401e23d33a657b239aaa9db101a6c32d2a06"
+    "README.md": "821eef4191142843b7a8fffee1d7f7ef1ddc899fb2e5b9eb3960243953e14f7b",
+    "SUBMISSION.md": "fe3b42f2acba096ed7dd1c483ef08274b336865b65bb90f59f31047a79b8a704",
+    "DESIGN.md": "91b64f39099fb657bbb1267413c3f9eda9558bc8271e7bbac729522df5fd88d8",
+    "REQUIREMENTS.md": "0a39bdc14a63fc049a2478f97f712a48dceb5290e48bce562c4fc96f5995930a",
+    "docs/FINAL_REPORT.md": "0d46174a9596f4b37b57f89eab613114c10ec34cb76bab2f9061149fb47e1c27",
+    "docs/parcel_guard_report.tex": "ba0230e751817cfca0c98c5dc9a3bb120174a18d8bb130afaac0129a4be645fb",
+    "docs/SOFTWARE_REQUIREMENTS.md": "687c91f680aa1ef2fc28dcece24c879b76aca8d8b253370b8279a49509dc61b1",
+    "docs/PRESENTATION_GUIDE.md": "fbf6016f352df6dc317a0da2bd8c54944bcc0b41e8849d7801594754b53c0344",
+    "docs/USER_GUIDE.md": "d85062fca2a96d170d4462abec6cd927864a1365db956ab38db28f10242330ae",
+    "docs/proposal/Package Delivery Security Box - Written Proposal.pdf": "62a152625e20fb8e84e692d3571e871618d8865d20e06e547790c341601ba9ab",
+    "output/pdf/Parcel Guard - Final Report.pdf": "2e4f5eeddfde604949a4d77397ed920a9c6fb3b7622b1377b37897a61cfe9140",
+    "output/pdf/Parcel Guard - Final Presentation.pdf": "196ad2e27b734df1db89749aa982b99ec7bc7cd0bdc12ea8fda052a2792d3bc3",
+    "output/submission/Parcel Guard - Final Presentation.pptx": "92e14171e01fa59ce8ea7b3cb56f5fc3a8793e9cff747177f98016aa0254f512",
+    "docs/report_source.md": "86c1441b48126b827cadf733220ca17f03442b893ba51ade4e860a9aeb73f3a7",
+    "output/index.html": "0123a263edf4e5a5da79969ffa354e2253328794a90185eba2cd8a702375e2e3"
   },
-  "evaluation_manifest_sha256": "5fc63a7677746e1e9cc9499e690e09c51eed5f700a6cc4628e661681b665f4e7",
-  "presentation_validation_receipt_sha256": "fc6027624ee154117f6662cfae6f917cddc0ecdee41b552cb30c4d08497d7dd4"
+  "evaluation_manifest_sha256": "7c93de8ad7a37f6d4951a6fe13eac4ccc555a1693b96ae65b23ed3a240eeb591",
+  "presentation_validation_receipt_sha256": "d896457b4d3f8d128068b3e04cc3b9ce4318ee294e19e5ebb1ca54ebe7cb91a0"
 }

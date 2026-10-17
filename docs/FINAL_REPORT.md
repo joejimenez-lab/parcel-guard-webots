@@ -1,9 +1,11 @@
 # Parcel Guard
 
-Repository reading companion. The canonical submission paper is [the standalone LaTeX source](parcel_guard_report.tex), exported as the [final report PDF](../output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf).
+Repository copy of the report. The submission paper is [the standalone LaTeX source](parcel_guard_report.tex), exported as the [final report PDF](../output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf).
 ## Package Delivery Security Box
 
 CS 5650 · Final project · Webots simulation
+
+Instructor: Dr. Jung Soo Lim · Fall 2026
 
 Joshua Guico · Joe Jimenez · Brandon Lopez
 
@@ -29,10 +31,6 @@ The final evaluation includes 50 parcel-presence trials, 60 event sequences, 100
 
 Additional checks cover bolt faults in both directions, an obstructed door, access expiry, early cancellation, lost acknowledgments, sensor startup and gaps, and malformed commands. These results apply to the generated simulation scenarios. The project does not establish physical attack resistance, production authentication, real radio performance, or recovery after a process restart.
 
-## Reading the evidence
-
-Sections 4 and 5 explain what the numbers measure and where the tests stop. The JSON reports retain individual trials; CSV files support inspection without running Webots. `results/evaluation_manifest.json` binds the results to the evaluated source and configuration. The report date is a build date, not an assignment deadline.
-
 # 1. Introduction
 
 ## Problem and intended users
@@ -45,20 +43,20 @@ The intended users are an owner collecting a parcel and a courier depositing one
 
 The project contains one virtual box and one parcel at a time. Python controls the door and bolt, reads the devices, enforces access rules, and maintains an event outbox. A local Webots Robot Window provides code entry, measurements, event history, and clearly separated scenario controls. The project uses no purchased hardware or external cloud service.
 
-Three decisions shape the implementation. First, measured feedback determines security status: a motor command alone cannot establish that a bolt moved. Second, the detector and the scenario fixture have separate responsibilities, so the fixture cannot supply labels to the detector. Third, loss of the simulated message link leaves sensing and local control running. These decisions make failures visible and let each requirement be evaluated independently.
+Position sensors determine whether the door and bolt have reached their targets. The detector reads devices, while a separate fixture sets up the trials and supplies labels to the scorer. Local sensing and access control continue when the simulated message link is offline.
 
 ## Team responsibilities and project organization
 
-The responsibilities below follow the allocation in the proposal. All three team members share integration review, interpretation of results, and presentation preparation.
+The responsibilities below are the planned allocation in the written September proposal. They describe assigned roles rather than a record of hours worked.
 
 | Team member | Proposal responsibility and corresponding project area |
 |---|---|
-| Joshua Guico | Webots world and sensors: enclosure, joints, collision geometry, and device configuration |
-| Joe Jimenez | Control logic: access policy, sensor interpretation, actuator sequencing, and event handling |
-| Brandon Lopez | Local panel and test automation: Robot Window, scenario runners, and results collection |
+| Joshua Guico | Project & Integration Lead: tasks, communication, integration, demonstration, presentation, and report |
+| Joe Jimenez | Simulation & Modeling Lead: enclosure, parcel, joints, sensors, and scenario modeling |
+| Brandon Lopez | Controller, Interface & Testing Lead: Python policy, access rules, local panel, automated tests, and troubleshooting |
 | All three | Integration review, interpretation of results, and final presentation |
 
-The proposal organized work into modeling and sensor checks, controller/UI integration, and evaluation. The repository follows those boundaries in separate modules. The final handoff includes reproducible commands and saved evidence so another team member can repeat a test or explain a failure. The suggested presentation remains 13 minutes plus two minutes for questions.
+The proposal organized work into modeling and sensor checks, controller/UI integration, and evaluation. The repository follows those boundaries in separate modules. The repository includes commands and trial records for repeating each test. The suggested presentation remains 13 minutes plus two minutes for questions.
 
 # 2. Related works and technologies
 
@@ -66,7 +64,7 @@ The proposal organized work into modeling and sensor checks, controller/UI integ
 
 Amazon Key describes a delivery workflow that verifies the package and driver's location before granting one-time garage access [1]. That approach connects access to a delivery transaction. Parcel Guard models the narrower rule of a single-use courier credential in a local environment. It does not implement Amazon's service, location verification, or carrier identity checks.
 
-Yale's Smart Security Box manual describes app setup, entry-code management, shared access, and an optional Connect WiFi Bridge [2]. This illustrates the separate concerns of enclosure access and connectivity. Parcel Guard makes those concerns observable through a measured bolt position and an explicit event outbox. We did not test Yale or Amazon products, and the comparison below makes no claim about their error rates or relative security.
+Yale's Smart Security Box manual describes app setup, entry-code management, shared access, and an optional Connect WiFi Bridge [2]. Parcel Guard checks bolt position for local access and uses an event outbox for message delivery. We did not test Yale or Amazon products, and the comparison below makes no claim about their error rates or relative security.
 
 | Approach | Access and deployment | Evidence available in this project |
 |---|---|---|
@@ -126,13 +124,13 @@ The door is closed below 0.05 rad, open above 0.15 rad, and moving between those
 | Locking | Extend bolt only after measured closure; confirm endpoint before reporting secured |
 | Fault | Show the reason; recovery requires usable sensors or measured target completion |
 
-Courier code 2468 expires after 300 simulated seconds and is consumed when access is granted. Owner code 1357 expires after 86,400 seconds. Expiry uses an exclusive upper bound, so a request exactly at the deadline is rejected. Five failed credential attempts within 300 seconds pause entry for 60 seconds. Replay IDs are rejected even when a code is otherwise valid.
+Courier code 2468 expires after 300 simulated seconds and is consumed when access is granted. Owner code 1357 also works once and expires after 86,400 seconds. Both tokens are consumed on a successful grant. Each independent motor-cycle trial starts a fresh policy session. Expiry uses an exclusive upper bound, so a request exactly at the deadline is rejected. Five failed credential attempts within 300 seconds pause entry for 60 seconds. Replay IDs are rejected even when a code is otherwise valid.
 
 A bolt target timeout is two seconds. A closing door has three seconds before a door fault. Physical hinge stops bound travel slightly beyond the motor's commanded range to avoid a stop fighting the normal closed target. The bolt moves with the door and has physical travel stops. Its failure fixture disables force and applies a brake so door motion cannot passively slide it into a false recovery. Door failures disable available torque.
 
 ## Event rules
 
-An empty-to-present transition during courier-authorized open-door handling creates a delivery event. A present-to-empty transition during owner access creates retrieval. An unexplained opening or parcel transition creates tamper. An acceleration-axis magnitude above 13 m/s2 outside approved handling and settling also creates tamper. A one-second refractory interval limits repeated impact alerts. Closure has a 0.7-second settling grace period. Benign motion is the evaluated sequence outcome when no delivery, retrieval, or tamper event occurs.
+An empty-to-present transition during courier-authorized open-door handling records `parcel_detected` and marks delivery pending. The `delivery` event is recorded only when the parcel remains present, the door is closed, the bolt is locked, and there is no active grant or fault. A jam leaves delivery pending; removal or suspected tampering cancels it. A present-to-empty transition during owner access creates retrieval. An unexplained opening or parcel transition creates tamper. An acceleration-axis magnitude above 13 m/s2 outside approved handling and settling also creates tamper. A one-second refractory interval limits repeated impact alerts. Closure has a 0.7-second settling grace period. Benign motion is the evaluated sequence outcome when no delivery, retrieval, or tamper event occurs.
 
 # 4. Evaluation method
 
@@ -153,6 +151,11 @@ The seeds produce separate scenario realizations of the same test families. They
 | R7 | Zero unauthorized unlocks in 30 attempts | Six each: invalid, expired, reused, wrong role, replayed ID |
 | R8 | Fault on blocked bolt, never false secured | Disable force and apply a brake in both directions; release and observe recovery |
 | R9 | Five wrong attempts trigger 60 s cooldown | Check a valid code during and after the pause |
+| R10 | Local entry, measured status, history and fixture controls | Robot Window; 14 DOM checks and browser layout review |
+| R11 | Repeatable evaluation with saved failure details | Fixed seeds; separate development/final runs; source/report hashes and JSON/CSV records |
+| R12 | Complete project and communication materials | Source, paper, presentation with notes, captioned demos, guides and portable archive |
+| R13 | Record delivery only after measured closure and locking | Pending delivery, blocked-lock recovery, removal and offline workflow tests |
+| R14 | Reset safely and resume local operation | Open-door reset revokes access and holds the bolt retracted until closure |
 
 ## Scoring and timing
 
@@ -185,9 +188,9 @@ The measured motion-only reference achieved macro F1 0.10 and raised a tamper al
 
 All 30 sampled impacts entered the local queue in the same controller iteration, giving 0 simulated seconds for sensor-sample-to-queue latency. Sampling runs every 32 ms. The independent observer received an alert within 0.224 simulated seconds of a stimulus. Zero queue latency therefore describes scheduling at the chosen resolution, rather than instantaneous physical or network response.
 
-Both bolt-jam directions produced faults and recovered from measured feedback. The separate door test revoked expired authorization, flagged parcel movement after expiry, kept the bolt retracted while open, and recovered after release. Early cancellation and malformed-command cases passed. The policy suite contains 31 targeted checks, and the dashboard suite contains 12 DOM checks.
+Both bolt-jam directions produced faults and recovered from measured feedback. A full offline workflow also confirmed delivery after a blocked bolt recovered, allowed local owner retrieval, and replayed all queued events once. Resetting an open box revoked access and kept the bolt retracted until closure. The separate door test revoked expired authorization, flagged parcel movement after expiry, kept the bolt retracted while open, and recovered after release. Early cancellation and malformed-command cases passed. The policy suite contains 38 targeted checks, and the dashboard suite contains 14 DOM checks.
 
-These finite tests do not prove an absence of defects. In particular, perfect scores on scripted scenes do not estimate performance across arbitrary parcel shapes, placements, users, weather, or attacks. The released JSON and CSV results make the tested cases inspectable.
+These scores cover the generated scenes. The JSON reports retain each trial, and the CSV exports can be read without Webots. Different parcel shapes, handling, weather, and attacks require further tests.
 
 # 5. Conclusions and future work
 
@@ -195,12 +198,15 @@ These finite tests do not prove an absence of defects. In particular, perfect sc
 
 The delivered simulation completes courier delivery and owner retrieval using measured device feedback. It rejects the required invalid access categories, distinguishes the four tested sequence types, reports actuator faults, and recovers retained alerts after simulated outages. The demonstration videos show actual Webots footage with status taken from the recording, and the full suite supplies the evidence beyond those selected examples.
 
-The project applies modular design, deterministic state control, input validation, debouncing, hysteresis, timeout handling, and idempotent event processing. Separating policy from device access makes the failure cases easier to reproduce and explain. The UI keeps an event such as delivery separate from the later confirmation that the box is secured.
+The policy runs independently of Webots, so access and event rules can be checked with short input sequences. Simulator tests then check those rules against device feedback and actuator motion.
 
 ## Failures found and corrected
 
 | Finding during final review | Correction and evidence |
 |---|---|
+| Delivery was recorded before the latch locked | Defer delivery until measured closure and locking; test blocked lock, recovery, and removal |
+| The owner temporary code could be reused | Consume both role tokens on grant; test owner reuse and exact expiry |
+| Resetting with the door open could extend the bolt | Keep the bolt retracted until measured closure; Webots reset regression |
 | Authorization survived its deadline while the door stayed open | Revoke at expiry; closing state and door timeout; policy and Webots obstruction tests |
 | Close during early unlocking could leave access active | Close cancels the grant immediately; Webots early-close regression |
 | Startup or invalid samples could undermine debounce | Require consecutive usable samples; reset the candidate count across gaps |
@@ -214,7 +220,7 @@ The parcel is a scripted object. The fixture can place or animate it through the
 
 The event queue survives the simulated link going offline, but restarting a controller loses pending state. A plausible stuck-at sensor value may remain undetected. Impact rules intentionally suppress approved handling and short closing/settling motion, which can hide an attack during that interval. The current test families do not measure that adversarial case.
 
-A next iteration should add persistent event and token state, deliberate stuck-at and biased-sensor trials, more varied benign disturbances, and adversarial handling during access. Hardware work would require a physical interlock, safe obstruction handling, secure credential provisioning, and tests of environmental and network behavior. Those additions need new acceptance criteria and cannot be inferred from the current simulation scores.
+A next iteration should add persistent event and token state, deliberate stuck-at and biased-sensor trials, more varied benign disturbances, and adversarial handling during access. Hardware work would require a physical interlock, safe obstruction handling, secure credential provisioning, and tests of environmental and network behavior. Each addition needs new acceptance criteria.
 
 # 6. References
 
@@ -230,11 +236,11 @@ A next iteration should add persistent event and token state, deliberate stuck-a
 
 [6] Cyberbotics, "Supervisor Programming," Webots R2025a User Guide. https://github.com/cyberbotics/webots/blob/R2025a/docs/guide/supervisor-programming.md. Accessed October 17, 2026.
 
-[7] J. Guico, J. Jimenez, and B. Lopez, "Package Delivery Security Box: CS 5650 Proposal, Webots Simulation," project proposal and speaker notes, supplied course material.
+[7] J. Guico, J. Jimenez, and B. Lopez, "Package Delivery Security Box: CS 5650 Proposal, Webots Simulation," written proposal, September 2026, and proposal presentation with speaker notes. The written PDF is included in `docs/proposal/`.
 
 [8] CS 5650, "Final Report Guidelines and Format Recommendation" and "Software Engineering - Design, Implementation, and Evaluation, Oral and Written Communication" rubric, supplied assignment screenshots. Due date shown as TBD.
 
-[9] Parcel Guard project, evaluation configuration, source manifest, scenario results, and recorded telemetry, release 2.2.0. https://github.com/joejimenez-lab/parcel-guard-webots. Local evidence: `results/evaluation_manifest.json`, `results/REPORT.md`, and the associated JSON/CSV files.
+[9] Parcel Guard project, evaluation configuration, source manifest, scenario results, and recorded telemetry, release 2.3.0. https://github.com/joejimenez-lab/parcel-guard-webots. Local evidence: `results/evaluation_manifest.json`, `results/REPORT.md`, and the associated JSON/CSV files.
 
 ## Reproduction and demonstration
 

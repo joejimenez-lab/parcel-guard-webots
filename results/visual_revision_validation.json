@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "timestamp_utc": "2026-10-17T18:32:29.276083+00:00",
+  "scope": "Editorial revision of report source, project documentation, dashboard messages, slide deck and captioned video exports",
+  "checks": {
+    "full_simulator_suite": true,
+    "policy_regressions": 38,
+    "dashboard_dom_checks": 14,
+    "both_recorded_scenarios": true,
+    "recordings_match_evaluated_source": true,
+    "typescript": true,
+    "isolated_directory_evaluation": true,
+    "all_three_videos_fully_decoded": true,
+    "closing_table_matches_evaluation": true,
+    "delivery_caption_follows_recorded_pending_status": true,
+    "presentation_slides": 14,
+    "presentation_notes": 14,
+    "presentation_pdf_pages": 14,
+    "native_table_slides": [
+      3,
+      4,
+      7,
+      9,
+      10,
+      11
+    ],
+    "latex_editor_compilation": true,
+    "report_pdf_pages": 8,
+    "report_pdf_visual_review": true
+  },
+  "visual_review": "Reviewed all 14 rendered slides, updated poster and converted PDF pages. Reviewed every video chapter and opening/transition/results frames, including full-size pending delivery, locking fault and results. Checked dashboard at desktop and 390px widths using recorded pending-delivery status.",
+  "evaluation_manifest_sha256": "7c93de8ad7a37f6d4951a6fe13eac4ccc555a1693b96ae65b23ed3a240eeb591",
+  "presentation_source_sha256": {
+    "demo-studio/src/Evidence.tsx": "7c9c091590f1d6ec73531989e7fd819539816c818e537963bc355e5714b601e6",
+    "demo-studio/src/FinalDemo.tsx": "c5dcfaaab8667ad9476d97abcb0961b1662afbe29d98b8dccf86a11d71f974f6",
+    "demo-studio/src/Opening.tsx": "846110cc48231a2390d5fb309246a6ab5bd58d82671143cab67adf6d5ff0028f",
+    "demo-studio/src/RecordedScene.tsx": "6d7d6d8055b574e7e2183695e0a1608b5e97905b312dfc45e55a84bc31961d53",
+    "demo-studio/src/Resilience.tsx": "1bf503c6593ad84d57c288a3ed7065fb5311ff1516b947628c5d06675c2f3e1e",
+    "demo-studio/src/Root.tsx": "d4b428ce8502d55227c6c41662adb4195d4d56a9f36f4d42fd8e80845e041e4b",
+    "demo-studio/src/Workflow.tsx": "524910952d22981ddd1c41704712e6536998afdcdf65ff063d0dd7d8666052d9",
+    "demo-studio/src/index.ts": "957e481dd33a29b4a55ae0e95dbf763b7e48c37c427ca4bd1275faf34bc07a74",
+    "demo-studio/src/style.ts": "1598920f51c5e6886f07fdb7b1f94fd6445cb423c68cc50ca8841546670d28f7"
+  },
+  "presentation_validation_receipt_sha256": "d896457b4d3f8d128068b3e04cc3b9ce4318ee294e19e5ebb1ca54ebe7cb91a0",
+  "artifact_sha256": {
+    "output/submission/Parcel Guard - Final Presentation.pptx": "92e14171e01fa59ce8ea7b3cb56f5fc3a8793e9cff747177f98016aa0254f512",
+    "output/pdf/Parcel Guard - Final Presentation.pdf": "196ad2e27b734df1db89749aa982b99ec7bc7cd0bdc12ea8fda052a2792d3bc3",
+    "docs/parcel_guard_report.tex": "ba0230e751817cfca0c98c5dc9a3bb120174a18d8bb130afaac0129a4be645fb",
+    "DESIGN.md": "91b64f39099fb657bbb1267413c3f9eda9558bc8271e7bbac729522df5fd88d8",
+    "REQUIREMENTS.md": "0a39bdc14a63fc049a2478f97f712a48dceb5290e48bce562c4fc96f5995930a",
+    "docs/SOFTWARE_REQUIREMENTS.md": "687c91f680aa1ef2fc28dcece24c879b76aca8d8b253370b8279a49509dc61b1",
+    "docs/report_source.md": "86c1441b48126b827cadf733220ca17f03442b893ba51ade4e860a9aeb73f3a7",
+    "docs/FINAL_REPORT.md": "0d46174a9596f4b37b57f89eab613114c10ec34cb76bab2f9061149fb47e1c27",
+    "output/index.html": "0123a263edf4e5a5da79969ffa354e2253328794a90185eba2cd8a702375e2e3",
+    "output/pdf/Parcel Guard - Final Report.pdf": "2e4f5eeddfde604949a4d77397ed920a9c6fb3b7622b1377b37897a61cfe9140"
+  },
+  "videos": [
+    {
+      "path": "output/Parcel Guard - Delivery Workflow.mp4",
+      "sha256": "672b535006acb0dfbdc9fb3efeb2325394806b78c59bd57068e49f826b546e59",
+      "passed": true,
+      "all_frames_decoded_without_errors": true
+    },
+    {
+      "path": "output/Parcel Guard - Security Recovery.mp4",
+      "sha256": "5e335d9441ac8440b0584ef3e71fb756bc7c962a2144bc8fd5eb405d09a117e3",
+      "passed": true,
+      "all_frames_decoded_without_errors": true
+    },
+    {
+      "path": "output/Parcel Guard - Final Demonstration.mp4",
+      "sha256": "96ba5dd3363810ec92d7c2a25a6f3de1242b6c18558be2710855ff65fc468121",
+      "passed": true,
+      "all_frames_decoded_without_errors": true
+    }
+  ],
+  "report_and_release": "Report PDF exported and reviewed. Submission document hashes are recorded in results/submission_validation.json for the 2.3.0 archive.",
+  "detail_review": {
+    "passed": true,
+    "timestamp_utc": "2026-10-17T18:26:24.299351+00:00",
+    "checks": {
+      "evaluated_source_files_unchanged": 37,
+      "evaluated_reports_unchanged": 8,
+      "policy_checks": 38,
+      "dashboard_checks": 14,
+      "recording_state_invariants": true,
+      "csv_trial_counts_match": true,
+      "all_four_requirements_tables_cover_R1_R14": true,
+      "only_slides_6_and_8_text_changed": true,
+      "all_14_speaker_notes_and_6_native_tables_retained": true,
+      "slide_pdf_14_pages_text_in_bounds": true,
+      "all_three_videos_match_full_decode_validation_and_have_no_audio": true,
+      "local_gallery_playback_and_mobile_layout": true,
+      "latex_editor_compilation": true
+    },
+    "changes": [
+      "Rejoined the SRD requirements table and added missing R10\u2013R14 rows to the report companion.",
+      "Made sensor boundary and commanded-position wording exact.",
+      "Corrected door closure versus bolt locking in slide 8; clarified inclusive thresholds in slide 6.",
+      "Named each gallery video for assistive technology and added keyboard focus and fallback links."
+    ],
+    "limits": "No runtime behavior changed during the detail pass. Existing simulator and frame-decode results were verified by hashes. The report PDF was subsequently exported and reviewed for release 2.3.0."
+  }
+}

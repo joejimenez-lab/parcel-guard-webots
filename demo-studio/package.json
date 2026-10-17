@@ -1,6 +1,6 @@
 {
   "name": "demo-studio",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Parcel Guard demos using verified Webots footage and sensor telemetry",
   "repository": {
     "type": "git",

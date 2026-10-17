@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-10-17T18:32:29.276083+00:00",
+  "functional_proposal_coverage_passed": true,
+  "submission_ready": true,
+  "sources": [
+    "docs/proposal/Package Delivery Security Box - Written Proposal.pdf",
+    "output/Package Delivery Security Box - Final Proposal.pptx"
+  ],
+  "coverage_matrix": "REQUIREMENTS.md",
+  "fixed_gaps": [
+    "Delivery now follows measured closure and bolt locking.",
+    "Both temporary role tokens are single-use.",
+    "Reset while open holds the bolt retracted until the door closes.",
+    "Team roles and instructor follow the written proposal."
+  ],
+  "additional_evidence": [
+    "Complete offline delivery and retrieval, with blocked-bolt recovery and unique replay.",
+    "38 policy regressions and 14 dashboard DOM checks.",
+    "Full Webots suite repeated from an isolated directory.",
+    "Three fresh captioned videos, full-frame decoded; 14-slide presentation refreshed."
+  ],
+  "remaining": [
+    "Team upload, rehearsal, presentation and Q&A."
+  ],
+  "evaluation_manifest_sha256": "7c93de8ad7a37f6d4951a6fe13eac4ccc555a1693b96ae65b23ed3a240eeb591"
+}

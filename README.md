@@ -1,10 +1,10 @@
-# Parcel Guard
+# Package Delivery Security Box
 
 [![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest)
 
 [Watch the demos](#demo-videos) · [Download the complete project](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) · [Evaluation report](results/REPORT.md) · [Design](DESIGN.md)
 
-Parcel Guard simulates a package-delivery security box in Webots. A Python controller reads 25 distance sensors, door and bolt positions, and motion. It checks access, recognizes parcel events, and retains alerts during simulated link outages.
+Parcel Guard is the Webots simulation for our CS 5650 package delivery security box project. A Python controller reads 25 distance sensors, door and bolt positions, and motion. It checks access, recognizes parcel events, and retains alerts during simulated link outages.
 
 ## Submission files
 
@@ -14,24 +14,24 @@ Parcel Guard simulates a package-delivery security box in Webots. A Python contr
 - [Rubric and proposal coverage](REQUIREMENTS.md), [user guide](docs/USER_GUIDE.md), and [test results](results/REPORT.md)
 - [Complete project ZIP](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest), including the final walkthrough, two class clips, and raw recordings
 
-The final materials retain Joshua Guico, Joe Jimenez, and Brandon Lopez for CS 5650. Team responsibilities and the suggested 13-minute presentation plus two-minute Q&A follow the proposal.
+The CS 5650 team is Joshua Guico, Joe Jimenez, and Brandon Lopez. The proposal assigns the team roles and suggests a 13-minute presentation plus two minutes for questions.
 
 ## Start here
 
 1. Install **Webots R2025a** and **Python 3.10+**. The simulation uses the Python standard library and the controller API bundled with Webots; no pip packages are required.
 2. Open **`worlds/delivery_box.wbt`** in Webots. Select real-time simulation speed, then run.
 3. Open the **Parcel Guard Robot Window** from the robot's context menu / Robot Window control.
-4. Select **Courier**, enter **2468**, and click **Unlock**. In **Scenario lab**, click **Place parcel**, then **Close and secure**.
-5. Select **Owner**, enter **1357**, and unlock. Click **Remove parcel**, then **Close and secure**.
+4. Select **Courier**, enter **2468**, and click **Unlock**. Wait for the door to open and bolt to retract. In **Test controls**, click **Place parcel** and wait for parcel detection. Click **Close and secure**, then wait for `SECURED` and the delivery event.
+5. Select **Owner**, enter **1357**, and unlock. Wait for the open door, click **Remove parcel**, and wait for the retrieval event. Click **Close and secure**.
 
-The courier code is single-use and expires 300 simulated seconds after issuance. The owner code expires after 86,400 simulated seconds. **New session** reissues demo tokens and resets policy state; move the parcel out first for another courier delivery. The clock uses simulated time, so fast mode also advances code expiry quickly.
+The courier code is single-use and expires 300 simulated seconds after issuance. The owner code is also single-use and expires after 86,400 simulated seconds. **New session** reissues demo tokens and resets policy state; move the parcel out first for another courier delivery. The clock uses simulated time, so fast mode also advances code expiry quickly.
 
 ### Fault and outage walkthrough
 
 - Click **Disconnect link**, then **Impact** (space repeated impacts by >1 simulated second). Watch the queue grow. **Restore link** drains it only after endpoint ACKs.
 - **Drop 3 ACKs** makes the endpoint receive retry packets while preserving unique event IDs.
-- Unlock as owner. Click **Block bolt**, then **Close and secure**. The door closes, the bolt remains retracted, and a fault appears after two seconds. **Release bolt** removes the brake and restores force; measured feedback must reach locked before the box reports secured.
-- Try the wrong purpose for a valid code, a redeemed courier code, or five incorrect entries. The log explains each denial; five wrong codes in five simulated minutes pause entry for one minute.
+- Start a **New session** if the owner token was already used. Unlock as owner and wait for the door to open fully. Click **Block bolt**, then **Close and secure**. The door closes, the bolt remains retracted, and a fault appears after two seconds. **Release bolt** removes the brake and restores force; measured feedback must reach locked before the box reports secured.
+- Try the wrong role for a valid code, a used courier code, or five incorrect entries. The log explains each denial; five wrong codes in five simulated minutes pause entry for one minute.
 
 ## Demo videos
 
@@ -42,7 +42,7 @@ The courier code is single-use and expires 300 simulated seconds after issuance.
 - **`output/index.html`** — local video gallery with evaluation results.
 - **`output/raw/`** in the [complete release package](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) — unedited native Webots footage. Recorded telemetry and scenario assertions are in `results/workflow_recording.json` and `results/resilience_recording.json`.
 
-The videos contain actual simulation footage. Telemetry panels are rendered from the recorded controller outputs. No narration is required; the chapters explain each action.
+The videos contain actual simulation footage. The readings and event messages below the footage come from the recorded controller outputs. Captions describe the test actions, including scripted parcel placement and fault injection.
 
 ## Evaluation
 
@@ -68,7 +68,7 @@ The command regenerates worlds, freezes source/configuration hashes, runs develo
 | Mixed access attacks | 0 unauthorized unlocks in 30 attempts |
 | Blocked bolt | Lock and unlock faults detected; measured recovery |
 | Added failure cases | Obstructed door, expired grant, early close, malformed input |
-| Policy and dashboard regressions | 31 policy checks and 12 DOM checks |
+| Policy and dashboard regressions | 38 policy checks and 14 DOM checks |
 
 Read **`results/REPORT.md`** for denominators, timing definitions, seeds, confusion matrices, and limitations. **`results/evaluation_manifest.json`** links each result to source and configuration hashes. **`REQUIREMENTS.md`** maps proposal requirements to implementations and evidence.
 
@@ -107,7 +107,7 @@ npm run render:final
 
 After rendering, return to the project root and run `python3 scripts/finalize_media.py` to check every encoded frame and refresh posters.
 
-`npm run dev` opens editable video scenes. Every substantial scene is registered independently as well as in its complete video. The raw capture is 1920×1080 at 31.25 fps; final videos are 1920×1080 at 30 fps.
+`npm run dev` opens editable video scenes. You can preview the opening, recorded run, and results separately. The raw capture is 1920×1080 at 31.25 fps; final videos are 1920×1080 at 30 fps.
 
 ## Submission package
 

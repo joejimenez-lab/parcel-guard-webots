@@ -5,7 +5,7 @@
       "name": "Delivery Workflow",
       "passed": true,
       "path": "output/Parcel Guard - Delivery Workflow.mp4",
-      "sha256": "2934c46afeeabe80b61edfae6890e5f4d88dc9c812fd9524e1c6538abb7b4124",
+      "sha256": "672b535006acb0dfbdc9fb3efeb2325394806b78c59bd57068e49f826b546e59",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -23,7 +23,7 @@
         ],
         "format": {
           "duration": "41.633333",
-          "size": "4855228"
+          "size": "4046393"
         }
       },
       "all_frames_decoded_without_errors": true
@@ -32,7 +32,7 @@
       "name": "Security Recovery",
       "passed": true,
       "path": "output/Parcel Guard - Security Recovery.mp4",
-      "sha256": "059ecc86e9e71feaa493f5aed9f2f0241ef9a6abbf341f0ac48a185c202d626d",
+      "sha256": "5e335d9441ac8440b0584ef3e71fb756bc7c962a2144bc8fd5eb405d09a117e3",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -50,7 +50,7 @@
         ],
         "format": {
           "duration": "54.433333",
-          "size": "6056343"
+          "size": "4584435"
         }
       },
       "all_frames_decoded_without_errors": true
@@ -59,7 +59,7 @@
       "name": "Final Demonstration",
       "passed": true,
       "path": "output/Parcel Guard - Final Demonstration.mp4",
-      "sha256": "22be3676d3fb9a0f5f0ff8719f9064aead3b615004d7341a7e6c4fb4e45156a5",
+      "sha256": "96ba5dd3363810ec92d7c2a25a6f3de1242b6c18558be2710855ff65fc468121",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -77,11 +77,11 @@
         ],
         "format": {
           "duration": "94.066667",
-          "size": "10776137"
+          "size": "8646596"
         }
       },
       "all_frames_decoded_without_errors": true
     }
   ],
-  "preview_bytes": 5890110
+  "preview_bytes": 6930044
 }

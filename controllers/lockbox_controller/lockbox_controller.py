@@ -78,6 +78,9 @@ def execute(command, now, trusted=False):
                         courier_valid_until=float(command.get('courier_ttl_s', 300)),
                         owner_valid_until=float(command.get('owner_ttl_s', 86400)))
         logic.previous = sensors
+        if not sensors.closed:
+            logic.request_close(now)
+            logic._target(False, now)
         door_requested_open = forced_open = False
         last_access_result = None
         latch_motor.setAvailableForce(50)

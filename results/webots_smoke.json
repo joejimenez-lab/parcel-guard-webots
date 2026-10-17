@@ -16,7 +16,7 @@
   "open_door_samples": 66,
   "max_bolt_orientation_error": 1.3004963792143885e-07,
   "final_status": {
-    "session": "bfdc9e2d8fad",
+    "session": "b87b5a619ab8",
     "time": 9.888,
     "phase": "SECURED",
     "secured": true,
@@ -30,48 +30,59 @@
     "entry_paused_s": 0,
     "access_remaining_s": 0,
     "courier_code_used": true,
+    "owner_code_used": true,
+    "delivery_pending": false,
     "pending": 0,
     "events": [
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 3,
         "time": 0.384,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 4,
         "time": 1.856,
-        "kind": "delivery",
-        "detail": "parcel placed",
+        "kind": "parcel_detected",
+        "detail": "parcel placed; awaiting closure and locking",
         "sensor_time": 1.856,
         "queue_latency_s": 0.0
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 5,
+        "time": 3.808,
+        "kind": "delivery",
+        "detail": "parcel inside; door closed and bolt confirmed locked",
+        "sensor_time": 3.808,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "b87b5a619ab8",
+        "id": 6,
         "time": 3.84,
         "kind": "link_lost",
         "detail": ""
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 6,
+        "session": "b87b5a619ab8",
+        "id": 7,
         "time": 4.256,
         "kind": "tamper",
         "detail": "impact detected",
@@ -79,22 +90,22 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 7,
+        "session": "b87b5a619ab8",
+        "id": 8,
         "time": 4.64,
         "kind": "link_restored",
         "detail": ""
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 8,
+        "session": "b87b5a619ab8",
+        "id": 9,
         "time": 5.568,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 9,
+        "session": "b87b5a619ab8",
+        "id": 10,
         "time": 7.04,
         "kind": "retrieval",
         "detail": "parcel removed",
@@ -106,6 +117,7 @@
       "sensor_fault",
       "sensor_recovered",
       "access_granted",
+      "parcel_detected",
       "delivery",
       "link_lost",
       "tamper",
@@ -115,45 +127,54 @@
     ],
     "all_events": [
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 3,
         "time": 0.384,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 4,
         "time": 1.856,
-        "kind": "delivery",
-        "detail": "parcel placed",
+        "kind": "parcel_detected",
+        "detail": "parcel placed; awaiting closure and locking",
         "sensor_time": 1.856,
         "queue_latency_s": 0.0
       },
       {
-        "session": "bfdc9e2d8fad",
+        "session": "b87b5a619ab8",
         "id": 5,
+        "time": 3.808,
+        "kind": "delivery",
+        "detail": "parcel inside; door closed and bolt confirmed locked",
+        "sensor_time": 3.808,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "b87b5a619ab8",
+        "id": 6,
         "time": 3.84,
         "kind": "link_lost",
         "detail": ""
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 6,
+        "session": "b87b5a619ab8",
+        "id": 7,
         "time": 4.256,
         "kind": "tamper",
         "detail": "impact detected",
@@ -161,22 +182,22 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 7,
+        "session": "b87b5a619ab8",
+        "id": 8,
         "time": 4.64,
         "kind": "link_restored",
         "detail": ""
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 8,
+        "session": "b87b5a619ab8",
+        "id": 9,
         "time": 5.568,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "bfdc9e2d8fad",
-        "id": 9,
+        "session": "b87b5a619ab8",
+        "id": 10,
         "time": 7.04,
         "kind": "retrieval",
         "detail": "parcel removed",
@@ -193,7 +214,8 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
     "pending_ids": [],
     "latch_target": "locked",
@@ -243,8 +265,9 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
-    "endpoint_duplicate_packets": 0
+    "endpoint_duplicate_packets": 1
   }
 }

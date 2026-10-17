@@ -35,6 +35,8 @@ class Lockbox:
         self.session = uuid.uuid4().hex[:12]
         self.auto_ack = auto_ack
         self.courier_used = False
+        self.owner_used = False
+        self.delivery_pending = False
         self.failure_times, self.seen_request_ids = [], set()
         self.locked_until = 0.0
         self.grant, self.grant_until = None, 0.0
@@ -66,6 +68,9 @@ class Lockbox:
             self.closing_since = now
 
     def _event(self, kind, now, detail="", detected_at=None):
+        if kind == "tamper":
+            # An interrupted or unexplained transfer cannot become a delivery.
+            self.delivery_pending = False
         event = {"session": self.session, "id": self.next_id, "time": round(now, 6),
                  "kind": kind, "detail": detail}
         if detected_at is not None:
@@ -114,6 +119,8 @@ class Lockbox:
             role, reason = "owner", "expired owner code"
             if now >= self.owner_valid_until:
                 role = None
+            elif self.owner_used:
+                role, reason = None, "owner code already used"
         elif code == self.courier_code:
             role, reason = "courier", "expired courier code"
             if now >= self.courier_valid_until:
@@ -145,6 +152,8 @@ class Lockbox:
         self.latch_target, self.target_since = 0.0, now
         if role == "courier":
             self.courier_used = True
+        else:
+            self.owner_used = True
         self._event("access_granted", now, role)
         return True
 
@@ -174,7 +183,8 @@ class Lockbox:
         if self.has_feedback and sensors.parcel_present != previous.parcel_present:
             access_open = sensors.door_open or previous.door_open
             if self.grant == "courier" and sensors.parcel_present and access_open:
-                self._event("delivery", now, "parcel placed", now)
+                self.delivery_pending = True
+                self._event("parcel_detected", now, "parcel placed; awaiting closure and locking", now)
             elif self.grant == "owner" and not sensors.parcel_present and access_open:
                 self._event("retrieval", now, "parcel removed", now)
             else:
@@ -202,6 +212,11 @@ class Lockbox:
         elif self.fault_reported and reached:
             self._event("latch_recovered", now, "measured bolt reached target")
             self.fault_reported = False
+        if (self.delivery_pending and sensors.parcel_present and sensors.closed
+                and sensors.latch_locked and not self.grant and self.closing_since is None
+                and not self.fault_reported and not self.door_fault):
+            self._event("delivery", now, "parcel inside; door closed and bolt confirmed locked", now)
+            self.delivery_pending = False
         self.previous = sensors
         self.has_feedback = True
 
@@ -229,5 +244,6 @@ class Lockbox:
                 "link": "online" if self.link_online else "offline", "grant": self.grant or "none",
                 "entry_paused_s": max(0, round(self.locked_until - now, 1)),
                 "access_remaining_s": max(0, round(self.grant_until - now, 1)) if self.grant else 0,
-                "courier_code_used": self.courier_used, "pending": len(self.pending),
+                "courier_code_used": self.courier_used, "owner_code_used": self.owner_used,
+                "delivery_pending": self.delivery_pending, "pending": len(self.pending),
                 "events": self.history[-16:]}

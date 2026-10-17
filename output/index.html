@@ -1,11 +1,184 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Parcel Guard — Final Demonstration</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f3f1eb;color:#202828;font:17px/1.65 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:64px 28px}header{border-bottom:1px solid #c7ccc6;padding-bottom:28px;margin-bottom:32px}.eyebrow{font-size:13px;letter-spacing:2px;color:#596462}h1{font:64px/1.05 Georgia,serif;margin:24px 0}h2{font:32px/1.2 Georgia,serif;margin:0 0 12px}p{max-width:850px;color:#596462}a{color:#215f51;text-underline-offset:4px}video{display:block;width:100%;background:#202828}section{margin:44px 0}.clips{display:grid;grid-template-columns:1fr 1fr;gap:28px}.clips h2{font-size:27px}.links{display:flex;gap:22px;flex-wrap:wrap;border-top:1px solid #c7ccc6;padding-top:28px}footer{border-top:1px solid #c7ccc6;padding-top:22px;margin-top:38px;color:#596462;font-size:14px}@media(max-width:720px){main{padding:32px 18px}h1{font-size:48px}.clips{grid-template-columns:1fr}}
-</style></head><body><main>
-<header><div class="eyebrow">CS 5650 / WEBOTS R2025a / VERSION 2.2.0</div><h1>Parcel Guard</h1><p>A package delivery box with temporary courier access, sensor-based events, and measured door and bolt feedback.</p><div>Joshua Guico · Joe Jimenez · Brandon Lopez</div></header>
-<section><h2>Final demonstration</h2><p>94 seconds · captioned, no narration. The complete workflow, failure tests, and evaluation summary use fresh 1080p Webots footage and synchronized controller telemetry.</p><video controls playsinline preload="metadata" poster="Parcel Guard Final Poster.jpg" src="Parcel Guard - Final Demonstration.mp4"></video></section>
-<div class="clips"><section><h2>Delivery and retrieval</h2><p>42-second class clip: courier access, parcel detection, locking, used-code rejection, and owner retrieval.</p><video controls playsinline preload="metadata" poster="Parcel Guard Workflow Poster.jpg" src="Parcel Guard - Delivery Workflow.mp4"></video></section><section><h2>Security and recovery</h2><p>54-second class clip: access denials, offline alerts, lost acknowledgments, and a blocked bolt.</p><video controls playsinline preload="metadata" poster="Parcel Guard Recovery Poster.jpg" src="Parcel Guard - Security Recovery.mp4"></video></section></div>
-<nav class="links" aria-label="Project files"><a href="pdf/Parcel Guard - Final Report.pdf">Final paper</a><a href="../docs/parcel_guard_report.tex">LaTeX source</a><a href="submission/Parcel Guard - Final Presentation.pptx">Presentation with notes</a><a href="pdf/Parcel Guard - Final Presentation.pdf">PDF slides</a><a href="https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest">Complete project ZIP</a><a href="../results/REPORT.md">Evaluation evidence</a><a href="../README.md">Run the simulation</a></nav>
-<footer>The saved evaluation covers this one-parcel simulation and a local message endpoint. It does not establish physical attack resistance, production authentication, real network performance, or recovery after a controller restart.</footer>
-</main></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Parcel Guard demonstration</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #fff;
+        color: #222;
+        font:
+          16px/1.6 Arial,
+          Helvetica,
+          sans-serif;
+      }
+      main {
+        max-width: 1120px;
+        margin: auto;
+        padding: 36px 24px;
+      }
+      header {
+        border-bottom: 2px solid #333;
+        padding-bottom: 20px;
+        margin-bottom: 28px;
+      }
+      .eyebrow {
+        font-size: 14px;
+        color: #555;
+      }
+      h1 {
+        font-size: 34px;
+        line-height: 1.2;
+        margin: 16px 0;
+      }
+      h2 {
+        font-size: 23px;
+        line-height: 1.3;
+        margin: 0 0 10px;
+      }
+      p {
+        max-width: 900px;
+        color: #444;
+      }
+      a {
+        color: #245f91;
+        text-underline-offset: 3px;
+      }
+      a:focus-visible,
+      video:focus-visible {
+        outline: 3px solid #245f91;
+        outline-offset: 4px;
+      }
+      video {
+        display: block;
+        width: 100%;
+        background: #222;
+      }
+      section {
+        margin: 30px 0;
+      }
+      .clips {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .clips h2 {
+        font-size: 21px;
+      }
+      .links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        border-top: 1px solid #aaa;
+        padding-top: 22px;
+      }
+      footer {
+        border-top: 1px solid #ccc;
+        padding-top: 18px;
+        margin-top: 30px;
+        color: #555;
+        font-size: 14px;
+      }
+      @media (max-width: 720px) {
+        main {
+          padding: 24px 16px;
+        }
+        h1 {
+          font-size: 29px;
+        }
+        .clips {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">CS 5650 · Fall 2026 · Webots R2025a</div>
+        <h1>Package Delivery Security Box</h1>
+        <p>
+          A Webots simulation of courier delivery, owner retrieval, and failure
+          handling. The controller reads the sensors and checks the door and
+          bolt before reporting the box secured.
+        </p>
+        <div>Joshua Guico · Joe Jimenez · Brandon Lopez</div>
+      </header>
+      <section>
+        <h2 id="final-title">Final demonstration</h2>
+        <p>
+          94 seconds, captioned without narration. Recorded Webots runs show the
+          normal workflow, access failures, offline alerts, and a blocked bolt.
+          The readings and event messages come from the controller log.
+        </p>
+        <video
+          aria-labelledby="final-title"
+          controls
+          playsinline
+          preload="metadata"
+          poster="Parcel Guard Final Poster.jpg"
+          src="Parcel Guard - Final Demonstration.mp4"
+        >
+          <a href="Parcel Guard - Final Demonstration.mp4">Open the final demonstration MP4</a>.
+        </video>
+      </section>
+      <div class="clips">
+        <section>
+          <h2 id="workflow-title">Delivery and retrieval</h2>
+          <p>
+            42-second class clip: courier access, parcel detection, locking,
+            used-code rejection, and owner retrieval.
+          </p>
+          <video
+            aria-labelledby="workflow-title"
+            controls
+            playsinline
+            preload="metadata"
+            poster="Parcel Guard Workflow Poster.jpg"
+            src="Parcel Guard - Delivery Workflow.mp4"
+          >
+            <a href="Parcel Guard - Delivery Workflow.mp4">Open the delivery and retrieval MP4</a>.
+          </video>
+        </section>
+        <section>
+          <h2 id="recovery-title">Security and recovery</h2>
+          <p>
+            54-second class clip: access denials, offline alerts, lost
+            acknowledgments, and a blocked bolt.
+          </p>
+          <video
+            aria-labelledby="recovery-title"
+            controls
+            playsinline
+            preload="metadata"
+            poster="Parcel Guard Recovery Poster.jpg"
+            src="Parcel Guard - Security Recovery.mp4"
+          >
+            <a href="Parcel Guard - Security Recovery.mp4">Open the security and recovery MP4</a>.
+          </video>
+        </section>
+      </div>
+      <nav class="links" aria-label="Project files">
+        <a href="pdf/Parcel Guard - Final Report.pdf">Final paper</a
+        ><a href="../docs/parcel_guard_report.tex">LaTeX source</a
+        ><a href="submission/Parcel Guard - Final Presentation.pptx"
+          >Presentation with notes</a
+        ><a href="pdf/Parcel Guard - Final Presentation.pdf">PDF slides</a
+        ><a
+          href="https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest"
+          >Complete project ZIP</a
+        ><a href="../results/REPORT.md">Test results</a
+        ><a href="../README.md">Run the simulation</a>
+      </nav>
+      <footer>
+        The tests use one parcel and a simulated message endpoint. The report
+        describes the hardware, networking, and restart behavior still to test.
+      </footer>
+    </main>
+  </body>
+</html>

@@ -36,7 +36,7 @@ def main():
     paths=sorted(set(paths))
     for p in paths:
         if not p.is_file():raise SystemExit(f'Missing artifact {p}')
-    delivery={'project':'Parcel Guard','version':'2.2.0','files':[{'path':str(p.relative_to(ROOT)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in paths]}
+    delivery={'project':'Parcel Guard','version':'2.3.0','files':[{'path':str(p.relative_to(ROOT)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in paths]}
     (OUTPUT/'delivery_manifest.json').write_text(json.dumps(delivery,indent=2))
     verify(ROOT)
     archive=OUTPUT/'Parcel Guard - Complete Project.zip'

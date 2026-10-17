@@ -13,6 +13,8 @@
     "sensor_fault_explained": true,
     "missing_values_rendered": true,
     "door_fault_explained": true,
-    "door_fixture_available": true
+    "door_fixture_available": true,
+    "pending_delivery_explained": true,
+    "used_owner_code_explained": true
   }
 }

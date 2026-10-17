@@ -82,6 +82,26 @@ for at in (.1,.2,.3):
  b.request_close(at); b.tick(at,Sensors())
 b.tick(.4,Sensors(impact=True))
 checks['redundant_close_does_not_suppress_impact']=any(e['kind']=='tamper' for e in b.history)
+# The proposal records delivery only after measured closure and locking.
+b=Lockbox(); b.tick(0,Sensors()); b.request_access('2468',.1,Sensors(),'delivery')
+opened_empty=Sensors(door_open=True,latch_locked=False)
+opened_full=Sensors(door_open=True,parcel_present=True,latch_locked=False)
+b.tick(.5,opened_empty); b.tick(1,opened_full)
+checks['parcel_detection_is_not_completed_delivery']=b.delivery_pending and [e['kind'] for e in b.history].count('delivery')==0
+b.request_close(1.1); b.tick(1.2,Sensors(parcel_present=True,latch_locked=False))
+b.tick(3.3,Sensors(parcel_present=True,latch_locked=False))
+checks['blocked_lock_cannot_confirm_delivery']=b.fault_reported and not any(e['kind']=='delivery' for e in b.history)
+b.tick(4,Sensors(parcel_present=True)); b.tick(5,Sensors(parcel_present=True))
+checks['delivery_confirmed_once_after_lock_feedback']=sum(e['kind']=='delivery' for e in b.history)==1 and b.history[-1]['time']==4
+b=Lockbox(); b.tick(0,Sensors()); b.request_access('2468',.1,Sensors(),'removed')
+b.tick(.5,opened_empty); b.tick(1,opened_full); b.tick(2,opened_empty); b.tick(3,Sensors())
+checks['removed_parcel_cancels_pending_delivery']=not b.delivery_pending and not any(e['kind']=='delivery' for e in b.history)
+b=Lockbox(); b.request_access('1357',0,Sensors(),'owner-first'); b.tick(1,opened_empty); b.tick(2,Sensors())
+checks['owner_code_is_single_use']=not b.request_access('1357',3,Sensors(),'owner-again') and b.history[-1]['detail']=='owner code already used'
+checks['owner_exact_expiry_rejected']=not Lockbox(owner_valid_until=2).request_access('1357',2,Sensors(),'owner-expired')
+# New policy sessions intentionally issue fresh temporary credentials.
+fresh=Lockbox(start_time=10)
+checks['reset_reissues_tokens_and_session']=fresh.session!=b.session and fresh.request_access('1357',11,Sensors(),'owner-first')
 report={'passed':all(checks.values()),'checks':checks}
 (ROOT/'results/robustness.json').write_text(json.dumps(report,indent=2))
 print(json.dumps(report,indent=2))

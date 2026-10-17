@@ -1,10 +1,13 @@
-{"session": "984ba4d795a6", "id": 1, "time": 0.032, "kind": "sensor_fault", "detail": "device feedback unavailable or not yet stable"}
-{"session": "984ba4d795a6", "id": 2, "time": 0.096, "kind": "sensor_recovered", "detail": "stable device feedback restored"}
-{"session": "2c3e5c4b3827", "id": 1, "time": 0.832, "kind": "access_granted", "detail": "owner"}
-{"session": "2c3e5c4b3827", "id": 2, "time": 20.832, "kind": "access_expired", "detail": "access window ended; closing door"}
-{"session": "2c3e5c4b3827", "id": 3, "time": 23.84, "kind": "door_fault", "detail": "door did not close within the allowed time"}
-{"session": "2c3e5c4b3827", "id": 4, "time": 24.096, "kind": "tamper", "detail": "unapproved parcel movement", "sensor_time": 24.096, "queue_latency_s": 0.0}
-{"session": "2c3e5c4b3827", "id": 5, "time": 24.544, "kind": "tamper", "detail": "impact detected", "sensor_time": 24.544, "queue_latency_s": 0.0}
-{"session": "2c3e5c4b3827", "id": 6, "time": 25.312, "kind": "door_recovered", "detail": "measured door reached closed position"}
-{"session": "2c3e5c4b3827", "id": 7, "time": 26.016, "kind": "tamper", "detail": "unapproved parcel movement", "sensor_time": 26.016, "queue_latency_s": 0.0}
-{"session": "859088375ae4", "id": 1, "time": 26.656, "kind": "access_granted", "detail": "owner"}
+{"session": "176e20c0bc81", "id": 1, "time": 0.032, "kind": "sensor_fault", "detail": "device feedback unavailable or not yet stable"}
+{"session": "176e20c0bc81", "id": 2, "time": 0.096, "kind": "sensor_recovered", "detail": "stable device feedback restored"}
+{"session": "1cb54d11627e", "id": 1, "time": 2.624, "kind": "access_denied", "detail": "code does not match requested role"}
+{"session": "1cb54d11627e", "id": 2, "time": 7.104, "kind": "access_denied", "detail": "expired courier code"}
+{"session": "90baa0b08a67", "id": 1, "time": 10.944, "kind": "link_lost", "detail": ""}
+{"session": "90baa0b08a67", "id": 2, "time": 12.8, "kind": "tamper", "detail": "impact detected", "sensor_time": 12.8, "queue_latency_s": 0.0}
+{"session": "90baa0b08a67", "id": 3, "time": 14.56, "kind": "tamper", "detail": "impact detected", "sensor_time": 14.56, "queue_latency_s": 0.0}
+{"session": "90baa0b08a67", "id": 4, "time": 16.32, "kind": "tamper", "detail": "impact detected", "sensor_time": 16.32, "queue_latency_s": 0.0}
+{"session": "90baa0b08a67", "id": 5, "time": 18.944, "kind": "link_restored", "detail": ""}
+{"session": "90baa0b08a67", "id": 6, "time": 22.4, "kind": "tamper", "detail": "impact detected", "sensor_time": 22.4, "queue_latency_s": 0.0}
+{"session": "90baa0b08a67", "id": 7, "time": 25.024, "kind": "access_granted", "detail": "owner"}
+{"session": "90baa0b08a67", "id": 8, "time": 31.68, "kind": "latch_fault", "detail": "measured bolt did not reach target within 2 seconds"}
+{"session": "90baa0b08a67", "id": 9, "time": 36.096, "kind": "latch_recovered", "detail": "measured bolt reached target"}

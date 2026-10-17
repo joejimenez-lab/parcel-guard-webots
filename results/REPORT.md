@@ -1,4 +1,4 @@
-# Parcel Guard — final evaluation
+# Parcel Guard evaluation
 
 Generated from simulator outputs. Source/configuration hashes and report hashes are in `evaluation_manifest.json`.
 
@@ -14,7 +14,7 @@ Generated from simulator outputs. Source/configuration hashes and report hashes 
 | Sensor sample → alert queue | ≥29/30 within 1 simulated second | 30/30 | `latency_trials.csv` |
 | Offline event recovery | 10 outages × 10 events, all once | 100/100 | `outage_trials.csv` |
 | Invalid/expired/used/wrong-role/replay | Zero unauthorized unlocks in 30 cases | 0/30 | `access_trials.csv` |
-| Blocked latch | Fault; never falsely secured | Both lock and unlock directions pass | `webots_benchmark.json` |
+| Blocked latch | Fault with secured status false | Both lock and unlock directions pass | `webots_benchmark.json` |
 | Five wrong codes in five minutes | 60-second cooldown | Pass, including valid code after expiry | `webots_benchmark.json` |
 
 ## Classification comparison
@@ -51,12 +51,12 @@ The local event queue is filled in the same Python iteration as the first sample
 - A 20-second access window closes the door automatically and confirms re-locking.
 - The separate `webots_edge_cases.json` checks an obstructed door, authorization expiry while open, late parcel movement, measured recovery, early cancellation and malformed commands. Physical hinge stops bound rotation when motor torque is disabled.
 - Expired-code cases include offline entry. All five attack categories have 6 independent attempts; cooldown cannot hide missing category coverage.
-- 31 targeted logic regressions cover startup, interrupted debounce, non-finite feedback and JSON, exact token expiry, expired grants, door faults, early close, hysteresis, mid-stroke bolts, concurrent access, request IDs, role scope and ACK races.
+- 38 targeted logic regressions cover startup, interrupted debounce, non-finite feedback and JSON, exact token expiry, expired grants, door faults, early close, hysteresis, mid-stroke bolts, concurrent access, request IDs, role scope and ACK races.
 
 ## Scope and limitations
 
-This is a complete local Webots simulation for one parcel, with a simulated notification endpoint. Controller decisions use devices; only the separate Supervisor fixture knows scene coordinates. Authentication models expiry, roles, one use, replay rejection and cooldown with demo PINs; it does not provide production cryptography or real cloud identity. Event IDs are session-qualified and the in-memory outbox survives simulated link outages, but not process restarts or power loss. Runtime JSONL is an audit export, not a durable recovery database. The door/bolt model demonstrates motion and feedback; it is not a forced-entry strength test. Fault detection covers non-finite feedback and target timeouts; plausible stuck-at sensor readings remain a limitation. No conclusions about real Wi-Fi, TLS, delivery services, outdoor weather or physical security are claimed.
+The tests use one parcel and a simulated notification endpoint. Controller decisions use devices; only the separate Supervisor fixture knows scene coordinates. Authentication models expiry, roles, one use, replay rejection and cooldown with demo PINs; it does not provide production cryptography or real cloud identity. Event IDs are session-qualified and the in-memory outbox survives simulated link outages, but not process restarts or power loss. Runtime JSONL is an audit export, not a durable recovery database. The door/bolt model demonstrates motion and feedback; it is not a forced-entry strength test. Fault detection covers non-finite feedback and target timeouts; plausible stuck-at sensor readings remain a limitation. No conclusions about real Wi-Fi, TLS, delivery services, outdoor weather or physical security are claimed.
 
 ## Videos
 
-`output/Parcel Guard - Delivery Workflow.mp4` and `output/Parcel Guard - Security Recovery.mp4` contain actual native Webots recordings with synchronized recorded telemetry overlays. `output/raw/` holds the unedited footage. Each recording has scenario assertions and a complete telemetry sidecar in `results/`. Video panels are presentation graphics driven by those sidecars, not a separate animation of the mechanism.
+`output/Parcel Guard - Delivery Workflow.mp4` and `output/Parcel Guard - Security Recovery.mp4` contain actual native Webots recordings with synchronized recorded telemetry overlays. `output/raw/` holds the unedited footage. Each recording has scenario assertions and a complete telemetry sidecar in `results/`. The sidecars supply the readings and event text beneath the footage.
