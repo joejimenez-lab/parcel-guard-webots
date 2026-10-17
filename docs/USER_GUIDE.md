@@ -32,8 +32,10 @@ Open `worlds/delivery_box.wbt`, select real-time speed, and open the Parcel Guar
 
 ## Repeating checks
 
+For a downloaded complete release, run `python3 scripts/check_submission.py` first. This verifies the saved files and their evidence using only Python. See [Submission checklist](../SUBMISSION.md) for the exact files to upload and present.
+
 Run `python3 scripts/run_all.py` from the repository root. It stops on a failed gate and saves the error in the corresponding report/log. Do not run concurrent Webots evaluation and recording processes against the same results directory.
 
 For UI regressions, run `npm ci` inside `demo-studio`, return to the root, then run `node tests/dashboard.cjs`. This tests DOM rendering and command construction with recorded status and injected faults. Browser layout review is separate from live Webots controller testing.
 
-The renderer commands are in the root README. After rendering, run `python3 scripts/finalize_media.py`, then `python3 scripts/package_project.py`. The package builder rejects stale evaluation or recording hashes. Keep the final report and presentation alongside the demos when submitting.
+The renderer commands are in the root README. After rendering, run `python3 scripts/finalize_media.py`. The package builder rejects stale source, evaluation, recording, video, or document hashes. Rebuilding the unchanged release uses `python3 scripts/package_project.py`; changed evaluation or document files require renewed review and updated submission validation. Run experiments in a separate copy to preserve the original release evidence. Keep the final report and presentation alongside the demos when submitting.

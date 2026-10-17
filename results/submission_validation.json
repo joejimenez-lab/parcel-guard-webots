@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "timestamp_utc": "2026-10-17T08:26:12.933296+00:00",
+  "timestamp_utc": "2026-10-17T08:34:21.266292+00:00",
   "checks": {
     "report_pages": 10,
     "presentation_slides": 14,
@@ -13,7 +13,7 @@
       10,
       11
     ],
-    "resolved_local_markdown_links": 18,
+    "resolved_local_markdown_links": 30,
     "selectable_pdf_text": true,
     "final_source_matches_evaluation": true,
     "both_recordings_match_evaluated_source": true,
@@ -32,10 +32,11 @@
     "docs/FINAL_REPORT.md": "8bdb06d322c4bdb30f06eccab9ccd75c302c1c78043f7ecb51add1e16d168fb1",
     "docs/PRESENTATION_GUIDE.md": "afb7c6d2050eb52f6ce1b82e959ab21461bda56594edb5dcf7dfe22246edd52c",
     "docs/SOFTWARE_REQUIREMENTS.md": "adf10634e7bac7d658ab0ede42add0ea2c2b9aefc699a50ad0d4f83a7beb740a",
-    "docs/USER_GUIDE.md": "5fc050752bc5da7cc405ea52a245bcbb4f519b07f2666cbbade9a10f1902579e",
+    "docs/USER_GUIDE.md": "3a52f316ad3855605f85772aa418d0c5a218c9e242023342a0d9f0fc89fc8b85",
     "REQUIREMENTS.md": "9b469b784a39111614f1f6bbf1a2e3fd82630bf6694db6e45768ef81c0f8fed1",
     "DESIGN.md": "f584d41d02e7b0efe62e6c0282157f5b0a9eccc98d20a9e185dfef4fc39fb624",
-    "README.md": "9d49c693432d2e39fef2b5189bfeee3d013e21e504c58d84c67579b5921fffdc"
+    "README.md": "fe3a471b840d7e87872a8e58c5f4507d61cb8672994c9e549131a409b3f53384",
+    "SUBMISSION.md": "651d9c971a53424701d6028a704684141ffdfc3dfbb9cc7f2294be629472aff4"
   },
   "evaluation_manifest_sha256": "5f948356131fcd5474b126aa441c367527a62f3557e2577ddb6c2c5d16458780",
   "presentation_validation_receipt_sha256": "c0c3f499812469a14202f1963a80553cf9105b3b7eb7e8a95663f810ee0f5574"

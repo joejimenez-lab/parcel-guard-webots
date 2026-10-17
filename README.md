@@ -8,6 +8,7 @@ Parcel Guard simulates a package-delivery security box in Webots. A Python contr
 
 ## Submission files
 
+- [What to upload and how to prepare for class](SUBMISSION.md)
 - [Final report PDF](output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf) and [editable text](docs/FINAL_REPORT.md)
 - [Final presentation](output/submission/Parcel%20Guard%20-%20Final%20Presentation.pptx), [PDF copy](output/pdf/Parcel%20Guard%20-%20Final%20Presentation.pdf), and [speaker guide](docs/PRESENTATION_GUIDE.md)
 - [Rubric and proposal coverage](REQUIREMENTS.md), [user guide](docs/USER_GUIDE.md), and [test results](results/REPORT.md)
@@ -107,7 +108,11 @@ After rendering, return to the project root and run `python3 scripts/finalize_me
 
 ## Submission package
 
-The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and both finished demos. It excludes `node_modules`, caches, and temporary builds. Run `python3 scripts/package_project.py` to rebuild it after successful evaluation and video rendering.
+The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and both finished demos. It excludes `node_modules`, caches, and temporary builds. Use this release asset for the complete handoff; GitHub's automatically generated source archive omits raw footage.
+
+After extraction, run `python3 scripts/check_submission.py`. It uses only the Python standard library to verify the saved evidence, document/video hashes, raw-footage presence, and delivery manifest. It does not rerun the simulator. The release was also tested from a fresh extracted copy, including the full Webots suite and a clean npm installation; see `results/portability_validation.json`.
+
+Run `python3 scripts/package_project.py` to rebuild the unchanged delivery. If you rerun the evaluation or edit the documents, the saved submission hashes must be reviewed and refreshed before packaging. Keep a separate copy of the original release evidence when experimenting.
 
 ## Scope
 
