@@ -2,19 +2,20 @@
 import hashlib
 import json
 import os
+import platform
 import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from lockbox.provenance import source_hashes
 WEBOTS=os.environ.get('WEBOTS_BIN') or shutil.which('webots') or '/Applications/Webots.app/Contents/MacOS/webots'
 REPORTS=[]
 
 def hashes():
-    paths=[ROOT/'config/evaluation.json',ROOT/'scripts/generate_worlds.py',*sorted((ROOT/'lockbox').glob('*.py')),
-           *sorted((ROOT/'controllers').glob('*/*.py'))]
-    return {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+    return source_hashes()
 
 def run(command,report,env=None):
     path=ROOT/'results'/report;path.unlink(missing_ok=True)
@@ -39,8 +40,10 @@ def main():
     run(options+['worlds/delivery_box_sensor_trials.wbt'],'webots_sensor_trials.json')
     run(options+['worlds/delivery_box_classification.wbt'],'webots_classification.json',env={**os.environ,'EVAL_PHASE':'final'})
     run(options+['worlds/delivery_box_benchmark.wbt'],'webots_benchmark.json')
+    run(options+['worlds/delivery_box_edge_cases.wbt'],'webots_edge_cases.json')
     stable=frozen==hashes()
     manifest={'passed':stable,'timestamp_utc':datetime.now(timezone.utc).isoformat(),'webots':'R2025a',
+              'python':sys.version.split()[0],'platform':platform.platform(),
               'configuration_unchanged_during_evaluation':stable,'source_sha256':frozen,'reports':REPORTS,
               'report_sha256':{p:hashlib.sha256((ROOT/'results'/p).read_bytes()).hexdigest() for p in REPORTS}}
     (ROOT/'results/evaluation_manifest.json').write_text(json.dumps(manifest,indent=2))

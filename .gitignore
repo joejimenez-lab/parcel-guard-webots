@@ -30,6 +30,13 @@ node_modules/
 !/output/Parcel Guard Recovery Poster.jpg
 !/output/Package Delivery Security Box - Final Proposal.pptx
 !/output/index.html
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/Parcel Guard - Final Report.pdf
+!/output/pdf/Parcel Guard - Final Presentation.pdf
+!/output/submission/
+/output/submission/*
+!/output/submission/Parcel Guard - Final Presentation.pptx
 
 # Historical reports from the first demo
 /results/demo_video_status.json

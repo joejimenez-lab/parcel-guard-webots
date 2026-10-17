@@ -4,6 +4,8 @@
     {
       "name": "Delivery Workflow",
       "passed": true,
+      "path": "output/Parcel Guard - Delivery Workflow.mp4",
+      "sha256": "303ae2a62b4d7c1d0ef91f5fa667a186a30d7f4240a751328280171f1ceace67",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -21,7 +23,7 @@
         ],
         "format": {
           "duration": "41.633333",
-          "size": "4074085"
+          "size": "4090533"
         }
       },
       "all_frames_decoded_without_errors": true
@@ -29,6 +31,8 @@
     {
       "name": "Security Recovery",
       "passed": true,
+      "path": "output/Parcel Guard - Security Recovery.mp4",
+      "sha256": "59c2d11c59b9551e4a686d011aa38ebedf59868ea1dcf33b0565016d8c53ec97",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -46,11 +50,11 @@
         ],
         "format": {
           "duration": "54.433333",
-          "size": "5077245"
+          "size": "5087664"
         }
       },
       "all_frames_decoded_without_errors": true
     }
   ],
-  "preview_bytes": 6893906
+  "preview_bytes": 7117829
 }

@@ -4,6 +4,7 @@ import math
 import time
 from pathlib import Path
 from .webots_harness import Harness, ROOT
+from .provenance import source_hashes
 
 def camera_pose(position, target):
     def unit(v):
@@ -44,7 +45,8 @@ def record(name, frames, schedule, chapters, verify):
     checks=verify(telemetry)
     checks['mp4_encoded']=video.exists() and video.stat().st_size>500000 and h.robot.movieIsReady() and not h.robot.movieFailed()
     report={'passed':all(checks.values()),'checks':checks,'frames':frames-8,'nominal_duration_s':(frames-8)*.032,
-            'raw_video':str(video.relative_to(ROOT)),'chapters':chapters,'telemetry':telemetry}
+            'raw_video':str(video.relative_to(ROOT)),'source_sha256':source_hashes(),
+            'chapters':chapters,'telemetry':telemetry}
     (ROOT/'results'/f'{name}_recording.json').write_text(json.dumps(report,indent=2))
     print(name,json.dumps(checks),flush=True)
     h.robot.simulationQuit(0 if report['passed'] else 1)

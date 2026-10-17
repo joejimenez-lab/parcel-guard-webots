@@ -1,10 +1,19 @@
 # Parcel Guard
 
-[![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.0.0)
+[![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest)
 
 [Watch the demos](#demo-videos) · [Download the complete project](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) · [Evaluation report](results/REPORT.md) · [Design](DESIGN.md)
 
-A complete Webots package-delivery security box: articulated door and bolt, a 25-ray parcel sensor array, motion sensing, role-bound access, an offline alert outbox, an independent scenario fixture, and a local control room.
+Parcel Guard simulates a package-delivery security box in Webots. A Python controller reads 25 distance sensors, door and bolt positions, and motion. It checks access, recognizes parcel events, and retains alerts during simulated link outages.
+
+## Submission files
+
+- [Final report PDF](output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf) and [editable text](docs/FINAL_REPORT.md)
+- [Final presentation](output/submission/Parcel%20Guard%20-%20Final%20Presentation.pptx), [PDF copy](output/pdf/Parcel%20Guard%20-%20Final%20Presentation.pdf), and [speaker guide](docs/PRESENTATION_GUIDE.md)
+- [Rubric and proposal coverage](REQUIREMENTS.md), [user guide](docs/USER_GUIDE.md), and [test results](results/REPORT.md)
+- [Complete project ZIP](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest), including both videos and raw recordings
+
+The final materials retain Joshua Guico, Joe Jimenez, and Brandon Lopez for CS 5650. Team responsibilities and the suggested 13-minute presentation plus two-minute Q&A follow the proposal.
 
 ## Start here
 
@@ -55,6 +64,8 @@ The command regenerates worlds, freezes source/configuration hashes, runs develo
 | Offline alerts recovered exactly once | 100/100 across 10 outages |
 | Mixed access attacks | 0 unauthorized unlocks in 30 attempts |
 | Blocked bolt | Lock and unlock faults detected; measured recovery |
+| Added failure cases | Obstructed door, expired grant, early close, malformed input |
+| Policy and dashboard regressions | 31 policy checks and 12 DOM checks |
 
 Read **`results/REPORT.md`** for denominators, timing definitions, seeds, confusion matrices, and limitations. **`results/evaluation_manifest.json`** links each result to source and configuration hashes. **`REQUIREMENTS.md`** maps proposal requirements to implementations and evidence.
 
@@ -68,7 +79,7 @@ controllers/lockbox_controller/        Ordinary Robot; device adapter, no scene 
 controllers/scene_supervisor/          Scenario actions and simulated alert endpoint
 controllers/*_runner/                  Reproducible ground-truth test drivers
 plugins/robot_windows/lockbox_window/   Local responsive dashboard; bundled Webots bridge
-scripts/generate_worlds.py             Single model source for seven worlds
+scripts/generate_worlds.py             Single model source for eight worlds
 scripts/run_all.py                     Automated evaluation + hashes + reports
 scripts/record_demo.py                 Native video capture and scenario verification
 demo-studio/                          Editable Remotion scenes and recorded assets
@@ -90,12 +101,29 @@ npm run render:workflow
 npm run render:recovery
 ```
 
+After rendering, return to the project root and run `python3 scripts/finalize_media.py` to check every encoded frame and refresh posters.
+
 `npm run dev` opens editable video scenes. Every substantial scene is registered independently as well as in its complete video. The raw capture uses 1280×720 at 31.25 fps; final videos use 1600×900 at 30 fps.
 
 ## Submission package
 
-The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, proposal, reproducible tests, results, raw footage, editable video source, and both finished demos. It excludes `node_modules`, caches, and temporary builds. Run `python3 scripts/package_project.py` to rebuild it after successful evaluation and video rendering.
+The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and both finished demos. It excludes `node_modules`, caches, and temporary builds. Run `python3 scripts/package_project.py` to rebuild it after successful evaluation and video rendering.
 
 ## Scope
 
 One parcel at a time; local simulation with a simulated event endpoint. Demo PINs model roles, expiry, single use, replay rejection and cooldown. Real cloud authentication, Wi-Fi/TLS, outdoor weather and physical forced-entry resistance are outside the proposal scope. The event outbox survives simulated link loss but is volatile across controller restarts. The bolt is an actuator/feedback model, not a physical security certification. A plausible stuck-at sensor value is not automatically diagnosable from these devices alone.
+
+## Additional checks and document rebuild
+
+```sh
+cd demo-studio
+npm ci
+npm run lint
+cd ..
+node tests/dashboard.cjs
+python3 scripts/finalize_media.py
+```
+
+The dashboard also received a browser layout check at desktop and 390-pixel widths. DOM tests use recorded status and injected faults; the Webots runners exercise the controller and fixture.
+
+To rebuild the paper, install `reportlab` in your document-building Python environment and run `python3 scripts/build_submission.py`. The script fills `docs/report_source.md` from passing JSON results and writes the editable final text and PDF. Edit the PPTX directly to revise the slides. The included PDF slide copy is a rendered viewing copy.

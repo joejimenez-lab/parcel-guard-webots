@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "webots": "R2025a",
   "basic_time_step_ms": 32,
   "development_seed": 5650,
@@ -25,6 +25,7 @@
   "bolt_unlocked_m": 0.006,
   "latch_timeout_s": 2.0,
   "access_window_s": 20.0,
+  "door_close_timeout_s": 3.0,
   "ack_retry_s": 0.25,
   "scope": "One parcel; local Webots simulation; no physical forced-entry or real network security claims",
   "code_failure_window_s": 300.0,

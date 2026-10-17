@@ -39,6 +39,8 @@ while robot.step(dt) != -1:
                 send('actuator_override', open=True)
             elif action in ('jam_latch', 'release_latch'):
                 send('actuator_jam', jammed=action == 'jam_latch')
+            elif action in ('jam_door', 'release_door'):
+                send('door_jam', jammed=action == 'jam_door')
             elif action == 'drop_acks':
                 drop_acks = int(command.get('count', 3))
             elif action == 'reset':

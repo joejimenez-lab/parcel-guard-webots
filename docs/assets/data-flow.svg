@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="240" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 240" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="240"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-240)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="168" width="136" height="62" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="36.2345" y="214" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,428) scale(1,-1)">Virtual devices</text>
+			<text x="26.872" y="200" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,400) scale(1,-1)">Distance / joint position</text>
+			<text x="36.656" y="189" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,378) scale(1,-1)">Door acceleration</text>
+			<rect x="182" y="168" width="136" height="62" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="216.988" y="214" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,428) scale(1,-1)">P1 Sensor filter</text>
+			<text x="215.768" y="200" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,400) scale(1,-1)">Validity / hysteresis</text>
+			<text x="211.988" y="189" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,378) scale(1,-1)">Consecutive samples</text>
+			<rect x="364" y="168" width="140" height="62" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="405.7445" y="214" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,428) scale(1,-1)">P2 Controller</text>
+			<text x="398.20799999999997" y="200" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,400) scale(1,-1)">Access / event rules</text>
+			<text x="396.428" y="189" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,378) scale(1,-1)">Motor targets / status</text>
+			<path d="M 136,199 L 182,199 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="182 199, 177.6121 201.3971, 177.6121 196.6029" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="146.9175" y="204.0" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,408) scale(1,-1)">samples</text>
+			<path d="M 318,199 L 364,199 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="364 199, 359.6121 201.3971, 359.6121 196.6029" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="332.6675" y="204.0" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,408) scale(1,-1)">states</text>
+			<rect x="364" y="65" width="140" height="58" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="395.23699999999997" y="107" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,214) scale(1,-1)">Owner / courier UI</text>
+			<text x="389.532" y="93" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,186) scale(1,-1)">Role + code + request ID</text>
+			<text x="396.648" y="82" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,164) scale(1,-1)">Status / event history</text>
+			<path d="M 418,168 L 418,123 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="418 123, 420.3971 127.3879, 415.6029 127.3879" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="387.4575" y="143" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,286) scale(1,-1)">status</text>
+			<path d="M 455,123 L 455,168 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="455 168, 452.6029 163.6121, 457.3971 163.6121" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="468.17" y="143" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,286) scale(1,-1)">request</text>
+			<rect x="182" y="65" width="136" height="58" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="208.996" y="107" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,214) scale(1,-1)">D1 Pending outbox</text>
+			<text x="216.316" y="93" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,186) scale(1,-1)">Session + event ID</text>
+			<text x="220.656" y="82" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,164) scale(1,-1)">Retain until ACK</text>
+			<path d="M 364,177 L 318,113 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="318 113, 322.5074 115.164, 318.6144 117.9621" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="317.41875" y="151" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,302) scale(1,-1)">events</text>
+			<rect x="0" y="65" width="136" height="58" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="29.241500000000002" y="107" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,214) scale(1,-1)">P3 Local endpoint</text>
+			<text x="28.875999999999998" y="93" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,186) scale(1,-1)">D2 Unique receipt IDs</text>
+			<text x="20.199999999999996" y="82" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,164) scale(1,-1)">Deduplicate / acknowledge</text>
+			<path d="M 182,104 L 136,104 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="136 104, 140.3879 101.6029, 140.3879 106.3971" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="150.92" y="110" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,220) scale(1,-1)">retry</text>
+			<path d="M 136,82 L 182,82 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="182 82, 177.6121 84.39713, 177.6121 79.60287" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="151.08375" y="68" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,136) scale(1,-1)">ACK</text>
+			<rect x="0" y="0" width="504" height="35" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(92%,95%,94%); fill-rule: evenodd;"/>
+			<text x="148.97699999999998" y="19" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,38) scale(1,-1)">Independent Supervisor fixture and test runners</text>
+			<text x="139.284" y="5" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,18%,18%); stroke:none;" transform="translate(0,10) scale(1,-1)">Scene stimuli and motor faults; truth labels go only to the scorer</text>
+			<path d="M 340,35 L 340,143 Z" style="stroke: rgb(32%,40%,38%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<path d="M 340,143 L 68,143 Z" style="stroke: rgb(32%,40%,38%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<path d="M 68,143 L 68,168 Z" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="68 168, 65.60287 163.6121, 70.39713 163.6121" style="stroke: rgb(7%,41%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,34%); fill-rule: evenodd;"/>
+			<text x="197.3125" y="132" style="font-family: Times-Roman; font-size: 7.5px;fill: rgb(32%,40%,38%); stroke:none;" transform="translate(0,264) scale(1,-1)">scene stimuli</text>
+		</g>
+	</g>
+</svg>

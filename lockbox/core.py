@@ -1,5 +1,6 @@
 """Deterministic policy. Decisions use measured sensors, never scene coordinates."""
 from dataclasses import dataclass
+import math
 import uuid
 from .config import CONFIG
 
@@ -26,6 +27,8 @@ class Sensors:
 class Lockbox:
     def __init__(self, courier_code="2468", owner_code="1357", courier_valid_until=300.0,
                  owner_valid_until=86400.0, auto_ack=True, start_time=0.0):
+        if not all(math.isfinite(v) and v >= 0 for v in (start_time, courier_valid_until, owner_valid_until)):
+            raise ValueError("Token lifetimes and start time must be finite and nonnegative")
         self.courier_code, self.owner_code = courier_code, owner_code
         self.courier_valid_until = start_time + courier_valid_until
         self.owner_valid_until = start_time + owner_valid_until
@@ -46,6 +49,21 @@ class Lockbox:
         self.target_since = start_time
         self.fault_reported = False
         self.sensor_fault = False
+        self.closing_since = None
+        self.door_fault = False
+        self.has_feedback = False
+
+    def _target(self, locked, now):
+        if self.latch_target != float(locked):
+            self.latch_target = float(locked)
+            self.target_since = now
+
+    def request_close(self, now):
+        """End authorization immediately; retract the bolt until the door closes."""
+        had_grant = self.grant is not None
+        self.grant = None
+        if self.closing_since is None and (had_grant or not self.previous.closed or not self.latch_target):
+            self.closing_since = now
 
     def _event(self, kind, now, detail="", detected_at=None):
         event = {"session": self.session, "id": self.next_id, "time": round(now, 6),
@@ -94,11 +112,11 @@ class Lockbox:
         reason, role = "invalid code", None
         if code == self.owner_code:
             role, reason = "owner", "expired owner code"
-            if now > self.owner_valid_until:
+            if now >= self.owner_valid_until:
                 role = None
         elif code == self.courier_code:
             role, reason = "courier", "expired courier code"
-            if now > self.courier_valid_until:
+            if now >= self.courier_valid_until:
                 role = None
             elif self.courier_used:
                 role, reason = None, "courier code already used"
@@ -115,10 +133,13 @@ class Lockbox:
                 self.failure_times.clear()
                 self._event("entry_paused", now, "60 seconds")
             return False
-        if self.grant or not sensors.valid or not sensors.closed or not sensors.latch_locked or self.fault_reported:
+        if (self.grant or self.closing_since is not None or not sensors.valid or not sensors.closed
+                or not sensors.latch_locked or self.fault_reported or self.door_fault):
             self._event("access_denied", now, "door, latch, or sensor not secure")
             return False
         self.failure_times.clear()
+        self.previous = sensors
+        self.has_feedback = True
         self.grant, self.grant_until = role, now + CONFIG["access_window_s"]
         self.door_was_open = False
         self.latch_target, self.target_since = 0.0, now
@@ -129,16 +150,28 @@ class Lockbox:
 
     def tick(self, now, sensors):
         previous = self.previous
+        if self.grant and now >= self.grant_until:
+            self._event("access_expired", now, "access window ended; closing door")
+            self.request_close(now)
         if not sensors.valid and not self.sensor_fault:
-            self._event("sensor_fault", now, "non-finite device feedback")
+            self._event("sensor_fault", now, "device feedback unavailable or not yet stable")
+            if self.grant:
+                self.request_close(now)
+        elif sensors.valid and self.sensor_fault:
+            self._event("sensor_recovered", now, "stable device feedback restored")
         self.sensor_fault = not sensors.valid
+        if not sensors.valid:
+            # Preserve the last valid sample across a gap. Invalid feedback must
+            # neither invent a door edge nor silently renew authorization.
+            return
         if sensors.door_open and not previous.door_open and self.grant is None:
             self._event("tamper", now, "door opened without approval", now)
-        if (sensors.impact and self.grant is None and now >= self.authorized_motion_until
+        closing_motion = self.closing_since is not None and now - self.closing_since < CONFIG["door_close_timeout_s"]
+        if (sensors.impact and self.grant is None and not closing_motion and now >= self.authorized_motion_until
                 and now - self.last_impact_at >= CONFIG["impact_refractory_s"]):
             self.last_impact_at = now
             self._event("tamper", now, "impact detected", now)
-        if sensors.parcel_present != previous.parcel_present:
+        if self.has_feedback and sensors.parcel_present != previous.parcel_present:
             access_open = sensors.door_open or previous.door_open
             if self.grant == "courier" and sensors.parcel_present and access_open:
                 self._event("delivery", now, "parcel placed", now)
@@ -149,10 +182,19 @@ class Lockbox:
         if self.grant and sensors.door_open:
             self.door_was_open = True
         if self.grant and sensors.closed and (self.door_was_open or now >= self.grant_until):
-            self.grant = None
+            self.request_close(now)
+        if self.closing_since is not None and sensors.closed:
+            if self.door_fault:
+                self._event("door_recovered", now, "measured door reached closed position")
+            self.door_fault = False
+            self.closing_since = None
             self.authorized_motion_until = now + CONFIG["post_close_motion_grace_s"]
-            self.latch_target, self.target_since = 1.0, now
-            self.fault_reported = False
+            self._target(True, now)
+        elif self.closing_since is not None:
+            self._target(False, now)
+            if not self.door_fault and now - self.closing_since >= CONFIG["door_close_timeout_s"]:
+                self._event("door_fault", now, "door did not close within the allowed time")
+                self.door_fault = True
         reached = sensors.valid and (sensors.latch_locked if self.latch_target else sensors.unlocked)
         if not self.fault_reported and now - self.target_since >= CONFIG["latch_timeout_s"] and not reached:
             self._event("latch_fault", now, "measured bolt did not reach target within 2 seconds")
@@ -161,11 +203,15 @@ class Lockbox:
             self._event("latch_recovered", now, "measured bolt reached target")
             self.fault_reported = False
         self.previous = sensors
+        self.has_feedback = True
 
     def status(self, now, sensors):
-        secure = sensors.valid and sensors.closed and sensors.latch_locked and not self.fault_reported and not self.grant
-        if self.fault_reported or not sensors.valid:
+        fault = self.fault_reported or self.door_fault or not sensors.valid
+        secure = sensors.valid and sensors.closed and sensors.latch_locked and not fault and not self.grant and self.closing_since is None
+        if fault:
             phase = "FAULT"
+        elif self.closing_since is not None:
+            phase = "CLOSING"
         elif self.grant:
             phase = "UNLOCKING" if not sensors.unlocked else ("ACCESS" if sensors.door_open else "OPENING")
             if now >= self.grant_until:
@@ -175,7 +221,8 @@ class Lockbox:
         else:
             phase = "SECURED" if secure else "LOCKING"
         return {"session": self.session, "time": round(now, 3), "phase": phase,
-                "secured": secure, "fault": self.fault_reported or not sensors.valid,
+                "secured": secure, "fault": fault,
+                "fault_reason": "sensor" if not sensors.valid else ("door" if self.door_fault else ("bolt" if self.fault_reported else None)),
                 "door": "open" if sensors.door_open else ("closed" if sensors.closed else "moving"),
                 "latch": "locked" if sensors.latch_locked else ("unlocked" if sensors.unlocked else "moving"),
                 "parcel": "present" if sensors.parcel_present else "empty",

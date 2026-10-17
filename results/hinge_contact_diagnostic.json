@@ -1,0 +1,37 @@
+{
+  "passed": false,
+  "phase": "development",
+  "seed": 5650,
+  "trials": 60,
+  "macro_f1": 0.1,
+  "false_alarms": 45,
+  "idle_peak_m_s2": 42.733,
+  "confusion_matrix": {
+    "benign_motion": {
+      "benign_motion": 0,
+      "delivery": 0,
+      "retrieval": 0,
+      "tamper": 15
+    },
+    "delivery": {
+      "benign_motion": 0,
+      "delivery": 0,
+      "retrieval": 0,
+      "tamper": 15
+    },
+    "retrieval": {
+      "benign_motion": 0,
+      "delivery": 0,
+      "retrieval": 0,
+      "tamper": 15
+    },
+    "tamper": {
+      "benign_motion": 0,
+      "delivery": 0,
+      "retrieval": 0,
+      "tamper": 15
+    }
+  },
+  "configuration": "Development diagnostic: physical hinge minStop=0, maxStop=1.35, dampingConstant=0.1; coincident commanded closed target and joint stop",
+  "purpose": "Retained failed development run; excluded from final acceptance results"
+}

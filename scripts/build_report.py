@@ -66,8 +66,9 @@ The local event queue is filled in the same Python iteration as the first sample
 - Lost ACKs cause retransmission. The independent endpoint deduplicates `(session, event ID)`; its unique receipt list is checked against all expected outage IDs.
 - Motor force is disabled for both locking and unlocking fault trials while commanded targets continue to update. The two-second timeout raises a fault. Recovery requires measured bolt feedback.
 - A 20-second access window closes the door automatically and confirms re-locking.
+- The separate `webots_edge_cases.json` checks an obstructed door, authorization expiry while open, late parcel movement, measured recovery, early cancellation and malformed commands. Physical hinge stops bound rotation when motor torque is disabled.
 - Expired-code cases include offline entry. All five attack categories have 6 independent attempts; cooldown cannot hide missing category coverage.
-- {len(r['checks'])} targeted logic regressions cover a one-frame sensor spike, hysteresis, NaN feedback, a bolt mid-stroke, concurrent access, missing request IDs, role scope, ACK races and issuance-relative expiry.
+- {len(r['checks'])} targeted logic regressions cover startup, interrupted debounce, non-finite feedback and JSON, exact token expiry, expired grants, door faults, early close, hysteresis, mid-stroke bolts, concurrent access, request IDs, role scope and ACK races.
 
 ## Scope and limitations
 

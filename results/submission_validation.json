@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "timestamp_utc": "2026-10-17T08:26:12.933296+00:00",
+  "checks": {
+    "report_pages": 10,
+    "presentation_slides": 14,
+    "presentation_pdf_pages": 14,
+    "speaker_note_slides": 14,
+    "native_table_slides": [
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "resolved_local_markdown_links": 18,
+    "selectable_pdf_text": true,
+    "final_source_matches_evaluation": true,
+    "both_recordings_match_evaluated_source": true,
+    "both_finished_videos_fully_decoded": true
+  },
+  "review": {
+    "paper": "All 10 pages visually reviewed; updated pages checked after final data refresh. Text bounds checked with pdfplumber.",
+    "slides": "All 14 rendered slides visually reviewed; package, layout, typography and native-table checks passed; PDF conversion also reviewed.",
+    "dashboard": "Browser preview visually reviewed at desktop and 390px widths; no horizontal overflow at 390px. Live controller/fixture behavior verified separately in Webots runners.",
+    "scope": "Submission retains the proposal team and proposed responsibility allocation. Presentation delivery and audience interaction remain live team activities."
+  },
+  "artifact_sha256": {
+    "output/pdf/Parcel Guard - Final Report.pdf": "2cf7ac12c9c7a0add6954e8c9c44fdc52f39946c46064afaffa48795f67ab707",
+    "output/pdf/Parcel Guard - Final Presentation.pdf": "e2c2ef8ff0c9174c8a0b3ecd9d31ef107b513ba670ac5290928fa77c4da7db02",
+    "output/submission/Parcel Guard - Final Presentation.pptx": "9697de390aab92bcc5681cec227f1a2e6ecbac551bc0796690d83e56a04e579d",
+    "docs/FINAL_REPORT.md": "8bdb06d322c4bdb30f06eccab9ccd75c302c1c78043f7ecb51add1e16d168fb1",
+    "docs/PRESENTATION_GUIDE.md": "afb7c6d2050eb52f6ce1b82e959ab21461bda56594edb5dcf7dfe22246edd52c",
+    "docs/SOFTWARE_REQUIREMENTS.md": "adf10634e7bac7d658ab0ede42add0ea2c2b9aefc699a50ad0d4f83a7beb740a",
+    "docs/USER_GUIDE.md": "5fc050752bc5da7cc405ea52a245bcbb4f519b07f2666cbbade9a10f1902579e",
+    "REQUIREMENTS.md": "9b469b784a39111614f1f6bbf1a2e3fd82630bf6694db6e45768ef81c0f8fed1",
+    "DESIGN.md": "f584d41d02e7b0efe62e6c0282157f5b0a9eccc98d20a9e185dfef4fc39fb624",
+    "README.md": "9d49c693432d2e39fef2b5189bfeee3d013e21e504c58d84c67579b5921fffdc"
+  },
+  "evaluation_manifest_sha256": "5f948356131fcd5474b126aa441c367527a62f3557e2577ddb6c2c5d16458780",
+  "presentation_validation_receipt_sha256": "c0c3f499812469a14202f1963a80553cf9105b3b7eb7e8a95663f810ee0f5574"
+}

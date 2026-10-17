@@ -103,7 +103,7 @@ Transform { translation 0.27 0.25 -0.38 children [ Shape { appearance PBRAppeara
   Transform { translation 0 0 -0.236 children [ Shape { appearance PBRAppearance { baseColor 0.46 0.53 0.51 metalness 0.0 roughness 0.65 } geometry Box { size 0.59 0.55 0.006 } } ] }
   Transform { translation 0 -0.315 0.29 children [ Shape { appearance PBRAppearance { baseColor 0.39 0.83 0.71 metalness 0.3 roughness 0.3 } geometry Box { size 0.7 0.028 0.025 } } ] }
   HingeJoint {
-   jointParameters HingeJointParameters { axis 0 0 -1 anchor -.35 -.32 0 }
+   jointParameters HingeJointParameters { axis 0 0 -1 anchor -.35 -.32 0 minStop -0.02 maxStop 1.40 dampingConstant 0.1 }
    device [ RotationalMotor { name "door_motor" minPosition 0 maxPosition 1.35 maxVelocity 1.5 maxTorque 20 } PositionSensor { name "door_position" } ]
    endPoint DEF DOOR Solid {
     translation -.35 -.32 0

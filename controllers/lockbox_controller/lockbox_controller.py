@@ -5,6 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from lockbox.core import Lockbox
 from lockbox.sensing import SensorFilter, CONFIG
+from lockbox.protocol import encode_status
 from controller import Robot
 
 robot = Robot()
@@ -58,6 +59,7 @@ def execute(command, now, trusted=False):
             door_requested_open = True
     elif action == 'close':
         door_requested_open = forced_open = False
+        logic.request_close(now)
     elif action == 'open' and logic.grant:
         door_requested_open = True
     elif action in ('link_off', 'link_on'):
@@ -66,6 +68,8 @@ def execute(command, now, trusted=False):
         forced_open = bool(command.get('open'))
     elif action == 'actuator_jam' and trusted:
         latch_motor.setAvailableForce(0 if command.get('jammed') else 50)
+    elif action == 'door_jam' and trusted:
+        door_motor.setAvailableTorque(0 if command.get('jammed') else 20)
     elif action == 'reset_logic':
         logic = Lockbox(auto_ack=False, start_time=now,
                         courier_valid_until=float(command.get('courier_ttl_s', 300)),
@@ -74,8 +78,9 @@ def execute(command, now, trusted=False):
         door_requested_open = forced_open = False
         last_access_result = None
         latch_motor.setAvailableForce(50)
+        door_motor.setAvailableTorque(20)
         logged = 0
-    elif action in ('parcel_in', 'parcel_out', 'impact', 'force_open', 'jam_latch', 'release_latch', 'drop_acks', 'reset'):
+    elif action in ('parcel_in', 'parcel_out', 'impact', 'force_open', 'jam_latch', 'release_latch', 'jam_door', 'release_door', 'drop_acks', 'reset'):
         scene_tx.send(json.dumps(command).encode())
     else:
         raise ValueError('Unknown command')
@@ -102,12 +107,12 @@ while robot.step(step_ms) != -1:
         receiver.nextPacket()
     logic.tick(now, sensors)
     latch_motor.setPosition(0.08 if logic.latch_target else 0.0)
-    if logic.grant and now >= logic.grant_until:
+    if not logic.grant:
         door_requested_open = False
     can_open = logic.grant and sensors.unlocked and sensors.valid and not logic.fault_reported
     door_motor.setPosition(1.2 if forced_open or (door_requested_open and can_open) else 0.0)
     secure = logic.status(now, sensors)['secured']
-    led.set(0xff5959 if logic.fault_reported else (0x35dfb8 if secure else 0xffc45b))
+    led.set(0xff5959 if logic.status(now, sensors)['fault'] else (0x35dfb8 if secure else 0xffc45b))
     if logic.link_online and logic.pending and now - last_transmit >= CONFIG['ack_retry_s']:
         for event in logic.pending[:16]:
             event_tx.send(json.dumps(event).encode())
@@ -129,7 +134,7 @@ while robot.step(step_ms) != -1:
                       last_access_result=last_access_result, malformed_commands=malformed_count, motion_peak_m_s2=motion_peak,
                       endpoint_ids=endpoint.get('sessions', {}).get(logic.session, []),
                       endpoint_duplicate_packets=endpoint.get('duplicates', 0))
-        payload = json.dumps(status)
+        payload = encode_status(status)
         robot.wwiSendText(payload)
         emitter.send(payload.encode())
         motion_peak = 0

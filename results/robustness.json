@@ -14,6 +14,23 @@
     "wrong_session_ack_ignored": true,
     "offline_ack_ignored": true,
     "duplicate_ack_idempotent": true,
-    "ttl_relative_to_issue_time": true
+    "ttl_relative_to_issue_time": true,
+    "startup_access_denied": true,
+    "startup_occupied_resolved": true,
+    "invalid_gap_breaks_debounce": true,
+    "missing_sensor_array_invalid": true,
+    "exact_expiry_rejected": true,
+    "invalid_ttl_nan_rejected": true,
+    "invalid_ttl_inf_rejected": true,
+    "invalid_ttl_-1_rejected": true,
+    "deadline_revokes_open_grant": true,
+    "door_jam_fault_without_bolt_extension": true,
+    "late_parcel_movement_is_tamper": true,
+    "door_recovery_measured": true,
+    "early_close_revokes_grant": true,
+    "sensor_loss_revokes_grant": true,
+    "sensor_recovery_no_false_door_edge": true,
+    "nonfinite_telemetry_is_json_null": true,
+    "redundant_close_does_not_suppress_impact": true
   }
 }

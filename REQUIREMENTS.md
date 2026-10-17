@@ -1,6 +1,6 @@
 # Proposal coverage and submission checklist
 
-The source proposal is `output/Package Delivery Security Box - Final Proposal.pptx`, including its speaker notes. This table maps the promised Webots work to actual implementation and reproducible evidence.
+The source proposal is `output/Package Delivery Security Box - Final Proposal.pptx`, including its speaker notes. The consolidated specification is [Software requirements](docs/SOFTWARE_REQUIREMENTS.md). This table maps the promised Webots work to actual implementation and reproducible evidence.
 
 | Proposal item | Implementation | Evidence / how to reproduce |
 |---|---|---|
@@ -24,17 +24,39 @@ The source proposal is `output/Package Delivery Security Box - Final Proposal.pp
 | Short demonstration videos | Two asserted native recordings with recorded telemetry overlays | `output/Parcel Guard - Delivery Workflow.mp4`, `output/Parcel Guard - Security Recovery.mp4` |
 | Complete code/design and final handoff | Quick start, architecture/state diagram, evidence report, editable video source | `README.md`, `DESIGN.md`, `results/REPORT.md`, complete ZIP |
 
-## Added robustness
+## Additional failure checks
 
-Lost-ACK retransmission; explicit moving bolt feedback; non-finite feedback denial; sensor spike rejection; concurrent request denial; automatic access timeout; offline expiry checks; faults in both bolt directions; measured recovery; endpoint ID verification; readable independent video scenes.
+Door obstruction and expiry; early access cancellation; physical hinge limits; exact token expiry; startup and interrupted sensor debounce; JSON-safe unavailable readings; malformed command handling; lost-ACK retransmission; explicit moving bolt feedback; non-finite feedback denial; sensor spike rejection; concurrent request denial; automatic access timeout; offline expiry checks; faults in both bolt directions; measured recovery; endpoint ID verification; readable independent video scenes.
 
-## Presentation order
+## Final report and grading coverage
 
-1. Play the delivery workflow demo (about 42 seconds).
-2. Show the Robot Window: parcel state, door/bolt feedback and an acknowledged event.
-3. Play the security/recovery demo (about 54 seconds).
-4. Show `results/REPORT.md`: actual targets, baseline comparison, denominator definitions, and scope.
-5. For code questions, start with `lockbox/core.py` and `DESIGN.md`. For reproducibility, run `python3 scripts/run_all.py`.
+The supplied assignment requires a class presentation and a paper submitted as a PDF. The final report follows the recommended order: title/team and contents, introduction, related works, architecture with a DFD and algorithms, results/conclusions, and references. The due date shown in the assignment is TBD.
+
+| Rubric criterion | Submission evidence |
+|---|---|
+| Design | `DESIGN.md`; final report pages 5–6; editable architecture diagram on slide 5; measured-state UI |
+| Implementation | Eight generated worlds; modular Python policy/device adapter; Robot Window; user guide |
+| Evaluation | Final report pages 7–9; complete JSON/CSV results; source and report hashes; requirement matrix above |
+| Overall software engineering | Separation of policy and fixture, sensor processing, fault handling, event deduplication, reproducible tests |
+| Logical organization | Report contents and required section order; 14-slide progression with timed speaker notes |
+| English language | Edited report and slide text; spoken delivery remains the presenters' responsibility |
+| Presentation aids | Actual Webots images, editable DFD and result tables, two captioned local videos |
+| Audience interaction | Opening prompt, Q&A plan, and evidence-based answers in `docs/PRESENTATION_GUIDE.md`; live delivery remains the team's responsibility |
+| Audience and purpose | User/problem framing, explained metrics, stated simulation boundaries, readable quick start |
+| Clarity | Distinct delivery versus secured state; labeled units, denominators, fault reasons and timing definitions |
+| Conciseness | Ten-page paper, brief slide text, supporting technical detail in notes and repository docs |
+| Accessibility | Searchable paper text, editable slide text/tables, high-contrast visuals, silent captioned videos, responsive panel, keyboard focus styling |
+
+### Required deliverables
+
+- `output/pdf/Parcel Guard - Final Report.pdf` and `docs/FINAL_REPORT.md`
+- `output/submission/Parcel Guard - Final Presentation.pptx` with speaker notes
+- `output/pdf/Parcel Guard - Final Presentation.pdf` as a viewing copy
+- `docs/PRESENTATION_GUIDE.md` and `docs/USER_GUIDE.md`
+- Two finished MP4 demos, raw recordings, and per-recording telemetry/assertions
+- Complete project ZIP and SHA-256 checksums in the public release
+
+The proposal names the team and CS 5650 but does not name an instructor, external sponsor or advisor. Responsibilities in the report retain the proposal's allocation. No course deadline or verified per-person work log is invented. The checklist maps evidence to the rubric; it does not assign a grade or replace the live presentation.
 
 ## Explicit scope
 

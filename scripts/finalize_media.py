@@ -1,5 +1,6 @@
 """Validate every exported frame, create local posters and an inline GIF preview."""
 import json
+import hashlib
 import subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -12,7 +13,9 @@ for mode,title,expected in [('workflow','Delivery Workflow',1249),('resilience',
     decoded=subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],capture_output=True,text=True)
     ok=(s['codec_name']=='h264' and s['width']==1600 and s['height']==900 and int(s['nb_frames'])==expected
         and s['r_frame_rate']=='30/1' and decoded.returncode==0 and not decoded.stderr.strip())
-    reports.append({'name':title,'passed':ok,'metadata':info,'all_frames_decoded_without_errors':decoded.returncode==0 and not decoded.stderr.strip()})
+    reports.append({'name':title,'passed':ok,'path':str(p.relative_to(ROOT)),
+                    'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'metadata':info,
+                    'all_frames_decoded_without_errors':decoded.returncode==0 and not decoded.stderr.strip()})
     poster=OUT/f"Parcel Guard {'Workflow' if mode=='workflow' else 'Recovery'} Poster.jpg"
     subprocess.run(['ffmpeg','-v','error','-ss','11.7' if mode=='workflow' else '38','-i',str(p),'-frames:v','1','-q:v','2','-y',str(poster)],check=True)
     print(f'{title}: {info["format"]["duration"]} s, {s["nb_frames"]} frames, validated',flush=True)

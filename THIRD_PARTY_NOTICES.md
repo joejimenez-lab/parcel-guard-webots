@@ -11,3 +11,5 @@ Webots is developed by Cyberbotics. The simulator is installed separately and is
 The editable video project uses Remotion, React and related npm packages. Exact versions are recorded in `demo-studio/package-lock.json`. These packages are installed separately with `npm ci`; their respective licenses apply. Remotion licensing terms may depend on the user's organization and usage.
 
 The Python controller and evaluation scripts require the Python standard library plus Webots' bundled controller API.
+
+The optional dashboard test uses jsdom under the MIT license. Report generation uses ReportLab under its BSD license. These packages are needed only to rebuild or check the accompanying materials.

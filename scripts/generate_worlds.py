@@ -40,7 +40,7 @@ DEF BOX Robot {{
   {block((0,0,-.236),(.59,.55,.006),'0.46 0.53 0.51')}
   {block((0,-.315,.29),(.70,.028,.025),'0.39 0.83 0.71',.3,.3)}
   HingeJoint {{
-   jointParameters HingeJointParameters {{ axis 0 0 -1 anchor -.35 -.32 0 }}
+   jointParameters HingeJointParameters {{ axis 0 0 -1 anchor -.35 -.32 0 minStop -0.02 maxStop 1.40 dampingConstant 0.1 }}
    device [ RotationalMotor {{ name "door_motor" minPosition 0 maxPosition 1.35 maxVelocity 1.5 maxTorque 20 }} PositionSensor {{ name "door_position" }} ]
    endPoint DEF DOOR Solid {{
     translation -.35 -.32 0
@@ -81,6 +81,6 @@ DEF FIXTURE Robot {{supervisor TRUE controller "scene_supervisor" children [Rece
 RUNNER = '''DEF TEST_RUNNER Robot {supervisor TRUE controller "__CONTROLLER__" children [Emitter {name "command_tx" channel 1} Receiver {name "status_rx" channel 2}] name "Reproducible scenario runner"}
 '''
 (WORLDS/'delivery_box.wbt').write_text(BASE)
-for suffix,controller in [('tests','trial_runner'),('sensor_trials','sensor_runner'),('classification','classification_runner'),('benchmark','cycle_runner'),('demo_video','demo_runner'),('resilience_video','resilience_demo')]:
+for suffix,controller in [('tests','trial_runner'),('edge_cases','edge_runner'),('sensor_trials','sensor_runner'),('classification','classification_runner'),('benchmark','cycle_runner'),('demo_video','demo_runner'),('resilience_video','resilience_demo')]:
     (WORLDS/f'delivery_box_{suffix}.wbt').write_text(BASE+RUNNER.replace('__CONTROLLER__',controller))
-print('Generated 7 worlds from config/evaluation.json')
+print('Generated 8 worlds from config/evaluation.json')
