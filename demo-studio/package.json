@@ -1,6 +1,6 @@
 {
   "name": "demo-studio",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Parcel Guard demos using verified Webots footage and sensor telemetry",
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "jsdom": "^26.1.0",
+    "playwright": "1.62.1",
     "prettier": "3.8.1",
     "typescript": "5.9.3"
   },

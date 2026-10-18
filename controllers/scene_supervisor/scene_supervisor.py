@@ -30,7 +30,13 @@ while robot.step(dt) != -1:
             if action in ('parcel_in', 'parcel_out'):
                 target = [0, 0, .32] if action == 'parcel_in' else [1.05, -.35, .10]
                 if command.get('animate'):
-                    animation = (robot.getTime(), translation.getSFVec3f(), target)
+                    # Approach the open front at the centre of the doorway.
+                    # A direct diagonal from the staging position crosses a side wall.
+                    outside = [0, -.60, .38]
+                    waypoints = ([translation.getSFVec3f(), [1.05, -.60, .38], outside, target]
+                                 if action == 'parcel_in' else
+                                 [translation.getSFVec3f(), outside, [1.05, -.60, .38], target])
+                    animation = (robot.getTime(), waypoints)
                 else:
                     translation.setSFVec3f(target)
             elif action == 'impact':
@@ -49,13 +55,15 @@ while robot.step(dt) != -1:
             pass
         scene_rx.nextPacket()
     if animation:
-        start, source, target = animation
-        t = min(1, (robot.getTime() - start) / 1.2)
+        start, waypoints = animation
+        progress = min(3, (robot.getTime() - start) / .64)
+        segment = min(2, int(progress))
+        t = min(1, progress - segment)
+        source, target = waypoints[segment:segment+2]
         ease = t*t*(3-2*t)
         position = [a+(b-a)*ease for a,b in zip(source, target)]
-        position[2] += .25 * 4*t*(1-t)
         translation.setSFVec3f(position)
-        if t == 1:
+        if progress == 3:
             animation = None
     while event_rx.getQueueLength():
         event = json.loads(event_rx.getString())

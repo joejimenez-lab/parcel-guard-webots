@@ -12,12 +12,12 @@
             "codec_name": "h264",
             "width": 1920,
             "height": 1080,
-            "nb_frames": "989"
+            "nb_frames": "889"
           }
         ],
         "format": {
-          "duration": "31.648000",
-          "size": "22971339"
+          "duration": "28.448000",
+          "size": "22591060"
         }
       }
     },
@@ -32,12 +32,12 @@
             "codec_name": "h264",
             "width": 1920,
             "height": 1080,
-            "nb_frames": "1389"
+            "nb_frames": "1189"
           }
         ],
         "format": {
-          "duration": "44.448000",
-          "size": "27610693"
+          "duration": "38.048000",
+          "size": "25604978"
         }
       }
     }

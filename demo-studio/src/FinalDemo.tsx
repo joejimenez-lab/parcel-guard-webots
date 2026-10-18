@@ -17,19 +17,19 @@ const Transition = () => (
 
 export const FinalDemo = () => (
   <Series>
-    <Series.Sequence durationInFrames={150}>
+    <Series.Sequence durationInFrames={120}>
       <Opening mode="final" />
     </Series.Sequence>
-    <Series.Sequence durationInFrames={949}>
+    <Series.Sequence durationInFrames={855}>
       <RecordedScene mode="workflow" />
     </Series.Sequence>
-    <Series.Sequence durationInFrames={90}>
+    <Series.Sequence durationInFrames={60}>
       <Transition />
     </Series.Sequence>
-    <Series.Sequence durationInFrames={1333}>
+    <Series.Sequence durationInFrames={1203}>
       <RecordedScene mode="resilience" />
     </Series.Sequence>
-    <Series.Sequence durationInFrames={300}>
+    <Series.Sequence durationInFrames={270}>
       <Evidence mode="final" />
     </Series.Sequence>
   </Series>

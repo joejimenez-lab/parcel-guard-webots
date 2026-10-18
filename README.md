@@ -35,14 +35,14 @@ The courier code is single-use and expires 300 simulated seconds after issuance.
 
 ## Demo videos
 
-- [**Final Demonstration**](output/Parcel%20Guard%20-%20Final%20Demonstration.mp4) — 94-second complete walkthrough with captions and no narration.
+- [**Final Demonstration**](output/Parcel%20Guard%20-%20Final%20Demonstration.mp4) — 84-second complete walkthrough with captions and no narration.
 
-- [**Delivery Workflow**](output/Parcel%20Guard%20-%20Delivery%20Workflow.mp4) — 42-second courier delivery, used-code rejection, and owner retrieval.
-- [**Security Recovery**](output/Parcel%20Guard%20-%20Security%20Recovery.mp4) — 54-second access failures, offline alerts, lost-ACK retries, bolt fault, and recovery.
+- [**Delivery Workflow**](output/Parcel%20Guard%20-%20Delivery%20Workflow.mp4) — 40-second courier delivery, used-code rejection, and owner retrieval.
+- [**Security Recovery**](output/Parcel%20Guard%20-%20Security%20Recovery.mp4) — 51-second access failures, offline alerts, lost-ACK retries, bolt fault, and recovery.
 - **`output/index.html`** — local video gallery with evaluation results.
 - **`output/raw/`** in the [complete release package](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) — unedited native Webots footage. Recorded telemetry and scenario assertions are in `results/workflow_recording.json` and `results/resilience_recording.json`.
 
-The videos contain actual simulation footage. The readings and event messages below the footage come from the recorded controller outputs. Captions describe the test actions, including scripted parcel placement and fault injection.
+The videos alternate between native Webots footage and the actual control page. Code entries and test buttons drive the running Python controller; status and events come back from its device readings. Captions identify fixture movement and fault injection. Both camera views follow the same simulation clock.
 
 ## Evaluation
 
@@ -95,10 +95,13 @@ See **`DESIGN.md`** for the state machine, sensing decisions, event protocol and
 Requires Node.js 22+ and FFmpeg/ffprobe in addition to Webots. Clone the repo and download the complete release package if you want the existing raw footage; otherwise the recording command below recreates it. Videos already included can be watched without Node or Remotion.
 
 ```sh
+cd demo-studio
+npm ci
+npx playwright install chromium
+cd ..
 python3 scripts/record_demo.py
 python3 scripts/prepare_video_assets.py
 cd demo-studio
-npm ci
 npm run lint
 npm run render:workflow
 npm run render:recovery
@@ -107,7 +110,7 @@ npm run render:final
 
 After rendering, return to the project root and run `python3 scripts/finalize_media.py` to check every encoded frame and refresh posters.
 
-`npm run dev` opens editable video scenes. You can preview the opening, recorded run, and results separately. The raw capture is 1920×1080 at 31.25 fps; final videos are 1920×1080 at 30 fps.
+`npm run dev` opens editable video scenes. You can preview the opening, recorded run, and results separately. The native Webots capture is 1920×1080 at 31.25 fps. The control page is captured every three simulation steps through a token-protected loopback bridge; the same page handlers send the commands. Final videos are silent, 1920×1080, and 30 fps. `CAPTURE_CHROMIUM` can select an existing Chromium executable.
 
 ## Submission package
 

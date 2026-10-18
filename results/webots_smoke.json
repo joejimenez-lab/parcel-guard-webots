@@ -16,7 +16,7 @@
   "open_door_samples": 66,
   "max_bolt_orientation_error": 1.3004963792143885e-07,
   "final_status": {
-    "session": "b87b5a619ab8",
+    "session": "f3981524fee1",
     "time": 9.888,
     "phase": "SECURED",
     "secured": true,
@@ -35,28 +35,28 @@
     "pending": 0,
     "events": [
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 3,
         "time": 0.384,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 4,
         "time": 1.856,
         "kind": "parcel_detected",
@@ -65,7 +65,7 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 5,
         "time": 3.808,
         "kind": "delivery",
@@ -74,14 +74,14 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 6,
         "time": 3.84,
         "kind": "link_lost",
         "detail": ""
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 7,
         "time": 4.256,
         "kind": "tamper",
@@ -90,21 +90,21 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 8,
         "time": 4.64,
         "kind": "link_restored",
         "detail": ""
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 9,
         "time": 5.568,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 10,
         "time": 7.04,
         "kind": "retrieval",
@@ -127,28 +127,28 @@
     ],
     "all_events": [
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 3,
         "time": 0.384,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 4,
         "time": 1.856,
         "kind": "parcel_detected",
@@ -157,7 +157,7 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 5,
         "time": 3.808,
         "kind": "delivery",
@@ -166,14 +166,14 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 6,
         "time": 3.84,
         "kind": "link_lost",
         "detail": ""
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 7,
         "time": 4.256,
         "kind": "tamper",
@@ -182,21 +182,21 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 8,
         "time": 4.64,
         "kind": "link_restored",
         "detail": ""
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 9,
         "time": 5.568,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "b87b5a619ab8",
+        "session": "f3981524fee1",
         "id": 10,
         "time": 7.04,
         "kind": "retrieval",

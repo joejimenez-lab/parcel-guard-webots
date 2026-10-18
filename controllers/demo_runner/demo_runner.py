@@ -24,4 +24,4 @@ def verify(rows):
          'no_tamper_false_alarm':'tamper' not in k,'final_empty_and_secured':s['secured'] and s['parcel']=='empty',
          'delivery_only_when_secured':all(row['status']['secured'] for row in rows if any(e['kind']=='delivery' and e['time']>=row['status']['time']-.1 for e in row['status']['all_events'])),
          'every_event_acknowledged':s['pending']==0 and len(s['endpoint_ids'])==len(s['all_events'])}
-record('workflow',1000,schedule,chapters,verify)
+record('workflow',900,schedule,chapters,verify)

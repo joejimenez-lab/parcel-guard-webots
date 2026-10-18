@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-10-17T18:32:29.276083+00:00",
+  "timestamp_utc": "2026-10-18T19:35:28.366623+00:00",
   "functional_proposal_coverage_passed": true,
   "submission_ready": true,
   "sources": [
@@ -22,5 +22,5 @@
   "remaining": [
     "Team upload, rehearsal, presentation and Q&A."
   ],
-  "evaluation_manifest_sha256": "7c93de8ad7a37f6d4951a6fe13eac4ccc555a1693b96ae65b23ed3a240eeb591"
+  "evaluation_manifest_sha256": "64d6b31fd118464e0142d799b839edc9367a1f27bec72ad5b727aca7231c8673"
 }

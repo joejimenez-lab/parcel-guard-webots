@@ -11,6 +11,7 @@ REPORTS = (
     'webots_edge_cases', 'dashboard_validation', 'evaluation_manifest',
     'submission_validation', 'video_validation', 'render_validation',
     'workflow_recording', 'resilience_recording', 'portability_validation',
+    'workflow_interface_capture', 'resilience_interface_capture', 'video_visual_review',
 )
 DOCUMENTS = (
     'README.md', 'SUBMISSION.md', 'DESIGN.md', 'REQUIREMENTS.md',
@@ -79,6 +80,11 @@ def verify(root):
         if reports[f'{mode}_recording'].get('source_sha256') != evaluation['source_sha256']:
             raise ValueError(f'{mode} recording does not match the evaluated source')
         file(f'output/raw/{mode}.mp4')
+        capture=reports[f'{mode}_interface_capture']
+        hashes(capture['artifact_sha256'])
+        if reports[f'{mode}_recording'].get('interaction_source') != 'live browser form and button handlers':
+            raise ValueError(f'{mode} does not demonstrate the live interface')
+    hashes(reports['video_visual_review']['artifact_sha256'])
     media = {item['path']: item for item in reports['render_validation']['videos']}
     for name in VIDEOS:
         item = media.get(name)

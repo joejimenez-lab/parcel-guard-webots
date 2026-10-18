@@ -20,11 +20,11 @@
       }
       body {
         margin: 0;
-        padding: 22px;
+        padding: 16px;
         background: var(--bg);
         color: var(--ink);
         font:
-          14px/1.5 Arial,
+          16px/1.4 Arial,
           Helvetica,
           sans-serif;
       }
@@ -38,7 +38,7 @@
         justify-content: space-between;
         gap: 12px;
         padding-bottom: 12px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         border-bottom: 2px solid #333;
       }
       .brand {
@@ -67,8 +67,8 @@
         color: var(--muted);
       }
       .hero {
-        padding: 0 0 20px;
-        margin-bottom: 22px;
+        padding: 0 0 12px;
+        margin-bottom: 14px;
         border-bottom: 1px solid #aaa;
       }
       .eyebrow {
@@ -87,7 +87,7 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(80px, 1fr));
         gap: 12px;
-        margin-top: 18px;
+        margin-top: 12px;
       }
       .metric {
         font-size: 12px;
@@ -133,7 +133,7 @@
       }
       button {
         font:
-          14px Arial,
+          16px Arial,
           Helvetica,
           sans-serif;
         cursor: pointer;
@@ -260,7 +260,7 @@
       }
       .lab {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 8px;
         margin-top: 14px;
       }
@@ -381,23 +381,13 @@
           </section>
         </div>
         <div>
-          <section class="panel">
-            <h2>
-              Event delivery <span class="tag" id="queue">0 PENDING</span>
-            </h2>
-            <p class="hint" id="delivery">
-              Events stay in the queue until the endpoint acknowledges receipt.
-            </p>
-            <ul id="events" class="events">
-              <li class="empty">Waiting for events.</li>
-            </ul>
-            <button class="secondary full" id="export">Export event log</button>
-          </section>
           <details class="panel">
             <summary>Test controls</summary>
             <p class="hint">
               Use these to place the parcel or inject a fault in the simulation.
             </p>
+            <label for="courier-ttl">Courier validity for a new session (seconds)</label>
+            <input id="courier-ttl" type="number" value="300" min="1" max="86400" />
             <div class="lab">
               <button class="secondary" data-action="parcel_in">
                 Place parcel</button
@@ -423,6 +413,19 @@
               </button>
             </div>
           </details>
+          <section class="panel">
+            <h2>
+              Event delivery <span class="tag" id="queue">0 PENDING</span>
+            </h2>
+            <p class="hint" id="delivery">
+              Events stay in the queue until the endpoint acknowledges receipt.
+            </p>
+            <ul id="events" class="events">
+              <li class="empty">Waiting for events.</li>
+            </ul>
+            <button class="secondary full" id="export">Export event log</button>
+          </section>
+
         </div>
       </div>
       <footer>
@@ -454,7 +457,9 @@
         .querySelectorAll("[data-action]")
         .forEach((b) =>
           b.addEventListener("click", () =>
-            send(b.dataset.action, { animate: true }),
+            send(b.dataset.action, b.dataset.action === "reset_logic"
+              ? { courier_ttl_s: Number($("courier-ttl").value) }
+              : { animate: true }),
           ),
         );
       $("export").addEventListener("click", () => {
@@ -515,7 +520,7 @@
         $("clock").textContent = `${displayNumber(s.time)} s SIM`;
         $("queue").textContent = `${s.pending} PENDING`;
         $("delivery").textContent =
-          `${s.delivered_ids.length} acknowledged · ${s.endpoint_ids.length} unique endpoint events · ${s.pending} awaiting ACK`;
+          `${s.delivered_ids.length} acknowledged · ${s.endpoint_ids.length} unique events · ${s.pending} awaiting ACK · ${s.endpoint_duplicate_packets || 0} repeated packets`;
         $("access-result").textContent =
           s.entry_paused_s > 0
             ? `Entry paused for ${displayNumber(s.entry_paused_s)} seconds`
@@ -571,7 +576,23 @@
     </script>
     <script type="module">
       import RobotWindow from "./RobotWindow.js";
-      if (!new URLSearchParams(location.search).has("preview")) {
+      const captureToken = new URLSearchParams(location.search).get("capture");
+      if (captureToken) {
+        const headers = { "X-Capture-Token": captureToken, "Content-Type": "application/json" };
+        window.robotWindow = {
+          send(message) {
+            window.pendingCommand = fetch("/capture/command", { method: "POST", headers, body: message })
+              .then(r => { if (!r.ok) throw new Error("Live command failed"); });
+          }
+        };
+        window.refreshStatus = async () => {
+          const response = await fetch("/capture/status", { headers });
+          if (!response.ok) throw new Error("Live status failed");
+          const status = await response.json();
+          if (status) window.renderStatus(status);
+        };
+        window.captureReady = true;
+      } else if (!new URLSearchParams(location.search).has("preview")) {
         window.robotWindow = new RobotWindow();
         window.robotWindow.receive = (m) => {
           try {

@@ -13,11 +13,11 @@ The deck follows the final-report order and retains the proposal's suggested 13-
 | 2:30–3:35 | 5 | Joe | Follow the data flow; separate detector and fixture |
 | 3:35–4:35 | 6 | Joe | Explain actual device readings and filtering |
 | 4:35–5:40 | 7 | Brandon | Explain credentials, motor sequence and timeouts |
-| 5:40–6:35 | 8 | Joe | Play the 42-second delivery video |
+| 5:40–6:35 | 8 | Joe | Play the 40-second delivery video |
 | 6:35–7:40 | 9 | Brandon | Explain scenarios, denominators and fixed configuration |
 | 7:40–8:50 | 10 | Brandon | Interpret the matrix and baseline limitations |
 | 8:50–10:00 | 11 | Brandon | Explain failures found, corrections and regressions |
-| 10:00–11:05 | 12 | Joe | Play the 54-second recovery video |
+| 10:00–11:05 | 12 | Joe | Play the 51-second recovery video |
 | 11:05–12:10 | 13 | Brandon | State limits and concrete next tests |
 | 12:10–13:00 | 14 | Brandon | Conclude, identify evidence and invite questions |
 | 13:00–15:00 | 14 | All | Questions and follow-up examples |
@@ -66,4 +66,4 @@ Listen to the complete question, answer it directly, then show one relevant obse
 
 ## Complete walkthrough
 
-`output/Parcel Guard - Final Demonstration.mp4` combines both scenarios and the final evaluation summary in 94 seconds. It is captioned without narration. The two shorter clips remain timed to slides 8 and 12. The standalone paper source is `docs/parcel_guard_report.tex`.
+`output/Parcel Guard - Final Demonstration.mp4` combines both scenarios and the final evaluation summary in 84 seconds. It is captioned without narration. The two shorter clips remain timed to slides 8 and 12. The standalone paper source is `docs/parcel_guard_report.tex`.

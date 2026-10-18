@@ -13,7 +13,7 @@ export const RemotionRoot = () => (
       width={1920}
       height={1080}
       fps={30}
-      durationInFrames={2822}
+      durationInFrames={2508}
     />
     <Composition
       id="DeliveryWorkflow"
@@ -21,7 +21,7 @@ export const RemotionRoot = () => (
       width={1920}
       height={1080}
       fps={30}
-      durationInFrames={1249}
+      durationInFrames={1185}
     />
     <Composition
       id="SecurityRecovery"
@@ -29,7 +29,7 @@ export const RemotionRoot = () => (
       width={1920}
       height={1080}
       fps={30}
-      durationInFrames={1633}
+      durationInFrames={1533}
     />
     <Folder name="Scenes">
       <Composition
@@ -48,7 +48,7 @@ export const RemotionRoot = () => (
         width={1920}
         height={1080}
         fps={30}
-        durationInFrames={949}
+        durationInFrames={855}
       />
       <Composition
         id="WorkflowEvidence"
@@ -57,7 +57,7 @@ export const RemotionRoot = () => (
         width={1920}
         height={1080}
         fps={30}
-        durationInFrames={180}
+        durationInFrames={210}
       />
       <Composition
         id="SecurityOpening"
@@ -75,7 +75,7 @@ export const RemotionRoot = () => (
         width={1920}
         height={1080}
         fps={30}
-        durationInFrames={1333}
+        durationInFrames={1203}
       />
       <Composition
         id="SecurityEvidence"
@@ -84,7 +84,7 @@ export const RemotionRoot = () => (
         width={1920}
         height={1080}
         fps={30}
-        durationInFrames={180}
+        durationInFrames={210}
       />
     </Folder>
   </>

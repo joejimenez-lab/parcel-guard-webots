@@ -59,4 +59,4 @@ The tests use one parcel and a simulated notification endpoint. Controller decis
 
 ## Videos
 
-`output/Parcel Guard - Delivery Workflow.mp4` and `output/Parcel Guard - Security Recovery.mp4` contain actual native Webots recordings with synchronized recorded telemetry overlays. `output/raw/` holds the unedited footage. Each recording has scenario assertions and a complete telemetry sidecar in `results/`. The sidecars supply the readings and event text beneath the footage.
+`output/Parcel Guard - Delivery Workflow.mp4` and `output/Parcel Guard - Security Recovery.mp4` combine native Webots footage with the actual browser control page connected to the running controller. `output/raw/` holds the unedited footage. Each recording has scenario assertions and a complete telemetry sidecar in `results/`. The sidecars supply the measured feedback. Interface capture reports retain the button/form command sequence and hashes of both unedited recordings.

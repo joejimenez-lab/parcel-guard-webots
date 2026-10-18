@@ -8,12 +8,12 @@ export const Resilience = () => (
       <Opening mode="resilience" />
     </Series.Sequence>
     <Series.Sequence
-      durationInFrames={1333}
+      durationInFrames={1203}
       name="Webots security and recovery"
     >
       <RecordedScene mode="resilience" />
     </Series.Sequence>
-    <Series.Sequence durationInFrames={180} name="Verified evidence">
+    <Series.Sequence durationInFrames={210} name="Verified evidence">
       <Evidence mode="resilience" />
     </Series.Sequence>
   </Series>

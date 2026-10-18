@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "timestamp_utc": "2026-10-18T19:35:24.763103+00:00",
+  "version": "2.4.0",
+  "method": "Chronological visual review across each entire exported timeline at two sampled frames per second, with full-resolution interface/result checks, denser parcel-motion and button-click inspection, exact last-frame review, and a separate decode/content check of every encoded frame.",
+  "coverage": [
+    {
+      "video": "Delivery Workflow",
+      "duration_s": 39.5,
+      "sampled_frames": 79,
+      "reviewed_range_s": [
+        0,
+        39.5
+      ]
+    },
+    {
+      "video": "Security Recovery",
+      "duration_s": 51.1,
+      "sampled_frames": 102,
+      "reviewed_range_s": [
+        0,
+        51.1
+      ]
+    },
+    {
+      "video": "Final Demonstration",
+      "duration_s": 83.6,
+      "sampled_frames": 167,
+      "reviewed_range_s": [
+        0,
+        83.6
+      ]
+    }
+  ],
+  "checks": {
+    "actual_interface_actions_visible": true,
+    "parcel_uses_open_front_doorway": true,
+    "captions_match_recorded_state": true,
+    "session_reset_explained": true,
+    "important_denials_readable": true,
+    "blocked_bolt_remains_unsecured": true,
+    "measured_recovery_visible": true,
+    "results_match_evaluation": true,
+    "no_narration_or_audio_track": true,
+    "all_5226_encoded_frames_decoded": true,
+    "no_missing_picture_in_active_scenes": true,
+    "exact_final_frames_reviewed": true
+  },
+  "inspection_pauses": [
+    {
+      "source_time_s": 7,
+      "duration_s": 2,
+      "purpose": "Read the actual expired-code denial; two seconds inserted with an explicit pause label."
+    },
+    {
+      "source_time_s": 20.9,
+      "duration_s": 0.8,
+      "purpose": "Inspect the actual Drop 3 ACKs click; replaces an idle interval and is explicitly labeled."
+    }
+  ],
+  "export_corrections": {
+    "Delivery Workflow": [
+      121
+    ],
+    "Security Recovery": [
+      121
+    ],
+    "Final Demonstration": [
+      1036
+    ]
+  },
+  "export_correction_method": "An isolated blank decoder-start frame was replaced by the immediately preceding recorded frame. Frame count, duration and all event sequences are preserved. Corrected transitions were visually checked.",
+  "picture_validation": [
+    {
+      "video": "output/Parcel Guard - Delivery Workflow.mp4",
+      "decoded_frames": 1185,
+      "active_scene_intervals_frames": [
+        [
+          120,
+          975
+        ]
+      ],
+      "blank_picture_frames": [],
+      "minimum_nonwhite_fraction": 0.0884
+    },
+    {
+      "video": "output/Parcel Guard - Security Recovery.mp4",
+      "decoded_frames": 1533,
+      "active_scene_intervals_frames": [
+        [
+          120,
+          1323
+        ]
+      ],
+      "blank_picture_frames": [],
+      "minimum_nonwhite_fraction": 0.081
+    },
+    {
+      "video": "output/Parcel Guard - Final Demonstration.mp4",
+      "decoded_frames": 2508,
+      "active_scene_intervals_frames": [
+        [
+          120,
+          975
+        ],
+        [
+          1035,
+          2238
+        ]
+      ],
+      "blank_picture_frames": [],
+      "minimum_nonwhite_fraction": 0.0812
+    }
+  ],
+  "local_gallery_playback": {
+    "passed": true,
+    "videos": [
+      {
+        "label": "Final demonstration",
+        "duration": 83.6,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "label": "Delivery and retrieval",
+        "duration": 39.5,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "label": "Security and recovery",
+        "duration": 51.1,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "no_horizontal_overflow": true,
+    "no_page_errors": true
+  },
+  "notes": [
+    "Parcel movement remains a scripted scene fixture, not a modeled courier hand.",
+    "The final combined cut uses the same frame boundaries as FinalDemo.tsx, with its recovery segment taken from the final standalone recovery render.",
+    "These reviews concern presentation quality; simulation assertions and source hashes are separate evidence."
+  ],
+  "artifact_sha256": {
+    "output/Parcel Guard - Delivery Workflow.mp4": "2578865cd613dfe65904e2cf866f6a05efafa270727fc0a1c019d07480cdf61e",
+    "output/Parcel Guard - Security Recovery.mp4": "85bfdbab6b4f2fe188b280e5b895c52f6e7d8b0847f4eee3896e5af6bd9a2242",
+    "output/Parcel Guard - Final Demonstration.mp4": "2bf8c00af2f91fa94675a7b93714824fcd2afa3b8e35412992e5f2ba57392289",
+    "demo-studio/src/captions.ts": "5fbf2ca4d96bc4db0a804efb574f82d57eeb0572e153f982abdf63318255f7c9",
+    "demo-studio/src/FinalDemo.tsx": "faae3e061ae17c5e952eba87a818b8f44efa0a52c6c8c166ea2d64c8bb476aee",
+    "demo-studio/src/RecordedScene.tsx": "658cccd77edda789517f9c5432c89361d31453dd0070845257eadff1a4ee3bc2",
+    "demo-studio/src/Root.tsx": "439a975c9d4d00e45da83fc44409b4c3ff5776a3a082c640744ff0284c3b1366",
+    "demo-studio/src/Opening.tsx": "846110cc48231a2390d5fb309246a6ab5bd58d82671143cab67adf6d5ff0028f",
+    "demo-studio/src/index.ts": "957e481dd33a29b4a55ae0e95dbf763b7e48c37c427ca4bd1275faf34bc07a74",
+    "demo-studio/src/style.ts": "1598920f51c5e6886f07fdb7b1f94fd6445cb423c68cc50ca8841546670d28f7",
+    "demo-studio/src/Workflow.tsx": "cbaf87470296068d39ae6981ca9a781391fe4cc38d241cd7569d989182eb254d",
+    "demo-studio/src/Resilience.tsx": "e71952b3b7a8cae87df3db2fa058de95c574eccc14c38bebf9fdf158cd072389",
+    "demo-studio/src/Evidence.tsx": "7c9c091590f1d6ec73531989e7fd819539816c818e537963bc355e5714b601e6",
+    "demo-studio/public/expired-code.png": "929a91f2607fcbfeda2bf624aaf9c898409038e98b7517bd23445f6da61fb116",
+    "demo-studio/public/drop-acks.png": "905d6a74aa6ed5e3efb2f22e4657a7527f8ea7e8368c135a97f7561127a57747",
+    "scripts/finalize_media.py": "7968671203083f31988d3a22f78e2b7c2319027d02906f9176f718157547bdb6",
+    "results/workflow_interface_capture.json": "3eb1293e77ece3b0febf476a73781be5422f8549ba74c369be914ac979b04ed0",
+    "results/resilience_interface_capture.json": "1ec5c035e6575f1d802581815bb15e095f3a20f04f9c2feb623d931bb2c82104"
+  }
+}

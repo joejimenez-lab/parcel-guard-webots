@@ -8,12 +8,12 @@ export const Workflow = () => (
       <Opening mode="workflow" />
     </Series.Sequence>
     <Series.Sequence
-      durationInFrames={949}
+      durationInFrames={855}
       name="Webots delivery and retrieval"
     >
       <RecordedScene mode="workflow" />
     </Series.Sequence>
-    <Series.Sequence durationInFrames={180} name="Verified evidence">
+    <Series.Sequence durationInFrames={210} name="Verified evidence">
       <Evidence mode="workflow" />
     </Series.Sequence>
   </Series>

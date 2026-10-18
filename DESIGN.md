@@ -96,3 +96,9 @@ A finite but stuck sensor value cannot be reliably distinguished from a real sta
 ## Reset behavior
 
 A new session reissues both temporary codes and clears in-memory events, replay IDs and pending delivery. If the door is open, the controller revokes access, commands closure, and holds the bolt retracted until the closed sensor condition is reached. Reset does not move the parcel. The Webots edge suite tests this path and a complete offline delivery/retrieval with a blocked bolt.
+
+## Recording the interface
+
+The normal Webots Robot Window uses WWI. The video recorder serves that same HTML page through a loopback-only HTTP bridge with a per-run token. Browser form and button handlers send commands to the scenario runner, which forwards them to the ordinary controller. Sensor status comes back over the existing status channel. The browser never invents access outcomes or sensor readings. The recorder advances one 32 ms simulator step at a time and captures the page every third step, keeping native footage, interface footage, and telemetry aligned. This transport exists only during recording.
+
+Animated parcel placement follows waypoints outside the box and through the centre of the open front. It remains a scripted fixture; it is not a model of a courier’s hand or a general collision-free manipulation planner.

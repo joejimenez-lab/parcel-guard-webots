@@ -2,13 +2,21 @@
 import json
 import shutil
 import subprocess
+import argparse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'demo-studio/public';PUBLIC.mkdir(exist_ok=True)
-for name in ('workflow','resilience'):
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--mode', choices=('workflow','resilience','all'), default='all')
+mode=parser.parse_args().mode
+for name in (('workflow','resilience') if mode=='all' else (mode,)):
     report=json.loads((ROOT/'results'/f'{name}_recording.json').read_text())
     if not report['passed']:raise SystemExit(f'{name}: scenario assertions failed')
     shutil.copy2(ROOT/report['raw_video'],PUBLIC/f'{name}.mp4')
+    capture=json.loads((ROOT/'results'/f'{name}_interface_capture.json').read_text())
+    if not capture['passed'] or report['interaction_source']!='live browser form and button handlers':
+        raise SystemExit('The demo must be recorded through the live control page')
+    shutil.copy2(ROOT/'output/raw'/f'{name}-interface.mp4',PUBLIC/f'{name}-interface.mp4')
     rows=[];previous=None
     for row in report['telemetry']:
         s=row['status']
@@ -30,4 +38,10 @@ summary={'presence':f"{sensor['correct']} / 50", 'f1':f"{classification['macro_f
          'observer':f"{benchmark['alert_latency']['max_stimulus_to_observer_s']:.3f}"}
 (PUBLIC/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 
-subprocess.run(['ffmpeg','-v','error','-ss','8','-i',str(PUBLIC/'workflow.mp4'),'-frames:v','1','-q:v','2','-y',str(PUBLIC/'cover.jpg')],check=True)
+if mode in ('workflow', 'all'):
+    subprocess.run(['ffmpeg','-v','error','-ss','8','-i',str(PUBLIC/'workflow.mp4'),'-frames:v','1','-q:v','2','-y',str(PUBLIC/'cover.jpg')],check=True)
+
+# Labeled inspection pauses use exact frames from the live UI recording.
+if mode in ('resilience', 'all'):
+    subprocess.run(['ffmpeg','-v','error','-ss','7','-i',str(PUBLIC/'resilience-interface.mp4'),'-frames:v','1','-y',str(PUBLIC/'expired-code.png')],check=True)
+    subprocess.run(['ffmpeg','-v','error','-ss','20.9','-i',str(PUBLIC/'resilience-interface.mp4'),'-frames:v','1','-y',str(PUBLIC/'drop-acks.png')],check=True)

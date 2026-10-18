@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "source": "Live project control page connected to the running Webots controller",
+  "viewport": {
+    "width": 960,
+    "height": 500,
+    "scale": 2
+  },
+  "screenshot_interval_sim_s": 0.096,
+  "screenshots": 298,
+  "commands": [
+    {
+      "frame": 75,
+      "time_s": 2.144,
+      "action": "access",
+      "role": "courier"
+    },
+    {
+      "frame": 180,
+      "time_s": 5.5040000000000004,
+      "action": "parcel_in",
+      "role": null
+    },
+    {
+      "frame": 275,
+      "time_s": 8.544,
+      "action": "close",
+      "role": null
+    },
+    {
+      "frame": 415,
+      "time_s": 13.024000000000001,
+      "action": "access",
+      "role": "courier"
+    },
+    {
+      "frame": 525,
+      "time_s": 16.544,
+      "action": "access",
+      "role": "owner"
+    },
+    {
+      "frame": 640,
+      "time_s": 20.224,
+      "action": "parcel_out",
+      "role": null
+    },
+    {
+      "frame": 750,
+      "time_s": 23.744,
+      "action": "close",
+      "role": null
+    }
+  ],
+  "browser_errors": [],
+  "artifact_sha256": {
+    "output/raw/workflow-interface.mp4": "d8fd5795989db61b455d9dc7c8037e83bbdc2b0bb74909b2dcebabc6a62cd378",
+    "output/raw/workflow.mp4": "2d73df6edbab634783b0acabb892ac9df931a692015a184b557eb4457abbe41c",
+    "demo-studio/scripts/capture-interface.mjs": "5f88d766c03c10c68114cba94535f67e8f77be5218d8ac58b42b075f6df0ad07",
+    "plugins/robot_windows/lockbox_window/lockbox_window.html": "dfd48dc0ddb1d1810775193535e670e4410cca2ae34b71fea3eb6815d1a0a766"
+  }
+}

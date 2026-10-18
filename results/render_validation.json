@@ -5,7 +5,7 @@
       "name": "Delivery Workflow",
       "passed": true,
       "path": "output/Parcel Guard - Delivery Workflow.mp4",
-      "sha256": "672b535006acb0dfbdc9fb3efeb2325394806b78c59bd57068e49f826b546e59",
+      "sha256": "2578865cd613dfe65904e2cf866f6a05efafa270727fc0a1c019d07480cdf61e",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -15,24 +15,27 @@
             "width": 1920,
             "height": 1080,
             "r_frame_rate": "30/1",
-            "nb_frames": "1249",
+            "nb_frames": "1185",
             "side_data_list": [
               {}
             ]
           }
         ],
         "format": {
-          "duration": "41.633333",
-          "size": "4046393"
+          "duration": "39.500000",
+          "size": "3442923"
         }
       },
+      "transition_picture_frames_repaired": [
+        121
+      ],
       "all_frames_decoded_without_errors": true
     },
     {
       "name": "Security Recovery",
       "passed": true,
       "path": "output/Parcel Guard - Security Recovery.mp4",
-      "sha256": "5e335d9441ac8440b0584ef3e71fb756bc7c962a2144bc8fd5eb405d09a117e3",
+      "sha256": "85bfdbab6b4f2fe188b280e5b895c52f6e7d8b0847f4eee3896e5af6bd9a2242",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -42,24 +45,27 @@
             "width": 1920,
             "height": 1080,
             "r_frame_rate": "30/1",
-            "nb_frames": "1633",
+            "nb_frames": "1533",
             "side_data_list": [
               {}
             ]
           }
         ],
         "format": {
-          "duration": "54.433333",
-          "size": "4584435"
+          "duration": "51.100000",
+          "size": "2988873"
         }
       },
+      "transition_picture_frames_repaired": [
+        121
+      ],
       "all_frames_decoded_without_errors": true
     },
     {
       "name": "Final Demonstration",
       "passed": true,
       "path": "output/Parcel Guard - Final Demonstration.mp4",
-      "sha256": "96ba5dd3363810ec92d7c2a25a6f3de1242b6c18558be2710855ff65fc468121",
+      "sha256": "2bf8c00af2f91fa94675a7b93714824fcd2afa3b8e35412992e5f2ba57392289",
       "metadata": {
         "programs": [],
         "stream_groups": [],
@@ -69,19 +75,22 @@
             "width": 1920,
             "height": 1080,
             "r_frame_rate": "30/1",
-            "nb_frames": "2822",
+            "nb_frames": "2508",
             "side_data_list": [
               {}
             ]
           }
         ],
         "format": {
-          "duration": "94.066667",
-          "size": "8646596"
+          "duration": "83.600000",
+          "size": "6207543"
         }
       },
+      "transition_picture_frames_repaired": [
+        1036
+      ],
       "all_frames_decoded_without_errors": true
     }
   ],
-  "preview_bytes": 6930044
+  "preview_bytes": 4441552
 }

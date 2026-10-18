@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "source": "Live project control page connected to the running Webots controller",
+  "viewport": {
+    "width": 960,
+    "height": 500,
+    "scale": 2
+  },
+  "screenshot_interval_sim_s": 0.096,
+  "screenshots": 398,
+  "commands": [
+    {
+      "frame": 30,
+      "time_s": 0.704,
+      "action": "reset_logic",
+      "role": null
+    },
+    {
+      "frame": 80,
+      "time_s": 2.3040000000000003,
+      "action": "access",
+      "role": "courier"
+    },
+    {
+      "frame": 220,
+      "time_s": 6.784,
+      "action": "access",
+      "role": "courier"
+    },
+    {
+      "frame": 260,
+      "time_s": 8.064,
+      "action": "reset_logic",
+      "role": null
+    },
+    {
+      "frame": 340,
+      "time_s": 10.624,
+      "action": "link_off",
+      "role": null
+    },
+    {
+      "frame": 395,
+      "time_s": 12.384,
+      "action": "impact",
+      "role": null
+    },
+    {
+      "frame": 450,
+      "time_s": 14.144,
+      "action": "impact",
+      "role": null
+    },
+    {
+      "frame": 505,
+      "time_s": 15.904,
+      "action": "impact",
+      "role": null
+    },
+    {
+      "frame": 590,
+      "time_s": 18.624,
+      "action": "link_on",
+      "role": null
+    },
+    {
+      "frame": 660,
+      "time_s": 20.864,
+      "action": "drop_acks",
+      "role": null
+    },
+    {
+      "frame": 695,
+      "time_s": 21.984,
+      "action": "impact",
+      "role": null
+    },
+    {
+      "frame": 780,
+      "time_s": 24.704,
+      "action": "access",
+      "role": "owner"
+    },
+    {
+      "frame": 855,
+      "time_s": 27.104,
+      "action": "jam_latch",
+      "role": null
+    },
+    {
+      "frame": 900,
+      "time_s": 28.544,
+      "action": "close",
+      "role": null
+    },
+    {
+      "frame": 1110,
+      "time_s": 35.264,
+      "action": "release_latch",
+      "role": null
+    }
+  ],
+  "browser_errors": [],
+  "artifact_sha256": {
+    "output/raw/resilience-interface.mp4": "165c512516b4e1568646a73f216671895ddb297a3a824df1a327dbefe94c70ee",
+    "output/raw/resilience.mp4": "6940ea1afc41f34cdad2ee174b47c449f86a29bbd85db96e888e752a36649b1e",
+    "demo-studio/scripts/capture-interface.mjs": "5f88d766c03c10c68114cba94535f67e8f77be5218d8ac58b42b075f6df0ad07",
+    "plugins/robot_windows/lockbox_window/lockbox_window.html": "dfd48dc0ddb1d1810775193535e670e4410cca2ae34b71fea3eb6815d1a0a766"
+  }
+}

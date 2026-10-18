@@ -240,10 +240,10 @@ A next iteration should add persistent event and token state, deliberate stuck-a
 
 [8] CS 5650, "Final Report Guidelines and Format Recommendation" and "Software Engineering - Design, Implementation, and Evaluation, Oral and Written Communication" rubric, supplied assignment screenshots. Due date shown as TBD.
 
-[9] Parcel Guard project, evaluation configuration, source manifest, scenario results, and recorded telemetry, release 2.3.0. https://github.com/joejimenez-lab/parcel-guard-webots. Local evidence: `results/evaluation_manifest.json`, `results/REPORT.md`, and the associated JSON/CSV files.
+[9] Parcel Guard project, evaluation configuration, source manifest, scenario results, and recorded telemetry, release 2.4.0. https://github.com/joejimenez-lab/parcel-guard-webots. Local evidence: `results/evaluation_manifest.json`, `results/REPORT.md`, and the associated JSON/CSV files.
 
 ## Reproduction and demonstration
 
 Open `worlds/delivery_box.wbt` with Webots R2025a and Python 3.10 or later. The controller requires no extra Python packages. From the repository root, run `python3 scripts/run_all.py` to regenerate the worlds and repeat acceptance and failure tests. Set `WEBOTS_BIN` when the simulator is installed outside its default macOS location.
 
-The submission includes `Parcel Guard - Delivery Workflow.mp4` (about 42 seconds) and `Parcel Guard - Security Recovery.mp4` (about 54 seconds). Play them locally during the presentation to avoid dependence on a network connection. `docs/PRESENTATION_GUIDE.md` supplies the timing plan, demonstration sequence, and likely questions. `REQUIREMENTS.md` maps the proposal and grading criteria to the delivered evidence.
+The submission includes `Parcel Guard - Delivery Workflow.mp4` (about 40 seconds) and `Parcel Guard - Security Recovery.mp4` (about 51 seconds). Play them locally during the presentation to avoid dependence on a network connection. `docs/PRESENTATION_GUIDE.md` supplies the timing plan, demonstration sequence, and likely questions. `REQUIREMENTS.md` maps the proposal and grading criteria to the delivered evidence.
