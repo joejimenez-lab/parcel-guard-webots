@@ -20,17 +20,17 @@ Owner sign-in needs only the password. Owner sessions and access codes expire us
 
 [Current progress report](docs/PROGRESS_REPORT_2.md) · [Class demo guide](docs/PROGRESS_REPORT_2_DEMO.md) · [Verified evidence](results/REPORT.md)
 
-The polished classroom set is in `output/progress-report-2/`: the report PDF follows the previous cover, contents and IEEE paper format; the matching 17-slide editable deck is saved in the chat viewer and can be exported as PowerPoint. The folder includes a slide PDF, [speaker guide](docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md), demo guide and editable LaTeX source. `output/Parcel Guard - Progress Report 2 - Submission.zip` is the document handoff. Rebuild the canonical paper with `python3 scripts/build_progress2_report.py` using TeX with IEEEtran; the Markdown file remains a concise reading companion.
+The classroom set is in `output/progress-report-2/`. The report follows the previous cover, contents and IEEE paper format, with a landscape workflow appendix. The 19-slide deck in the chat viewer includes two appendix slides for the workflow and can be exported as PowerPoint. The folder includes the slide PDF, [speaker guide](docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md), demo guide and editable LaTeX source. `output/Parcel Guard - Progress Report 2 - Submission.zip` is the document handoff. Rebuild the paper with `python3 scripts/build_progress2_report.py` using TeX with IEEEtran.
 
 `python3 scripts/run_all.py` runs the original numerical suite in legacy fixture mode and separately tests the default security workflow. New evidence is in `results/security_layers.json` and `results/webots_security.json`. Baseline results are not a claim that the complete classification suite was repeated with managed credentials. Existing videos and final-paper/slides are historical. The current report is `output/pdf/Parcel Guard - Progress Report 2.pdf`; `python3 scripts/package_progress2.py` rebuilds the local ZIP.
 
 ## Security workflow
 
-![Progress Report 2 security flow: owner provisions codes, the box validates access, and tamper requires owner recovery](docs/assets/progress2-security-flow.svg)
+![Progress Report 2 security flow: owner provisions codes, the box validates access, and tamper requires owner recovery](docs/assets/parcel-guard-workflow.png)
 
-[Printable PDF](docs/assets/progress2-security-flow.pdf) · [Slide-ready PNG](docs/assets/progress2-security-flow.png) · [Vector SVG](docs/assets/progress2-security-flow.svg) · [Editable Mermaid flow](docs/assets/progress2-security-flow.mmd)
+[Full diagram PNG](docs/assets/parcel-guard-workflow.png) · [Report with landscape appendix](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf) · [Slides with workflow walkthrough](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202%20Slides.pdf)
 
-The diagram covers the current password-only owner workflow, one-use code validation, delivery/collection, persistent lockdown and restart recovery. Delivery confirmation requires measured closure and bolt locking. Clearing lockdown keeps old codes revoked. The PDF and PNG are supplementary downloads for v2.5.0; the previously published report and ZIP packages retain their original contents. Rebuild the matching SVG, PDF and PNG with `python3 scripts/build_security_flow.py` (ReportLab and Poppler required).
+Lockdown cancels active access, revokes issued codes and ends the owner session. The owner clears it with a fresh password sign-in and measured door closure and bolt locking. Old codes stay revoked. The earlier diagram is available as an [editable Mermaid flow](docs/assets/progress2-security-flow.mmd) and a [vector PDF](docs/assets/progress2-security-flow.pdf).
 
 ## Earlier submission files
 

@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{microtype,balance,amsmath,booktabs,tabularx,array,graphicx,tikz,enumitem}
+\usepackage{pdflscape}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 \usepackage[hidelinks,breaklinks]{hyperref}
 \hypersetup{pdftitle={Parcel Guard: Owner-Managed Access and Persistent Incident Recovery in Webots},pdfauthor={Joshua Guico, Joe Jimenez, Brandon Lopez},pdfsubject={CS 5650 Project Progress Report 2}}
@@ -103,6 +104,7 @@ Administrative lockdown $L$ is separate. A physically secured box can still reje
 Normal actuator sequencing is unchanged: retract the bolt, confirm retraction, open the door, permit authorized handling, close the door, confirm closure, extend the bolt and confirm locking. An access grant ends on close, deadline, sensor failure or an incident. The runtime holds bolt retraction when valid closed-door feedback is unavailable.
 
 \section{Owner Management and Credential Design}
+Figure~\ref{fig:workflow} traces owner code management, access decisions, delivery confirmation and lockdown recovery.
 \subsection{Password-Authenticated Management Sessions}
 The owner signs in using a password. The implementation stores a PBKDF2-HMAC-SHA256 verifier with a random salt and 200,000 iterations. Python provides the PBKDF2 primitive through \code{hashlib} \cite{pythonhash}. This implementation choice is a concrete local control, not a claim that the surrounding application has production-grade authentication.
 
@@ -223,4 +225,14 @@ For class, open \code{worlds/delivery\_box.wbt}, choose real-time speed and open
 \bibitem{pythonhash} Python Software Foundation, ``hashlib: Key derivation,'' Python documentation. \url{https://docs.python.org/3/library/hashlib.html#key-derivation}.
 \bibitem{evidence} Parcel Guard project, ``Current evaluation manifest and saved reports,'' Nov. 2026. \code{results/evaluation\_manifest.json}, \code{security\_layers.json}, \code{webots\_security.json}, \code{webots\_progress2.json}, and numerical benchmark reports. Local source/evidence package accompanying this submission.
 \end{thebibliography}
+\clearpage
+\onecolumn
+\begin{landscape}
+\section{Security Workflow}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth,trim=100 305 0 205,clip]{assets/parcel-guard-workflow.png}
+\caption{Parcel Guard security workflow. Connector A carries the issued code to the access request. All times are simulated. Lockdown revokes issued codes, ends the owner session, and cancels active access. A failed recovery check keeps administrative lockdown active while the door and bolt are secured.}\label{fig:workflow}
+\end{figure}
+\end{landscape}
 \end{document}

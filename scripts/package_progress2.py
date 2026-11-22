@@ -16,6 +16,7 @@ for folder in ('lockbox', 'controllers', 'worlds', 'plugins', 'config', 'scripts
 for name in ('README.md', 'DESIGN.md', 'REQUIREMENTS.md', 'SUBMISSION.md', 'THIRD_PARTY_NOTICES.md', '.gitignore',
              'docs/PROGRESS_REPORT_2.md', 'docs/PROGRESS_REPORT_2_DEMO.md', 'docs/USER_GUIDE.md',
              'docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md', 'docs/parcel_guard_progress2_report.tex',
+             'docs/assets/parcel-guard-workflow.png',
              'output/pdf/Parcel Guard - Progress Report 2 Slides.pdf',
              'docs/SOFTWARE_REQUIREMENTS.md', 'output/pdf/Parcel Guard - Progress Report 2.pdf',
              'results/REPORT.md', 'results/evaluation_manifest.json', 'results/progress2_layout.json'):

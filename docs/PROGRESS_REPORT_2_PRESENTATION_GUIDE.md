@@ -1,6 +1,6 @@
 # Parcel Guard Progress Report 2 Speaker Guide
 
-The editable deck has 17 slides and follows the navy-and-cyan style of the first progress presentation. Allow about 10 minutes for the slides, an optional three-minute live demonstration after slide 9, and questions. These are rehearsal targets, not a confirmed course time limit.
+The editable deck has 19 slides, including two appendix slides for the workflow, and follows the navy-and-cyan style of the first progress presentation. Allow about 10 minutes for the main slides, an optional three-minute live demonstration after slide 9, and questions. These are rehearsal targets, not a confirmed course time limit.
 
 Owner sign-in is password-only. The default local demo password is **owner-5650**, unless changed at initialization. The deck contains current status screenshots. The earlier videos are historical and do not demonstrate this version.
 
@@ -71,6 +71,14 @@ Suggested time: 15 seconds. This is the responsibility allocation from the origi
 ## Slide 17 Questions
 
 Suggested time: 15 seconds plus questions. Close by emphasizing the new visible capability: the owner can authorize and revoke access, while tampering forces a persistent review state. Both the report and slides distinguish simulated evidence from real-world security claims.
+
+## Slide 18 Access and delivery
+
+Use this appendix slide to show how an issued code leads to access. The code must match the role and be valid, unused and unrevoked. The controller also checks request freshness, cooldown, lockdown, feedback and storage health. An accepted request consumes the code and opens a 20-second simulated access window. Only measured closure and locking confirm delivery with the parcel inside.
+
+## Slide 19 Lockdown and recovery
+
+Use this appendix slide to explain why tampering cancels access, revokes codes and ends the owner session. An unsuccessful recovery check keeps administrative lockdown active while faults are resolved and the door and bolt are secured. A fresh owner sign-in and measured security permit clearance. Old codes stay revoked.
 
 ## Classroom handoff
 

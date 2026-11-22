@@ -1,17 +1,17 @@
 {
   "passed": true,
   "presentation": {
-    "artifact_ref": "artifact_external_aae2b8ff-3315-46de-8018-14ab22444de1",
+    "artifact_ref": "artifact_external_9d526aea-b9d8-4c1d-88a1-7ca67fd1678b",
     "page_id": "page_bb2ace9a2b708191aac852a145496b45",
-    "state_version": 8,
-    "slides": 17,
+    "state_version": 10,
+    "slides": 19,
     "native_tables": 8,
-    "speaker_notes_slides": 17,
-    "review": "All 17 slides rendered and visually inspected; diagrams repaired and reviewed again."
+    "speaker_notes_slides": 19,
+    "review": "The 17 original slides were previously reviewed. Workflow appendix slides 18 and 19 were rendered and checked. The offline PDF retains the 17 original pages and includes the two rendered appendix slides."
   },
   "report": {
-    "pages": 7,
-    "format": "Previous cover, contents and two-column IEEE-style paper",
+    "pages": 8,
+    "format": "Previous cover, contents and two-column IEEE-style paper with landscape workflow appendix",
     "source": "docs/parcel_guard_progress2_report.tex",
     "layout_warnings": 0
   },
