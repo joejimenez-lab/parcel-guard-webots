@@ -3,11 +3,11 @@
   "presentation": {
     "artifact_ref": "artifact_external_9d526aea-b9d8-4c1d-88a1-7ca67fd1678b",
     "page_id": "page_bb2ace9a2b708191aac852a145496b45",
-    "state_version": 10,
+    "state_version": 12,
     "slides": 19,
     "native_tables": 8,
     "speaker_notes_slides": 19,
-    "review": "The 17 original slides were previously reviewed. Workflow appendix slides 18 and 19 were rendered and checked. The offline PDF retains the 17 original pages and includes the two rendered appendix slides."
+    "review": "The 17 original slides were previously reviewed. Slides 18 and 19 were recreated with editable flowchart shapes and connectors, rendered, and inspected for label fit and complete arrows. The offline PDF includes both new renders."
   },
   "report": {
     "pages": 8,
