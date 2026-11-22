@@ -1,0 +1,36 @@
+flowchart TD
+  subgraph Owner[Owner provisions access]
+    Login[Password-only owner sign-in] --> Password{Password valid?}
+    Password -->|No| LoginDenied[Deny; after 5 failures pause for 60 simulated seconds]
+    Password -->|Yes| Session[Owner session expires after 300 simulated seconds]
+    Session --> Issue[Issue or revoke courier / owner collection codes]
+    Issue --> Code[8-digit one-use code; expiry 30-3600 simulated seconds]
+  end
+  subgraph Access[Normal access and parcel workflow]
+    Request[Code + role + fresh request ID] --> Checks{All checks pass?}
+    Checks -->|No| Denied[Deny access and log reason]
+    Checks -->|Yes| Grant[Consume code; grant 20-second access window]
+    Grant --> Transfer[Open; place or collect parcel]
+    Transfer --> Close[Close door; confirm bolt locked]
+    Close --> Secure[Delivery confirmed only after measured secure closure]
+  end
+  Code --> Request
+  Secure -->|Next delivery: fresh code| Issue
+  subgraph Incident[Concurrent tamper monitoring and recovery]
+    Tamper[Impact or unapproved door / parcel action] --> Lockdown[Persist lockdown; revoke all codes; sign out owner]
+    Lockdown --> Cancel[Cancel active access; request closure; save incident and queue alert]
+    Cancel --> Recover[Fresh owner password sign-in; resolve faults; close and lock]
+    Recover --> Ready{Signed in and measured secure?}
+    Ready -->|No| Recover
+    Ready -->|Yes| Clear[Owner clears lockdown; old codes remain revoked]
+  end
+  Clear -->|Issue fresh codes| Issue
+  Restart[Controller restart] --> Restore[Restore code state, incident and unacknowledged outbox]
+  Restore --> CancelSession[Cancel active access and owner sessions; measure closure]
+  CancelSession -->|New access still needs every check| Request
+  Rules[Access checks: valid unused unrevoked code; role; expiry; request ID; cooldown; no lockdown; healthy storage; valid sensors; measured closed and locked]
+  Rules -.-> Checks
+  classDef owner fill:#EFF7FA,stroke:#087E92,color:#15364E;
+  classDef danger fill:#FFF0F2,stroke:#A32B3A,color:#A32B3A;
+  class Login,Password,Session,Issue,Code,Request,Checks,Grant,Transfer,Close,Secure,Recover,Ready,Clear owner;
+  class LoginDenied,Denied,Tamper,Lockdown,Cancel danger;

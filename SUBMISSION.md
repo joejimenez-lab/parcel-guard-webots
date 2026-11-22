@@ -14,6 +14,7 @@ The current classroom files are in `output/progress-report-2/`. Submit the writt
 - Canonical report source: `docs/parcel_guard_progress2_report.tex`
 - Report rebuild: `python3 scripts/build_progress2_report.py` with a TeX distribution and IEEEtran installed
 - Source/evidence package: `output/Parcel Guard - Progress Report 2 - Project.zip`
+- Supplementary flow diagram: [PDF](docs/assets/progress2-security-flow.pdf), [PNG for slides](docs/assets/progress2-security-flow.png), and [editable Mermaid](docs/assets/progress2-security-flow.mmd). These are separate downloads added after the original v2.5.0 packages.
 
 Use the password-only owner workflow. The older final paper, deck, videos and original submission checker below belong to the earlier delivery. Current evaluated source/report hashes are in `results/evaluation_manifest.json`; each current ZIP has its own file manifest.
 

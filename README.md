@@ -24,6 +24,14 @@ The polished classroom set is in `output/progress-report-2/`: the report PDF fol
 
 `python3 scripts/run_all.py` runs the original numerical suite in legacy fixture mode and separately tests the default security workflow. New evidence is in `results/security_layers.json` and `results/webots_security.json`. Baseline results are not a claim that the complete classification suite was repeated with managed credentials. Existing videos and final-paper/slides are historical. The current report is `output/pdf/Parcel Guard - Progress Report 2.pdf`; `python3 scripts/package_progress2.py` rebuilds the local ZIP.
 
+## Security workflow
+
+![Progress Report 2 security flow: owner provisions codes, the box validates access, and tamper requires owner recovery](docs/assets/progress2-security-flow.svg)
+
+[Printable PDF](docs/assets/progress2-security-flow.pdf) · [Slide-ready PNG](docs/assets/progress2-security-flow.png) · [Vector SVG](docs/assets/progress2-security-flow.svg) · [Editable Mermaid flow](docs/assets/progress2-security-flow.mmd)
+
+The diagram covers the current password-only owner workflow, one-use code validation, delivery/collection, persistent lockdown and restart recovery. Delivery confirmation requires measured closure and bolt locking. Clearing lockdown keeps old codes revoked. The PDF and PNG are supplementary downloads for v2.5.0; the previously published report and ZIP packages retain their original contents. Rebuild the matching SVG, PDF and PNG with `python3 scripts/build_security_flow.py` (ReportLab and Poppler required).
+
 ## Earlier submission files
 
 - [What to upload and how to prepare for class](SUBMISSION.md)

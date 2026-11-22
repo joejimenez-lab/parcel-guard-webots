@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200" role="img" aria-labelledby="title desc">
+<title id="title">Parcel Guard security workflow</title>
+<desc id="desc">Password-only owner sign-in creates one-use codes. Access requires code, policy and measured device checks. Tampering revokes all codes and enters persistent lockdown. A fresh owner sign-in and measured secure state are required to clear it. Restart restores incidents and queued events, but cancels active access.</desc>
+<rect x="0" y="0" width="1920" height="1200" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1920" height="160" rx="0" fill="#102D45" stroke="none" stroke-width="2"/>
+<rect x="64" y="33" width="6" height="25" rx="0" fill="#48D4D3" stroke="none" stroke-width="2"/>
+<text x="86" y="54" fill="#76E0DD" font-family="Albert Sans, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="start">PARCEL GUARD  /  PROGRESS REPORT 2</text>
+<text x="64" y="111" fill="#FFFFFF" font-family="Albert Sans, Arial, sans-serif" font-size="46" font-weight="800" text-anchor="start">Layered security: access, delivery and recovery</text>
+<text x="1855" y="140" fill="#C1D8E3" font-family="Albert Sans, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="end">CS 5650</text>
+<text x="70" y="212" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="start">01</text>
+<text x="118" y="212" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="800" text-anchor="start">OWNER PROVISIONS ACCESS</text>
+<text x="665" y="212" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="start">02</text>
+<text x="713" y="212" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="800" text-anchor="start">BOX VALIDATES &amp; OPERATES</text>
+<text x="1330" y="212" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="start">03</text>
+<text x="1378" y="212" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="800" text-anchor="start">TAMPER &amp; OWNER RECOVERY</text>
+<polyline points="610,190 610,1115" fill="none" stroke="#BDCDD7" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1290,190 1290,1115" fill="none" stroke="#BDCDD7" stroke-width="3" stroke-linejoin="round"/>
+<rect x="70" y="250" width="450" height="122" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="94" y="284" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Password-only owner sign-in</text>
+<text x="94" y="316" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Invalid password: deny sign-in.</text>
+<text x="94" y="344" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">5 failures: pause for 60 s.</text>
+<polyline points="295,372 295,425" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="295,425 301.0,412.0 289.0,412.0" fill="#087E92"/>
+<text x="311" y="407" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="19" font-weight="800" text-anchor="start">VALID PASSWORD</text>
+<rect x="70" y="425" width="450" height="94" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="94" y="459" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Owner session: 300 s</text>
+<text x="94" y="491" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Re-sign-in replaces the old session.</text>
+<polyline points="295,519 295,575" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="295,575 301.0,562.0 289.0,562.0" fill="#087E92"/>
+<rect x="70" y="575" width="450" height="124" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="94" y="609" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Create / revoke access codes</text>
+<text x="94" y="641" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Courier delivery or owner collection.</text>
+<text x="94" y="669" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Lifetime: 30-3600 simulated s.</text>
+<polyline points="295,699 295,777" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="295,777 301.0,764.0 289.0,764.0" fill="#087E92"/>
+<rect x="70" y="777" width="450" height="124" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="94" y="811" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Share an 8-digit one-use code</text>
+<text x="94" y="843" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Plaintext is shown only once.</text>
+<text x="94" y="871" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Only its keyed digest is saved.</text>
+<polyline points="520,839 575,839 575,295 665,295" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="665,295 652.0,289.0 652.0,301.0" fill="#087E92"/>
+<text x="70" y="967" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="start">Owner authentication</text>
+<text x="70" y="1002" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">controls code creation and recovery.</text>
+<text x="70" y="1037" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">A separate one-use code controls</text>
+<text x="70" y="1072" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">the physical access request.</text>
+<rect x="665" y="250" width="430" height="94" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="689" y="284" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Request access</text>
+<text x="689" y="316" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Code + role + fresh request ID.</text>
+<polyline points="880,344 880,420" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="880,420 886.0,407.0 874.0,407.0" fill="#087E92"/>
+<polygon points="880.0,420 1095,490.0 880.0,560 665,490.0" fill="#FFFFFF" stroke="#087E92" stroke-width="3"/>
+<text x="880.0" y="499.0" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="middle">Access permitted?</text>
+<polyline points="1095,490 1130,490" fill="none" stroke="#A32B3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1130,490 1117.0,484.0 1117.0,496.0" fill="#A32B3A"/>
+<text x="1100" y="474" fill="#A32B3A" font-family="Albert Sans, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="start">NO</text>
+<rect x="1130" y="438" width="133" height="104" rx="10" fill="#FFF0F2" stroke="#A32B3A" stroke-width="2"/>
+<text x="1196" y="470" fill="#A32B3A" font-family="Albert Sans, Arial, sans-serif" font-size="26" font-weight="800" text-anchor="middle">Deny</text>
+<text x="1196" y="500" fill="#A32B3A" font-family="Albert Sans, Arial, sans-serif" font-size="26" font-weight="800" text-anchor="middle">access</text>
+<text x="1196" y="528" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle">Log reason</text>
+<polyline points="880,560 880,640" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="880,640 886.0,627.0 874.0,627.0" fill="#087E92"/>
+<text x="898" y="602" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="start">YES</text>
+<rect x="665" y="640" width="430" height="94" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="689" y="674" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Consume code; grant access</text>
+<text x="689" y="706" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="21.985611510791365" font-weight="400" text-anchor="start">20 s access window; code used once.</text>
+<polyline points="880,734 880,788" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="880,788 886.0,775.0 874.0,775.0" fill="#087E92"/>
+<rect x="665" y="788" width="430" height="94" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="689" y="822" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Open; place or collect parcel</text>
+<text x="689" y="854" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Sensors track the authorized action.</text>
+<polyline points="880,882 880,936" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="880,936 886.0,923.0 874.0,923.0" fill="#087E92"/>
+<rect x="665" y="936" width="430" height="122" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="689" y="970" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="25.919392047767676" font-weight="800" text-anchor="start">Close door; confirm bolt locked</text>
+<text x="689" y="1002" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="22.160343427311755" font-weight="400" text-anchor="start">Delivery confirmed only when secure.</text>
+<text x="689" y="1030" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Ready for a fresh delivery code.</text>
+<text x="665" y="1093" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start">Checks: code, role, expiry, replay, cooldown;</text>
+<text x="665" y="1122" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start">no lockdown; healthy storage + secure devices.</text>
+<rect x="1330" y="250" width="500" height="122" rx="12" fill="#FFF0F2" stroke="#A32B3A" stroke-width="2"/>
+<text x="1354" y="284" fill="#A32B3A" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Tamper detected during monitoring</text>
+<text x="1354" y="316" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="22.922054870936662" font-weight="400" text-anchor="start">Impact or unapproved door / parcel action.</text>
+<text x="1354" y="344" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Strong impact also during granted access.</text>
+<polyline points="1580,372 1580,425" fill="none" stroke="#A32B3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1580,425 1586.0,412.0 1574.0,412.0" fill="#A32B3A"/>
+<rect x="1330" y="425" width="500" height="150" rx="12" fill="#FFF0F2" stroke="#A32B3A" stroke-width="2"/>
+<text x="1354" y="459" fill="#A32B3A" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Enter persistent lockdown</text>
+<text x="1354" y="491" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Revoke every code; sign out the owner.</text>
+<text x="1354" y="519" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Cancel active access; request closure.</text>
+<text x="1354" y="547" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Save the incident; queue the alert.</text>
+<polyline points="1580,575 1580,648" fill="none" stroke="#A32B3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1580,648 1586.0,635.0 1574.0,635.0" fill="#A32B3A"/>
+<rect x="1330" y="648" width="500" height="122" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="1354" y="682" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="26.98668577228491" font-weight="800" text-anchor="start">Owner signs in again with password</text>
+<text x="1354" y="714" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="start">Close the door and confirm bolt locking.</text>
+<text x="1354" y="742" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="22.63621794871795" font-weight="400" text-anchor="start">Resolve sensor, actuator and storage faults.</text>
+<polyline points="1580,770 1580,817" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1580,817 1586.0,804.0 1574.0,804.0" fill="#087E92"/>
+<polygon points="1580.0,817 1800,884.0 1580.0,951 1360,884.0" fill="#FFFFFF" stroke="#087E92" stroke-width="3"/>
+<text x="1580.0" y="893.0" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="middle">Signed in + secured?</text>
+<polyline points="1800,884 1860,884 1860,709 1830,709" fill="none" stroke="#A32B3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1830,709 1843.0,715.0 1843.0,703.0" fill="#A32B3A"/>
+<text x="1820" y="870" fill="#A32B3A" font-family="Albert Sans, Arial, sans-serif" font-size="19" font-weight="800" text-anchor="start">NO</text>
+<polyline points="1580,951 1580,1003" fill="none" stroke="#087E92" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1580,1003 1586.0,990.0 1574.0,990.0" fill="#087E92"/>
+<text x="1597" y="984" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="start">YES</text>
+<rect x="1330" y="1003" width="500" height="94" rx="12" fill="#EFF7FA" stroke="#087E92" stroke-width="2"/>
+<text x="1354" y="1037" fill="#15364E" font-family="Albert Sans, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="start">Clear lockdown; issue fresh codes</text>
+<text x="1354" y="1069" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="21.433990895295903" font-weight="400" text-anchor="start">Old codes stay revoked. Reset cannot bypass.</text>
+<polyline points="64,1148 1856,1148" fill="none" stroke="#BDCDD7" stroke-width="3" stroke-linejoin="round"/>
+<text x="64" y="1183" fill="#087E92" font-family="Albert Sans, Arial, sans-serif" font-size="19" font-weight="800" text-anchor="start">RESTART</text>
+<text x="172" y="1183" fill="#50677B" font-family="Albert Sans, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start">Restore incidents, code state and unacknowledged events; cancel access and owner sessions. Faults block new access. All times are simulated.</text>
+</svg>
