@@ -3,6 +3,8 @@
 
 ## Progress Report 2 handoff
 
+Download the current report, slide PDF and ZIP packages from [release v2.5.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.5.0).
+
 The current classroom files are in `output/progress-report-2/`. Submit the written paper PDF, present the editable 17-slide deck from the chat viewer, and keep its slide PDF as a playback backup. Export the deck as PowerPoint from the viewer if a local PPTX is required. `output/Parcel Guard - Progress Report 2 - Submission.zip` bundles the PDFs, speaker guide, live demo guide and editable report source.
 
 - Written paper: `output/pdf/Parcel Guard - Progress Report 2.pdf`
@@ -36,7 +38,7 @@ The assignment requires a paper as a PDF and a class presentation. Use the files
 | Editable paper source | [Standalone LaTeX](docs/parcel_guard_report.tex) |
 | Delivery and retrieval demo | [Delivery Workflow MP4](output/Parcel%20Guard%20-%20Delivery%20Workflow.mp4) |
 | Access failures, outages, and recovery demo | [Security Recovery MP4](output/Parcel%20Guard%20-%20Security%20Recovery.mp4) |
-| Complete source, evidence, and media | **Parcel Guard - Complete Project.zip** from the [public release](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) |
+| Complete source, evidence, and media | **Parcel Guard - Complete Project.zip** from the [public release](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.4.0) |
 
 Submit the report PDF to the documentation assignment. Use the PPTX for the class presentation and keep the two short MP4 clips on the presentation computer. The videos are separate files; the deck includes stills and notes explaining when to play them. The source ZIP and repository are supporting materials for any code or project attachment requested by the instructor.
 

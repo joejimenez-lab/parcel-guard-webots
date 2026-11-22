@@ -2,7 +2,7 @@
 
 [![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf)
 
-[Current project ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Project.zip) · [Report PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf) · [Slide PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202%20Slides.pdf) · [Submission ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Submission.zip) · [Evaluation](results/REPORT.md)
+[Latest release: v2.5.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.5.0) · [Current project ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Project.zip) · [Report PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf) · [Slide PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202%20Slides.pdf) · [Submission ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Submission.zip) · [Evaluation](results/REPORT.md)
 
 Parcel Guard is the Webots simulation for our CS 5650 package delivery security box project. A Python controller reads 25 distance sensors, door and bolt positions, and motion. It checks access, recognizes parcel events, and retains alerts during simulated link outages.
 
@@ -12,7 +12,7 @@ The interactive project now has a different owner workflow: password-only owner 
 
 1. Open `worlds/delivery_box.wbt` in Webots R2025a, choose real-time speed and open its Robot Window.
 2. Sign in to the owner console with **owner-5650**, the default local demo owner password. `PARCEL_GUARD_OWNER_PASSWORD` can change it at first initialization; a recovered checkpoint retains its existing verifier.
-3. Sign in with the owner password. Create a courier delivery code, choose its lifetime, and copy the eight-digit code. Use it in Request access. Create a separate owner collection code for retrieval.
+3. Create a courier delivery code, choose its lifetime, and copy the eight-digit code. Use it in Request access. Create a separate owner collection code for retrieval.
 4. Revoke a code from the owner console to show it being rejected. An unexplained impact, door opening or package movement enters lockdown, revokes outstanding codes and signs out the owner.
 5. To recover, sign in with the owner password again and clear lockdown after measured closure/locking. Revoked codes stay revoked. **New session** cannot bypass security mode.
 
@@ -30,7 +30,7 @@ The polished classroom set is in `output/progress-report-2/`: the report PDF fol
 - [Final report PDF](output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf) and [editable LaTeX source](docs/parcel_guard_report.tex)
 - [Final presentation](output/submission/Parcel%20Guard%20-%20Final%20Presentation.pptx), [PDF copy](output/pdf/Parcel%20Guard%20-%20Final%20Presentation.pdf), and [speaker guide](docs/PRESENTATION_GUIDE.md)
 - [Rubric and proposal coverage](REQUIREMENTS.md), [user guide](docs/USER_GUIDE.md), and [test results](results/REPORT.md)
-- [Complete project ZIP](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest), including the final walkthrough, two class clips, and raw recordings
+- [Complete project ZIP](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.4.0), including the final walkthrough, two class clips, and raw recordings
 
 The CS 5650 team is Joshua Guico, Joe Jimenez, and Brandon Lopez. The proposal assigns the team roles and suggests a 13-minute presentation plus two minutes for questions.
 
@@ -61,7 +61,7 @@ The courier code is single-use and expires 300 simulated seconds after issuance.
 - [**Delivery Workflow**](output/Parcel%20Guard%20-%20Delivery%20Workflow.mp4) — 40-second courier delivery, used-code rejection, and owner retrieval.
 - [**Security Recovery**](output/Parcel%20Guard%20-%20Security%20Recovery.mp4) — 51-second access failures, offline alerts, lost-ACK retries, bolt fault, and recovery.
 - **`output/index.html`** — local video gallery with evaluation results.
-- **`output/raw/`** in the [complete release package](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) — unedited native Webots footage. Recorded telemetry and scenario assertions are in `results/workflow_recording.json` and `results/resilience_recording.json`.
+- **`output/raw/`** in the [complete release package](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.4.0) — unedited native Webots footage. Recorded telemetry and scenario assertions are in `results/workflow_recording.json` and `results/resilience_recording.json`.
 
 The videos alternate between native Webots footage and the actual control page. Code entries and test buttons drive the running Python controller; status and events come back from its device readings. Captions identify fixture movement and fault injection. Both camera views follow the same simulation clock.
 
@@ -135,7 +135,7 @@ After rendering, return to the project root and run `python3 scripts/finalize_me
 
 ## Submission package
 
-The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and all three finished demos. It excludes `node_modules`, caches, and temporary builds. Use this release asset for the complete handoff; GitHub's automatically generated source archive omits raw footage.
+The [**complete project ZIP**](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.4.0) includes the worlds, controller code, dashboard, design, final paper, presentation, speaker guide, proposal, reproducible tests, results, raw footage, editable video source, and all three finished demos. It excludes `node_modules`, caches, and temporary builds. Use this release asset for the complete handoff; GitHub's automatically generated source archive omits raw footage.
 
 After extraction, run `python3 scripts/check_submission.py`. It uses only the Python standard library to verify the saved evidence, document/video hashes, raw-footage presence, and delivery manifest. It does not rerun the simulator. The runtime was also tested from an isolated copy, including the full Webots suite and a clean npm installation; see `results/portability_validation.json`.
 
