@@ -1,0 +1,1 @@
+Pre-change evidence retained before Progress Report 2 work on November 15, 2026 (America/Los_Angeles). These files describe the earlier implementation; current results live one directory above. Original recordings and final-report materials remain historical artifacts.

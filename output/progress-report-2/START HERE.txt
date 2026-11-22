@@ -1,0 +1,20 @@
+PARCEL GUARD - PROGRESS REPORT 2 SUBMISSION
+
+1. Submit Parcel Guard - Progress Report 2.pdf as the written progress report.
+2. Present the editable 17-slide deck returned in the chat viewer. It matches
+   the previous navy/cyan presentation design. Export as PowerPoint from the
+   viewer before class if a local PPTX is needed.
+3. Keep Parcel Guard - Progress Report 2 Slides.pdf as an offline viewing backup.
+4. Rehearse with Speaker Guide.md and Live Demo Guide.md. Owner sign-in uses
+   only the password (default local demo: owner-5650). No authenticator is needed.
+5. Report Source/ contains the editable LaTeX paper source and its figure.
+
+The paper has a cover, contents page and two-column technical body, following
+our earlier submission. Numerical benchmark results use legacy fixture codes;
+the new owner-managed security workflow has its own measured evaluation.
+Earlier project videos are historical and do not show these new features.
+The instructor's actual deadline, upload rules and talk duration take precedence
+over the suggested rehearsal timings.
+
+The separate Progress Report 2 Project.zip contains current source and test evidence.
+No runtime secret files are included in either package.

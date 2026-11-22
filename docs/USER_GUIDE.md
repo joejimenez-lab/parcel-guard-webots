@@ -1,41 +1,33 @@
-# Running Parcel Guard
+# Parcel Guard User Guide
 
-## Requirements
+## Current interactive workflow
 
-- Webots R2025a and Python 3.10 or later.
-- The simulation and Python test suite need no pip dependencies.
-- Node.js 22+ is needed only for video editing and dashboard DOM tests. FFmpeg and ffprobe are needed for media checks and video production.
-- The editable paper is `docs/parcel_guard_report.tex`. Open it in a LaTeX editor; the repository build command requires Tectonic or a working TeX distribution. `docs/FINAL_REPORT.md` is a reading companion.
+Open `worlds/delivery_box.wbt` in Webots R2025a, select real-time speed and open its Robot Window. The interactive controller enables layered security and local checkpoints by default. The owner security console appears above the door-entry controls.
 
-Open `worlds/delivery_box.wbt`, select real-time speed, and open the Parcel Guard Robot Window. Start with the parcel outside. Courier code `2468` permits one delivery and expires after 300 simulated seconds. Owner code `1357` permits one collection access and expires after 86,400 seconds. The selected purpose must match the code.
+1. Enter the local demo owner password **owner-5650** in the owner console and sign in. No authenticator, second device or timed code is needed.
+2. Create a courier code and choose its lifetime. Copy the generated eight-digit value; it is returned once and is absent from event exports. Select Courier under Request access, enter the code and unlock.
+3. Wait for the door to open, then use Test controls to place the parcel. Close and secure. Delivery is recorded after measured door closure and bolt locking.
+4. Create an Owner collection code, select Owner under Request access and use it to retrieve the parcel. Create a new courier code for another delivery; a policy reset is unnecessary.
+5. Revoke an unused code from its credential row when access should be cancelled. Codes also stop working after one use or expiry.
 
-## Reading the panel
+Owner sessions last five simulated minutes. You can sign in again immediately using the same password; a new sign-in invalidates the old session. Five incorrect passwords trigger a 60-simulated-second pause. `PARCEL_GUARD_OWNER_PASSWORD` can configure the password at first initialization; saved state retains its verifier. Existing checkpoints upgrade automatically without resetting issued codes or incidents.
 
-`SECURED` requires valid readings, a closed door, a locked bolt, no active grant, and no fault. `parcel_detected` means the parcel arrived and delivery is pending. The `delivery` event is recorded only after measured closure and locking. A moving bolt has reached neither endpoint. The queue count shows events awaiting acknowledgment, while the endpoint count shows unique receipts.
+## Security incidents
 
-`New session` resets policy state and demo tokens. It does not move the parcel. Move the parcel outside first when preparing another delivery. Resetting the simulation also resets the scene. All expiry and cooldown periods use simulation time.
+An unexplained impact, opening or parcel movement triggers lockdown. All issued codes are revoked, the current owner session ends, and active access is cancelled. The controller attempts closure and locks only after measured feedback permits it. A physically secured box can still be in administrative lockdown.
 
-## Troubleshooting
+To recover, sign in with the owner password again, then clear lockdown after physical security is confirmed. Old credentials remain revoked. Issue a fresh access code afterward. New session cannot clear a security incident, and controller/world restart retains lockdown.
 
-| Symptom | Meaning and action |
-|---|---|
-| Courier or owner request denied | Check purpose, occupancy, expiry, prior use and the event-log reason. Start a new session for a new demo token. |
-| Entry paused | Five failed credential attempts occurred within 300 simulated seconds. Wait 60 simulated seconds. |
-| Bolt fault | Target was not reached within two seconds. Release the bolt fixture and wait for measured recovery. |
-| Door fault | Closure has not completed after three seconds. Release the door fixture. The bolt stays retracted while the door is open. |
-| Sensor unavailable | Readings are missing or not stable. Access remains disabled. Initial startup requires three usable samples. |
-| Queue stays nonzero | The link may be offline, ACKs may be deliberately dropped, or the fixture controller may have stopped. Check the Webots console. |
-| Empty/blank Robot Window | Confirm the correct world is running and select Parcel Guard's Robot Window. The HTML preview is not connected to live hardware. |
-| Python controller exits | Check Webots' Python command in Preferences. Run Python 3.10+. The `controller` module is supplied by Webots when it launches the process. |
-| Runner cannot find Webots | Set `WEBOTS_BIN` to the simulator executable. |
-| Portability problem | The included run was tested on macOS. Keep all project directories together; use the provided paths relative to the repository root. |
+## Recovery and fault controls
 
-## Repeating checks
+- **Restart controller** reloads saved events, credential state and any lockdown. It cancels active access, discards owner sessions and closes before locking. The control is enabled when the panel shows Saved locally.
+- **Impact** creates an ordinary unapproved disturbance. In security mode it can trigger incident lockdown. **Strong impact** is intended to demonstrate detection during approved open-door access; it applies a stronger force relative to the door.
+- **Invalid sensor** injects an impossible distance. Access is disabled until Restore sensor supplies three stable valid readings. Unresolved faults prevent lockdown clearance.
+- **Disconnect link / Restore link** demonstrate the durable sender queue. Events remain pending until acknowledged. Receiver deduplication still resides in memory.
+- **Block bolt / Release bolt** and **Block door / Release door** demonstrate measured fault detection and recovery.
 
-For a downloaded complete release, run `python3 scripts/check_submission.py` first. This verifies the saved files and their evidence using only Python. See [Submission checklist](../SUBMISSION.md) for the exact files to upload and present.
+Local state is stored in `.runtime/lockbox-state.json` with private file permissions. It includes the private credential digest key and password verifier and is not encrypted or protected against malicious host access. Do not share runtime files. The project ZIP excludes them. A damaged/unwritable checkpoint disables access; preserve it when diagnosing the fault.
 
-Run `python3 scripts/run_all.py` from the repository root. It stops on a failed gate and saves the error in the corresponding report/log. Do not run concurrent Webots evaluation and recording processes against the same results directory.
+## Legacy evaluations
 
-For UI regressions, run `npm ci` inside `demo-studio`, return to the root, then run `node tests/dashboard.cjs`. This tests DOM rendering and command construction with recorded status and injected faults. Browser layout review is separate from live Webots controller testing.
-
-The renderer commands are in the root README. After rendering, run `python3 scripts/finalize_media.py`. The package builder rejects stale source, evaluation, recording, video, or document hashes. Rebuilding the unchanged release uses `python3 scripts/package_project.py`; changed evaluation or document files require renewed review and updated submission validation. Run experiments in a separate copy to preserve the original release evidence. Keep the final report and presentation alongside the demos when submitting.
+The original acceptance worlds use fixed fixture codes, 2468 and 1357, to retain a comparable numerical benchmark. They do not represent the current interactive access policy. The dedicated `delivery_box_security.wbt` uses isolated password-only owner sign-in and managed codes. `python3 scripts/run_all.py` executes both sets and records their separate evidence. Existing videos show the earlier workflow; use `PROGRESS_REPORT_2_DEMO.md` for the current class demonstration.

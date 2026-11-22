@@ -1,5 +1,22 @@
 # Parcel Guard submission
 
+
+## Progress Report 2 handoff
+
+The current classroom files are in `output/progress-report-2/`. Submit the written paper PDF, present the editable 17-slide deck from the chat viewer, and keep its slide PDF as a playback backup. Export the deck as PowerPoint from the viewer if a local PPTX is required. `output/Parcel Guard - Progress Report 2 - Submission.zip` bundles the PDFs, speaker guide, live demo guide and editable report source.
+
+- Written paper: `output/pdf/Parcel Guard - Progress Report 2.pdf`
+- Slide viewing copy: `output/pdf/Parcel Guard - Progress Report 2 Slides.pdf`
+- Speaker guide: `docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md`
+- Live demo: `docs/PROGRESS_REPORT_2_DEMO.md`
+- Canonical report source: `docs/parcel_guard_progress2_report.tex`
+- Report rebuild: `python3 scripts/build_progress2_report.py` with a TeX distribution and IEEEtran installed
+- Source/evidence package: `output/Parcel Guard - Progress Report 2 - Project.zip`
+
+Use the password-only owner workflow. The older final paper, deck, videos and original submission checker below belong to the earlier delivery. Current evaluated source/report hashes are in `results/evaluation_manifest.json`; each current ZIP has its own file manifest.
+
+## Earlier submission
+
 **Team:** Joshua Guico, Joe Jimenez, Brandon Lopez
 
 **Course:** CS 5650 · Fall 2026

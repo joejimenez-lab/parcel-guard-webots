@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const [mode, root] = process.argv.slice(2);
+const viewport = { width: Number(process.env.CAPTURE_WIDTH || 960), height: Number(process.env.CAPTURE_HEIGHT || 500) };
 const descriptor = path.join(root, '.build/ui-capture', `${mode}.json`);
 let config;
 for (let attempt = 0; attempt < 240; attempt++) {
@@ -16,7 +17,7 @@ const browser = await chromium.launch({
   headless: true,
   ...(process.env.CAPTURE_CHROMIUM ? { executablePath: process.env.CAPTURE_CHROMIUM } : {}),
 });
-const page = await browser.newPage({ viewport: { width: 960, height: 500 }, deviceScaleFactor: 2 });
+const page = await browser.newPage({ viewport, deviceScaleFactor: 2 });
 await page.addInitScript(() => {
   document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.createElement('div');
@@ -83,6 +84,6 @@ await browser.close();
 if (errors.length) throw Error(errors.join('\n'));
 await fs.writeFile(path.join(root, 'results', `${mode}_interface_capture.json`), JSON.stringify({
   passed: true, source: 'Live project control page connected to the running Webots controller',
-  viewport: { width: 960, height: 500, scale: 2 }, screenshot_interval_sim_s: .096,
+  viewport: { ...viewport, scale: 2 }, screenshot_interval_sim_s: .096,
   screenshots: imageIndex, commands: trace, browser_errors: errors,
 }, null, 2) + '\n');

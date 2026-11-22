@@ -15,6 +15,25 @@
     "door_fault_explained": true,
     "door_fixture_available": true,
     "pending_delivery_explained": true,
-    "used_owner_code_explained": true
+    "used_owner_code_explained": true,
+    "saved_state_visible": true,
+    "restart_enabled_for_saved_state": true,
+    "strong_impact_requests_physical_fixture": true,
+    "restart_disabled_without_saved_state": true,
+    "storage_fault_explained": true,
+    "sensor_fault_fixtures_available": true,
+    "owner_console_visible_in_security_mode": true,
+    "code_issuance_requires_owner_session": true,
+    "password_only_owner_sign_in": true,
+    "no_authenticator_field": true,
+    "owner_secrets_cleared_after_submit": true,
+    "verified_owner_can_issue_code": true,
+    "issuance_sends_session_scope_and_lifetime": true,
+    "private_code_visible_before_next_status": true,
+    "revocation_targets_credential_id": true,
+    "used_code_removed_from_private_display": true,
+    "lockdown_prominent_and_previous_owner_session_cancelled": true,
+    "fresh_owner_can_clear_physically_secure_lockdown": true,
+    "lockdown_clear_waits_for_physical_security": true
   }
 }

@@ -1,0 +1,1528 @@
+{
+  "passed": true,
+  "checks": {
+    "motor_cycles": {
+      "successful": 100,
+      "attempted": 100,
+      "target": 99,
+      "trials": [
+        {
+          "cycle": 0,
+          "unlock_and_open_s": 1.248,
+          "full_cycle_s": 2.752,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 1,
+          "unlock_and_open_s": 1.2480000000000002,
+          "full_cycle_s": 2.7520000000000007,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 2,
+          "unlock_and_open_s": 1.2480000000000002,
+          "full_cycle_s": 2.752,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 3,
+          "unlock_and_open_s": 1.2479999999999993,
+          "full_cycle_s": 2.7520000000000007,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 4,
+          "unlock_and_open_s": 1.2479999999999993,
+          "full_cycle_s": 2.751999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 5,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 6,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 7,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.751999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 8,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 9,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 10,
+          "unlock_and_open_s": 1.248000000000001,
+          "full_cycle_s": 2.751999999999999,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 11,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 12,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 13,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 14,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 15,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 16,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 17,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 18,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 19,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 20,
+          "unlock_and_open_s": 1.2479999999999976,
+          "full_cycle_s": 2.7520000000000024,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 21,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 22,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 23,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 24,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 25,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 26,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 27,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 28,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 29,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 30,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 31,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 32,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 33,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 34,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 35,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 36,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 37,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 38,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 39,
+          "unlock_and_open_s": 1.2480000000000047,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 40,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999953,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 41,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 42,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 43,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 44,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 45,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 46,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 47,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 48,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 49,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 50,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 51,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 52,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 53,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 54,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 55,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 56,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 57,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 58,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 59,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 60,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 61,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 62,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 63,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 64,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 65,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 66,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 67,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 68,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 69,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 70,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 71,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 72,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 73,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 74,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 75,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.751999999999981,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 76,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 77,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 78,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 79,
+          "unlock_and_open_s": 1.2480000000000189,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 80,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 81,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 82,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 83,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 84,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 85,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 86,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 87,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 88,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 89,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999527,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 90,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999527,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 91,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7519999999999527,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 92,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 93,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 94,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 95,
+          "unlock_and_open_s": 1.2480000000000473,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 96,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 97,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 98,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        },
+        {
+          "cycle": 99,
+          "unlock_and_open_s": 1.2479999999999905,
+          "full_cycle_s": 2.7520000000000095,
+          "door_rad": 0.0,
+          "bolt_m": 0.0791,
+          "secured": true
+        }
+      ]
+    },
+    "alert_latency": {
+      "within_1s": 30,
+      "trials": 30,
+      "target": 29,
+      "median_s": 0.0,
+      "p95_s": 0.0,
+      "max_s": 0.0,
+      "max_stimulus_to_observer_s": 0.224,
+      "definition": "First sampled impact threshold crossing to synchronous local outbox insertion; simulated time; excludes transport/rendering",
+      "details": [
+        {
+          "trial": 0,
+          "event_id": 2,
+          "sensor_sample_s": 308.768,
+          "queued_s": 308.768,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.224
+        },
+        {
+          "trial": 1,
+          "event_id": 3,
+          "sensor_sample_s": 310.272,
+          "queued_s": 310.272,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 2,
+          "event_id": 4,
+          "sensor_sample_s": 311.712,
+          "queued_s": 311.712,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 3,
+          "event_id": 5,
+          "sensor_sample_s": 313.152,
+          "queued_s": 313.152,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 4,
+          "event_id": 6,
+          "sensor_sample_s": 314.592,
+          "queued_s": 314.592,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 5,
+          "event_id": 7,
+          "sensor_sample_s": 316.032,
+          "queued_s": 316.032,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 6,
+          "event_id": 8,
+          "sensor_sample_s": 317.472,
+          "queued_s": 317.472,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 7,
+          "event_id": 9,
+          "sensor_sample_s": 318.912,
+          "queued_s": 318.912,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 8,
+          "event_id": 10,
+          "sensor_sample_s": 320.352,
+          "queued_s": 320.352,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 9,
+          "event_id": 11,
+          "sensor_sample_s": 321.792,
+          "queued_s": 321.792,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 10,
+          "event_id": 12,
+          "sensor_sample_s": 323.232,
+          "queued_s": 323.232,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 11,
+          "event_id": 13,
+          "sensor_sample_s": 324.672,
+          "queued_s": 324.672,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 12,
+          "event_id": 14,
+          "sensor_sample_s": 326.112,
+          "queued_s": 326.112,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 13,
+          "event_id": 15,
+          "sensor_sample_s": 327.552,
+          "queued_s": 327.552,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 14,
+          "event_id": 16,
+          "sensor_sample_s": 328.992,
+          "queued_s": 328.992,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 15,
+          "event_id": 17,
+          "sensor_sample_s": 330.432,
+          "queued_s": 330.432,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 16,
+          "event_id": 18,
+          "sensor_sample_s": 331.872,
+          "queued_s": 331.872,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 17,
+          "event_id": 19,
+          "sensor_sample_s": 333.312,
+          "queued_s": 333.312,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 18,
+          "event_id": 20,
+          "sensor_sample_s": 334.752,
+          "queued_s": 334.752,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 19,
+          "event_id": 21,
+          "sensor_sample_s": 336.192,
+          "queued_s": 336.192,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 20,
+          "event_id": 22,
+          "sensor_sample_s": 337.632,
+          "queued_s": 337.632,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 21,
+          "event_id": 23,
+          "sensor_sample_s": 339.072,
+          "queued_s": 339.072,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 22,
+          "event_id": 24,
+          "sensor_sample_s": 340.512,
+          "queued_s": 340.512,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 23,
+          "event_id": 25,
+          "sensor_sample_s": 341.952,
+          "queued_s": 341.952,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 24,
+          "event_id": 26,
+          "sensor_sample_s": 343.392,
+          "queued_s": 343.392,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 25,
+          "event_id": 27,
+          "sensor_sample_s": 344.832,
+          "queued_s": 344.832,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 26,
+          "event_id": 28,
+          "sensor_sample_s": 346.272,
+          "queued_s": 346.272,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 27,
+          "event_id": 29,
+          "sensor_sample_s": 347.712,
+          "queued_s": 347.712,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 28,
+          "event_id": 30,
+          "sensor_sample_s": 349.152,
+          "queued_s": 349.152,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        },
+        {
+          "trial": 29,
+          "event_id": 31,
+          "sensor_sample_s": 350.592,
+          "queued_s": 350.592,
+          "sensor_to_queue_s": 0.0,
+          "stimulus_to_observer_s": 0.16
+        }
+      ]
+    },
+    "connection_recovery": {
+      "successful_outages": 10,
+      "target": 10,
+      "events_per_outage": 10,
+      "expected_events": 100,
+      "recovered_events": 100,
+      "outages": [
+        {
+          "outage": 0,
+          "expected_tamper_ids": [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.256
+        },
+        {
+          "outage": 1,
+          "expected_tamper_ids": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 2,
+          "expected_tamper_ids": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 3,
+          "expected_tamper_ids": [
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 4,
+          "expected_tamper_ids": [
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 5,
+          "expected_tamper_ids": [
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 6,
+          "expected_tamper_ids": [
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 7,
+          "expected_tamper_ids": [
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 8,
+          "expected_tamper_ids": [
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        },
+        {
+          "outage": 9,
+          "expected_tamper_ids": [
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150
+          ],
+          "retained_offline": true,
+          "recovered_once": true,
+          "reconnect_drain_s": 0.288
+        }
+      ]
+    },
+    "lost_ack_retry": {
+      "retried": true,
+      "queue_drained": true,
+      "receiver_ids_unique": true
+    },
+    "latch_jam": {
+      "blocked_lock_fault": true,
+      "blocked_unlock_fault": true,
+      "measured_recovery": true,
+      "recovered_to_secured": true
+    },
+    "access_security": {
+      "trials": 30,
+      "categories": {
+        "invalid": 6,
+        "expired": 6,
+        "reused": 6,
+        "wrong_role": 6,
+        "replay": 6
+      },
+      "unauthorized_unlocks": 0,
+      "details": [
+        {
+          "category": "invalid",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "invalid",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "invalid code"
+        },
+        {
+          "category": "expired",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "expired",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "expired courier code"
+        },
+        {
+          "category": "reused",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "owner code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "owner code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "courier code already used"
+        },
+        {
+          "category": "reused",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "owner code already used"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "wrong_role",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "code does not match requested role"
+        },
+        {
+          "category": "replay",
+          "trial": 0,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 1,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 2,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 3,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 4,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        },
+        {
+          "category": "replay",
+          "trial": 5,
+          "denied": true,
+          "unauthorized_unlocks": 0,
+          "secured": true,
+          "reason": "replayed request ID"
+        }
+      ]
+    },
+    "cooldown": {
+      "five_failures_pause_60s": true,
+      "valid_code_blocked_during_pause": true,
+      "valid_code_works_after_pause": true
+    },
+    "access_timeout": {
+      "auto_closed_and_secured": true
+    }
+  },
+  "runner_error": null,
+  "simulation_time_s": 649.568,
+  "timestep_ms": 32
+}

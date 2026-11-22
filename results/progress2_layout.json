@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "method": "Chromium render of actual owner panel using protected, lockdown and recovered status snapshots from the measured Webots security evaluation; owner signed out",
+  "checks": [
+    {
+      "state": "protected",
+      "label": "desktop",
+      "width": 1280,
+      "body": 1280,
+      "headline": "Parcel inside. Box secured.",
+      "ownerConsole": true,
+      "passed": true
+    },
+    {
+      "state": "protected",
+      "label": "mobile",
+      "width": 390,
+      "body": 390,
+      "headline": "Parcel inside. Box secured.",
+      "ownerConsole": true,
+      "passed": true
+    },
+    {
+      "state": "lockdown",
+      "label": "desktop",
+      "width": 1280,
+      "body": 1280,
+      "headline": "Security lockdown. Owner review required.",
+      "ownerConsole": true,
+      "passed": true
+    },
+    {
+      "state": "lockdown",
+      "label": "mobile",
+      "width": 390,
+      "body": 390,
+      "headline": "Security lockdown. Owner review required.",
+      "ownerConsole": true,
+      "passed": true
+    },
+    {
+      "state": "recovered",
+      "label": "desktop",
+      "width": 1280,
+      "body": 1280,
+      "headline": "Empty. Box secured.",
+      "ownerConsole": true,
+      "passed": true
+    },
+    {
+      "state": "recovered",
+      "label": "mobile",
+      "width": 390,
+      "body": 390,
+      "headline": "Empty. Box secured.",
+      "ownerConsole": true,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,2439 @@
+{
+  "passed": true,
+  "checks": {
+    "secure_default": {
+      "enabled": true,
+      "fixed_courier_denied": true,
+      "fixed_owner_denied": true
+    },
+    "owner_password": {
+      "wrong_password_denied": true,
+      "missing_password_denied": true,
+      "password_only_accepted": true,
+      "immediate_repeat_sign_in_works": true
+    },
+    "revocation": {
+      "owner_revocation_accepted": true,
+      "revoked_code_denied": true
+    },
+    "managed_delivery_cycle": {
+      "delivery_confirmed": true,
+      "reused_code_denied": true,
+      "collection_confirmed": true
+    },
+    "repeat_delivery_without_reset": {
+      "same_policy_session": true,
+      "second_delivery_confirmed": true
+    },
+    "expiry": {
+      "expired_code_denied": true
+    },
+    "incident_lockdown": {
+      "all_codes_revoked": true,
+      "old_owner_session_invalidated": true,
+      "previously_valid_code_blocked": true,
+      "physical_box_secured": true
+    },
+    "lockdown_restart": {
+      "reset_cannot_bypass": true,
+      "lockdown_persisted": true,
+      "revocations_persisted": true
+    },
+    "owner_recovery": {
+      "password_sign_in_accepted": true,
+      "lockdown_cleared": true,
+      "old_code_remains_revoked": true,
+      "new_code_works": true
+    },
+    "secret_redaction": {
+      "no_password_in_status": true,
+      "no_private_reply_values_in_status": true
+    }
+  },
+  "runner_error": null,
+  "snapshots": {
+    "protected": {
+      "session": "5f54f422d4c6",
+      "time": 44.16,
+      "phase": "SECURED",
+      "secured": true,
+      "fault": false,
+      "fault_reason": null,
+      "door": "closed",
+      "latch": "locked",
+      "parcel": "present",
+      "link": "online",
+      "grant": "none",
+      "entry_paused_s": 0,
+      "access_remaining_s": 0,
+      "courier_code_used": true,
+      "owner_code_used": true,
+      "delivery_pending": false,
+      "pending": 1,
+      "storage": "saved",
+      "recovered": false,
+      "recovery_count": 0,
+      "sensor_detail": "",
+      "security": {
+        "enabled": true,
+        "lockdown": false,
+        "incident": "",
+        "owner_paused_s": 0,
+        "credentials": [
+          {
+            "id": "d870bb378fb9",
+            "role": "courier",
+            "expires": 301.792,
+            "used": false,
+            "revoked": true
+          },
+          {
+            "id": "13a9384d4774",
+            "role": "courier",
+            "expires": 302.304,
+            "used": true,
+            "revoked": false
+          },
+          {
+            "id": "979ba6792090",
+            "role": "owner",
+            "expires": 302.368,
+            "used": true,
+            "revoked": false
+          },
+          {
+            "id": "f7cb06fb4b35",
+            "role": "courier",
+            "expires": 309.536,
+            "used": true,
+            "revoked": false
+          },
+          {
+            "id": "92be277f4b0d",
+            "role": "owner",
+            "expires": 42.992000000000004,
+            "used": false,
+            "revoked": false
+          },
+          {
+            "id": "7434624466b7",
+            "role": "owner",
+            "expires": 344.16,
+            "used": false,
+            "revoked": false
+          }
+        ]
+      },
+      "events": [
+        {
+          "session": "5f54f422d4c6",
+          "id": 12,
+          "time": 1.92,
+          "kind": "access_denied",
+          "detail": "code revoked"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 13,
+          "time": 2.304,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 14,
+          "time": 2.368,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 15,
+          "time": 2.432,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 16,
+          "time": 3.84,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 3.84,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 17,
+          "time": 5.504,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 5.504,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 18,
+          "time": 5.792,
+          "kind": "access_denied",
+          "detail": "code already used"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 19,
+          "time": 6.176,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 20,
+          "time": 7.584,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 7.584,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 21,
+          "time": 9.536,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 22,
+          "time": 9.6,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 23,
+          "time": 11.04,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 11.04,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 24,
+          "time": 12.704,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 12.704,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 25,
+          "time": 12.992,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 26,
+          "time": 43.776,
+          "kind": "access_denied",
+          "detail": "code expired"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 27,
+          "time": 44.16,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        }
+      ],
+      "event_kinds": [
+        "sensor_fault",
+        "sensor_recovered",
+        "access_denied",
+        "access_denied",
+        "owner_action_denied",
+        "owner_action_denied",
+        "owner_action",
+        "owner_action",
+        "owner_action_denied",
+        "owner_action",
+        "owner_action",
+        "access_denied",
+        "owner_action",
+        "owner_action",
+        "access_granted",
+        "parcel_detected",
+        "delivery",
+        "access_denied",
+        "access_granted",
+        "retrieval",
+        "owner_action",
+        "access_granted",
+        "parcel_detected",
+        "delivery",
+        "owner_action",
+        "access_denied",
+        "owner_action"
+      ],
+      "all_events": [
+        {
+          "session": "5f54f422d4c6",
+          "id": 1,
+          "time": 0.032,
+          "kind": "sensor_fault",
+          "detail": "device feedback unavailable or not yet stable"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 2,
+          "time": 0.096,
+          "kind": "sensor_recovered",
+          "detail": "stable device feedback restored"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 3,
+          "time": 0.704,
+          "kind": "access_denied",
+          "detail": "invalid code"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 4,
+          "time": 1.088,
+          "kind": "access_denied",
+          "detail": "invalid code"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 5,
+          "time": 1.472,
+          "kind": "owner_action_denied",
+          "detail": "owner_login: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 6,
+          "time": 1.536,
+          "kind": "owner_action_denied",
+          "detail": "owner_login: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 7,
+          "time": 1.6,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 8,
+          "time": 1.664,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 9,
+          "time": 1.728,
+          "kind": "owner_action_denied",
+          "detail": "issue_code: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 10,
+          "time": 1.792,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 11,
+          "time": 1.856,
+          "kind": "owner_action",
+          "detail": "revoke_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 12,
+          "time": 1.92,
+          "kind": "access_denied",
+          "detail": "code revoked"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 13,
+          "time": 2.304,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 14,
+          "time": 2.368,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 15,
+          "time": 2.432,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 16,
+          "time": 3.84,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 3.84,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 17,
+          "time": 5.504,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 5.504,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 18,
+          "time": 5.792,
+          "kind": "access_denied",
+          "detail": "code already used"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 19,
+          "time": 6.176,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 20,
+          "time": 7.584,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 7.584,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 21,
+          "time": 9.536,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 22,
+          "time": 9.6,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 23,
+          "time": 11.04,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 11.04,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 24,
+          "time": 12.704,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 12.704,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 25,
+          "time": 12.992,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 26,
+          "time": 43.776,
+          "kind": "access_denied",
+          "detail": "code expired"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 27,
+          "time": 44.16,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        }
+      ],
+      "delivered_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "pending_ids": [
+        27
+      ],
+      "latch_target": "locked",
+      "door_angle_rad": 0.0,
+      "latch_position_m": 0.08,
+      "parcel_distances_m": [
+        0.5962,
+        0.6002,
+        0.5961,
+        0.6033,
+        0.6064,
+        0.608,
+        0.2855,
+        0.2843,
+        0.282,
+        0.5985,
+        0.5982,
+        0.2884,
+        0.2842,
+        0.2851,
+        0.6051,
+        0.5983,
+        0.2846,
+        0.2847,
+        0.2839,
+        0.5998,
+        0.5998,
+        0.5934,
+        0.599,
+        0.5962,
+        0.6
+      ],
+      "door_accel_m_s2": [
+        -0.0,
+        -0.001,
+        9.81
+      ],
+      "last_access_result": false,
+      "malformed_commands": 0,
+      "motion_peak_m_s2": 9.809999999808985,
+      "endpoint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "endpoint_duplicate_packets": 0
+    },
+    "lockdown": {
+      "session": "5f54f422d4c6",
+      "time": 44.352,
+      "phase": "LOCKDOWN",
+      "secured": true,
+      "fault": false,
+      "fault_reason": null,
+      "door": "closed",
+      "latch": "locked",
+      "parcel": "present",
+      "link": "online",
+      "grant": "none",
+      "entry_paused_s": 0,
+      "access_remaining_s": 0,
+      "courier_code_used": true,
+      "owner_code_used": true,
+      "delivery_pending": false,
+      "pending": 1,
+      "storage": "saved",
+      "recovered": false,
+      "recovery_count": 0,
+      "sensor_detail": "",
+      "security": {
+        "enabled": true,
+        "lockdown": true,
+        "incident": "impact detected",
+        "owner_paused_s": 0,
+        "credentials": [
+          {
+            "id": "d870bb378fb9",
+            "role": "courier",
+            "expires": 301.792,
+            "used": false,
+            "revoked": true
+          },
+          {
+            "id": "13a9384d4774",
+            "role": "courier",
+            "expires": 302.304,
+            "used": true,
+            "revoked": true
+          },
+          {
+            "id": "979ba6792090",
+            "role": "owner",
+            "expires": 302.368,
+            "used": true,
+            "revoked": true
+          },
+          {
+            "id": "f7cb06fb4b35",
+            "role": "courier",
+            "expires": 309.536,
+            "used": true,
+            "revoked": true
+          },
+          {
+            "id": "92be277f4b0d",
+            "role": "owner",
+            "expires": 42.992000000000004,
+            "used": false,
+            "revoked": true
+          },
+          {
+            "id": "7434624466b7",
+            "role": "owner",
+            "expires": 344.16,
+            "used": false,
+            "revoked": true
+          }
+        ]
+      },
+      "events": [
+        {
+          "session": "5f54f422d4c6",
+          "id": 13,
+          "time": 2.304,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 14,
+          "time": 2.368,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 15,
+          "time": 2.432,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 16,
+          "time": 3.84,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 3.84,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 17,
+          "time": 5.504,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 5.504,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 18,
+          "time": 5.792,
+          "kind": "access_denied",
+          "detail": "code already used"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 19,
+          "time": 6.176,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 20,
+          "time": 7.584,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 7.584,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 21,
+          "time": 9.536,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 22,
+          "time": 9.6,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 23,
+          "time": 11.04,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 11.04,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 24,
+          "time": 12.704,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 12.704,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 25,
+          "time": 12.992,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 26,
+          "time": 43.776,
+          "kind": "access_denied",
+          "detail": "code expired"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 27,
+          "time": 44.16,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 28,
+          "time": 44.32,
+          "kind": "tamper",
+          "detail": "impact detected",
+          "sensor_time": 44.32,
+          "queue_latency_s": 0.0
+        }
+      ],
+      "event_kinds": [
+        "sensor_fault",
+        "sensor_recovered",
+        "access_denied",
+        "access_denied",
+        "owner_action_denied",
+        "owner_action_denied",
+        "owner_action",
+        "owner_action",
+        "owner_action_denied",
+        "owner_action",
+        "owner_action",
+        "access_denied",
+        "owner_action",
+        "owner_action",
+        "access_granted",
+        "parcel_detected",
+        "delivery",
+        "access_denied",
+        "access_granted",
+        "retrieval",
+        "owner_action",
+        "access_granted",
+        "parcel_detected",
+        "delivery",
+        "owner_action",
+        "access_denied",
+        "owner_action",
+        "tamper"
+      ],
+      "all_events": [
+        {
+          "session": "5f54f422d4c6",
+          "id": 1,
+          "time": 0.032,
+          "kind": "sensor_fault",
+          "detail": "device feedback unavailable or not yet stable"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 2,
+          "time": 0.096,
+          "kind": "sensor_recovered",
+          "detail": "stable device feedback restored"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 3,
+          "time": 0.704,
+          "kind": "access_denied",
+          "detail": "invalid code"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 4,
+          "time": 1.088,
+          "kind": "access_denied",
+          "detail": "invalid code"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 5,
+          "time": 1.472,
+          "kind": "owner_action_denied",
+          "detail": "owner_login: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 6,
+          "time": 1.536,
+          "kind": "owner_action_denied",
+          "detail": "owner_login: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 7,
+          "time": 1.6,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 8,
+          "time": 1.664,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 9,
+          "time": 1.728,
+          "kind": "owner_action_denied",
+          "detail": "issue_code: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 10,
+          "time": 1.792,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 11,
+          "time": 1.856,
+          "kind": "owner_action",
+          "detail": "revoke_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 12,
+          "time": 1.92,
+          "kind": "access_denied",
+          "detail": "code revoked"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 13,
+          "time": 2.304,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 14,
+          "time": 2.368,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 15,
+          "time": 2.432,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 16,
+          "time": 3.84,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 3.84,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 17,
+          "time": 5.504,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 5.504,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 18,
+          "time": 5.792,
+          "kind": "access_denied",
+          "detail": "code already used"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 19,
+          "time": 6.176,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 20,
+          "time": 7.584,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 7.584,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 21,
+          "time": 9.536,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 22,
+          "time": 9.6,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 23,
+          "time": 11.04,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 11.04,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 24,
+          "time": 12.704,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 12.704,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 25,
+          "time": 12.992,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 26,
+          "time": 43.776,
+          "kind": "access_denied",
+          "detail": "code expired"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 27,
+          "time": 44.16,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 28,
+          "time": 44.32,
+          "kind": "tamper",
+          "detail": "impact detected",
+          "sensor_time": 44.32,
+          "queue_latency_s": 0.0
+        }
+      ],
+      "delivered_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "pending_ids": [
+        28
+      ],
+      "latch_target": "locked",
+      "door_angle_rad": 0.0146,
+      "latch_position_m": 0.0801,
+      "parcel_distances_m": [
+        0.6037,
+        0.601,
+        0.6032,
+        0.602,
+        0.6029,
+        0.6018,
+        0.2859,
+        0.2841,
+        0.2866,
+        0.6031,
+        0.6026,
+        0.2856,
+        0.2837,
+        0.2877,
+        0.5988,
+        0.5988,
+        0.2844,
+        0.2831,
+        0.2842,
+        0.6023,
+        0.598,
+        0.5986,
+        0.5991,
+        0.5991,
+        0.5997
+      ],
+      "door_accel_m_s2": [
+        -0.039,
+        -1.101,
+        9.81
+      ],
+      "last_access_result": false,
+      "malformed_commands": 0,
+      "motion_peak_m_s2": 14.30439921420278,
+      "endpoint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "endpoint_duplicate_packets": 0
+    },
+    "recovered": {
+      "session": "5f54f422d4c6",
+      "time": 49.664,
+      "phase": "SECURED",
+      "secured": true,
+      "fault": false,
+      "fault_reason": null,
+      "door": "closed",
+      "latch": "locked",
+      "parcel": "empty",
+      "link": "online",
+      "grant": "none",
+      "entry_paused_s": 0,
+      "access_remaining_s": 0,
+      "courier_code_used": true,
+      "owner_code_used": true,
+      "delivery_pending": false,
+      "pending": 0,
+      "storage": "saved",
+      "recovered": true,
+      "recovery_count": 1,
+      "sensor_detail": "",
+      "security": {
+        "enabled": true,
+        "lockdown": false,
+        "incident": "",
+        "owner_paused_s": 0,
+        "credentials": [
+          {
+            "id": "d870bb378fb9",
+            "role": "courier",
+            "expires": 301.792,
+            "used": false,
+            "revoked": true
+          },
+          {
+            "id": "13a9384d4774",
+            "role": "courier",
+            "expires": 302.304,
+            "used": true,
+            "revoked": true
+          },
+          {
+            "id": "979ba6792090",
+            "role": "owner",
+            "expires": 302.368,
+            "used": true,
+            "revoked": true
+          },
+          {
+            "id": "f7cb06fb4b35",
+            "role": "courier",
+            "expires": 309.536,
+            "used": true,
+            "revoked": true
+          },
+          {
+            "id": "92be277f4b0d",
+            "role": "owner",
+            "expires": 42.992000000000004,
+            "used": false,
+            "revoked": true
+          },
+          {
+            "id": "7434624466b7",
+            "role": "owner",
+            "expires": 344.16,
+            "used": false,
+            "revoked": true
+          },
+          {
+            "id": "af1e12d484cf",
+            "role": "owner",
+            "expires": 346.4,
+            "used": true,
+            "revoked": false
+          }
+        ]
+      },
+      "events": [
+        {
+          "session": "5f54f422d4c6",
+          "id": 25,
+          "time": 12.992,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 26,
+          "time": 43.776,
+          "kind": "access_denied",
+          "detail": "code expired"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 27,
+          "time": 44.16,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 28,
+          "time": 44.32,
+          "kind": "tamper",
+          "detail": "impact detected",
+          "sensor_time": 44.32,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 29,
+          "time": 44.448,
+          "kind": "owner_action_denied",
+          "detail": "clear_lockdown: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 30,
+          "time": 44.512,
+          "kind": "access_denied",
+          "detail": "security lockdown; owner verification required"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 31,
+          "time": 44.896,
+          "kind": "reset_denied",
+          "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 32,
+          "time": 45.344,
+          "kind": "controller_recovered",
+          "detail": "saved queue and access state restored; active access cancelled"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 33,
+          "time": 45.376,
+          "kind": "sensor_fault",
+          "detail": "device feedback unavailable or not yet stable"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 34,
+          "time": 45.44,
+          "kind": "sensor_recovered",
+          "detail": "stable device feedback restored"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 35,
+          "time": 45.6,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 36,
+          "time": 45.664,
+          "kind": "owner_action",
+          "detail": "clear_lockdown: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 37,
+          "time": 46.016,
+          "kind": "access_denied",
+          "detail": "code revoked"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 38,
+          "time": 46.4,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 39,
+          "time": 46.464,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 40,
+          "time": 47.84,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 47.84,
+          "queue_latency_s": 0.0
+        }
+      ],
+      "event_kinds": [
+        "sensor_fault",
+        "sensor_recovered",
+        "access_denied",
+        "access_denied",
+        "owner_action_denied",
+        "owner_action_denied",
+        "owner_action",
+        "owner_action",
+        "owner_action_denied",
+        "owner_action",
+        "owner_action",
+        "access_denied",
+        "owner_action",
+        "owner_action",
+        "access_granted",
+        "parcel_detected",
+        "delivery",
+        "access_denied",
+        "access_granted",
+        "retrieval",
+        "owner_action",
+        "access_granted",
+        "parcel_detected",
+        "delivery",
+        "owner_action",
+        "access_denied",
+        "owner_action",
+        "tamper",
+        "owner_action_denied",
+        "access_denied",
+        "reset_denied",
+        "controller_recovered",
+        "sensor_fault",
+        "sensor_recovered",
+        "owner_action",
+        "owner_action",
+        "access_denied",
+        "owner_action",
+        "access_granted",
+        "retrieval"
+      ],
+      "all_events": [
+        {
+          "session": "5f54f422d4c6",
+          "id": 1,
+          "time": 0.032,
+          "kind": "sensor_fault",
+          "detail": "device feedback unavailable or not yet stable"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 2,
+          "time": 0.096,
+          "kind": "sensor_recovered",
+          "detail": "stable device feedback restored"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 3,
+          "time": 0.704,
+          "kind": "access_denied",
+          "detail": "invalid code"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 4,
+          "time": 1.088,
+          "kind": "access_denied",
+          "detail": "invalid code"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 5,
+          "time": 1.472,
+          "kind": "owner_action_denied",
+          "detail": "owner_login: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 6,
+          "time": 1.536,
+          "kind": "owner_action_denied",
+          "detail": "owner_login: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 7,
+          "time": 1.6,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 8,
+          "time": 1.664,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 9,
+          "time": 1.728,
+          "kind": "owner_action_denied",
+          "detail": "issue_code: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 10,
+          "time": 1.792,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 11,
+          "time": 1.856,
+          "kind": "owner_action",
+          "detail": "revoke_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 12,
+          "time": 1.92,
+          "kind": "access_denied",
+          "detail": "code revoked"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 13,
+          "time": 2.304,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 14,
+          "time": 2.368,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 15,
+          "time": 2.432,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 16,
+          "time": 3.84,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 3.84,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 17,
+          "time": 5.504,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 5.504,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 18,
+          "time": 5.792,
+          "kind": "access_denied",
+          "detail": "code already used"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 19,
+          "time": 6.176,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 20,
+          "time": 7.584,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 7.584,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 21,
+          "time": 9.536,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 22,
+          "time": 9.6,
+          "kind": "access_granted",
+          "detail": "courier"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 23,
+          "time": 11.04,
+          "kind": "parcel_detected",
+          "detail": "parcel placed; awaiting closure and locking",
+          "sensor_time": 11.04,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 24,
+          "time": 12.704,
+          "kind": "delivery",
+          "detail": "parcel inside; door closed and bolt confirmed locked",
+          "sensor_time": 12.704,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 25,
+          "time": 12.992,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 26,
+          "time": 43.776,
+          "kind": "access_denied",
+          "detail": "code expired"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 27,
+          "time": 44.16,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 28,
+          "time": 44.32,
+          "kind": "tamper",
+          "detail": "impact detected",
+          "sensor_time": 44.32,
+          "queue_latency_s": 0.0
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 29,
+          "time": 44.448,
+          "kind": "owner_action_denied",
+          "detail": "clear_lockdown: denied"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 30,
+          "time": 44.512,
+          "kind": "access_denied",
+          "detail": "security lockdown; owner verification required"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 31,
+          "time": 44.896,
+          "kind": "reset_denied",
+          "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 32,
+          "time": 45.344,
+          "kind": "controller_recovered",
+          "detail": "saved queue and access state restored; active access cancelled"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 33,
+          "time": 45.376,
+          "kind": "sensor_fault",
+          "detail": "device feedback unavailable or not yet stable"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 34,
+          "time": 45.44,
+          "kind": "sensor_recovered",
+          "detail": "stable device feedback restored"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 35,
+          "time": 45.6,
+          "kind": "owner_action",
+          "detail": "owner_login: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 36,
+          "time": 45.664,
+          "kind": "owner_action",
+          "detail": "clear_lockdown: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 37,
+          "time": 46.016,
+          "kind": "access_denied",
+          "detail": "code revoked"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 38,
+          "time": 46.4,
+          "kind": "owner_action",
+          "detail": "issue_code: approved"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 39,
+          "time": 46.464,
+          "kind": "access_granted",
+          "detail": "owner"
+        },
+        {
+          "session": "5f54f422d4c6",
+          "id": 40,
+          "time": 47.84,
+          "kind": "retrieval",
+          "detail": "parcel removed",
+          "sensor_time": 47.84,
+          "queue_latency_s": 0.0
+        }
+      ],
+      "delivered_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "pending_ids": [],
+      "latch_target": "locked",
+      "door_angle_rad": 0.0,
+      "latch_position_m": 0.0794,
+      "parcel_distances_m": [
+        0.594,
+        0.5991,
+        0.5985,
+        0.5943,
+        0.5971,
+        0.595,
+        0.591,
+        0.5999,
+        0.5999,
+        0.6,
+        0.6017,
+        0.5994,
+        0.5996,
+        0.604,
+        0.6025,
+        0.5946,
+        0.5923,
+        0.601,
+        0.6007,
+        0.5942,
+        0.6056,
+        0.5974,
+        0.5986,
+        0.6009,
+        0.6009
+      ],
+      "door_accel_m_s2": [
+        0.001,
+        -0.001,
+        9.81
+      ],
+      "last_access_result": true,
+      "malformed_commands": 0,
+      "motion_peak_m_s2": 9.810000385826921,
+      "endpoint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "endpoint_duplicate_packets": 0
+    }
+  },
+  "final_status": {
+    "session": "5f54f422d4c6",
+    "time": 49.664,
+    "phase": "SECURED",
+    "secured": true,
+    "fault": false,
+    "fault_reason": null,
+    "door": "closed",
+    "latch": "locked",
+    "parcel": "empty",
+    "link": "online",
+    "grant": "none",
+    "entry_paused_s": 0,
+    "access_remaining_s": 0,
+    "courier_code_used": true,
+    "owner_code_used": true,
+    "delivery_pending": false,
+    "pending": 0,
+    "storage": "saved",
+    "recovered": true,
+    "recovery_count": 1,
+    "sensor_detail": "",
+    "security": {
+      "enabled": true,
+      "lockdown": false,
+      "incident": "",
+      "owner_paused_s": 0,
+      "credentials": [
+        {
+          "id": "d870bb378fb9",
+          "role": "courier",
+          "expires": 301.792,
+          "used": false,
+          "revoked": true
+        },
+        {
+          "id": "13a9384d4774",
+          "role": "courier",
+          "expires": 302.304,
+          "used": true,
+          "revoked": true
+        },
+        {
+          "id": "979ba6792090",
+          "role": "owner",
+          "expires": 302.368,
+          "used": true,
+          "revoked": true
+        },
+        {
+          "id": "f7cb06fb4b35",
+          "role": "courier",
+          "expires": 309.536,
+          "used": true,
+          "revoked": true
+        },
+        {
+          "id": "92be277f4b0d",
+          "role": "owner",
+          "expires": 42.992000000000004,
+          "used": false,
+          "revoked": true
+        },
+        {
+          "id": "7434624466b7",
+          "role": "owner",
+          "expires": 344.16,
+          "used": false,
+          "revoked": true
+        },
+        {
+          "id": "af1e12d484cf",
+          "role": "owner",
+          "expires": 346.4,
+          "used": true,
+          "revoked": false
+        }
+      ]
+    },
+    "events": [
+      {
+        "session": "5f54f422d4c6",
+        "id": 25,
+        "time": 12.992,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 26,
+        "time": 43.776,
+        "kind": "access_denied",
+        "detail": "code expired"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 27,
+        "time": 44.16,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 28,
+        "time": 44.32,
+        "kind": "tamper",
+        "detail": "impact detected",
+        "sensor_time": 44.32,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 29,
+        "time": 44.448,
+        "kind": "owner_action_denied",
+        "detail": "clear_lockdown: denied"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 30,
+        "time": 44.512,
+        "kind": "access_denied",
+        "detail": "security lockdown; owner verification required"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 31,
+        "time": 44.896,
+        "kind": "reset_denied",
+        "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 32,
+        "time": 45.344,
+        "kind": "controller_recovered",
+        "detail": "saved queue and access state restored; active access cancelled"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 33,
+        "time": 45.376,
+        "kind": "sensor_fault",
+        "detail": "device feedback unavailable or not yet stable"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 34,
+        "time": 45.44,
+        "kind": "sensor_recovered",
+        "detail": "stable device feedback restored"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 35,
+        "time": 45.6,
+        "kind": "owner_action",
+        "detail": "owner_login: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 36,
+        "time": 45.664,
+        "kind": "owner_action",
+        "detail": "clear_lockdown: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 37,
+        "time": 46.016,
+        "kind": "access_denied",
+        "detail": "code revoked"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 38,
+        "time": 46.4,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 39,
+        "time": 46.464,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 40,
+        "time": 47.84,
+        "kind": "retrieval",
+        "detail": "parcel removed",
+        "sensor_time": 47.84,
+        "queue_latency_s": 0.0
+      }
+    ],
+    "event_kinds": [
+      "sensor_fault",
+      "sensor_recovered",
+      "access_denied",
+      "access_denied",
+      "owner_action_denied",
+      "owner_action_denied",
+      "owner_action",
+      "owner_action",
+      "owner_action_denied",
+      "owner_action",
+      "owner_action",
+      "access_denied",
+      "owner_action",
+      "owner_action",
+      "access_granted",
+      "parcel_detected",
+      "delivery",
+      "access_denied",
+      "access_granted",
+      "retrieval",
+      "owner_action",
+      "access_granted",
+      "parcel_detected",
+      "delivery",
+      "owner_action",
+      "access_denied",
+      "owner_action",
+      "tamper",
+      "owner_action_denied",
+      "access_denied",
+      "reset_denied",
+      "controller_recovered",
+      "sensor_fault",
+      "sensor_recovered",
+      "owner_action",
+      "owner_action",
+      "access_denied",
+      "owner_action",
+      "access_granted",
+      "retrieval"
+    ],
+    "all_events": [
+      {
+        "session": "5f54f422d4c6",
+        "id": 1,
+        "time": 0.032,
+        "kind": "sensor_fault",
+        "detail": "device feedback unavailable or not yet stable"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 2,
+        "time": 0.096,
+        "kind": "sensor_recovered",
+        "detail": "stable device feedback restored"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 3,
+        "time": 0.704,
+        "kind": "access_denied",
+        "detail": "invalid code"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 4,
+        "time": 1.088,
+        "kind": "access_denied",
+        "detail": "invalid code"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 5,
+        "time": 1.472,
+        "kind": "owner_action_denied",
+        "detail": "owner_login: denied"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 6,
+        "time": 1.536,
+        "kind": "owner_action_denied",
+        "detail": "owner_login: denied"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 7,
+        "time": 1.6,
+        "kind": "owner_action",
+        "detail": "owner_login: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 8,
+        "time": 1.664,
+        "kind": "owner_action",
+        "detail": "owner_login: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 9,
+        "time": 1.728,
+        "kind": "owner_action_denied",
+        "detail": "issue_code: denied"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 10,
+        "time": 1.792,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 11,
+        "time": 1.856,
+        "kind": "owner_action",
+        "detail": "revoke_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 12,
+        "time": 1.92,
+        "kind": "access_denied",
+        "detail": "code revoked"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 13,
+        "time": 2.304,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 14,
+        "time": 2.368,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 15,
+        "time": 2.432,
+        "kind": "access_granted",
+        "detail": "courier"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 16,
+        "time": 3.84,
+        "kind": "parcel_detected",
+        "detail": "parcel placed; awaiting closure and locking",
+        "sensor_time": 3.84,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 17,
+        "time": 5.504,
+        "kind": "delivery",
+        "detail": "parcel inside; door closed and bolt confirmed locked",
+        "sensor_time": 5.504,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 18,
+        "time": 5.792,
+        "kind": "access_denied",
+        "detail": "code already used"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 19,
+        "time": 6.176,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 20,
+        "time": 7.584,
+        "kind": "retrieval",
+        "detail": "parcel removed",
+        "sensor_time": 7.584,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 21,
+        "time": 9.536,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 22,
+        "time": 9.6,
+        "kind": "access_granted",
+        "detail": "courier"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 23,
+        "time": 11.04,
+        "kind": "parcel_detected",
+        "detail": "parcel placed; awaiting closure and locking",
+        "sensor_time": 11.04,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 24,
+        "time": 12.704,
+        "kind": "delivery",
+        "detail": "parcel inside; door closed and bolt confirmed locked",
+        "sensor_time": 12.704,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 25,
+        "time": 12.992,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 26,
+        "time": 43.776,
+        "kind": "access_denied",
+        "detail": "code expired"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 27,
+        "time": 44.16,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 28,
+        "time": 44.32,
+        "kind": "tamper",
+        "detail": "impact detected",
+        "sensor_time": 44.32,
+        "queue_latency_s": 0.0
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 29,
+        "time": 44.448,
+        "kind": "owner_action_denied",
+        "detail": "clear_lockdown: denied"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 30,
+        "time": 44.512,
+        "kind": "access_denied",
+        "detail": "security lockdown; owner verification required"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 31,
+        "time": 44.896,
+        "kind": "reset_denied",
+        "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 32,
+        "time": 45.344,
+        "kind": "controller_recovered",
+        "detail": "saved queue and access state restored; active access cancelled"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 33,
+        "time": 45.376,
+        "kind": "sensor_fault",
+        "detail": "device feedback unavailable or not yet stable"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 34,
+        "time": 45.44,
+        "kind": "sensor_recovered",
+        "detail": "stable device feedback restored"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 35,
+        "time": 45.6,
+        "kind": "owner_action",
+        "detail": "owner_login: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 36,
+        "time": 45.664,
+        "kind": "owner_action",
+        "detail": "clear_lockdown: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 37,
+        "time": 46.016,
+        "kind": "access_denied",
+        "detail": "code revoked"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 38,
+        "time": 46.4,
+        "kind": "owner_action",
+        "detail": "issue_code: approved"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 39,
+        "time": 46.464,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "5f54f422d4c6",
+        "id": 40,
+        "time": 47.84,
+        "kind": "retrieval",
+        "detail": "parcel removed",
+        "sensor_time": 47.84,
+        "queue_latency_s": 0.0
+      }
+    ],
+    "delivered_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "pending_ids": [],
+    "latch_target": "locked",
+    "door_angle_rad": 0.0,
+    "latch_position_m": 0.0794,
+    "parcel_distances_m": [
+      0.594,
+      0.5991,
+      0.5985,
+      0.5943,
+      0.5971,
+      0.595,
+      0.591,
+      0.5999,
+      0.5999,
+      0.6,
+      0.6017,
+      0.5994,
+      0.5996,
+      0.604,
+      0.6025,
+      0.5946,
+      0.5923,
+      0.601,
+      0.6007,
+      0.5942,
+      0.6056,
+      0.5974,
+      0.5986,
+      0.6009,
+      0.6009
+    ],
+    "door_accel_m_s2": [
+      0.001,
+      -0.001,
+      9.81
+    ],
+    "last_access_result": true,
+    "malformed_commands": 0,
+    "motion_peak_m_s2": 9.810000385826921,
+    "endpoint_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "endpoint_duplicate_packets": 0
+  }
+}

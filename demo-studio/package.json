@@ -31,6 +31,7 @@
     "lint": "tsc --noEmit",
     "render:workflow": "remotion render src/index.ts DeliveryWorkflow \"../output/Parcel Guard - Delivery Workflow.mp4\"",
     "render:recovery": "remotion render src/index.ts SecurityRecovery \"../output/Parcel Guard - Security Recovery.mp4\"",
-    "render:final": "remotion render src/index.ts FinalDemonstration \"../output/Parcel Guard - Final Demonstration.mp4\""
+    "render:final": "remotion render src/index.ts FinalDemonstration \"../output/Parcel Guard - Final Demonstration.mp4\"",
+    "render:project": "remotion render src/index.ts ProjectDemo \"../output/Parcel Guard - Project Demo.mp4\""
   }
 }

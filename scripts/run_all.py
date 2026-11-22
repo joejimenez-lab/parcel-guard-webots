@@ -30,10 +30,15 @@ def run(command,report,env=None):
 
 def main():
     if not Path(WEBOTS).is_file():raise SystemExit('Set WEBOTS_BIN to the Webots executable')
+    os.environ['PARCEL_GUARD_STATE_PATH']=''
+    os.environ['PARCEL_GUARD_SECURE_MODE']='0'
     subprocess.run([sys.executable,'scripts/generate_worlds.py'],cwd=ROOT,check=True)
     frozen=hashes()
     run([sys.executable,'tests/run_trials.py'],'logic_trials.json')
     run([sys.executable,'tests/robustness.py'],'robustness.json')
+    run([sys.executable,'tests/progress2.py'],'progress2_regressions.json')
+    run([sys.executable,'tests/security_layers.py'],'security_layers.json')
+    run(['node','tests/dashboard.cjs'],'dashboard_validation.json')
     options=[WEBOTS,'--batch','--no-rendering','--mode=fast','--stdout','--stderr']
     run(options+['worlds/delivery_box_tests.wbt'],'webots_smoke.json')
     run(options+['worlds/delivery_box_classification.wbt'],'webots_development.json',env={**os.environ,'EVAL_PHASE':'development'})
@@ -41,6 +46,15 @@ def main():
     run(options+['worlds/delivery_box_classification.wbt'],'webots_classification.json',env={**os.environ,'EVAL_PHASE':'final'})
     run(options+['worlds/delivery_box_benchmark.wbt'],'webots_benchmark.json')
     run(options+['worlds/delivery_box_edge_cases.wbt'],'webots_edge_cases.json')
+    recovery_state=ROOT/'.runtime/evaluation-recovery.json'
+    recovery_state.unlink(missing_ok=True)
+    run(options+['worlds/delivery_box_progress2.wbt'],'webots_progress2.json',
+        env={**os.environ,'PARCEL_GUARD_STATE_PATH':str(recovery_state)})
+    security_state=ROOT/'.runtime/evaluation-security.json'
+    security_state.unlink(missing_ok=True)
+    run(options+['worlds/delivery_box_security.wbt'],'webots_security.json',
+        env={**os.environ,'PARCEL_GUARD_STATE_PATH':str(security_state),
+             'PARCEL_GUARD_SECURE_MODE':'1','PARCEL_GUARD_OWNER_PASSWORD':'evaluation-owner'})
     stable=frozen==hashes()
     manifest={'passed':stable,'timestamp_utc':datetime.now(timezone.utc).isoformat(),'webots':'R2025a',
               'python':sys.version.split()[0],'platform':platform.platform(),

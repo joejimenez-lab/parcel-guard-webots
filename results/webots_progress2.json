@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "checks": {
+    "offline_restart": {
+      "ten_impacts_recorded": true,
+      "same_session": true,
+      "all_pending_ids_retained": true,
+      "link_stays_offline": true,
+      "no_access_grant": true
+    },
+    "reset_guard": {
+      "session_preserved": true,
+      "queue_preserved": true,
+      "denial_explained": true
+    },
+    "recovered_ack_delivery": {
+      "all_original_ids_received": true,
+      "unique_processing": true,
+      "retry_observed": true
+    },
+    "restart_during_access": {
+      "used_code_retained": true,
+      "grant_cancelled": true,
+      "bolt_waits_for_closure": true,
+      "measured_secure_recovery": true
+    },
+    "sensor_range_fault": {
+      "cannot_claim_secure": true,
+      "access_denied": true,
+      "reason_exposed": true,
+      "stable_recovery": true
+    },
+    "frozen_bolt_feedback": {
+      "cannot_claim_secure": true,
+      "timeout_detected": true,
+      "measured_recovery": true
+    },
+    "impact_during_access": {
+      "impact_classified_as_tamper": true,
+      "authorization_revoked": true,
+      "access_code_stays_used": true,
+      "measured_secure_recovery": true
+    }
+  },
+  "runner_error": null,
+  "final_status": {
+    "session": "859edec2278a",
+    "time": 31.104,
+    "phase": "SECURED",
+    "secured": true,
+    "fault": false,
+    "fault_reason": null,
+    "door": "closed",
+    "latch": "locked",
+    "parcel": "empty",
+    "link": "online",
+    "grant": "none",
+    "entry_paused_s": 0,
+    "access_remaining_s": 0,
+    "courier_code_used": false,
+    "owner_code_used": true,
+    "delivery_pending": false,
+    "pending": 0,
+    "storage": "saved",
+    "recovered": false,
+    "recovery_count": 0,
+    "sensor_detail": "",
+    "security": {
+      "enabled": false,
+      "lockdown": false,
+      "incident": "",
+      "owner_paused_s": 0,
+      "credentials": []
+    },
+    "events": [
+      {
+        "session": "859edec2278a",
+        "id": 1,
+        "time": 27.616,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "859edec2278a",
+        "id": 2,
+        "time": 29.76,
+        "kind": "tamper",
+        "detail": "severe impact detected",
+        "sensor_time": 29.76,
+        "queue_latency_s": 0.0
+      }
+    ],
+    "event_kinds": [
+      "access_granted",
+      "tamper"
+    ],
+    "all_events": [
+      {
+        "session": "859edec2278a",
+        "id": 1,
+        "time": 27.616,
+        "kind": "access_granted",
+        "detail": "owner"
+      },
+      {
+        "session": "859edec2278a",
+        "id": 2,
+        "time": 29.76,
+        "kind": "tamper",
+        "detail": "severe impact detected",
+        "sensor_time": 29.76,
+        "queue_latency_s": 0.0
+      }
+    ],
+    "delivered_ids": [
+      1,
+      2
+    ],
+    "pending_ids": [],
+    "latch_target": "locked",
+    "door_angle_rad": 0.0001,
+    "latch_position_m": 0.0759,
+    "parcel_distances_m": [
+      0.5936,
+      0.6011,
+      0.6044,
+      0.5996,
+      0.5998,
+      0.5996,
+      0.6011,
+      0.6003,
+      0.5957,
+      0.6042,
+      0.6018,
+      0.5979,
+      0.6018,
+      0.5991,
+      0.5986,
+      0.5962,
+      0.6012,
+      0.6006,
+      0.6022,
+      0.6007,
+      0.5971,
+      0.5943,
+      0.6008,
+      0.602,
+      0.5998
+    ],
+    "door_accel_m_s2": [
+      0.003,
+      -0.008,
+      9.81
+    ],
+    "last_access_result": true,
+    "malformed_commands": 0,
+    "motion_peak_m_s2": 9.810000446785846,
+    "endpoint_ids": [
+      1,
+      2
+    ],
+    "endpoint_duplicate_packets": 4
+  },
+  "observed_peak_m_s2": 35.84949341717058
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "method": "DOM integration with recorded Webots status and injected fault states",
+  "checks": {
+    "secured_headline": true,
+    "twenty_five_sensor_cells": true,
+    "event_history_visible": true,
+    "access_role_and_fresh_id": true,
+    "code_cleared_after_submit": true,
+    "lab_action_forwarded": true,
+    "fault_cannot_display_secured": true,
+    "offline_queue_displayed": true,
+    "sensor_fault_explained": true,
+    "missing_values_rendered": true,
+    "door_fault_explained": true,
+    "door_fixture_available": true,
+    "pending_delivery_explained": true,
+    "used_owner_code_explained": true
+  }
+}

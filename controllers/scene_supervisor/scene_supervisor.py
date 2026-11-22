@@ -40,7 +40,7 @@ while robot.step(dt) != -1:
                 else:
                     translation.setSFVec3f(target)
             elif action == 'impact':
-                door.addForce([0, -float(command.get('force', 75)), 0], False)
+                door.addForce([0, -float(command.get('force', 75)), 0], bool(command.get('local', False)))
             elif action == 'force_open':
                 send('actuator_override', open=True)
             elif action in ('jam_latch', 'release_latch'):
@@ -49,6 +49,12 @@ while robot.step(dt) != -1:
                 send('door_jam', jammed=action == 'jam_door')
             elif action == 'drop_acks':
                 drop_acks = int(command.get('count', 3))
+            elif action == 'restart_controller':
+                robot.getFromDef('BOX').restartController()
+            elif action == 'sensor_fault':
+                send('sensor_override', mode=command.get('mode', 'range'))
+            elif action == 'sensor_restore':
+                send('sensor_override', mode=None)
             elif action == 'reset':
                 robot.simulationReset()
         except (ValueError, TypeError, AttributeError):

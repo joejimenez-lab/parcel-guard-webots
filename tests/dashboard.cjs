@@ -92,6 +92,46 @@ w.renderStatus({
 checks.used_owner_code_explained = d
   .getElementById("access-result")
   .textContent.includes("Owner code used");
+w.renderStatus({ ...s, storage: "saved", recovery_count: 2 });
+checks.saved_state_visible = d.getElementById("storage").textContent === "Saved locally" &&
+  d.getElementById("recoveries").textContent === "2";
+checks.restart_enabled_for_saved_state = !d.querySelector('[data-action="restart_controller"]').disabled;
+d.querySelector('[data-action="severe_impact"]').click();
+checks.strong_impact_requests_physical_fixture = messages.at(-1).action === "impact" && messages.at(-1).severe === true;
+w.renderStatus({ ...s, storage: "memory" });
+checks.restart_disabled_without_saved_state = d.querySelector('[data-action="restart_controller"]').disabled;
+w.renderStatus({ ...s, secured: false, fault: true, fault_reason: "storage", storage: "fault" });
+checks.storage_fault_explained = d.getElementById("headline").textContent === "Saved state unavailable.";
+checks.sensor_fault_fixtures_available = !!d.querySelector('[data-action="sensor_fault"]') &&
+  !!d.querySelector('[data-action="sensor_restore"]');
+const protectedStatus = {...s, security:{enabled:true,lockdown:false,incident:"",credentials:[]}};
+w.renderStatus(protectedStatus);
+checks.owner_console_visible_in_security_mode = !d.getElementById("owner-security").hidden;
+checks.code_issuance_requires_owner_session = d.getElementById("issue-code").disabled;
+d.getElementById("owner-password").value="example-password";
+d.getElementById("owner-login-form").dispatchEvent(new w.Event("submit",{bubbles:true,cancelable:true}));
+checks.password_only_owner_sign_in = messages.at(-1).action==="owner_login" && messages.at(-1).password==="example-password" && !("otp" in messages.at(-1));
+checks.no_authenticator_field = !d.getElementById("owner-otp");
+checks.owner_secrets_cleared_after_submit = !d.getElementById("owner-password").value;
+w.receiveMessage({type:"security_reply",action:"owner_login",ok:true,token:"test-owner-token",expires:s.time+300,session:s.session,message:"Owner verified."});
+checks.verified_owner_can_issue_code = !d.getElementById("issue-code").disabled;
+d.getElementById("issue-code-form").dispatchEvent(new w.Event("submit",{bubbles:true,cancelable:true}));
+checks.issuance_sends_session_scope_and_lifetime = messages.at(-1).action==="issue_code" && messages.at(-1).token==="test-owner-token" && messages.at(-1).role==="courier" && messages.at(-1).ttl_s===300;
+w.receiveMessage({type:"security_reply",action:"issue_code",ok:true,id:"code-a",code:"82468135",role:"courier",expires:s.time+300,session:s.session,message:"Code created."});
+checks.private_code_visible_before_next_status = d.getElementById("issued-code").textContent==="82468135";
+const credential={id:"code-a",role:"courier",expires:s.time+300,used:false,revoked:false};
+w.renderStatus({...protectedStatus,security:{...protectedStatus.security,credentials:[credential]}});
+d.querySelector("#credentials button").click();
+checks.revocation_targets_credential_id = messages.at(-1).action==="revoke_code" && messages.at(-1).credential_id==="code-a";
+w.renderStatus({...protectedStatus,security:{...protectedStatus.security,credentials:[{...credential,used:true}]}});
+checks.used_code_removed_from_private_display = d.getElementById("issued-code").textContent==="";
+const lockedStatus={...protectedStatus,phase:"LOCKDOWN",all_events:[...(s.all_events||[]),{id:100000,kind:"tamper"}],security:{...protectedStatus.security,lockdown:true,incident:"impact detected"}};
+w.renderStatus(lockedStatus);
+checks.lockdown_prominent_and_previous_owner_session_cancelled = d.getElementById("headline").textContent.includes("Security lockdown") && d.getElementById("issue-code").disabled && d.getElementById("clear-lockdown").disabled;
+w.receiveMessage({type:"security_reply",action:"owner_login",ok:true,token:"fresh-owner-token",expires:s.time+300,session:s.session,message:"Owner verified again."});
+checks.fresh_owner_can_clear_physically_secure_lockdown = !d.getElementById("clear-lockdown").disabled;
+w.renderStatus({...lockedStatus,secured:false});
+checks.lockdown_clear_waits_for_physical_security = d.getElementById("clear-lockdown").disabled;
 const result = {
   passed: Object.values(checks).every(Boolean),
   method:

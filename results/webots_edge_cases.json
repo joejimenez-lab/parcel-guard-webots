@@ -35,7 +35,7 @@
   },
   "runner_error": null,
   "final_status": {
-    "session": "b218d87a642c",
+    "session": "5a040efd5e70",
     "time": 42.336,
     "phase": "SECURED",
     "secured": true,
@@ -52,6 +52,17 @@
     "owner_code_used": false,
     "delivery_pending": false,
     "pending": 0,
+    "storage": "memory",
+    "recovered": false,
+    "recovery_count": 0,
+    "sensor_detail": "",
+    "security": {
+      "enabled": false,
+      "lockdown": false,
+      "incident": "",
+      "owner_paused_s": 0,
+      "credentials": []
+    },
     "events": [],
     "event_kinds": [],
     "all_events": [],

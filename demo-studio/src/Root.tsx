@@ -1,4 +1,5 @@
 import { Composition, Folder } from "remotion";
+import { ProjectDemo, projectDemoFrames } from "./ProjectDemo";
 import { FinalDemo } from "./FinalDemo";
 import { Workflow } from "./Workflow";
 import { Resilience } from "./Resilience";
@@ -7,6 +8,7 @@ import { RecordedScene } from "./RecordedScene";
 import { Evidence } from "./Evidence";
 export const RemotionRoot = () => (
   <>
+    <Composition id="ProjectDemo" component={ProjectDemo} width={1920} height={1080} fps={30} durationInFrames={projectDemoFrames} />
     <Composition
       id="FinalDemonstration"
       component={FinalDemo}

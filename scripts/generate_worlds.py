@@ -18,7 +18,7 @@ sensors = '\n'.join(f'''DistanceSensor {{ translation {x} {y} .245 rotation 0 1 
 keypad = '\n'.join(block((.22+(i%3)*.023,-.052,.02-(i//3)*.023),(.017,.008,.017),'0.71 0.79 0.78',.3,.35) for i in range(12))
 pavers = '\n'.join(block((x,y,.044),(.49,.49,.025),'0.70 0.70 0.70') for x in (-1.5,-1,-.5,0,.5,1,1.5) for y in (-1.5,-1,-.5,0,.5,1,1.5))
 BASE = f'''#VRML_SIM R2025a utf8
-WorldInfo {{ basicTimeStep 32 randomSeed 42 title "Parcel Guard | Delivery Security Box" info ["Version 2.2" "One parcel; local simulation and simulated connectivity"] }}
+WorldInfo {{ basicTimeStep 32 randomSeed 42 title "Parcel Guard | Delivery Security Box" info ["Version 3.0 - Layered security" "One parcel; local simulation and simulated connectivity"] }}
 DEF CAMERA Viewpoint {{ orientation -0.186473 0.091566 0.978184 2.246021 position 1.7 -2.2 1.55 fieldOfView .62 }}
 Background {{ skyColor [.77 .78 .80] }}
 DirectionalLight {{ direction -.4 .5 -1 intensity 1.6 color 1 1 1 }}
@@ -29,6 +29,7 @@ DEF BOX Robot {{
  children [
   Emitter {{ name "status_tx" channel 2 }} Receiver {{ name "command_rx" channel 1 }}
   Emitter {{ name "scene_tx" channel 3 }} Emitter {{ name "event_tx" channel 4 }}
+  Emitter {{ name "security_reply_tx" channel 5 }}
   {sensors}
   {body} {feet}
   {block((0,0,-.236),(.59,.55,.006),'0.49 0.50 0.51')}
@@ -75,6 +76,8 @@ DEF FIXTURE Robot {{supervisor TRUE controller "scene_supervisor" children [Rece
 RUNNER = '''DEF TEST_RUNNER Robot {supervisor TRUE controller "__CONTROLLER__" children [Emitter {name "command_tx" channel 1} Receiver {name "status_rx" channel 2}] name "Reproducible scenario runner"}
 '''
 (WORLDS/'delivery_box.wbt').write_text(BASE)
-for suffix,controller in [('tests','trial_runner'),('edge_cases','edge_runner'),('sensor_trials','sensor_runner'),('classification','classification_runner'),('benchmark','cycle_runner'),('demo_video','demo_runner'),('resilience_video','resilience_demo')]:
+for suffix,controller in [('tests','trial_runner'),('edge_cases','edge_runner'),('sensor_trials','sensor_runner'),('classification','classification_runner'),('benchmark','cycle_runner'),('demo_video','demo_runner'),('resilience_video','resilience_demo'),('progress2','progress2_runner')]:
     (WORLDS/f'delivery_box_{suffix}.wbt').write_text(BASE+RUNNER.replace('__CONTROLLER__',controller))
-print('Generated 8 worlds from config/evaluation.json')
+SECURITY_RUNNER = RUNNER.replace('__CONTROLLER__', 'security_runner').replace('Receiver {name "status_rx" channel 2}', 'Receiver {name "status_rx" channel 2} Receiver {name "security_rx" channel 5}')
+(WORLDS/'delivery_box_security.wbt').write_text(BASE + SECURITY_RUNNER)
+print('Generated 10 worlds from config/evaluation.json')

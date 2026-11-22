@@ -1,12 +1,30 @@
 # Package Delivery Security Box
 
-[![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest)
+[![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf)
 
-[Watch the demos](#demo-videos) · [Download the complete project](https://github.com/joejimenez-lab/parcel-guard-webots/releases/latest) · [Evaluation report](results/REPORT.md) · [Design](DESIGN.md)
+[Current project ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Project.zip) · [Report PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf) · [Slide PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202%20Slides.pdf) · [Submission ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Submission.zip) · [Evaluation](results/REPORT.md)
 
 Parcel Guard is the Webots simulation for our CS 5650 package delivery security box project. A Python controller reads 25 distance sensors, door and bolt positions, and motion. It checks access, recognizes parcel events, and retains alerts during simulated link outages.
 
-## Submission files
+## Progress Report 2 - Layered security
+
+The interactive project now has a different owner workflow: password-only owner sign-in, owner-issued/revoked access codes, and automatic tamper lockdown. Fixed **2468/1357** codes are disabled in the interactive world. An owner can complete repeated deliveries without resetting the box.
+
+1. Open `worlds/delivery_box.wbt` in Webots R2025a, choose real-time speed and open its Robot Window.
+2. Sign in to the owner console with **owner-5650**, the default local demo owner password. `PARCEL_GUARD_OWNER_PASSWORD` can change it at first initialization; a recovered checkpoint retains its existing verifier.
+3. Sign in with the owner password. Create a courier delivery code, choose its lifetime, and copy the eight-digit code. Use it in Request access. Create a separate owner collection code for retrieval.
+4. Revoke a code from the owner console to show it being rejected. An unexplained impact, door opening or package movement enters lockdown, revokes outstanding codes and signs out the owner.
+5. To recover, sign in with the owner password again and clear lockdown after measured closure/locking. Revoked codes stay revoked. **New session** cannot bypass security mode.
+
+Owner sign-in needs only the password. Owner sessions and access codes expire using simulation time; you can sign in again immediately. Existing saved state upgrades without discarding issued codes or incidents. The local fixture and unencrypted recovery file remain part of the course simulation.
+
+[Current progress report](docs/PROGRESS_REPORT_2.md) · [Class demo guide](docs/PROGRESS_REPORT_2_DEMO.md) · [Verified evidence](results/REPORT.md)
+
+The polished classroom set is in `output/progress-report-2/`: the report PDF follows the previous cover, contents and IEEE paper format; the matching 17-slide editable deck is saved in the chat viewer and can be exported as PowerPoint. The folder includes a slide PDF, [speaker guide](docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md), demo guide and editable LaTeX source. `output/Parcel Guard - Progress Report 2 - Submission.zip` is the document handoff. Rebuild the canonical paper with `python3 scripts/build_progress2_report.py` using TeX with IEEEtran; the Markdown file remains a concise reading companion.
+
+`python3 scripts/run_all.py` runs the original numerical suite in legacy fixture mode and separately tests the default security workflow. New evidence is in `results/security_layers.json` and `results/webots_security.json`. Baseline results are not a claim that the complete classification suite was repeated with managed credentials. Existing videos and final-paper/slides are historical. The current report is `output/pdf/Parcel Guard - Progress Report 2.pdf`; `python3 scripts/package_progress2.py` rebuilds the local ZIP.
+
+## Earlier submission files
 
 - [What to upload and how to prepare for class](SUBMISSION.md)
 - [Final report PDF](output/pdf/Parcel%20Guard%20-%20Final%20Report.pdf) and [editable LaTeX source](docs/parcel_guard_report.tex)
@@ -16,10 +34,12 @@ Parcel Guard is the Webots simulation for our CS 5650 package delivery security 
 
 The CS 5650 team is Joshua Guico, Joe Jimenez, and Brandon Lopez. The proposal assigns the team roles and suggests a 13-minute presentation plus two minutes for questions.
 
-## Start here
+## Legacy fixture walkthrough
+
+These steps describe the earlier fixed-code workflow. The current interactive world uses the password-only owner workflow above; legacy fixture worlds are retained for the automated numerical benchmark.
 
 1. Install **Webots R2025a** and **Python 3.10+**. The simulation uses the Python standard library and the controller API bundled with Webots; no pip packages are required.
-2. Open **`worlds/delivery_box.wbt`** in Webots. Select real-time simulation speed, then run.
+2. Open the archived Report 1 copy of **`worlds/delivery_box.wbt`** for this historical walkthrough. The current world uses managed codes.
 3. Open the **Parcel Guard Robot Window** from the robot's context menu / Robot Window control.
 4. Select **Courier**, enter **2468**, and click **Unlock**. Wait for the door to open and bolt to retract. In **Test controls**, click **Place parcel** and wait for parcel detection. Click **Close and secure**, then wait for `SECURED` and the delivery event.
 5. Select **Owner**, enter **1357**, and unlock. Wait for the open door, click **Remove parcel**, and wait for the retrieval event. Click **Close and secure**.
@@ -35,6 +55,7 @@ The courier code is single-use and expires 300 simulated seconds after issuance.
 
 ## Demo videos
 
+- [**Project Demo**](output/Parcel%20Guard%20-%20Project%20Demo.mp4) — Webots and the control panel shown together, with captions and no narration. This is the historical clip embedded in the first progress-report slides.
 - [**Final Demonstration**](output/Parcel%20Guard%20-%20Final%20Demonstration.mp4) — 84-second complete walkthrough with captions and no narration.
 
 - [**Delivery Workflow**](output/Parcel%20Guard%20-%20Delivery%20Workflow.mp4) — 40-second courier delivery, used-code rejection, and owner retrieval.
@@ -68,7 +89,7 @@ The command regenerates worlds, freezes source/configuration hashes, runs develo
 | Mixed access attacks | 0 unauthorized unlocks in 30 attempts |
 | Blocked bolt | Lock and unlock faults detected; measured recovery |
 | Added failure cases | Obstructed door, expired grant, early close, malformed input |
-| Policy and dashboard regressions | 38 policy checks and 14 DOM checks |
+| Policy and dashboard regressions | 38 original + 26 recovery/fault + 29 security checks and 33 DOM checks |
 
 Read **`results/REPORT.md`** for denominators, timing definitions, seeds, confusion matrices, and limitations. **`results/evaluation_manifest.json`** links each result to source and configuration hashes. **`REQUIREMENTS.md`** maps proposal requirements to implementations and evidence.
 
@@ -82,7 +103,7 @@ controllers/lockbox_controller/        Ordinary Robot; device adapter, no scene 
 controllers/scene_supervisor/          Scenario actions and simulated alert endpoint
 controllers/*_runner/                  Reproducible ground-truth test drivers
 plugins/robot_windows/lockbox_window/   Local responsive dashboard; bundled Webots bridge
-scripts/generate_worlds.py             Single model source for eight worlds
+scripts/generate_worlds.py             Single model source for ten worlds
 scripts/run_all.py                     Automated evaluation + hashes + reports
 scripts/record_demo.py                 Native video capture and scenario verification
 demo-studio/                          Editable Remotion scenes and recorded assets
@@ -122,7 +143,7 @@ Run `python3 scripts/package_project.py` to rebuild the unchanged delivery. If y
 
 ## Scope
 
-One parcel at a time; local simulation with a simulated event endpoint. Demo PINs model roles, expiry, single use, replay rejection and cooldown. Real cloud authentication, Wi-Fi/TLS, outdoor weather and physical forced-entry resistance are outside the proposal scope. The event outbox survives simulated link loss but is volatile across controller restarts. The bolt is an actuator/feedback model, not a physical security certification. A plausible stuck-at sensor value is not automatically diagnosable from these devices alone.
+One parcel at a time; local simulation with a simulated event endpoint. Demo PINs model roles, expiry, single use, replay rejection and cooldown. Real cloud authentication, Wi-Fi/TLS, outdoor weather and physical forced-entry resistance are outside the proposal scope. The interactive event outbox is checkpointed locally and tested across controller restarts. Receiver deduplication remains in memory; simultaneous endpoint restart and physical power loss were not tested. The bolt is an actuator/feedback model, not a physical security certification. A plausible stuck-at sensor value is not automatically diagnosable from these devices alone.
 
 ## Additional checks and document rebuild
 

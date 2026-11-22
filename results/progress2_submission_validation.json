@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "presentation": {
+    "artifact_ref": "artifact_external_aae2b8ff-3315-46de-8018-14ab22444de1",
+    "page_id": "page_bb2ace9a2b708191aac852a145496b45",
+    "state_version": 8,
+    "slides": 17,
+    "native_tables": 8,
+    "speaker_notes_slides": 17,
+    "review": "All 17 slides rendered and visually inspected; diagrams repaired and reviewed again."
+  },
+  "report": {
+    "pages": 7,
+    "format": "Previous cover, contents and two-column IEEE-style paper",
+    "source": "docs/parcel_guard_progress2_report.tex",
+    "layout_warnings": 0
+  },
+  "evidence": {
+    "source_files": 46,
+    "passing_reports": 13,
+    "security_tests": 29,
+    "dashboard_checks": 33,
+    "security_scenario_groups": 10,
+    "security_assertions": 28
+  },
+  "runtime_changed": false
+}

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests_run": 29,
+  "failures": [],
+  "errors": [],
+  "method": "Password-only owner sessions, adversarial access cases and old-checkpoint migration"
+}

@@ -276,6 +276,18 @@
       .state-fault .eyebrow {
         color: var(--red);
       }
+      .security-strip { padding: 12px 0; border-bottom: 2px solid #245f91; margin-bottom: 20px; }
+      .security-strip strong { display: block; font-size: 18px; }
+      .security-strip.alert { border-color: var(--red); color: var(--red); }
+      .security-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+      .security-columns input { width: 100%; letter-spacing: normal; }
+      .security-columns form { margin: 12px 0; }
+      .security-columns label { margin-top: 9px; }
+      .issued-code { font: 700 28px ui-monospace, monospace; letter-spacing: 3px; padding: 8px 0; }
+      .credential-row { display: flex; gap: 12px; justify-content: space-between; align-items: center; padding: 9px 0; border-top: 1px solid #ddd; }
+      .credential-row small { display: block; color: var(--muted); }
+      button:disabled { opacity: .5; cursor: not-allowed; }
+      [hidden] { display: none !important; }
       @media (max-width: 620px) {
         body {
           padding: 16px;
@@ -290,6 +302,7 @@
           grid-template-columns: 1fr;
           gap: 0;
         }
+        .security-columns { grid-template-columns: 1fr; gap: 12px; }
         .cards {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -318,6 +331,41 @@
           <div class="metric">Parcel<strong id="parcel">—</strong></div>
           <div class="metric">Message link<strong id="link">—</strong></div>
         </div>
+      </section>
+      <section id="owner-security" class="panel" hidden>
+        <div id="security-strip" class="security-strip" role="status" aria-live="polite">
+          <strong id="security-state">Protected access</strong>
+          <p id="security-description">Owner verification, one-use access codes and incident lockdown.</p>
+        </div>
+        <details id="owner-console" open>
+          <summary>Owner security console</summary>
+          <div class="security-columns">
+            <div>
+              <form id="owner-login-form">
+                <label for="owner-password">Owner password</label>
+                <input id="owner-password" type="password" autocomplete="current-password" maxlength="256" required />
+                <button class="full" type="submit">Verify owner</button>
+              </form>
+              <p class="hint">Sign in with the owner password to create or revoke access codes.</p>
+              <p id="owner-session-status" class="hint">Owner signed out</p>
+              <div id="owner-result" class="result" role="status" aria-live="polite"></div>
+              <button id="owner-logout" class="secondary">Sign out</button>
+              <button id="clear-lockdown" class="danger">Clear lockdown</button>
+            </div>
+            <div>
+              <form id="issue-code-form">
+                <label for="issue-role">Code purpose</label>
+                <select id="issue-role"><option value="courier">Courier delivery</option><option value="owner">Owner collection</option></select>
+                <label for="issue-ttl">Code lifetime</label>
+                <select id="issue-ttl"><option value="60">1 simulated minute</option><option value="300" selected>5 simulated minutes</option><option value="900">15 simulated minutes</option></select>
+                <button id="issue-code" class="full" type="submit">Create one-use code</button>
+              </form>
+              <output id="issued-code" class="issued-code" aria-live="polite"></output>
+              <p id="issued-code-note" class="hint">New codes appear here once, after owner verification.</p>
+              <div id="credentials" aria-label="Issued access codes"></div>
+            </div>
+          </div>
+        </details>
       </section>
       <div class="columns">
         <div>
@@ -351,7 +399,7 @@
             <button class="secondary full" data-action="close">
               Close and secure
             </button>
-            <p class="hint">
+            <p class="hint" id="access-hint">
               Courier: 2468 (expires after 300 simulated seconds).
               Owner: 1357 (expires after 86,400 seconds). Each code works once.
             </p>
@@ -377,6 +425,8 @@
               </div>
               <div>Motion peak <strong id="motion">—</strong></div>
               <div>Access window <strong id="window">—</strong></div>
+              <div>Saved state <strong id="storage">—</strong></div>
+              <div>Restarts recovered <strong id="recoveries">—</strong></div>
             </div>
           </section>
         </div>
@@ -410,6 +460,14 @@
                 Drop 3 ACKs</button
               ><button class="secondary" data-action="reset_logic">
                 New session
+              </button><button class="secondary" data-action="restart_controller">
+                Restart controller
+              </button><button class="danger" data-action="severe_impact">
+                Strong impact
+              </button><button class="danger" data-action="sensor_fault">
+                Invalid sensor
+              </button><button class="secondary" data-action="sensor_restore">
+                Restore sensor
               </button>
             </div>
           </details>
@@ -436,6 +494,8 @@
     <script>
       let lastStatus = null,
         requestCounter = 0;
+      let ownerToken = null, ownerExpires = 0, ownerSession = null,
+        ownerRecovery = 0, ownerTamperId = 0, issuedCredential = null, issuedExpires = 0;
       const $ = (id) => document.getElementById(id);
       function send(action, extra = {}) {
         if (window.robotWindow)
@@ -444,6 +504,38 @@
           $("access-result").textContent =
             "Connect this window to the running Webots simulation.";
       }
+      function forgetOwner() {
+        ownerToken = null;
+        issuedCredential = null;
+        $("issued-code").textContent = "";
+      }
+      $("owner-login-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        send("owner_login", {password: $("owner-password").value});
+        $("owner-password").value = "";
+      });
+      $("issue-code-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        send("issue_code", {token: ownerToken, role: $("issue-role").value, ttl_s: Number($("issue-ttl").value)});
+      });
+      $("owner-logout").addEventListener("click", () => {send("owner_logout", {token: ownerToken}); forgetOwner();});
+      $("clear-lockdown").addEventListener("click", () => send("clear_lockdown", {token: ownerToken}));
+      window.receiveMessage = (packet) => {
+        if (packet.type !== "security_reply") {window.renderStatus(packet); return;}
+        $("owner-result").textContent = packet.message;
+        if (packet.ok && packet.action === "owner_login") {
+          ownerToken = packet.token; ownerExpires = packet.expires; ownerSession = packet.session;
+          ownerRecovery = lastStatus?.recovery_count || 0;
+          ownerTamperId = Math.max(0, ...(lastStatus?.all_events || []).filter(e => e.kind === "tamper").map(e => e.id));
+        }
+        if (packet.ok && packet.action === "issue_code") {
+          issuedCredential = packet.id;
+          issuedExpires = packet.expires;
+          $("issued-code").textContent = packet.code;
+          $("issued-code-note").textContent = `${packet.role} code. Share it privately; it expires and works once.`;
+        }
+        if (lastStatus) window.renderStatus(lastStatus);
+      };
       $("access-form").addEventListener("submit", (e) => {
         e.preventDefault();
         send("access", {
@@ -457,9 +549,9 @@
         .querySelectorAll("[data-action]")
         .forEach((b) =>
           b.addEventListener("click", () =>
-            send(b.dataset.action, b.dataset.action === "reset_logic"
+            send(b.dataset.action === "severe_impact" ? "impact" : b.dataset.action, b.dataset.action === "reset_logic"
               ? { courier_ttl_s: Number($("courier-ttl").value) }
-              : { animate: true }),
+              : b.dataset.action === "severe_impact" ? { severe: true } : { animate: true }),
           ),
         );
       $("export").addEventListener("click", () => {
@@ -478,11 +570,46 @@
         Number.isFinite(n) ? n.toFixed(digits) : "unavailable";
       window.renderStatus = (s) => {
         lastStatus = s;
+        const security = s.security || {enabled: false, lockdown: false, credentials: []};
+        const latestTamper = Math.max(0, ...(s.all_events || []).filter(e => e.kind === "tamper").map(e => e.id));
+        if (ownerToken && (s.time >= ownerExpires || s.session !== ownerSession ||
+            (s.recovery_count || 0) !== ownerRecovery || latestTamper > ownerTamperId)) forgetOwner();
+        $("owner-security").hidden = !security.enabled;
+        $("security-strip").classList.toggle("alert", security.lockdown);
+        $("security-state").textContent = security.lockdown ? "Security lockdown" : "Protected access";
+        $("security-description").textContent = security.lockdown
+          ? `${security.incident}. Outstanding codes are revoked. Verify the owner, then clear lockdown after the box is secured.`
+          : "Owner verification + expiring one-use codes + automatic tamper lockdown";
+        $("owner-session-status").textContent = ownerToken ? `Owner verified · ${Math.max(0,Math.ceil(ownerExpires-s.time))} simulated seconds remaining` : "Owner signed out";
+        $("issue-code").disabled = !ownerToken || security.lockdown;
+        $("owner-logout").disabled = !ownerToken;
+        $("clear-lockdown").disabled = !ownerToken || !security.lockdown || !s.secured;
+        $("access-hint").textContent = security.enabled
+          ? "Enter the eight-digit code issued by the owner. Codes are scoped to a purpose, expire and work once."
+          : "Courier: 2468 (300 simulated seconds). Owner: 1357 (86,400 seconds). Each code works once.";
+        $("credentials").replaceChildren(...security.credentials.slice().reverse().map(c => {
+          const row = document.createElement("div"), text = document.createElement("div"), detail = document.createElement("small"), revoke = document.createElement("button");
+          row.className = "credential-row";
+          const state = c.revoked ? "Revoked" : c.used ? "Used" : s.time >= c.expires ? "Expired" : "Ready";
+          text.textContent = `${c.role === "courier" ? "Courier" : "Owner"} · ${state}`;
+          detail.textContent = `ID ${c.id} · ${Math.max(0,Math.ceil(c.expires-s.time))}s remaining`;
+          text.append(detail); revoke.textContent = "Revoke"; revoke.className = "secondary";
+          revoke.disabled = !ownerToken || state !== "Ready";
+          revoke.addEventListener("click", () => send("revoke_code", {token: ownerToken, credential_id: c.id}));
+          row.append(text, revoke); return row;
+        }));
+        if (issuedCredential && (s.time >= issuedExpires || security.credentials.some(c => c.id === issuedCredential && (c.used || c.revoked)))) {
+          $("issued-code").textContent = ""; issuedCredential = null;
+        }
         for (const key of ["door", "latch", "parcel", "link"])
           $(key).textContent = s[key];
         $("phase").textContent = s.phase;
-        $("hero").classList.toggle("state-fault", s.fault);
+        $("hero").classList.toggle("state-fault", s.fault || security.lockdown);
         const faultText = {
+          storage: [
+            "Saved state unavailable.",
+            "Access is disabled because the recovery file could not be read or saved. Check local storage before starting a new session.",
+          ],
           sensor: [
             "Sensor feedback unavailable.",
             "Access is disabled until stable readings return. Check the sensor values below.",
@@ -497,7 +624,7 @@
           ],
         };
         const fault = faultText[s.fault_reason] || faultText.bolt;
-        $("headline").textContent = s.fault
+        $("headline").textContent = security.lockdown ? "Security lockdown. Owner review required." : s.fault
           ? fault[0]
           : s.secured
             ? s.parcel === "present"
@@ -508,7 +635,9 @@
               : s.phase === "UNSECURED"
                 ? "Door is unsecured."
                 : "Door or bolt moving.";
-        $("summary").textContent = s.fault
+        $("summary").textContent = security.lockdown
+          ? "Access is blocked. The door and bolt feedback below shows whether the enclosure has physically secured."
+          : s.fault
           ? fault[1]
           : s.secured
             ? "The position sensors confirm a closed door and locked bolt."
@@ -528,6 +657,7 @@
               ? "Access denied. See the reason in the event log."
               : s.grant !== "none"
                 ? `${s.grant} access approved`
+                : security.enabled ? "Use an active owner-issued code for this purpose."
                 : s.owner_code_used
                   ? "Owner code used. Start a new session for another access cycle."
                   : s.courier_code_used
@@ -541,6 +671,11 @@
           : "unavailable";
         $("motion").textContent = `${displayNumber(s.motion_peak_m_s2)} m/s²`;
         $("window").textContent = `${s.access_remaining_s} s`;
+        $("storage").textContent = s.storage === "saved" ? "Saved locally" : s.storage === "fault" ? "Storage fault" : "Memory only";
+        $("recoveries").textContent = String(s.recovery_count || 0);
+        const restartButton = document.querySelector('[data-action="restart_controller"]');
+        restartButton.disabled = s.storage !== "saved";
+        restartButton.title = s.storage === "saved" ? "Restore saved events and cancel active access" : "Available in the interactive world with saved state";
         $("door-track").style.width =
           `${Math.max(0, Math.min(100, ((s.door_angle_rad || 0) / 1.2) * 100))}%`;
         $("bolt-track").style.width =
@@ -596,7 +731,7 @@
         window.robotWindow = new RobotWindow();
         window.robotWindow.receive = (m) => {
           try {
-            window.renderStatus(JSON.parse(m));
+            window.receiveMessage(JSON.parse(m));
           } catch (e) {
             console.error(e);
           }

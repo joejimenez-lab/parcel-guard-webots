@@ -2,6 +2,8 @@
 
 Generated from simulator outputs. Source/configuration hashes and report hashes are in `evaluation_manifest.json`.
 
+The original numerical acceptance suite uses legacy fixture credentials for comparison. The interactive world defaults to layered security; its password sign-in, managed codes, repeated deliveries and lockdown are evaluated separately in `webots_security.json`.
+
 ## Proposal acceptance criteria
 
 | Requirement | Target | Actual | Evidence |
@@ -53,9 +55,21 @@ The local event queue is filled in the same Python iteration as the first sample
 - Expired-code cases include offline entry. All five attack categories have 6 independent attempts; cooldown cannot hide missing category coverage.
 - 38 targeted logic regressions cover startup, interrupted debounce, non-finite feedback and JSON, exact token expiry, expired grants, door faults, early close, hysteresis, mid-stroke bolts, concurrent access, request IDs, role scope and ACK races.
 
+## Progress Report 2 improvements
+
+- 26 additional Python regressions passed, including abrupt child-process exit, persisted code use/replay/cooldown state, clock epochs, corrupted storage and failed writes.
+- 7 Webots scenario groups passed: offline restart with ten impacts, reset protection, recovered ACK/retry delivery, restart during access, invalid sensor range, frozen bolt feedback and strong impact during owner access. Details: `webots_progress2.json`.
+- 33 dashboard checks passed. The panel shows saved state and recovery count, explains storage faults, and exposes restart, strong-impact and sensor-fault fixtures.
+- Interactive `delivery_box.wbt` uses `.runtime/lockbox-state.json`. Checkpoints use a checksum, flushed file data and atomic replacement. A storage fault disables access. The audit JSONL remains separate.
+- Recovery preserves session/event IDs, the unacknowledged outbox, consumed credentials, replay IDs and cooldown. Active access is cancelled and closure is measured before locking. A new world epoch expires old codes. A new session is rejected while events await ACK.
+- A separate 35 m/s² acceleration threshold reports strong impacts even during authorized access, closing or settling. A usable accelerometer remains effective when another device is invalid. This fixed simulation threshold needs hardware calibration.
+- Finite but impossible distance/joint readings now cause sensor faults. Frozen bolt feedback is detected during commanded motion by the existing timeout; plausible frozen parcel readings remain unresolved.
+
 ## Scope and limitations
 
-The tests use one parcel and a simulated notification endpoint. Controller decisions use devices; only the separate Supervisor fixture knows scene coordinates. Authentication models expiry, roles, one use, replay rejection and cooldown with demo PINs; it does not provide production cryptography or real cloud identity. Event IDs are session-qualified and the in-memory outbox survives simulated link outages, but not process restarts or power loss. Runtime JSONL is an audit export, not a durable recovery database. The door/bolt model demonstrates motion and feedback; it is not a forced-entry strength test. Fault detection covers non-finite feedback and target timeouts; plausible stuck-at sensor readings remain a limitation. No conclusions about real Wi-Fi, TLS, delivery services, outdoor weather or physical security are claimed.
+The interactive owner workflow adds 29 Python security tests and 10 Webots security groups: secure default, owner password, revocation, delivery/collection, another delivery without reset, expiry, lockdown, restart persistence, fresh owner recovery and redaction. Fixed 2468/1357 codes are disabled in the interactive world. Owner sessions require only the owner password, expire after 300 simulated seconds, and are invalidated by restart or tampering. A tamper event revokes every outstanding code. A new password sign-in and measured closure/locking are required to clear lockdown; reset cannot bypass it. New eight-digit code plaintext is returned privately once; shared status and audit exports contain metadata only. Owner password verifiers use PBKDF2-HMAC-SHA256; issued codes use a keyed digest. Digest keys remain in the local private checkpoint. Owner sessions and delivery-code lifetimes use simulation time. The local UI, fixture and test reply channel are not a secure production transport.
+
+The tests use one parcel and a simulated notification endpoint. Controller decisions use devices; only the separate Supervisor fixture knows scene coordinates. The baseline suite uses demo PINs; the default interactive workflow uses password sign-in and managed one-use codes. Cryptographic primitives do not establish production security: cloud identity, TLS and tamper-resistant local storage are outside this simulation. Interactive local checkpoints and abrupt-process/restart tests now cover sender recovery; actual power interruption was not tested. Receiver deduplication remains in memory, so simultaneous sender/endpoint restart is not an exactly-once guarantee. Pending delivery confirmation is cancelled on restart because uninterrupted custody cannot be inferred. Runtime JSONL is an audit export, not the recovery database. The door/bolt model demonstrates motion and feedback; it is not a forced-entry strength test. Fault detection covers non-finite/range feedback and target timeouts; plausible stuck-at parcel readings remain a limitation. No conclusions about real Wi-Fi, TLS, delivery services, outdoor weather or physical security are claimed. Existing videos and final-paper PDFs describe the earlier version; Progress Report 2 is the current change record.
 
 ## Videos
 

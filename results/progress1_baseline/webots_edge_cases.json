@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "checks": {
+    "door_timeout": {
+      "expired_grant_revoked": true,
+      "late_movement_flagged": true,
+      "measured_recovery": true
+    },
+    "early_close": {
+      "grant_cancelled": true,
+      "stays_secured": true
+    },
+    "malformed_commands": {
+      "counted": true,
+      "still_secured": true
+    },
+    "offline_delivery_and_retrieval": {
+      "presence_pending": true,
+      "blocked_lock_no_delivery": true,
+      "delivery_after_measured_lock": true,
+      "local_retrieval": true,
+      "all_events_retained": true,
+      "recovered_once": true
+    },
+    "owner_reuse": {
+      "denied": true,
+      "reason": true
+    },
+    "reset_while_open": {
+      "fresh_session": true,
+      "no_grant_survives": true,
+      "bolt_retracted_until_closed": true,
+      "recovered_empty_and_secured": true
+    }
+  },
+  "runner_error": null,
+  "final_status": {
+    "session": "b218d87a642c",
+    "time": 42.336,
+    "phase": "SECURED",
+    "secured": true,
+    "fault": false,
+    "fault_reason": null,
+    "door": "closed",
+    "latch": "locked",
+    "parcel": "empty",
+    "link": "online",
+    "grant": "none",
+    "entry_paused_s": 0,
+    "access_remaining_s": 0,
+    "courier_code_used": false,
+    "owner_code_used": false,
+    "delivery_pending": false,
+    "pending": 0,
+    "events": [],
+    "event_kinds": [],
+    "all_events": [],
+    "delivered_ids": [],
+    "pending_ids": [],
+    "latch_target": "locked",
+    "door_angle_rad": 0.0001,
+    "latch_position_m": 0.0772,
+    "parcel_distances_m": [
+      0.6013,
+      0.6,
+      0.5973,
+      0.599,
+      0.6042,
+      0.5998,
+      0.6005,
+      0.6007,
+      0.5971,
+      0.601,
+      0.6013,
+      0.5955,
+      0.5997,
+      0.5965,
+      0.6048,
+      0.6001,
+      0.5992,
+      0.6005,
+      0.5944,
+      0.5984,
+      0.5973,
+      0.6021,
+      0.5993,
+      0.5996,
+      0.5962
+    ],
+    "door_accel_m_s2": [
+      0.002,
+      -0.005,
+      9.81
+    ],
+    "last_access_result": null,
+    "malformed_commands": 3,
+    "motion_peak_m_s2": 9.810000442005515,
+    "endpoint_ids": [],
+    "endpoint_duplicate_packets": 0
+  }
+}

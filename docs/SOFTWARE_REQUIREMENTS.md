@@ -39,4 +39,12 @@ The UI must distinguish parcel detection from completed delivery, show the curre
 
 ## Exclusions and limits
 
-The project makes no requirement claim for physical attack resistance, weatherproofing, real radio/network delay, production credential storage, cloud identity, controller-restart persistence or reliable diagnosis of plausible stuck-at readings. The parcel is positioned by a scenario fixture. Hardware handling, motor pinch protection and collision-free courier placement require a separate physical design and evaluation.
+The project makes no requirement claim for physical attack resistance, weatherproofing, real radio/network delay, production credential storage, cloud identity or reliable diagnosis of plausible stuck-at readings. The parcel is positioned by a scenario fixture. Hardware handling, motor pinch protection and collision-free courier placement require a separate physical design and evaluation.
+
+
+Progress Report 2 adds local sender checkpoints and tests real controller restarts, consumed credentials, replay and cooldown retention, storage faults, sensor range faults, frozen-bolt timeouts and strong impacts during access. Physical power interruption and endpoint restart durability remain outside the verified requirements. See `PROGRESS_REPORT_2.md` and `results/webots_progress2.json`.
+
+
+## Layered security update
+
+The current interactive world requires only the owner password for credential management. The owner can issue eight-digit purpose-scoped one-use codes with 30 to 3600 simulated seconds of validity and revoke them before use. A tamper event revokes outstanding codes, ends owner sessions and enters persistent lockdown. A new owner password sign-in and measured physical security are required for clearance. Reset cannot bypass the incident, and previously revoked codes stay revoked. The dedicated security suite evaluates this workflow separately from the legacy numerical benchmark. Local host/fixture trust, unencrypted secret storage and simulated transport remain limitations.

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests_run": 26,
+  "failures": [],
+  "errors": [],
+  "method": "temporary local stores, abrupt child-process exit, injected disk errors and deterministic sensor samples"
+}

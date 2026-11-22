@@ -3,6 +3,8 @@ from dataclasses import dataclass
 import math
 import uuid
 from .config import CONFIG
+from .storage import StateStore, StateError
+from .security import SecurityPolicy
 
 
 @dataclass(frozen=True)
@@ -14,6 +16,8 @@ class Sensors:
     latch_unlocked: bool | None = None
     door_closed: bool | None = None
     valid: bool = True
+    severe_impact: bool = False
+    fault_detail: str = ""
 
     @property
     def unlocked(self):
@@ -26,7 +30,9 @@ class Sensors:
 
 class Lockbox:
     def __init__(self, courier_code="2468", owner_code="1357", courier_valid_until=300.0,
-                 owner_valid_until=86400.0, auto_ack=True, start_time=0.0):
+                 owner_valid_until=86400.0, auto_ack=True, start_time=0.0,
+                 state_path=None, restore=True, clock_epoch=None, secure_mode=False,
+                 owner_password='owner-5650', credential_key=None):
         if not all(math.isfinite(v) and v >= 0 for v in (start_time, courier_valid_until, owner_valid_until)):
             raise ValueError("Token lifetimes and start time must be finite and nonnegative")
         self.courier_code, self.owner_code = courier_code, owner_code
@@ -54,6 +60,104 @@ class Lockbox:
         self.closing_since = None
         self.door_fault = False
         self.has_feedback = False
+        self.store = StateStore(state_path) if state_path else None
+        self.storage_fault = False
+        self.recovered = False
+        self.recovery_count = 0
+        self.clock_rewound = False
+        self.now = start_time
+        self.clock_epoch = clock_epoch
+        self.security = SecurityPolicy(enabled=secure_mode, password=owner_password, credential_key=credential_key)
+        if self.store and restore:
+            try:
+                saved = self.store.load()
+                if saved:
+                    self._restore(saved, start_time)
+            except (StateError, KeyError, TypeError, ValueError):
+                self.storage_fault = True
+        self._checkpoint(start_time)
+
+    def _state(self):
+        state = {key: sorted(value) if isinstance(value, set) else value for key, value in
+                ((key, getattr(self, key)) for key in (
+                    'session', 'courier_valid_until', 'owner_valid_until', 'courier_used',
+                    'owner_used', 'failure_times', 'seen_request_ids', 'locked_until',
+                    'link_online', 'pending', 'delivered', 'history', 'next_id', 'recovery_count', 'clock_epoch'))}
+        state['security_state'] = self.security.snapshot()
+        return state
+
+    def _checkpoint(self, now):
+        self.now = now
+        if self.store and not self.storage_fault:
+            try:
+                self.store.save(self._state(), now)
+            except (OSError, ValueError):
+                self.storage_fault = True
+                self.request_close(now)
+
+    def _restore(self, saved, now):
+        state = saved['state']
+        expected = self._state()
+        # Upgrade existing progress-2 checkpoints without discarding their queue.
+        if isinstance(state, dict) and 'security_state' not in state:
+            state = {**state, 'security_state': self.security.snapshot()}
+        if set(state) != set(expected) or not isinstance(state['session'], str) or not state['session']:
+            raise StateError('invalid checkpoint fields')
+        for key in ('courier_used', 'owner_used', 'link_online'):
+            if type(state[key]) is not bool:
+                raise StateError('invalid checkpoint flag')
+        for key in ('courier_valid_until', 'owner_valid_until', 'locked_until'):
+            if type(state[key]) not in (int, float) or not math.isfinite(state[key]) or state[key] < 0:
+                raise StateError('invalid checkpoint deadline')
+        if (type(saved['saved_at']) not in (int, float) or not math.isfinite(saved['saved_at'])
+                or saved['saved_at'] < 0 or type(state['recovery_count']) is not int
+                or state['recovery_count'] < 0):
+            raise StateError('invalid checkpoint clock')
+        if (not isinstance(state['seen_request_ids'], list)
+                or any(not isinstance(v, str) or not v.strip() or len(v) > 128 for v in state['seen_request_ids'])
+                or not isinstance(state['failure_times'], list)
+                or any(type(v) not in (int, float) or not math.isfinite(v) for v in state['failure_times'])):
+            raise StateError('invalid checkpoint access state')
+        for key in ('history', 'pending', 'delivered'):
+            if not isinstance(state[key], list):
+                raise StateError('invalid event list')
+            for event in state[key]:
+                if (not isinstance(event, dict) or event.get('session') != state['session']
+                        or type(event.get('id')) is not int or event['id'] <= 0
+                        or not isinstance(event.get('kind'), str)):
+                    raise StateError('invalid checkpoint event')
+        ids = [e['id'] for e in state['history']]
+        pending_ids = [e['id'] for e in state['pending']]
+        delivered_ids = [e['id'] for e in state['delivered']]
+        if (ids != list(range(1, len(ids) + 1)) or type(state['next_id']) is not int
+                or state['next_id'] != len(ids) + 1
+                or sorted(pending_ids + delivered_ids) != ids
+                or any(e != state['history'][e['id'] - 1] for e in state['pending'] + state['delivered'])):
+            raise StateError('inconsistent checkpoint event IDs')
+        previous_epoch = self.clock_epoch
+        if state['clock_epoch'] is not None and not isinstance(state['clock_epoch'], str):
+            raise StateError('invalid clock epoch')
+        self.security.restore(state['security_state'])
+        for key, value in state.items():
+            if key != 'security_state':
+                setattr(self, key, set(value) if key == 'seen_request_ids' else value)
+        self.clock_rewound = now < saved['saved_at'] or previous_epoch != self.clock_epoch
+        self.clock_epoch = previous_epoch
+        if self.clock_rewound:
+            # A rewound simulator clock must never renew old credentials.
+            self.courier_valid_until = self.owner_valid_until = now
+            self.locked_until = now + max(0, self.locked_until - saved['saved_at'])
+            self.failure_times = [now for _ in self.failure_times]
+            self.security.owner_paused_until = now + max(0, self.security.owner_paused_until - saved['saved_at'])
+            for credential in self.security.credentials:
+                credential['revoked'] = True
+        self.recovered = True
+        self.recovery_count += 1
+        self.closing_since = now
+        self.latch_target = 0.0
+        self._event('controller_recovered', now,
+                    'saved queue and access state restored; active access cancelled'
+                    + ('; clock rewound, old codes expired' if self.clock_rewound else ''))
 
     def _target(self, locked, now):
         if self.latch_target != float(locked):
@@ -71,6 +175,9 @@ class Lockbox:
         if kind == "tamper":
             # An interrupted or unexplained transfer cannot become a delivery.
             self.delivery_pending = False
+            if self.security.enabled:
+                self.security.enter_lockdown(detail)
+                self.request_close(now)
         event = {"session": self.session, "id": self.next_id, "time": round(now, 6),
                  "kind": kind, "detail": detail}
         if detected_at is not None:
@@ -79,6 +186,7 @@ class Lockbox:
         self.next_id += 1
         self.history.append(event)
         self.pending.append(event)
+        self._checkpoint(now)
         self._flush()
         return event
 
@@ -94,6 +202,7 @@ class Lockbox:
             if event["id"] == event_id:
                 self.pending.remove(event)
                 self.delivered.append(event)
+                self._checkpoint(self.now)
                 return True
         return False
 
@@ -104,6 +213,12 @@ class Lockbox:
         self._flush()
 
     def request_access(self, code, now, sensors, request_id, intent=None):
+        if self.storage_fault:
+            self._event('access_denied', now, 'recovery storage unavailable')
+            return False
+        if self.security.enabled and self.security.lockdown:
+            self._event('access_denied', now, 'security lockdown; owner verification required')
+            return False
         if not isinstance(request_id, str) or not request_id.strip() or len(request_id) > 128:
             self._event("access_denied", now, "missing or malformed request ID")
             return False
@@ -114,8 +229,11 @@ class Lockbox:
         if now < self.locked_until:
             self._event("access_denied", now, "code entry paused")
             return False
-        reason, role = "invalid code", None
-        if code == self.owner_code:
+        reason, role, credential = "invalid code", None, None
+        if self.security.enabled:
+            credential, reason = self.security.match(code, now)
+            role = credential['role'] if credential else None
+        elif code == self.owner_code:
             role, reason = "owner", "expired owner code"
             if now >= self.owner_valid_until:
                 role = None
@@ -154,16 +272,59 @@ class Lockbox:
             self.courier_used = True
         else:
             self.owner_used = True
+        if credential:
+            credential['used'] = True
         self._event("access_granted", now, role)
-        return True
+        return not self.storage_fault
+
+    def security_command(self, command, now, sensors):
+        action = command.get('action')
+        if self.storage_fault or not self.security.enabled:
+            return {'ok': False, 'message': 'Owner security is unavailable.'}
+        token = command.get('token')
+        if action == 'owner_login':
+            result = self.security.login(command.get('password'), now)
+        elif action == 'owner_logout':
+            if isinstance(token, str):
+                self.security.sessions.pop(token, None)
+            result = {'ok': True, 'message': 'Owner signed out.'}
+        elif action == 'issue_code':
+            result = self.security.issue(token, command.get('role'), command.get('ttl_s'), now)
+        elif action == 'revoke_code':
+            result = self.security.revoke(token, command.get('credential_id'), now)
+        elif action == 'clear_lockdown':
+            if not self.security.authorized(token, now):
+                result = {'ok': False, 'message': 'Sign in with the owner password first.'}
+            elif not self.status(now, sensors)['secured']:
+                result = {'ok': False, 'message': 'Resolve faults and confirm the door is closed and locked first.'}
+            else:
+                self.security.lockdown = False
+                self.security.incident = ''
+                result = {'ok': True, 'message': 'Lockdown cleared. Old codes remain revoked; issue a fresh code.'}
+        else:
+            result = {'ok': False, 'message': 'Unknown owner command.'}
+        # Secrets appear only in the direct reply, never in audit/status exports.
+        self._event('owner_action' if result['ok'] else 'owner_action_denied', now,
+                    f"{action}: {'approved' if result['ok'] else 'denied'}")
+        if self.storage_fault:
+            return {'ok': False, 'message': 'Could not save the security change. Access is disabled.'}
+        return result
 
     def tick(self, now, sensors):
+        self.now = now
         previous = self.previous
+        # A usable accelerometer can report an impact even when another device
+        # has failed. Never hide that evidence behind the combined validity bit.
+        if sensors.severe_impact and now - self.last_impact_at >= CONFIG['impact_refractory_s']:
+            self.last_impact_at = now
+            self._event('tamper', now, 'severe impact detected', now)
+            if self.grant:
+                self.request_close(now)
         if self.grant and now >= self.grant_until:
             self._event("access_expired", now, "access window ended; closing door")
             self.request_close(now)
         if not sensors.valid and not self.sensor_fault:
-            self._event("sensor_fault", now, "device feedback unavailable or not yet stable")
+            self._event("sensor_fault", now, sensors.fault_detail or "device feedback unavailable or not yet stable")
             if self.grant:
                 self.request_close(now)
         elif sensors.valid and self.sensor_fault:
@@ -173,7 +334,7 @@ class Lockbox:
             # Preserve the last valid sample across a gap. Invalid feedback must
             # neither invent a door edge nor silently renew authorization.
             return
-        if sensors.door_open and not previous.door_open and self.grant is None:
+        if sensors.door_open and not previous.door_open and self.grant is None and (self.has_feedback or not self.security.enabled):
             self._event("tamper", now, "door opened without approval", now)
         closing_motion = self.closing_since is not None and now - self.closing_since < CONFIG["door_close_timeout_s"]
         if (sensors.impact and self.grant is None and not closing_motion and now >= self.authorized_motion_until
@@ -219,12 +380,15 @@ class Lockbox:
             self.delivery_pending = False
         self.previous = sensors
         self.has_feedback = True
+        self._checkpoint(now)
 
     def status(self, now, sensors):
-        fault = self.fault_reported or self.door_fault or not sensors.valid
+        fault = self.fault_reported or self.door_fault or not sensors.valid or self.storage_fault
         secure = sensors.valid and sensors.closed and sensors.latch_locked and not fault and not self.grant and self.closing_since is None
         if fault:
             phase = "FAULT"
+        elif self.security.enabled and self.security.lockdown:
+            phase = 'LOCKDOWN'
         elif self.closing_since is not None:
             phase = "CLOSING"
         elif self.grant:
@@ -237,7 +401,7 @@ class Lockbox:
             phase = "SECURED" if secure else "LOCKING"
         return {"session": self.session, "time": round(now, 3), "phase": phase,
                 "secured": secure, "fault": fault,
-                "fault_reason": "sensor" if not sensors.valid else ("door" if self.door_fault else ("bolt" if self.fault_reported else None)),
+                "fault_reason": "storage" if self.storage_fault else ("sensor" if not sensors.valid else ("door" if self.door_fault else ("bolt" if self.fault_reported else None))),
                 "door": "open" if sensors.door_open else ("closed" if sensors.closed else "moving"),
                 "latch": "locked" if sensors.latch_locked else ("unlocked" if sensors.unlocked else "moving"),
                 "parcel": "present" if sensors.parcel_present else "empty",
@@ -246,4 +410,8 @@ class Lockbox:
                 "access_remaining_s": max(0, round(self.grant_until - now, 1)) if self.grant else 0,
                 "courier_code_used": self.courier_used, "owner_code_used": self.owner_used,
                 "delivery_pending": self.delivery_pending, "pending": len(self.pending),
+                "storage": "fault" if self.storage_fault else ("saved" if self.store else "memory"),
+                "recovered": self.recovered, "recovery_count": self.recovery_count,
+                "sensor_detail": sensors.fault_detail,
+                "security": self.security.public(now),
                 "events": self.history[-16:]}
