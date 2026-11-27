@@ -53,7 +53,7 @@
   "runner_error": null,
   "snapshots": {
     "protected": {
-      "session": "5f54f422d4c6",
+      "session": "031463c00794",
       "time": 44.16,
       "phase": "SECURED",
       "secured": true,
@@ -81,42 +81,42 @@
         "owner_paused_s": 0,
         "credentials": [
           {
-            "id": "d870bb378fb9",
+            "id": "9128c87886a8",
             "role": "courier",
             "expires": 301.792,
             "used": false,
             "revoked": true
           },
           {
-            "id": "13a9384d4774",
+            "id": "14fccea2d51a",
             "role": "courier",
             "expires": 302.304,
             "used": true,
             "revoked": false
           },
           {
-            "id": "979ba6792090",
+            "id": "41e680cdec7e",
             "role": "owner",
             "expires": 302.368,
             "used": true,
             "revoked": false
           },
           {
-            "id": "f7cb06fb4b35",
+            "id": "d08d91668357",
             "role": "courier",
             "expires": 309.536,
             "used": true,
             "revoked": false
           },
           {
-            "id": "92be277f4b0d",
+            "id": "ff15a7ca300e",
             "role": "owner",
             "expires": 42.992000000000004,
             "used": false,
             "revoked": false
           },
           {
-            "id": "7434624466b7",
+            "id": "d3692b198b8e",
             "role": "owner",
             "expires": 344.16,
             "used": false,
@@ -126,35 +126,35 @@
       },
       "events": [
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 12,
           "time": 1.92,
           "kind": "access_denied",
           "detail": "code revoked"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 13,
           "time": 2.304,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 14,
           "time": 2.368,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 15,
           "time": 2.432,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 16,
           "time": 3.84,
           "kind": "parcel_detected",
@@ -163,7 +163,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 17,
           "time": 5.504,
           "kind": "delivery",
@@ -172,21 +172,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 18,
           "time": 5.792,
           "kind": "access_denied",
           "detail": "code already used"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 19,
           "time": 6.176,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 20,
           "time": 7.584,
           "kind": "retrieval",
@@ -195,21 +195,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 21,
           "time": 9.536,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 22,
           "time": 9.6,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 23,
           "time": 11.04,
           "kind": "parcel_detected",
@@ -218,7 +218,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 24,
           "time": 12.704,
           "kind": "delivery",
@@ -227,21 +227,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 25,
           "time": 12.992,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 26,
           "time": 43.776,
           "kind": "access_denied",
           "detail": "code expired"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 27,
           "time": 44.16,
           "kind": "owner_action",
@@ -279,112 +279,112 @@
       ],
       "all_events": [
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 1,
           "time": 0.032,
           "kind": "sensor_fault",
           "detail": "device feedback unavailable or not yet stable"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 2,
           "time": 0.096,
           "kind": "sensor_recovered",
           "detail": "stable device feedback restored"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 3,
           "time": 0.704,
           "kind": "access_denied",
           "detail": "invalid code"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 4,
           "time": 1.088,
           "kind": "access_denied",
           "detail": "invalid code"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 5,
           "time": 1.472,
           "kind": "owner_action_denied",
           "detail": "owner_login: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 6,
           "time": 1.536,
           "kind": "owner_action_denied",
           "detail": "owner_login: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 7,
           "time": 1.6,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 8,
           "time": 1.664,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 9,
           "time": 1.728,
           "kind": "owner_action_denied",
           "detail": "issue_code: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 10,
           "time": 1.792,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 11,
           "time": 1.856,
           "kind": "owner_action",
           "detail": "revoke_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 12,
           "time": 1.92,
           "kind": "access_denied",
           "detail": "code revoked"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 13,
           "time": 2.304,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 14,
           "time": 2.368,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 15,
           "time": 2.432,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 16,
           "time": 3.84,
           "kind": "parcel_detected",
@@ -393,7 +393,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 17,
           "time": 5.504,
           "kind": "delivery",
@@ -402,21 +402,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 18,
           "time": 5.792,
           "kind": "access_denied",
           "detail": "code already used"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 19,
           "time": 6.176,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 20,
           "time": 7.584,
           "kind": "retrieval",
@@ -425,21 +425,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 21,
           "time": 9.536,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 22,
           "time": 9.6,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 23,
           "time": 11.04,
           "kind": "parcel_detected",
@@ -448,7 +448,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 24,
           "time": 12.704,
           "kind": "delivery",
@@ -457,21 +457,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 25,
           "time": 12.992,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 26,
           "time": 43.776,
           "kind": "access_denied",
           "detail": "code expired"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 27,
           "time": 44.16,
           "kind": "owner_action",
@@ -575,10 +575,13 @@
         25,
         26
       ],
-      "endpoint_duplicate_packets": 0
+      "endpoint_duplicate_packets": 0,
+      "endpoint_instance": "41c1bc80f55b4bd2a1c418552aca99a4",
+      "endpoint_dropped_acks": 0,
+      "endpoint_storage_fault": false
     },
     "lockdown": {
-      "session": "5f54f422d4c6",
+      "session": "031463c00794",
       "time": 44.352,
       "phase": "LOCKDOWN",
       "secured": true,
@@ -606,42 +609,42 @@
         "owner_paused_s": 0,
         "credentials": [
           {
-            "id": "d870bb378fb9",
+            "id": "9128c87886a8",
             "role": "courier",
             "expires": 301.792,
             "used": false,
             "revoked": true
           },
           {
-            "id": "13a9384d4774",
+            "id": "14fccea2d51a",
             "role": "courier",
             "expires": 302.304,
             "used": true,
             "revoked": true
           },
           {
-            "id": "979ba6792090",
+            "id": "41e680cdec7e",
             "role": "owner",
             "expires": 302.368,
             "used": true,
             "revoked": true
           },
           {
-            "id": "f7cb06fb4b35",
+            "id": "d08d91668357",
             "role": "courier",
             "expires": 309.536,
             "used": true,
             "revoked": true
           },
           {
-            "id": "92be277f4b0d",
+            "id": "ff15a7ca300e",
             "role": "owner",
             "expires": 42.992000000000004,
             "used": false,
             "revoked": true
           },
           {
-            "id": "7434624466b7",
+            "id": "d3692b198b8e",
             "role": "owner",
             "expires": 344.16,
             "used": false,
@@ -651,28 +654,28 @@
       },
       "events": [
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 13,
           "time": 2.304,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 14,
           "time": 2.368,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 15,
           "time": 2.432,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 16,
           "time": 3.84,
           "kind": "parcel_detected",
@@ -681,7 +684,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 17,
           "time": 5.504,
           "kind": "delivery",
@@ -690,21 +693,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 18,
           "time": 5.792,
           "kind": "access_denied",
           "detail": "code already used"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 19,
           "time": 6.176,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 20,
           "time": 7.584,
           "kind": "retrieval",
@@ -713,21 +716,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 21,
           "time": 9.536,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 22,
           "time": 9.6,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 23,
           "time": 11.04,
           "kind": "parcel_detected",
@@ -736,7 +739,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 24,
           "time": 12.704,
           "kind": "delivery",
@@ -745,28 +748,28 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 25,
           "time": 12.992,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 26,
           "time": 43.776,
           "kind": "access_denied",
           "detail": "code expired"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 27,
           "time": 44.16,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 28,
           "time": 44.32,
           "kind": "tamper",
@@ -807,112 +810,112 @@
       ],
       "all_events": [
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 1,
           "time": 0.032,
           "kind": "sensor_fault",
           "detail": "device feedback unavailable or not yet stable"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 2,
           "time": 0.096,
           "kind": "sensor_recovered",
           "detail": "stable device feedback restored"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 3,
           "time": 0.704,
           "kind": "access_denied",
           "detail": "invalid code"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 4,
           "time": 1.088,
           "kind": "access_denied",
           "detail": "invalid code"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 5,
           "time": 1.472,
           "kind": "owner_action_denied",
           "detail": "owner_login: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 6,
           "time": 1.536,
           "kind": "owner_action_denied",
           "detail": "owner_login: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 7,
           "time": 1.6,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 8,
           "time": 1.664,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 9,
           "time": 1.728,
           "kind": "owner_action_denied",
           "detail": "issue_code: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 10,
           "time": 1.792,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 11,
           "time": 1.856,
           "kind": "owner_action",
           "detail": "revoke_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 12,
           "time": 1.92,
           "kind": "access_denied",
           "detail": "code revoked"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 13,
           "time": 2.304,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 14,
           "time": 2.368,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 15,
           "time": 2.432,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 16,
           "time": 3.84,
           "kind": "parcel_detected",
@@ -921,7 +924,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 17,
           "time": 5.504,
           "kind": "delivery",
@@ -930,21 +933,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 18,
           "time": 5.792,
           "kind": "access_denied",
           "detail": "code already used"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 19,
           "time": 6.176,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 20,
           "time": 7.584,
           "kind": "retrieval",
@@ -953,21 +956,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 21,
           "time": 9.536,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 22,
           "time": 9.6,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 23,
           "time": 11.04,
           "kind": "parcel_detected",
@@ -976,7 +979,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 24,
           "time": 12.704,
           "kind": "delivery",
@@ -985,28 +988,28 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 25,
           "time": 12.992,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 26,
           "time": 43.776,
           "kind": "access_denied",
           "detail": "code expired"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 27,
           "time": 44.16,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 28,
           "time": 44.32,
           "kind": "tamper",
@@ -1113,10 +1116,13 @@
         25,
         26
       ],
-      "endpoint_duplicate_packets": 0
+      "endpoint_duplicate_packets": 0,
+      "endpoint_instance": "41c1bc80f55b4bd2a1c418552aca99a4",
+      "endpoint_dropped_acks": 0,
+      "endpoint_storage_fault": false
     },
     "recovered": {
-      "session": "5f54f422d4c6",
+      "session": "031463c00794",
       "time": 49.664,
       "phase": "SECURED",
       "secured": true,
@@ -1144,49 +1150,49 @@
         "owner_paused_s": 0,
         "credentials": [
           {
-            "id": "d870bb378fb9",
+            "id": "9128c87886a8",
             "role": "courier",
             "expires": 301.792,
             "used": false,
             "revoked": true
           },
           {
-            "id": "13a9384d4774",
+            "id": "14fccea2d51a",
             "role": "courier",
             "expires": 302.304,
             "used": true,
             "revoked": true
           },
           {
-            "id": "979ba6792090",
+            "id": "41e680cdec7e",
             "role": "owner",
             "expires": 302.368,
             "used": true,
             "revoked": true
           },
           {
-            "id": "f7cb06fb4b35",
+            "id": "d08d91668357",
             "role": "courier",
             "expires": 309.536,
             "used": true,
             "revoked": true
           },
           {
-            "id": "92be277f4b0d",
+            "id": "ff15a7ca300e",
             "role": "owner",
             "expires": 42.992000000000004,
             "used": false,
             "revoked": true
           },
           {
-            "id": "7434624466b7",
+            "id": "d3692b198b8e",
             "role": "owner",
             "expires": 344.16,
             "used": false,
             "revoked": true
           },
           {
-            "id": "af1e12d484cf",
+            "id": "146a3591dcf4",
             "role": "owner",
             "expires": 346.4,
             "used": true,
@@ -1196,28 +1202,28 @@
       },
       "events": [
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 25,
           "time": 12.992,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 26,
           "time": 43.776,
           "kind": "access_denied",
           "detail": "code expired"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 27,
           "time": 44.16,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 28,
           "time": 44.32,
           "kind": "tamper",
@@ -1226,84 +1232,84 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 29,
           "time": 44.448,
           "kind": "owner_action_denied",
           "detail": "clear_lockdown: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 30,
           "time": 44.512,
           "kind": "access_denied",
           "detail": "security lockdown; owner verification required"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 31,
           "time": 44.896,
           "kind": "reset_denied",
           "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 32,
           "time": 45.344,
           "kind": "controller_recovered",
           "detail": "saved queue and access state restored; active access cancelled"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 33,
           "time": 45.376,
           "kind": "sensor_fault",
           "detail": "device feedback unavailable or not yet stable"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 34,
           "time": 45.44,
           "kind": "sensor_recovered",
           "detail": "stable device feedback restored"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 35,
           "time": 45.6,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 36,
           "time": 45.664,
           "kind": "owner_action",
           "detail": "clear_lockdown: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 37,
           "time": 46.016,
           "kind": "access_denied",
           "detail": "code revoked"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 38,
           "time": 46.4,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 39,
           "time": 46.464,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 40,
           "time": 47.84,
           "kind": "retrieval",
@@ -1356,112 +1362,112 @@
       ],
       "all_events": [
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 1,
           "time": 0.032,
           "kind": "sensor_fault",
           "detail": "device feedback unavailable or not yet stable"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 2,
           "time": 0.096,
           "kind": "sensor_recovered",
           "detail": "stable device feedback restored"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 3,
           "time": 0.704,
           "kind": "access_denied",
           "detail": "invalid code"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 4,
           "time": 1.088,
           "kind": "access_denied",
           "detail": "invalid code"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 5,
           "time": 1.472,
           "kind": "owner_action_denied",
           "detail": "owner_login: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 6,
           "time": 1.536,
           "kind": "owner_action_denied",
           "detail": "owner_login: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 7,
           "time": 1.6,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 8,
           "time": 1.664,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 9,
           "time": 1.728,
           "kind": "owner_action_denied",
           "detail": "issue_code: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 10,
           "time": 1.792,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 11,
           "time": 1.856,
           "kind": "owner_action",
           "detail": "revoke_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 12,
           "time": 1.92,
           "kind": "access_denied",
           "detail": "code revoked"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 13,
           "time": 2.304,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 14,
           "time": 2.368,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 15,
           "time": 2.432,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 16,
           "time": 3.84,
           "kind": "parcel_detected",
@@ -1470,7 +1476,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 17,
           "time": 5.504,
           "kind": "delivery",
@@ -1479,21 +1485,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 18,
           "time": 5.792,
           "kind": "access_denied",
           "detail": "code already used"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 19,
           "time": 6.176,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 20,
           "time": 7.584,
           "kind": "retrieval",
@@ -1502,21 +1508,21 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 21,
           "time": 9.536,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 22,
           "time": 9.6,
           "kind": "access_granted",
           "detail": "courier"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 23,
           "time": 11.04,
           "kind": "parcel_detected",
@@ -1525,7 +1531,7 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 24,
           "time": 12.704,
           "kind": "delivery",
@@ -1534,28 +1540,28 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 25,
           "time": 12.992,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 26,
           "time": 43.776,
           "kind": "access_denied",
           "detail": "code expired"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 27,
           "time": 44.16,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 28,
           "time": 44.32,
           "kind": "tamper",
@@ -1564,84 +1570,84 @@
           "queue_latency_s": 0.0
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 29,
           "time": 44.448,
           "kind": "owner_action_denied",
           "detail": "clear_lockdown: denied"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 30,
           "time": 44.512,
           "kind": "access_denied",
           "detail": "security lockdown; owner verification required"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 31,
           "time": 44.896,
           "kind": "reset_denied",
           "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 32,
           "time": 45.344,
           "kind": "controller_recovered",
           "detail": "saved queue and access state restored; active access cancelled"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 33,
           "time": 45.376,
           "kind": "sensor_fault",
           "detail": "device feedback unavailable or not yet stable"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 34,
           "time": 45.44,
           "kind": "sensor_recovered",
           "detail": "stable device feedback restored"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 35,
           "time": 45.6,
           "kind": "owner_action",
           "detail": "owner_login: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 36,
           "time": 45.664,
           "kind": "owner_action",
           "detail": "clear_lockdown: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 37,
           "time": 46.016,
           "kind": "access_denied",
           "detail": "code revoked"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 38,
           "time": 46.4,
           "kind": "owner_action",
           "detail": "issue_code: approved"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 39,
           "time": 46.464,
           "kind": "access_granted",
           "detail": "owner"
         },
         {
-          "session": "5f54f422d4c6",
+          "session": "031463c00794",
           "id": 40,
           "time": 47.84,
           "kind": "retrieval",
@@ -1773,11 +1779,14 @@
         39,
         40
       ],
-      "endpoint_duplicate_packets": 0
+      "endpoint_duplicate_packets": 0,
+      "endpoint_instance": "41c1bc80f55b4bd2a1c418552aca99a4",
+      "endpoint_dropped_acks": 0,
+      "endpoint_storage_fault": false
     }
   },
   "final_status": {
-    "session": "5f54f422d4c6",
+    "session": "031463c00794",
     "time": 49.664,
     "phase": "SECURED",
     "secured": true,
@@ -1805,49 +1814,49 @@
       "owner_paused_s": 0,
       "credentials": [
         {
-          "id": "d870bb378fb9",
+          "id": "9128c87886a8",
           "role": "courier",
           "expires": 301.792,
           "used": false,
           "revoked": true
         },
         {
-          "id": "13a9384d4774",
+          "id": "14fccea2d51a",
           "role": "courier",
           "expires": 302.304,
           "used": true,
           "revoked": true
         },
         {
-          "id": "979ba6792090",
+          "id": "41e680cdec7e",
           "role": "owner",
           "expires": 302.368,
           "used": true,
           "revoked": true
         },
         {
-          "id": "f7cb06fb4b35",
+          "id": "d08d91668357",
           "role": "courier",
           "expires": 309.536,
           "used": true,
           "revoked": true
         },
         {
-          "id": "92be277f4b0d",
+          "id": "ff15a7ca300e",
           "role": "owner",
           "expires": 42.992000000000004,
           "used": false,
           "revoked": true
         },
         {
-          "id": "7434624466b7",
+          "id": "d3692b198b8e",
           "role": "owner",
           "expires": 344.16,
           "used": false,
           "revoked": true
         },
         {
-          "id": "af1e12d484cf",
+          "id": "146a3591dcf4",
           "role": "owner",
           "expires": 346.4,
           "used": true,
@@ -1857,28 +1866,28 @@
     },
     "events": [
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 25,
         "time": 12.992,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 26,
         "time": 43.776,
         "kind": "access_denied",
         "detail": "code expired"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 27,
         "time": 44.16,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 28,
         "time": 44.32,
         "kind": "tamper",
@@ -1887,84 +1896,84 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 29,
         "time": 44.448,
         "kind": "owner_action_denied",
         "detail": "clear_lockdown: denied"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 30,
         "time": 44.512,
         "kind": "access_denied",
         "detail": "security lockdown; owner verification required"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 31,
         "time": 44.896,
         "kind": "reset_denied",
         "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 32,
         "time": 45.344,
         "kind": "controller_recovered",
         "detail": "saved queue and access state restored; active access cancelled"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 33,
         "time": 45.376,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 34,
         "time": 45.44,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 35,
         "time": 45.6,
         "kind": "owner_action",
         "detail": "owner_login: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 36,
         "time": 45.664,
         "kind": "owner_action",
         "detail": "clear_lockdown: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 37,
         "time": 46.016,
         "kind": "access_denied",
         "detail": "code revoked"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 38,
         "time": 46.4,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 39,
         "time": 46.464,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 40,
         "time": 47.84,
         "kind": "retrieval",
@@ -2017,112 +2026,112 @@
     ],
     "all_events": [
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 3,
         "time": 0.704,
         "kind": "access_denied",
         "detail": "invalid code"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 4,
         "time": 1.088,
         "kind": "access_denied",
         "detail": "invalid code"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 5,
         "time": 1.472,
         "kind": "owner_action_denied",
         "detail": "owner_login: denied"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 6,
         "time": 1.536,
         "kind": "owner_action_denied",
         "detail": "owner_login: denied"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 7,
         "time": 1.6,
         "kind": "owner_action",
         "detail": "owner_login: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 8,
         "time": 1.664,
         "kind": "owner_action",
         "detail": "owner_login: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 9,
         "time": 1.728,
         "kind": "owner_action_denied",
         "detail": "issue_code: denied"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 10,
         "time": 1.792,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 11,
         "time": 1.856,
         "kind": "owner_action",
         "detail": "revoke_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 12,
         "time": 1.92,
         "kind": "access_denied",
         "detail": "code revoked"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 13,
         "time": 2.304,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 14,
         "time": 2.368,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 15,
         "time": 2.432,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 16,
         "time": 3.84,
         "kind": "parcel_detected",
@@ -2131,7 +2140,7 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 17,
         "time": 5.504,
         "kind": "delivery",
@@ -2140,21 +2149,21 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 18,
         "time": 5.792,
         "kind": "access_denied",
         "detail": "code already used"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 19,
         "time": 6.176,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 20,
         "time": 7.584,
         "kind": "retrieval",
@@ -2163,21 +2172,21 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 21,
         "time": 9.536,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 22,
         "time": 9.6,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 23,
         "time": 11.04,
         "kind": "parcel_detected",
@@ -2186,7 +2195,7 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 24,
         "time": 12.704,
         "kind": "delivery",
@@ -2195,28 +2204,28 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 25,
         "time": 12.992,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 26,
         "time": 43.776,
         "kind": "access_denied",
         "detail": "code expired"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 27,
         "time": 44.16,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 28,
         "time": 44.32,
         "kind": "tamper",
@@ -2225,84 +2234,84 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 29,
         "time": 44.448,
         "kind": "owner_action_denied",
         "detail": "clear_lockdown: denied"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 30,
         "time": 44.512,
         "kind": "access_denied",
         "detail": "security lockdown; owner verification required"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 31,
         "time": 44.896,
         "kind": "reset_denied",
         "detail": "security mode uses owner-issued codes; reset cannot clear lockdown or credentials"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 32,
         "time": 45.344,
         "kind": "controller_recovered",
         "detail": "saved queue and access state restored; active access cancelled"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 33,
         "time": 45.376,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 34,
         "time": 45.44,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 35,
         "time": 45.6,
         "kind": "owner_action",
         "detail": "owner_login: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 36,
         "time": 45.664,
         "kind": "owner_action",
         "detail": "clear_lockdown: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 37,
         "time": 46.016,
         "kind": "access_denied",
         "detail": "code revoked"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 38,
         "time": 46.4,
         "kind": "owner_action",
         "detail": "issue_code: approved"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 39,
         "time": 46.464,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "5f54f422d4c6",
+        "session": "031463c00794",
         "id": 40,
         "time": 47.84,
         "kind": "retrieval",
@@ -2434,6 +2443,9 @@
       39,
       40
     ],
-    "endpoint_duplicate_packets": 0
+    "endpoint_duplicate_packets": 0,
+    "endpoint_instance": "41c1bc80f55b4bd2a1c418552aca99a4",
+    "endpoint_dropped_acks": 0,
+    "endpoint_storage_fault": false
   }
 }

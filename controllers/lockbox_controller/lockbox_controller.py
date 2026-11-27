@@ -180,7 +180,10 @@ while robot.step(step_ms) != -1:
                       door_accel_m_s2=[round(x, 3) for x in door_accel.getValues()],
                       last_access_result=last_access_result, malformed_commands=malformed_count, motion_peak_m_s2=motion_peak,
                       endpoint_ids=endpoint.get('sessions', {}).get(logic.session, []),
-                      endpoint_duplicate_packets=endpoint.get('duplicates', 0))
+                      endpoint_duplicate_packets=endpoint.get('duplicates', 0),
+                      endpoint_instance=endpoint.get('instance'),
+                      endpoint_dropped_acks=endpoint.get('dropped_acks', 0),
+                      endpoint_storage_fault=endpoint.get('storage_fault', False))
         payload = encode_status(status)
         robot.wwiSendText(payload)
         emitter.send(payload.encode())

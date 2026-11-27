@@ -44,7 +44,7 @@
   },
   "runner_error": null,
   "final_status": {
-    "session": "859edec2278a",
+    "session": "a7339b69357e",
     "time": 31.104,
     "phase": "SECURED",
     "secured": true,
@@ -74,14 +74,14 @@
     },
     "events": [
       {
-        "session": "859edec2278a",
+        "session": "a7339b69357e",
         "id": 1,
         "time": 27.616,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "859edec2278a",
+        "session": "a7339b69357e",
         "id": 2,
         "time": 29.76,
         "kind": "tamper",
@@ -96,14 +96,14 @@
     ],
     "all_events": [
       {
-        "session": "859edec2278a",
+        "session": "a7339b69357e",
         "id": 1,
         "time": 27.616,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "859edec2278a",
+        "session": "a7339b69357e",
         "id": 2,
         "time": 29.76,
         "kind": "tamper",
@@ -159,7 +159,10 @@
       1,
       2
     ],
-    "endpoint_duplicate_packets": 4
+    "endpoint_duplicate_packets": 4,
+    "endpoint_instance": "93e0ae12ecac4976ad1dc4ab4205f6c2",
+    "endpoint_dropped_acks": 4,
+    "endpoint_storage_fault": false
   },
   "observed_peak_m_s2": 35.84949341717058
 }

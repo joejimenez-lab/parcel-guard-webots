@@ -41,7 +41,7 @@
 \author{Joshua Guico, Joe Jimenez, and Brandon Lopez\\M.S. Computer Science\\Department of Computer Science\\California State University, Los Angeles\\Fall 2026}
 \maketitle
 \begin{abstract}
-Parcel Guard models a delivery security box in Webots. This second progress report extends the earlier fixed-code workflow with password-authenticated owner management, revocable one-use access codes, and persistent incident lockdown. An owner can authorize delivery or collection, revoke unused credentials, and run another delivery without resetting policy state. Unexplained activity revokes outstanding codes and ends owner sessions. Recovery requires a new owner sign-in and measured door closure and bolt locking. Local checkpoints retain pending events, credential state, cooldown and incidents across controller restarts. The current evaluation passes \SecurityTests{} security-policy tests, \DashboardChecks{} dashboard checks, and \SecurityGroups{} Webots security groups containing \SecurityAssertions{} assertions. Separate legacy-fixture benchmarks retain 50/50 package-presence decisions and macro F1 of 1.00 on generated scenarios. The report distinguishes these two evidence sets, describes implementation and failure behavior, and identifies receiver durability, plausible frozen sensors, and deployment security as remaining work.
+Parcel Guard models a delivery security box in Webots. This second progress report extends the earlier fixed-code workflow with password-authenticated owner management, revocable one-use access codes, and persistent incident lockdown. An owner can authorize delivery or collection, revoke unused credentials, and run another delivery without resetting policy state. Unexplained activity revokes outstanding codes and ends owner sessions. Recovery requires a new owner sign-in and measured door closure and bolt locking. Local checkpoints retain pending events, credential state, cooldown and incidents across controller restarts. The current evaluation passes \SecurityTests{} security-policy tests, \DashboardChecks{} dashboard checks, and \SecurityGroups{} Webots security groups containing \SecurityAssertions{} assertions. Separate legacy-fixture benchmarks retain 50/50 package-presence decisions and macro F1 of 1.00 on generated scenarios. The report distinguishes these two evidence sets, describes implementation and failure behavior, and reports the follow-up test in which one tamper alert survived a lost acknowledgment and both controller restarts.
 \end{abstract}
 \begin{IEEEkeywords}Webots, access control, package delivery, incident response, persistent state, simulation.\end{IEEEkeywords}
 
@@ -56,16 +56,16 @@ This iteration changes the owner workflow. The default interactive world require
 The physical scope remains unchanged. The model does not establish forced-entry resistance, weather protection, safe human interaction, carrier identity or real notification delivery. The ordinary box controller reads Webots devices; separate Supervisor fixtures create stimuli and assign evaluation truth. The report describes a local course prototype, not a deployed security product.
 
 \subsection{Implemented Changes}
-Table~\ref{tab:changes} separates the previous baseline from the current implementation. Owner sign-in is password-only, allowing the complete class demonstration to run through the control panel. Short management sessions, code expiry, one-use consumption, revocation, role checks and persistent incidents remain enforced.
+Report 1 identified restart recovery and sensor faults as follow-up work. Table~\ref{tab:changes} shows what was implemented and verified by Report 2. The two milestones use the same Webots model and measured locking rule. The new owner console changes how access is issued, repeated and withdrawn.
 \begin{table*}[t]\centering\small
 \caption{Implemented progress since the first report.}\label{tab:changes}
 \begin{tabularx}{\textwidth}{@{}p{.17\textwidth}YY@{}}\toprule
-Area & Report 1 baseline & Current implementation\\\midrule
-Owner control & Fixed owner/courier demonstration PINs & Password-authenticated owner session issues purpose-scoped codes.\\
-Repeated operation & Reset policy to provision fresh codes & Create another courier or collection code within the same session.\\
-Incident handling & Record suspected tampering & Revoke issued codes, terminate owner sessions and enter persistent lockdown.\\
-Restart recovery & In-memory queue and credential-use state & Restore pending IDs, consumed/revoked credentials, cooldown and incident.\\
-Fault coverage & Non-finite feedback and motion timeouts & Added modeled-range checks, frozen-bolt feedback trials and strong-impact cases.\\\bottomrule
+Area & Report 1 (October) & Report 2 (November)\\\midrule
+Owner control & Fixed role-specific demonstration PINs. & Password sign-in lets the owner issue and revoke expiring, one-use delivery or collection codes.\\
+Repeated deliveries & Reset policy to reissue demo PINs. & A second delivery was verified in the same policy session with a fresh code.\\
+Tamper response & Record suspected tampering in the event log. & Revoke outstanding codes, end owner sessions and keep lockdown active until a fresh owner sign-in and measured locking.\\
+Restart recovery & Queue and credential-use state held in memory. & Local checkpoint restores pending alerts and security state. Ten queued alerts survived a Webots controller restart.\\
+Fault coverage & Non-finite feedback and motion timeouts. & Added tests for out-of-range feedback, frozen bolt readings and strong impacts during approved access.\\\bottomrule
 \end{tabularx}\end{table*}
 
 \subsection{Team Responsibilities}
@@ -178,21 +178,24 @@ Private-data redaction & Owner password, newly issued codes and bearer sessions 
 
 A restart or incident requires a new password-authenticated owner session before clearance. The previous session cannot authorize recovery. These session checks complement one-use credentials, expiry, revocation and password throttling; successful owner sign-in still cannot override invalid physical feedback.
 
-\subsection{Original Benchmark and Retained Recovery Work}
-Table~\ref{tab:baseline} reports the current rerun of the original acceptance suite. Package presence remains \Presence{}, event macro F1 remains \MacroF{}, and false tamper alarms remain \FalseAlarms{}/45 on the generated non-tamper sequences. All \Cycles{} motor cycles complete, the 30 invalid-access trials produce \Unauthorized{} unauthorized unlocks, and all \Recovered{} offline impact events recover at the running endpoint.
+\subsection{Benchmark Comparison and New Recovery Coverage}
+Report 1 already met the proposal targets. Table~\ref{tab:baseline} compares its October results with the November rerun of the same fixture-code benchmark \cite{progressone,evidence}. The benchmark scores held steady. The new evidence covers owner-managed access, persistent lockdown and controller restart recovery.
 \begin{table}[t]\centering\small
-\caption{Original acceptance benchmark, using legacy fixture credentials.}\label{tab:baseline}
-\begin{tabular}{@{}lr@{}}\toprule
-Measure & Current result\\\midrule
-Package presence & \Presence{}\\
-Four-class macro F1 & \MacroF{}\\
-Non-tamper false alarms & \FalseAlarms{}/45\\
-Completed motor cycles & \Cycles{}/100\\
-Unauthorized unlocks & \Unauthorized{}/30\\
-Recovered offline events & \Recovered{}/100\\\bottomrule
+\caption{October baseline and November rerun with fixture PINs.}\label{tab:baseline}
+\begin{tabular}{@{}lrr@{}}\toprule
+Measure & Report 1 & Report 2\\\midrule
+Package presence & 50/50 & \Presence{}\\
+Four-class macro F1 & 1.00 & \MacroF{}\\
+Non-tamper false alarms & 0/45 & \FalseAlarms{}/45\\
+Completed motor cycles & 100/100 & \Cycles{}/100\\
+Unauthorized unlocks & 0/30 & \Unauthorized{}/30\\
+Recovered offline events & 100/100 & \Recovered{}/100\\\bottomrule
 \end{tabular}\end{table}
 
-The \RecoveryTests{} recovery/fault tests and 38 original policy regressions also pass. Seven additional Webots recovery groups retain evidence for ten queued impact events surviving a real controller restart, lost-ACK retries, safe restart during access, invalid sensor ranges, frozen bolt feedback and strong impact during access. The receiver processes duplicate retries once while it remains running; simultaneous receiver restart is not part of that result.
+The \RecoveryTests{} recovery and fault tests added since Report 1 pass, along with all 38 original policy regressions. Seven additional Webots recovery groups provide evidence for ten queued impact events surviving a real controller restart, lost-ACK retries, safe restart during access, invalid sensor ranges, frozen bolt feedback and strong impact during access. This suite keeps the receiver running. A separate follow-up tests both sides restarting after a lost acknowledgment.
+
+\subsection{Follow-Up: Durable Alert Receipts}
+The receiver stores the alert in SQLite under its session and event ID before sending an acknowledgment (ACK). A retry receives an ACK for the existing record. In Webots, the receiver stored a tamper alert and its ACK was dropped. Both controllers restarted while the link was paused. The sender reloaded its pending alert and the receiver reloaded its receipt. After reconnection, the receiver recognized the retry, retained one stored alert, and sent the ACK that emptied the sender queue. The measured sequence is in \code{webots\_alert\_recovery.json}.
 
 \subsection{Interface Evidence}
 Figure~\ref{fig:lockdown} is a recorded status snapshot from the security evaluation. It shows a physically closed and locked enclosure that remains administratively blocked. The owner console provides password sign-in, purpose/lifetime selection, one-use code creation and revocation. The screenshot is evidence of the displayed state, not a separate successful authentication trial.
@@ -204,10 +207,10 @@ Figure~\ref{fig:lockdown} is a recorded status snapshot from the security evalua
 \subsection{Interpretation and Limits}
 Perfect results on known generated scenario families should not be extrapolated to field behavior. Parcel movement is scripted, the physical model does not establish lock strength, and the interface exposes trusted fault fixtures. A local host can inspect or alter private state. A password verifier and keyed credential digest do not create an authenticated network boundary.
 
-The sender checkpoint is tested across process/controller restart and injected storage errors, but physical power interruption is untested. Endpoint receipt IDs remain volatile. A sender and receiver that both lose state could process a retry again; the current result therefore does not establish end-to-end exactly-once delivery across arbitrary crashes.
+The sender checkpoint is tested across process/controller restart and injected storage errors, but physical power interruption is untested. The dual-restart test retained both local stores. It measures one record at the simulated receiver. Storage loss and external notification delivery are outside that test.
 
 \section{Next Steps and Conclusion}
-The next implementation priority is persistent receiver deduplication with dual-process crash tests during retries. Independent parcel sensing or explicit diagnostics are needed for plausible frozen readings. Hardware traces should guide impact calibration, and any physical prototype would require enclosure, safe-motion and forced-entry testing. A networked version would also need a separately authenticated operational interface and protected secret storage.
+Receipt recovery during physical power interruption remains a follow-up test. Independent parcel sensing or explicit diagnostics are needed for plausible frozen readings. Hardware traces should guide impact calibration, and any physical prototype would require enclosure, safe-motion and forced-entry testing. A networked version would also need a separately authenticated operational interface and protected secret storage.
 
 The current iteration provides a demonstrably different owner workflow: authorize access, revoke a credential, trigger persistent incident response, and restore service through password sign-in and measured security. It retains local delivery and retrieval, while keeping baseline classification results and new security-workflow evidence distinct.
 
@@ -220,10 +223,10 @@ For class, open \code{worlds/delivery\_box.wbt}, choose real-time speed and open
 \balance
 \begin{thebibliography}{9}
 \bibitem{proposal} J. Guico, J. Jimenez, and B. Lopez, \emph{Package Delivery Security Box: Webots Simulation for Secure Package Delivery}, CS 5650 project proposal, California State University, Los Angeles, Sept. 2026. Supplied project materials.
-\bibitem{progressone} J. Guico, J. Jimenez, and B. Lopez, \emph{Parcel Guard: Project Progress Report 1} and \emph{Design and Evaluation of a Webots Package Delivery Security Box}, CS 5650, Fall 2026. Previously submitted presentation and report.
+\bibitem{progressone} J. Guico, J. Jimenez, and B. Lopez, \emph{Package Delivery Security Box: Project Progress Report 1}, CS 5650, Oct. 18, 2026, Secs. IV--VII. Saved benchmark in \code{results/progress1\_baseline/REPORT.md}.
 \bibitem{webots} Cyberbotics, \emph{Webots User Guide and Reference Manual}, R2025a. \url{https://cyberbotics.com/doc/guide/index?version=R2025a}.
 \bibitem{pythonhash} Python Software Foundation, ``hashlib: Key derivation,'' Python documentation. \url{https://docs.python.org/3/library/hashlib.html#key-derivation}.
-\bibitem{evidence} Parcel Guard project, ``Current evaluation manifest and saved reports,'' Nov. 2026. \code{results/evaluation\_manifest.json}, \code{security\_layers.json}, \code{webots\_security.json}, \code{webots\_progress2.json}, and numerical benchmark reports. Local source/evidence package accompanying this submission.
+\bibitem{evidence} Parcel Guard project, ``Saved evaluation reports,'' Nov. 2026. The numerical, security, and restart reports are indexed in the evaluation manifest in the accompanying project package.
 \end{thebibliography}
 \clearpage
 \onecolumn

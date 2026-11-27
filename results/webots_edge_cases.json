@@ -35,7 +35,7 @@
   },
   "runner_error": null,
   "final_status": {
-    "session": "5a040efd5e70",
+    "session": "01ba0e760d42",
     "time": 42.336,
     "phase": "SECURED",
     "secured": true,
@@ -107,6 +107,9 @@
     "malformed_commands": 3,
     "motion_peak_m_s2": 9.810000442005515,
     "endpoint_ids": [],
-    "endpoint_duplicate_packets": 0
+    "endpoint_duplicate_packets": 0,
+    "endpoint_instance": "e662619ce5214b5d9ccc09cafbce5fda",
+    "endpoint_dropped_acks": 0,
+    "endpoint_storage_fault": false
   }
 }

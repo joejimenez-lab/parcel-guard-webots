@@ -42,7 +42,7 @@ The UI must distinguish parcel detection from completed delivery, show the curre
 The project makes no requirement claim for physical attack resistance, weatherproofing, real radio/network delay, production credential storage, cloud identity or reliable diagnosis of plausible stuck-at readings. The parcel is positioned by a scenario fixture. Hardware handling, motor pinch protection and collision-free courier placement require a separate physical design and evaluation.
 
 
-Progress Report 2 adds local sender checkpoints and tests real controller restarts, consumed credentials, replay and cooldown retention, storage faults, sensor range faults, frozen-bolt timeouts and strong impacts during access. Physical power interruption and endpoint restart durability remain outside the verified requirements. See `PROGRESS_REPORT_2.md` and `results/webots_progress2.json`.
+Progress Report 2 adds local sender checkpoints and tests real controller restarts, consumed credentials, replay and cooldown retention, storage faults, sensor range faults, frozen-bolt timeouts and strong impacts during access. The receiver follow-up verifies one persisted tamper alert after a lost ACK and both controllers restarting with their local stores intact. See `PROGRESS_REPORT_2.md`, `results/webots_progress2.json`, and `results/webots_alert_recovery.json`. Physical power interruption remains outside the verified requirements.
 
 
 ## Layered security update

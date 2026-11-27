@@ -23,7 +23,7 @@ To recover, sign in with the owner password again, then clear lockdown after phy
 - **Restart controller** reloads saved events, credential state and any lockdown. It cancels active access, discards owner sessions and closes before locking. The control is enabled when the panel shows Saved locally.
 - **Impact** creates an ordinary unapproved disturbance. In security mode it can trigger incident lockdown. **Strong impact** is intended to demonstrate detection during approved open-door access; it applies a stronger force relative to the door.
 - **Invalid sensor** injects an impossible distance. Access is disabled until Restore sensor supplies three stable valid readings. Unresolved faults prevent lockdown clearance.
-- **Disconnect link / Restore link** demonstrate the durable sender queue. Events remain pending until acknowledged. Receiver deduplication still resides in memory.
+- **Disconnect link / Restore link** demonstrate the durable sender queue. Events remain pending until acknowledged. The simulated receiver saves each alert before sending an acknowledgment. The saved Webots recovery test shows one alert after a lost acknowledgment and both controllers restarting. See `results/webots_alert_recovery.json`.
 - **Block bolt / Release bolt** and **Block door / Release door** demonstrate measured fault detection and recovery.
 
 Local state is stored in `.runtime/lockbox-state.json` with private file permissions. It includes the private credential digest key and password verifier and is not encrypted or protected against malicious host access. Do not share runtime files. The project ZIP excludes them. A damaged/unwritable checkpoint disables access; preserve it when diagnosing the fault.

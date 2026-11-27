@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": {
+    "ack_lost_after_durable_receipt": true,
+    "both_controllers_restarted": true,
+    "same_alert_restored_before_retry": true,
+    "retry_seen_by_restarted_receiver": true,
+    "one_durable_alert": true,
+    "one_sender_acknowledgment_and_empty_queue": true
+  },
+  "runner_error": null,
+  "evidence": {
+    "alert": {
+      "session": "582a394675fd",
+      "id": 3,
+      "kind": "tamper"
+    },
+    "before_restart": {
+      "receiver_receipts": 1,
+      "acknowledgments_dropped": 1,
+      "sender_pending": true,
+      "sender_acknowledgments": 0
+    },
+    "after_restart_before_retry": {
+      "sender_restarted": true,
+      "receiver_restarted": true,
+      "session_preserved": true,
+      "link_still_paused": true,
+      "sender_pending": true,
+      "receiver_receipts": 1,
+      "receiver_duplicate_packets": 0,
+      "sender_acknowledgments": 0
+    },
+    "after_retry": {
+      "receiver_receipts": 1,
+      "receiver_duplicate_packets": 1,
+      "sender_acknowledgments": 1,
+      "sender_queue": 0
+    }
+  }
+}

@@ -64,9 +64,9 @@ the original workspace's separate assets. No GitHub account is required.
 
 PROGRESS2_PACKAGE_MANIFEST.json records the hashes of every included file
 except the manifest itself. results/evaluation_manifest.json binds evaluated
-runtime code to the current passing test reports. Receiver crash durability,
-physical power interruption and general frozen-parcel diagnostics remain
-outside the verified claims. No runtime state or access logs are bundled.
+runtime code to the current passing test reports, including lost-ACK recovery
+after both controllers restart. Physical power interruption and general
+frozen-parcel diagnostics remain outside the verified claims. No runtime state or access logs are bundled.
 '''
 payloads = {str(p.relative_to(ROOT)): p.read_bytes() for p in sorted(files)}
 payloads['PROGRESS2_START_HERE.txt'] = start.encode()

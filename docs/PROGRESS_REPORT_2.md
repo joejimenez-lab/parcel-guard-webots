@@ -9,20 +9,19 @@ Joshua Guico, Joe Jimenez and Brandon Lopez
 
 November 17, 2026 | Webots R2025a local simulation
 
-### New capability
+### Progress since Report 1
 
-The owner now controls who can access the box. Instead of relying on two fixed demo PINs, the interactive system requires owner verification to create or revoke temporary courier and collection codes. Unexplained activity triggers a persistent lockdown that requires owner review.
+The October report established delivery and collection with fixed role-specific PINs, measured locking, tamper logging, and alert recovery after a simulated link outage. It identified controller restart recovery and sensor faults as follow-up work. The November milestone adds owner-managed access, persistent lockdown, and tests for those failure cases.
 
-This changes the class demonstration: verify the owner, authorize a delivery, revoke a code, trigger an incident and recover service. Another delivery can run in the same policy session without resetting the simulation.
-
-| Security layer | Earlier workflow | Current interactive workflow |
+| Area | Report 1 (October) | Report 2 (November) |
 |---|---|---|
-| Owner verification | Fixed owner collection PIN | Owner password for a separate management session |
-| Delivery authorization | Fixed courier PIN; reset to reuse | Owner-issued eight-digit codes with purpose, expiry and revocation |
-| Incident response | Record a tamper event | Revoke outstanding codes, end owner sessions and enter lockdown |
-| Recovery | Close and re-lock | Fresh owner verification plus measured physical security before clearance |
+| Owner access | Fixed courier and owner PINs | Owner signs in and issues or revokes one-use codes with a purpose and expiry |
+| Repeated deliveries | Reset to reissue demo PINs | Second delivery verified in the same policy session |
+| Tamper response | Log suspected tampering | Revoke outstanding codes, end owner sessions and require an owner to clear lockdown |
+| Restart recovery | In-memory queue survives link outages | Local checkpoint restores pending alerts and lockdown after controller restart |
+| Fault coverage | Non-finite readings and actuator timeouts | Added range checks, frozen bolt trials, and strong-impact cases during approved access |
 
-**Verified:** 29 new security policy tests, 33 dashboard checks and 10 security scenario groups with 28 assertions. Existing restart/fault tests also pass. Numerical benchmark results and the new security workflow are reported separately.
+The original fixture-PIN benchmark met the proposal targets in October and recorded the same results in November. The November security suite separately verified the owner-managed workflow in 10 Webots groups with 28 assertions. The milestone also adds 29 security policy tests and 26 recovery and fault tests. All 38 original policy checks still pass.
 
 <!-- pagebreak -->
 
@@ -81,7 +80,7 @@ The Webots security evaluation verified this sequence after an actual box-contro
 
 ### Existing protection retained
 
-Local checkpoints preserve the event queue, consumed credentials, replay IDs, cooldown and incident state. Active access and owner sessions never resume automatically. Range faults disable access, frozen bolt feedback during commanded motion triggers a timeout, and strong impacts can still be reported during approved access. The simulated endpoint acknowledges retried events while it remains running.
+Local checkpoints preserve the event queue, consumed credentials, replay IDs, cooldown and incident state. Active access and owner sessions never resume automatically. Range faults disable access, frozen bolt feedback during commanded motion triggers a timeout, and strong impacts can still be reported during approved access. The initial Report 2 test kept the simulated endpoint running during sender restart. The follow-up below also restarts the endpoint.
 
 <!-- pagebreak -->
 
@@ -107,7 +106,7 @@ The dedicated `delivery_box_security.wbt` runs the default security policy again
 
 The original acceptance worlds retain legacy fixture credentials for comparison. They do not establish the classification score of the entire managed-code workflow; the security scenario suite above supplies that workflow's evidence.
 
-| Benchmark | Current result |
+| Benchmark | Result in both reports |
 |---|---|
 | Package presence | 50/50 correct |
 | Four-class classification | Macro F1 1.00; 0/45 false tamper alarms |
@@ -115,9 +114,15 @@ The original acceptance worlds retain legacy fixture credentials for comparison.
 | Unauthorized attempts | 0/30 unlocks |
 | Offline impact events | 100/100 recovered |
 
-The full-run manifest binds 46 source/configuration files to 13 passing report files and confirms source stayed unchanged during evaluation. New records are `results/security_layers.json` and `results/webots_security.json`. These are generated simulation scenarios, not field-security trials.
+The full-run manifest binds 50 source/configuration files to 15 passing report files and confirms source stayed unchanged during evaluation. New records are `results/security_layers.json` and `results/webots_security.json`. These are generated simulation scenarios, not field-security trials.
 
 <!-- pagebreak -->
+
+# Follow-up after Progress Report 2
+
+The simulated receiver now stores each alert in SQLite before it returns an acknowledgment (ACK). The pair of session ID and event ID identifies the record. A retry returns an ACK for the existing record.
+
+In Webots, the receiver stored a tamper alert and the fixture dropped its ACK. The link stayed paused while the box and receiver controllers restarted. The box restored the pending alert and the receiver reloaded its receipt. When the link resumed, the box sent the same alert again. The receiver retained **one stored tamper alert** and the sender cleared its queue. See `results/webots_alert_recovery.json`.
 
 # Demonstration and next steps
 
@@ -137,9 +142,9 @@ The rehearsal script is `docs/PROGRESS_REPORT_2_DEMO.md`. The panel can be previ
 
 ### Next development priorities
 
-Persist receiver deduplication to test simultaneous sender/receiver restarts. Add an independent sensing strategy for plausible frozen parcel readings. Replace the trusted local fixture and file assumptions with an authenticated operational interface before any networked or physical deployment. Calibrate impact thresholds using real handling traces.
+Test recovery from power interruption during a receipt write. Add an independent sensing strategy for plausible frozen parcel readings. Replace the trusted local fixture and file assumptions with an authenticated operational interface before any networked or physical deployment. Calibrate impact thresholds using real handling traces.
 
-The current model does not establish resistance to physical forced entry, safe human handling, weather or network attacks. Local host access can expose private state or alter the simulation. Encrypted transport, protected secret storage and receiver crash durability remain unverified. A checkpoint and cryptographic primitives alone do not establish production security.
+The current model does not establish resistance to physical forced entry, safe human handling, weather or network attacks. Local host access can expose private state or alter the simulation. Encrypted transport, protected secret storage, and recovery after loss of a storage file remain unverified. A checkpoint and cryptographic primitives alone do not establish production security.
 
 ### Reproduction
 

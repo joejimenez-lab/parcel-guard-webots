@@ -1,5 +1,13 @@
 """Independent fixture and simulated alert endpoint; never classifies events."""
 import json
+import os
+from pathlib import Path
+import sqlite3
+import sys
+import uuid
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from lockbox.alert_receiver import AlertReceiver
 from controller import Supervisor
 
 robot = Supervisor()
@@ -12,9 +20,14 @@ for receiver in (scene_rx, event_rx):
 parcel = robot.getFromDef('PARCEL')
 door = robot.getFromDef('DOOR')
 translation = parcel.getField('translation')
-sessions = {}
+root = Path(__file__).resolve().parents[2]
+default_receipts = str(root / '.runtime/alert-receipts.sqlite3') if Path(robot.getWorldPath()).name == 'delivery_box.wbt' else ''
+receipt_path = os.environ.get('PARCEL_GUARD_RECEIVER_PATH', default_receipts)
+endpoint = None
+instance = uuid.uuid4().hex
 duplicates = 0
-drop_acks = 0
+drop_acks = dropped_acks = 0
+storage_fault = False
 animation = None
 
 def send(action, **data):
@@ -71,17 +84,39 @@ while robot.step(dt) != -1:
         translation.setSFVec3f(position)
         if progress == 3:
             animation = None
+    if endpoint is None and (frame % 6 == 0 or event_rx.getQueueLength()):
+        try:
+            endpoint = AlertReceiver(receipt_path)
+            storage_fault = False
+        except (OSError, sqlite3.Error):
+            storage_fault = True
     while event_rx.getQueueLength():
-        event = json.loads(event_rx.getString())
-        ids = sessions.setdefault(event['session'], [])
-        if event['id'] in ids:
-            duplicates += 1
-        else:
-            ids.append(event['id'])
-        if drop_acks:
-            drop_acks -= 1
-        else:
-            send('ack', session=event['session'], id=event['id'])
-        event_rx.nextPacket()
+        try:
+            if endpoint is not None:
+                event = json.loads(event_rx.getString())
+                duplicates += not endpoint.record(event)
+                storage_fault = False
+                if drop_acks > 0:
+                    drop_acks -= 1
+                    dropped_acks += 1
+                else:
+                    send('ack', session=event['session'], id=event['id'])
+        except (ValueError, TypeError):
+            pass
+        except sqlite3.Error:
+            # Keep the event pending at the sender until a write succeeds.
+            storage_fault = True
+        finally:
+            event_rx.nextPacket()
     if frame % 6 == 0:
-        send('endpoint_status', sessions=sessions, duplicates=duplicates)
+        sessions = {}
+        if endpoint is not None:
+            try:
+                sessions = endpoint.sessions()
+            except sqlite3.Error:
+                storage_fault = True
+        send('endpoint_status', sessions=sessions, duplicates=duplicates,
+             instance=instance, dropped_acks=dropped_acks, storage_fault=storage_fault)
+
+if endpoint is not None:
+    endpoint.close()

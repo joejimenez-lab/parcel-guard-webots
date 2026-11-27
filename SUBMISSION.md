@@ -3,9 +3,9 @@
 
 ## Progress Report 2 handoff
 
-Use the report, slide PDF and ZIP packages in this branch for the workflow diagram revision. The original submission is archived in [release v2.5.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.5.0).
+Use the report, 20-slide PDF and ZIP packages from [release v2.6.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.6.0) for the current classroom handoff. The original Progress Report 2 release is archived in [v2.5.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.5.0).
 
-The current classroom files are in `output/progress-report-2/`. Submit the written paper PDF, present the editable 19-slide deck from the chat viewer, and keep its slide PDF as a playback backup. Export the deck as PowerPoint from the viewer if a local PPTX is required. `output/Parcel Guard - Progress Report 2 - Submission.zip` bundles the PDFs, speaker guide, live demo guide and editable report source.
+The current classroom files are in `output/progress-report-2/`. Submit the written paper PDF, present the editable 20-slide deck from the chat viewer, and keep its slide PDF as a playback backup. Export the deck as PowerPoint from the viewer if a local PPTX is required. `output/Parcel Guard - Progress Report 2 - Submission.zip` bundles the PDFs, speaker guide, live demo guide and editable report source.
 
 - Written paper: `output/pdf/Parcel Guard - Progress Report 2.pdf`
 - Slide viewing copy: `output/pdf/Parcel Guard - Progress Report 2 Slides.pdf`
@@ -14,7 +14,7 @@ The current classroom files are in `output/progress-report-2/`. Submit the writt
 - Canonical report source: `docs/parcel_guard_progress2_report.tex`
 - Report rebuild: `python3 scripts/build_progress2_report.py` with a TeX distribution and IEEEtran installed
 - Source/evidence package: `output/Parcel Guard - Progress Report 2 - Project.zip`
-- Full workflow diagram: [PNG](docs/assets/parcel-guard-workflow.png), also included in the report appendix and on slides 18–19.
+- Full workflow diagram: [PNG](docs/assets/parcel-guard-workflow.png), also included in the report appendix and on slides 19–20. Slide 5 shows the lost-ACK test with both controllers restarting.
 
 Use the password-only owner workflow. The older final paper, deck, videos and original submission checker below belong to the earlier delivery. Current evaluated source/report hashes are in `results/evaluation_manifest.json`; each current ZIP has its own file manifest.
 

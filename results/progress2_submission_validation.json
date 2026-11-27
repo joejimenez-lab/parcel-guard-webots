@@ -1,27 +1,32 @@
 {
   "passed": true,
   "presentation": {
-    "artifact_ref": "artifact_external_9d526aea-b9d8-4c1d-88a1-7ca67fd1678b",
+    "artifact_ref": "artifact_external_fd870f66-4262-4195-9f97-4563dae731dd",
     "page_id": "page_bb2ace9a2b708191aac852a145496b45",
-    "state_version": 12,
-    "slides": 19,
-    "native_tables": 8,
-    "speaker_notes_slides": 19,
-    "review": "The 17 original slides were previously reviewed. Slides 18 and 19 were recreated with editable flowchart shapes and connectors, rendered, and inspected for label fit and complete arrows. The offline PDF includes both new renders."
+    "state_version": 16,
+    "slides": 20,
+    "native_tables": 9,
+    "speaker_notes_slides": 20,
+    "review": "Reviewed the full montage and slides 2, 5, 11, 15 and 16 individually. Slide 5 shows the durable receiver test. The offline copy includes the five updated slide renders and preserves the other pages."
   },
   "report": {
     "pages": 8,
     "format": "Previous cover, contents and two-column IEEE-style paper with landscape workflow appendix",
     "source": "docs/parcel_guard_progress2_report.tex",
-    "layout_warnings": 0
+    "layout_warnings": 0,
+    "review": "The follow-up describes the verified lost-ACK and two-controller restart test. Checked the report layout and matching editable source."
   },
   "evidence": {
-    "source_files": 46,
-    "passing_reports": 13,
+    "source_files": 50,
+    "passing_reports": 15,
     "security_tests": 29,
     "dashboard_checks": 33,
     "security_scenario_groups": 10,
-    "security_assertions": 28
+    "security_assertions": 28,
+    "receiver_storage_tests": 3,
+    "receiver_restart_checks": 6,
+    "receiver_alerts_after_retry": 1,
+    "sender_pending_after_retry": 0
   },
-  "runtime_changed": false
+  "runtime_changed": true
 }

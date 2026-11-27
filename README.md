@@ -2,7 +2,7 @@
 
 [![Delivery workflow](output/Parcel%20Guard%20Workflow%20Poster.jpg)](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf)
 
-[Latest release: v2.5.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.5.0) · [Current project ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Project.zip) · [Report PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf) · [Slide PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202%20Slides.pdf) · [Submission ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Submission.zip) · [Evaluation](results/REPORT.md)
+[Latest release: v2.6.0](https://github.com/joejimenez-lab/parcel-guard-webots/releases/tag/v2.6.0) · [Current project ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Project.zip) · [Report PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202.pdf) · [Slide PDF](output/pdf/Parcel%20Guard%20-%20Progress%20Report%202%20Slides.pdf) · [Submission ZIP](output/Parcel%20Guard%20-%20Progress%20Report%202%20-%20Submission.zip) · [Evaluation](results/REPORT.md)
 
 Parcel Guard is the Webots simulation for our CS 5650 package delivery security box project. A Python controller reads 25 distance sensors, door and bolt positions, and motion. It checks access, recognizes parcel events, and retains alerts during simulated link outages.
 
@@ -20,9 +20,13 @@ Owner sign-in needs only the password. Owner sessions and access codes expire us
 
 [Current progress report](docs/PROGRESS_REPORT_2.md) · [Class demo guide](docs/PROGRESS_REPORT_2_DEMO.md) · [Verified evidence](results/REPORT.md)
 
-The classroom set is in `output/progress-report-2/`. The report follows the previous cover, contents and IEEE paper format, with a landscape workflow appendix. The 19-slide deck in the chat viewer includes two appendix slides for the workflow and can be exported as PowerPoint. The folder includes the slide PDF, [speaker guide](docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md), demo guide and editable LaTeX source. `output/Parcel Guard - Progress Report 2 - Submission.zip` is the document handoff. Rebuild the paper with `python3 scripts/build_progress2_report.py` using TeX with IEEEtran.
+The classroom set is in `output/progress-report-2/`. The report follows the previous cover, contents and IEEE paper format, with a landscape workflow appendix. The 20-slide deck in the chat viewer includes the receiver-restart result on slide 5 and two appendix slides for the workflow and can be exported as PowerPoint. The folder includes the slide PDF, [speaker guide](docs/PROGRESS_REPORT_2_PRESENTATION_GUIDE.md), demo guide and editable LaTeX source. `output/Parcel Guard - Progress Report 2 - Submission.zip` is the document handoff. Rebuild the paper with `python3 scripts/build_progress2_report.py` using TeX with IEEEtran.
 
 `python3 scripts/run_all.py` runs the original numerical suite in legacy fixture mode and separately tests the default security workflow. New evidence is in `results/security_layers.json` and `results/webots_security.json`. Baseline results are not a claim that the complete classification suite was repeated with managed credentials. Existing videos and final-paper/slides are historical. The current report is `output/pdf/Parcel Guard - Progress Report 2.pdf`; `python3 scripts/package_progress2.py` rebuilds the local ZIP.
+
+## Alert recovery after both controllers restart
+
+The simulated receiver saves each alert before acknowledging it. In the Webots recovery test, the acknowledgment was dropped and both controllers restarted. The box retried the same alert, and the receiver kept one stored alert while the sender cleared its queue. Slide 5 walks through the test. See [recorded results](results/webots_alert_recovery.json).
 
 ## Security workflow
 
@@ -151,7 +155,7 @@ Run `python3 scripts/package_project.py` to rebuild the unchanged delivery. If y
 
 ## Scope
 
-One parcel at a time; local simulation with a simulated event endpoint. Demo PINs model roles, expiry, single use, replay rejection and cooldown. Real cloud authentication, Wi-Fi/TLS, outdoor weather and physical forced-entry resistance are outside the proposal scope. The interactive event outbox is checkpointed locally and tested across controller restarts. Receiver deduplication remains in memory; simultaneous endpoint restart and physical power loss were not tested. The bolt is an actuator/feedback model, not a physical security certification. A plausible stuck-at sensor value is not automatically diagnosable from these devices alone.
+One parcel at a time; local simulation with a simulated event endpoint. Demo PINs model roles, expiry, single use, replay rejection and cooldown. Real cloud authentication, Wi-Fi/TLS, outdoor weather and physical forced-entry resistance are outside the proposal scope. The interactive event outbox is checkpointed locally and tested across controller restarts. The receiver writes alerts to `.runtime/alert-receipts.sqlite3`. A dedicated Webots test drops an ACK and restarts both controllers, then verifies one stored alert after retry. Physical power interruption and storage loss remain outside the test. The bolt is an actuator/feedback model, not a physical security certification. A plausible stuck-at sensor value is not automatically diagnosable from these devices alone.
 
 ## Additional checks and document rebuild
 

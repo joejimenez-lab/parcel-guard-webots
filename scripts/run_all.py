@@ -6,6 +6,7 @@ import platform
 import shutil
 import subprocess
 import sys
+from tempfile import TemporaryDirectory
 from datetime import datetime, timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -31,6 +32,7 @@ def run(command,report,env=None):
 def main():
     if not Path(WEBOTS).is_file():raise SystemExit('Set WEBOTS_BIN to the Webots executable')
     os.environ['PARCEL_GUARD_STATE_PATH']=''
+    os.environ['PARCEL_GUARD_RECEIVER_PATH']=''
     os.environ['PARCEL_GUARD_SECURE_MODE']='0'
     subprocess.run([sys.executable,'scripts/generate_worlds.py'],cwd=ROOT,check=True)
     frozen=hashes()
@@ -38,6 +40,7 @@ def main():
     run([sys.executable,'tests/robustness.py'],'robustness.json')
     run([sys.executable,'tests/progress2.py'],'progress2_regressions.json')
     run([sys.executable,'tests/security_layers.py'],'security_layers.json')
+    run([sys.executable,'tests/alert_receiver.py'],'alert_receiver.json')
     run(['node','tests/dashboard.cjs'],'dashboard_validation.json')
     options=[WEBOTS,'--batch','--no-rendering','--mode=fast','--stdout','--stderr']
     run(options+['worlds/delivery_box_tests.wbt'],'webots_smoke.json')
@@ -55,6 +58,12 @@ def main():
     run(options+['worlds/delivery_box_security.wbt'],'webots_security.json',
         env={**os.environ,'PARCEL_GUARD_STATE_PATH':str(security_state),
              'PARCEL_GUARD_SECURE_MODE':'1','PARCEL_GUARD_OWNER_PASSWORD':'evaluation-owner'})
+    with TemporaryDirectory(prefix='parcel-guard-alert-recovery-') as directory:
+        recovery_dir = Path(directory)
+        run(options+['worlds/delivery_box_alert_recovery.wbt'], 'webots_alert_recovery.json',
+            env={**os.environ, 'PARCEL_GUARD_STATE_PATH': str(recovery_dir/'box.json'),
+                 'PARCEL_GUARD_RECEIVER_PATH': str(recovery_dir/'receiver.sqlite3'),
+                 'PARCEL_GUARD_SECURE_MODE': '1', 'PARCEL_GUARD_OWNER_PASSWORD': 'evaluation-owner'})
     stable=frozen==hashes()
     manifest={'passed':stable,'timestamp_utc':datetime.now(timezone.utc).isoformat(),'webots':'R2025a',
               'python':sys.version.split()[0],'platform':platform.platform(),

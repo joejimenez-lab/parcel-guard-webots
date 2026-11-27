@@ -76,8 +76,8 @@ DEF FIXTURE Robot {{supervisor TRUE controller "scene_supervisor" children [Rece
 RUNNER = '''DEF TEST_RUNNER Robot {supervisor TRUE controller "__CONTROLLER__" children [Emitter {name "command_tx" channel 1} Receiver {name "status_rx" channel 2}] name "Reproducible scenario runner"}
 '''
 (WORLDS/'delivery_box.wbt').write_text(BASE)
-for suffix,controller in [('tests','trial_runner'),('edge_cases','edge_runner'),('sensor_trials','sensor_runner'),('classification','classification_runner'),('benchmark','cycle_runner'),('demo_video','demo_runner'),('resilience_video','resilience_demo'),('progress2','progress2_runner')]:
+for suffix,controller in [('tests','trial_runner'),('edge_cases','edge_runner'),('sensor_trials','sensor_runner'),('classification','classification_runner'),('benchmark','cycle_runner'),('demo_video','demo_runner'),('resilience_video','resilience_demo'),('progress2','progress2_runner'),('alert_recovery','alert_recovery_runner')]:
     (WORLDS/f'delivery_box_{suffix}.wbt').write_text(BASE+RUNNER.replace('__CONTROLLER__',controller))
 SECURITY_RUNNER = RUNNER.replace('__CONTROLLER__', 'security_runner').replace('Receiver {name "status_rx" channel 2}', 'Receiver {name "status_rx" channel 2} Receiver {name "security_rx" channel 5}')
 (WORLDS/'delivery_box_security.wbt').write_text(BASE + SECURITY_RUNNER)
-print('Generated 10 worlds from config/evaluation.json')
+print('Generated 11 worlds from config/evaluation.json')

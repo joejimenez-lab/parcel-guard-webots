@@ -16,7 +16,7 @@
   "open_door_samples": 66,
   "max_bolt_orientation_error": 1.3004963769341842e-07,
   "final_status": {
-    "session": "7ec9626bd2fe",
+    "session": "40c0eec5227c",
     "time": 9.888,
     "phase": "SECURED",
     "secured": true,
@@ -46,28 +46,28 @@
     },
     "events": [
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 3,
         "time": 0.384,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 4,
         "time": 1.856,
         "kind": "parcel_detected",
@@ -76,7 +76,7 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 5,
         "time": 3.808,
         "kind": "delivery",
@@ -85,14 +85,14 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 6,
         "time": 3.84,
         "kind": "link_lost",
         "detail": ""
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 7,
         "time": 4.256,
         "kind": "tamper",
@@ -101,21 +101,21 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 8,
         "time": 4.64,
         "kind": "link_restored",
         "detail": ""
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 9,
         "time": 5.568,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 10,
         "time": 7.04,
         "kind": "retrieval",
@@ -138,28 +138,28 @@
     ],
     "all_events": [
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 1,
         "time": 0.032,
         "kind": "sensor_fault",
         "detail": "device feedback unavailable or not yet stable"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 2,
         "time": 0.096,
         "kind": "sensor_recovered",
         "detail": "stable device feedback restored"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 3,
         "time": 0.384,
         "kind": "access_granted",
         "detail": "courier"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 4,
         "time": 1.856,
         "kind": "parcel_detected",
@@ -168,7 +168,7 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 5,
         "time": 3.808,
         "kind": "delivery",
@@ -177,14 +177,14 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 6,
         "time": 3.84,
         "kind": "link_lost",
         "detail": ""
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 7,
         "time": 4.256,
         "kind": "tamper",
@@ -193,21 +193,21 @@
         "queue_latency_s": 0.0
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 8,
         "time": 4.64,
         "kind": "link_restored",
         "detail": ""
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 9,
         "time": 5.568,
         "kind": "access_granted",
         "detail": "owner"
       },
       {
-        "session": "7ec9626bd2fe",
+        "session": "40c0eec5227c",
         "id": 10,
         "time": 7.04,
         "kind": "retrieval",
@@ -279,6 +279,9 @@
       9,
       10
     ],
-    "endpoint_duplicate_packets": 1
+    "endpoint_duplicate_packets": 1,
+    "endpoint_instance": "16c6d99f73e04777a8b032c1e5b97974",
+    "endpoint_dropped_acks": 0,
+    "endpoint_storage_fault": false
   }
 }
